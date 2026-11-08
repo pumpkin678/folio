@@ -1,0 +1,11 @@
+slug: complex-geometry
+title: 复几何
+english: Complex Geometry
+symbol: X
+order: 4
+color: blue
+description: 当局部坐标取值于复数，解析性为几何带来更强的约束与联系。
+topics: [复流形, 全纯映射, 射影空间]
+quote: 在复坐标之间，发现几何。
+featured: cg.projective-line
+primaryRoadmap: cg.first-path

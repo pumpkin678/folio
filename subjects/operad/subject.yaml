@@ -1,0 +1,14 @@
+slug: operad
+title: Operad
+english: Operads & Composition
+symbol: P
+order: 3
+color: purple
+description: 用多输入运算与树形复合，整理代数结构背后的共同语言。
+topics: [多元运算, 复合, 单位, Endomorphism]
+quote: 把运算的运算，组织成语言。
+featured: op.endomorphism
+primaryRoadmap: op.first-path
+references:
+  - title: Geoffroy Horel · Operads, Appendix B
+    url: https://math.mit.edu/~hrm/thesis/horel-thesis.pdf

@@ -1,0 +1,16 @@
+{
+  "name": "math-atlas",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs",
+    "check": "node scripts/build.mjs --check"
+  },
+  "dependencies": {
+    "katex": "^0.16.22",
+    "marked": "^15.0.12",
+    "yaml": "^2.8.1"
+  }
+}

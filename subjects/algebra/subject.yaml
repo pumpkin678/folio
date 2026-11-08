@@ -1,0 +1,11 @@
+slug: algebra
+title: 代数学
+english: Algebra
+symbol: G
+order: 2
+color: amber
+description: 从运算与对称性出发，研究结构、映射，以及它们保持不变的性质。
+topics: [群, 同态, 商群, 同构]
+quote: 透过运算，辨认结构。
+featured: alg.first-isomorphism
+primaryRoadmap: alg.groups-path
