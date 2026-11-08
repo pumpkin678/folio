@@ -5,10 +5,10 @@ symbol: M
 order: 1
 color: green
 description: 从局部坐标出发，理解光滑映射如何揭示流形的几何与拓扑。
-topics: [光滑流形, 切空间, 正则值, 子流形]
+topics: [图册与射影空间, 切空间与切丛, 正则值, 积分曲线与流, 外幂与定向]
 quote: 从局部的微分，读懂整体的形状。
 featured: dt.regular-value-theorem
-primaryRoadmap: dt.first-course
+primaryRoadmap: dt.course-index
 references:
   - title: MIT · Forms on Manifolds, §4.1
     url: https://math.mit.edu/classes/18.952/2016SP/docs/chapter4.pdf
