@@ -27,13 +27,16 @@ for (const subject of subjects) {
     if (!match) fail(`Missing frontmatter: ${filename}`);
     const meta = YAML.parse(match[1]);
     const collection = path.relative(path.join(contentRoot, subject.slug), filename).split(path.sep)[0];
-    const category = ({materials:'material', roadmaps:'roadmap', exercises:'exercise'})[collection];
+    const category = ({materials:'material', roadmaps:'roadmap', exercises:'exercise', mistakes:'mistake'})[collection];
     if (!category) fail(`Unknown collection: ${filename}`);
     for (const key of ['id','title','summary']) if (typeof meta[key] !== 'string' || !meta[key].trim()) fail(`Missing ${key}: ${filename}`);
-    if (!/^[a-z0-9][a-z0-9.-]+$/.test(meta.id)) fail(`Invalid ID: ${meta.id}`);
+    if (!/^[a-zA-Z0-9][a-zA-Z0-9.-]+$/.test(meta.id)) fail(`Invalid ID: ${meta.id}`);
     if (meta.subject && meta.subject !== subject.slug) fail(`Conflicting subject: ${meta.id}`);
     if (category === 'material' && !['def','thm','eg'].includes(meta.type)) fail(`Invalid material type: ${meta.id}`);
-    for (const key of ['requires','targets','tags','aliases']) if (meta[key] !== undefined && (!Array.isArray(meta[key]) || meta[key].some(x => typeof x !== 'string'))) fail(`Invalid ${key}: ${meta.id}`);
+    for (const key of ['requires','targets','tags','aliases','related_questions','mistake_ids']) if (meta[key] !== undefined && (!Array.isArray(meta[key]) || meta[key].some(x => typeof x !== 'string'))) fail(`Invalid ${key}: ${meta.id}`);
+    if (category === 'mistake' && !['observed','suggested'].includes(meta.kind)) fail(`Mistake requires observed/suggested kind: ${meta.id}`);
+    if (meta.initial_status && !['new','attempted','independent','assisted','review'].includes(meta.initial_status)) fail(`Invalid initial exercise status: ${meta.id}`);
+    if (meta.study_date && (typeof meta.study_date !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(meta.study_date))) fail(`Invalid study date: ${meta.id}`);
     entries.push({...meta, subject:subject.slug, category, source:path.relative(root, filename).split(path.sep).join('/'), raw, body:match[2], blocks:[]});
   }
 }
@@ -58,14 +61,14 @@ function markdown(source) {
     return `href="${escape(route(ref))}"`;
   });
 }
-const allowed = new Set(['statement','intuition','proof','remark','example','problem','hint','solution','goal']);
+const allowed = new Set(['statement','intuition','proof','remark','example','problem','hint','solution','goal','original','correction','counterexample','reviewtask']);
 for (const entry of entries) {
   let prose = [];
   const flush = () => { if (prose.join('\n').trim()) entry.blocks.push({kind:'prose', text:prose.join('\n'), html:markdown(prose.join('\n'))}); prose=[]; };
   const lines = entry.body.split('\n');
   for (let i=0;i<lines.length;i++) {
     const open = lines[i].match(/^:::([a-z]+)\s*$/);
-    const ref = lines[i].match(/^::(material|exercise)\{id="([a-z0-9.-]+)"\}\s*$/);
+    const ref = lines[i].match(/^::(material|exercise|mistake)\{id="([a-zA-Z0-9.-]+)"\}\s*$/);
     if (open) {
       flush();
       if (!allowed.has(open[1])) fail(`Unknown semantic block ${open[1]}: ${entry.id}`);
@@ -79,7 +82,7 @@ for (const entry of entries) {
       if (!target || target.category !== ref[1]) fail(`Invalid ${ref[1]} reference ${ref[2]}: ${entry.id}`);
       entry.blocks.push({kind:ref[1], id:ref[2]});
     } else {
-      if (lines[i].startsWith(':::') || lines[i].startsWith('::material') || lines[i].startsWith('::exercise')) fail(`Malformed directive: ${entry.id}: ${lines[i]}`);
+      if (lines[i].startsWith(':::') || /^::(?:material|exercise|mistake)/.test(lines[i])) fail(`Malformed directive: ${entry.id}: ${lines[i]}`);
       prose.push(lines[i]);
     }
   }
@@ -87,10 +90,17 @@ for (const entry of entries) {
   if (entry.category==='exercise' && !entry.blocks.some(b=>b.kind==='problem')) fail(`Exercise requires a problem block: ${entry.id}`);
   if (entry.category==='exercise' && !(entry.targets?.length)) fail(`Exercise requires targets: ${entry.id}`);
   if (entry.category==='material' && !entry.blocks.some(b=>b.kind==='statement' || b.kind==='example')) fail(`Material requires a statement/example: ${entry.id}`);
+  if (entry.category==='mistake') {
+    for (const block of ['correction','reviewtask']) if (!entry.blocks.some(b=>b.kind===block)) fail(`Mistake requires ${block}: ${entry.id}`);
+    if (!entry.related_questions?.length) fail(`Mistake requires related questions: ${entry.id}`);
+  }
   for (const id of [...(entry.requires??[]),...(entry.targets??[])]) if (!byId.has(id) || byId.get(id).category !== 'material') fail(`Missing material ${id}: ${entry.id}`);
+  for (const [field,category] of [['related_questions','exercise'],['mistake_ids','mistake']]) {
+    for (const id of entry[field]??[]) if (byId.get(id)?.category!==category) fail(`Invalid ${field} reference ${id}: ${entry.id}`);
+  }
   entry.formulaHtml = entry.formula ? math(entry.formula, true) : '';
-  entry.searchText = [entry.title,entry.english,...(entry.aliases??[]),...(entry.tags??[]),entry.summary,...entry.blocks.filter(b=>b.text).map(b=>b.text.replace(/\]\(ref:[^)]+\)/g,']'))].filter(Boolean).join(' ').toLowerCase();
-  entry.references = [...new Set([...(entry.requires??[]),...(entry.targets??[]),...entry.blocks.filter(b=>b.id).map(b=>b.id),...Array.from(entry.body.matchAll(/\]\(ref:([^)]+)\)/g),m=>m[1])])];
+  entry.searchText = [entry.id,entry.title,entry.english,entry.study_date,entry.track,...(entry.aliases??[]),...(entry.tags??[]),entry.summary,...entry.blocks.filter(b=>b.text).map(b=>b.text.replace(/\]\(ref:[^)]+\)/g,']'))].filter(Boolean).join(' ').toLowerCase();
+  entry.references = [...new Set([...(entry.requires??[]),...(entry.targets??[]),...(entry.related_questions??[]),...(entry.mistake_ids??[]),...entry.blocks.filter(b=>b.id).map(b=>b.id),...Array.from(entry.body.matchAll(/\]\(ref:([^)]+)\)/g),m=>m[1])])];
   entry.backlinks=[];
 }
 const visited=new Set(), stack=new Set();
@@ -118,4 +128,4 @@ if (!process.argv.includes('--check')) {
   fs.writeFileSync(path.join(output,'index.html'),template.replace('<!-- CONTENT_DATA -->',()=>`<script type="application/json" id="content-data">${data}</script>`));
   fs.writeFileSync(path.join(output,'.nojekyll'),'');
 }
-console.log(`${process.argv.includes('--check')?'Validated':'Built'} ${subjects.length} subjects, ${entries.filter(e=>e.category==='material').length} materials, ${entries.filter(e=>e.category==='roadmap').length} roadmaps, ${entries.filter(e=>e.category==='exercise').length} exercises. All references, prerequisite cycles, semantic blocks, and LaTeX checked.`);
+console.log(`${process.argv.includes('--check')?'Validated':'Built'} ${subjects.length} subjects, ${entries.filter(e=>e.category==='material').length} materials, ${entries.filter(e=>e.category==='roadmap').length} roadmaps, ${entries.filter(e=>e.category==='exercise').length} exercises, ${entries.filter(e=>e.category==='mistake').length} correction/review records. All references, prerequisite cycles, semantic blocks, and LaTeX checked.`);

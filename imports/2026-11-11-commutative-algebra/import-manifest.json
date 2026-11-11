@@ -1,0 +1,25 @@
+{
+  "study_date": "2026-11-11",
+  "subject": "algebra",
+  "archive": "folio-commutative-algebra-pack.zip",
+  "archive_sha256": "edd5cc4e8d9bee9d155489ae7b870fad3a8fc9a7f5045d105a68becfad37ebaa",
+  "question_ids": [
+    "CA-Q001",
+    "CA-Q002"
+  ],
+  "material_ids": [
+    "CA-K001",
+    "CA-K002"
+  ],
+  "observed_mistake_ids": [
+    "CA-M001",
+    "CA-M002"
+  ],
+  "suggested_review_ids": [
+    "CA-M003",
+    "CA-M004",
+    "CA-M005",
+    "CA-M006"
+  ],
+  "source_verified": false
+}

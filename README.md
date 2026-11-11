@@ -1,6 +1,6 @@
 # Folio · 数学手记
 
-一个以 subject 为归属的数学学习 demo。包含 4 个学科、15 个材料、5 条学习路线和 6 道习题。Markdown 是数学内容的唯一来源，网页根据结构生成不同的阅读体验。
+一个以 subject 为归属的数学学习网站。包含 4 个学科，支持材料、学习路线、习题和错题勘误。Markdown 是数学内容的唯一来源，网页根据结构生成不同的阅读体验；具体条目数量由构建结果统计。
 
 ## 打开 demo
 
@@ -41,6 +41,7 @@ subjects/
     materials/*.md
     roadmaps/*.md
     exercises/*.md
+    mistakes/*.md
   algebra/
   operad/
   complex-geometry/
@@ -106,6 +107,62 @@ minutes: 5
 ### 内容与展示
 
 Markdown 记录数学内容和语义，不记录卡片颜色、栏宽与按钮位置。`web/assets/app.js` 负责材料详情、路线嵌入、检索摘要等视图；`style.css` 负责 UI。构建后的 HTML 不需要手动编辑。
+
+### 错题集与勘误
+
+每个 subject 都有「错题集」入口，分为三个视图：
+
+- **已记录误区**：来源明确记录为发生过的错误认识。
+- **复习提醒**：建议复习的薄弱环节，不记作已经犯过的错误。
+- **待复做题**：习题自评为「还需重做」的题目；完成自评后移出这个列表。
+
+在 `subjects/<subject>/mistakes/*.md` 中保存一条勘误：
+
+```md
+---
+id: CA-M001
+title: 不能把一般 A[x] 当作 PID
+summary: 一句话说明应当修正的认识
+kind: observed
+related_questions: [CA-Q002]
+targets: [CA-K002]
+study_date: 2026-11-11
+---
+
+:::original
+原来的想法。
+:::
+
+:::correction
+正确的条件与结论。
+:::
+
+:::counterexample
+反例或检验方法。
+:::
+
+:::reviewtask
+闭卷复习任务。
+:::
+```
+
+`kind` 为 `observed` 或 `suggested`。`related_questions` 指向原题，`targets` 指向知识材料。`correction`、`reviewtask` 和至少一个关联原题是必需项。全站 ID 支持大小写，引用区分大小写。
+
+路线可通过 `::mistake{id="CA-M001"}` 嵌入勘误。订正状态（待复习、已订正、已掌握）和个人复盘笔记保存在浏览器，不修改 Markdown；它们与原题的完成状态分别记录，并随学习记录一起导入、导出。旧版学习记录文件仍可导入。
+
+### 2026-11-11 交换代数题卡包
+
+用户提供的 `folio-commutative-algebra-pack.zip` 已导入代数学：
+
+- `CA-Q001`、`CA-Q002`：两道题，含分层提示、完整证明、另一种证明及自测。
+- `CA-K001`、`CA-K002`：多项式单位判别、幂零根基与 Jacobson 根基。
+- `CA-M001`、`CA-M002`：原包标注的两条已发生误区。
+- `CA-M003` 至 `CA-M006`：原包标注的四条复习提醒。
+- `ca.daily-2026-11-11`：将以上内容串联的按日期题组路线。
+
+原件保存在 `imports/2026-11-11-commutative-algebra/`，导入清单记录原 ZIP 的 SHA-256。该目录是原始资料存档；实际网页内容来自 subject 下转换后的 Markdown。保留原编号和 `source_verified: false`，未把未核对的书目题号标为已核实。导入的「待独立复做」作为初始待重做状态，后续以个人自评为准。
+
+背景核对参考：[Stacks Project：Jacobson 根基](https://stacks.math.columbia.edu/tag/0AMD)、[素理想与幂零元](https://stacks.math.columbia.edu/tag/00E0)。这些参考不代表已核实原书题号。
 
 ## 同步到自己的 GitHub
 
