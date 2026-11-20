@@ -11,6 +11,7 @@
     book:'<path d="M4 4h6a3 3 0 0 1 3 3v14a4 4 0 0 0-4-2H4z"/><path d="M20 4h-4a3 3 0 0 0-3 3v14a4 4 0 0 1 4-2h3z"/>',
     grid:'<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',
     route:'<circle cx="6" cy="5" r="2"/><circle cx="18" cy="19" r="2"/><path d="M6 7v7a5 5 0 0 0 5 5h5M8 5h6a4 4 0 0 1 0 8h-4"/>',
+    graph:'<circle cx="6" cy="7" r="3"/><circle cx="18" cy="5" r="2"/><circle cx="16" cy="18" r="3"/><path d="m9 7 7-2M8 10l6 6m3-9-1 8"/>',
     pen:'<path d="m15 4 5 5M4 20l4-1L20 7a2 2 0 0 0-4-4L4 15zM4 20h16"/>',
     search:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/>',
     code:'<path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-14-2 18"/>',
@@ -43,7 +44,7 @@
   const entryView=e=>e.category==='roadmap'?(mapPurpose(e)==='practice'?'practice':'roadmaps'):({material:'materials',exercise:'exercises',mistake:'mistakes'})[e.category];
   const selectedView=view=>view==='roadmap'?(entries.has(current.id)?entryView(entries.get(current.id)):'roadmaps'):({material:'materials',exercise:'exercises',mistake:'mistakes'})[view]??view;
   const badge=e=>{const key=e.type??e.category;return `<span class="badge ${key}">${key==='roadmap'?mapPurpose(e).toUpperCase():key.toUpperCase()} <span>· ${key==='roadmap'?mapLabels[mapPurpose(e)]:types[key]?.[0]??''}</span></span>`;};
-  const labels={overview:'学科概览',materials:'知识材料',roadmaps:'学习路线',practice:'刷题地图',exercises:'习题库',mistakes:'错题集',review:'学习记录',source:'内容与源码'};
+  const labels={overview:'学科概览',materials:'知识材料',graph:'知识图谱',roadmaps:'学习路线',practice:'刷题地图',exercises:'习题库',mistakes:'错题集',review:'学习记录',source:'内容与源码'};
   let progress={version:1,read:[],exercises:{},mistakes:{}};
   let storageAvailable=true;
   try {const saved=JSON.parse(localStorage.getItem(STORAGE)); if(saved?.version===1&&Array.isArray(saved.read)&&saved.exercises&&typeof saved.exercises==='object')progress=saved;}catch{storageAvailable=false;}
@@ -58,6 +59,8 @@
   const exerciseSessions={};
   const sourceVisible=new Set();
   const mapModes={};
+  const graphModels=new Map(),graphStates=new Map();
+  let activeGraph=null;
   let modalName=null,previousFocus=null,toastTimer;
   let current={subject:data.subjects[0].slug,view:'overview',id:''};
   function save(){try{localStorage.setItem(STORAGE,JSON.stringify(progress));storageAvailable=true;}catch{storageAvailable=false;toast('浏览器未允许保存，可导出学习记录保留进度');}}
@@ -78,7 +81,7 @@
   function tabs(s,view){
     const selected=selectedView(view);
     const count=key=>key==='roadmaps'?maps(s.slug).filter(e=>mapPurpose(e)!=='practice').length:key==='practice'?maps(s.slug,'practice').length:key==='mistakes'?items(s.slug,'mistake').filter(e=>e.kind==='observed').length:items(s.slug,key.slice(0,-1)).length;
-    return `<nav class="tabs" aria-label="学科内容">${[['overview','grid'],['materials','book'],['roadmaps','route'],['practice','pen'],['exercises','layers'],['mistakes','refresh']].map(([key,name])=>`<a class="tab ${selected===key?'active':''}" href="${url(s.slug,key)}" ${selected===key?'aria-current="page"':''}>${icon(name,'sm')}${labels[key]}${key==='overview'?'':`<span class="tab-count">${count(key)}</span>`}</a>`).join('')}</nav>`;
+    return `<nav class="tabs" aria-label="学科内容">${[['overview','grid'],['materials','book'],['graph','graph'],['roadmaps','route'],['practice','pen'],['exercises','layers'],['mistakes','refresh']].map(([key,name])=>`<a class="tab ${selected===key?'active':''}" href="${url(s.slug,key)}" ${selected===key?'aria-current="page"':''}>${icon(name,'sm')}${labels[key]}${['overview','graph'].includes(key)?'':`<span class="tab-count">${count(key)}</span>`}</a>`).join('')}</nav>`;
   }
   function shell(s,body){const totalRead=progress.read.filter(id=>entries.has(id)).length;return `<div class="sidebar-scrim" data-action="close-menu"></div><aside class="sidebar" aria-label="学科导航"><a class="brand" href="${url(data.subjects[0].slug)}" aria-label="Folio 首页"><span class="brand-mark">f<span style="color:#c1cb99">.</span></span><div><div class="brand-name">folio<span>.</span></div><div class="brand-sub">数学手记</div></div></a><div class="sidebar-label">我的学科 <span style="float:right;font:9px var(--mono)">${String(data.subjects.length).padStart(2,'0')}</span></div><nav>${data.subjects.map(subject=>`<a class="side-subject ${s.slug===subject.slug?'active':''}" href="${url(subject.slug)}" ${s.slug===subject.slug?'aria-current="true"':''}><span class="subject-symbol">${h(subject.symbol)}</span><span>${h(subject.title)}</span><span class="count">${String(items(subject.slug,'material').length).padStart(2,'0')}</span></a>`).join('')}</nav><div class="sidebar-label">学习空间</div><button class="side-utility" data-action="search">${icon('search','sm')} 搜索知识</button><a class="side-utility" href="${url(s.slug,'review')}">${icon('refresh','sm')} 我的学习记录 <span class="spacer"></span><span style="font:9px var(--mono)">${totalRead}</span></a><a class="side-utility" href="${url(s.slug,'mistakes')}">${icon('pen','sm')} 错题与复盘</a><button class="side-utility" data-action="github">${icon('github','sm')} GitHub 工作流</button><div class="sidebar-bottom"><div class="small-note">让定义成为语言，<br>让理解慢慢生长。</div><div class="local-note"><i class="dot"></i>${storageAvailable?'学习记录保存在此设备':'当前浏览器无法持久保存'}</div><div class="profile"><span class="avatar">∴</span><div><div class="profile-name">我的数学手记</div><small>PERSONAL LEARNING SPACE</small></div></div></div></aside><div class="workspace"><header class="topbar"><div class="row"><button class="icon-button mobile-menu" data-action="menu" aria-label="打开学科导航">${icon('menu')}</button><div class="breadcrumbs"><span class="crumb-home">我的学习空间</span><span class="crumb-home">/</span><strong>${h(s.title)}</strong><span>/</span><span>${h(labels[selectedView(current.view)]??'知识详情')}</span></div></div><div class="top-actions"><button class="search-trigger" data-action="search">${icon('search','sm')} 搜索定义、定理、例子… <kbd>⌘ K</kbd></button><span class="version-pill">DEMO · 0.1</span></div></header><main id="main" class="page" tabindex="-1">${subjectHeader(s)}${tabs(s,current.view)}${body}<footer class="page-footer"><span>FOLIO / 每一份理解，都从一个定义开始。</span><span>Mathematics, connected.</span></footer></main></div>`;}
   function roadmapCard(e,compact=false){
@@ -114,13 +117,20 @@
     const highlights=subjectHighlights(s),highlightIds=new Set(highlights.map(e=>e.id));
     const remaining=mats.filter(e=>!highlightIds.has(e.id));
     const selected=[...new Map([remaining.find(e=>e.type==='def'),remaining.find(e=>e.type==='eg'),...remaining].filter(Boolean).map(e=>[e.id,e])).values()].slice(0,3);
-    return `${highlightSection(highlights)}
+    return `<a class="graph-overview-link" href="${url(s.slug,'graph')}">${icon('graph')}<div><strong>把材料连成一张知识图谱</strong><p>${mats.length} 份材料，沿学习路线，看见定义、定理与例子之间的联系。</p></div><span>探索图谱</span></a>${highlightSection(highlights)}
       <section class="overview-learning" aria-labelledby="overview-learning-title"><div class="section-head"><h2 id="overview-learning-title">${icon('route','sm')} 推荐学习路线 <span class="english-label">Learning path</span></h2><a class="text-link" href="${url(s.slug,'roadmaps')}">全部路线 ${icon('arrow','sm')}</a></div><div class="overview-grid">${roadmapCard(primary)}<aside class="subject-note"><div class="eyebrow">A PATH TO UNDERSTANDING</div><p>${h(s.quote)}</p><a class="btn white small" href="${url(s.slug,'materials')}">浏览知识材料 ${icon('arrow','sm')}</a></aside></div></section>
       ${studyDigest(s)}
       <section class="stats" aria-label="学科内容统计">${[['book',mats.length,'份','知识材料','Definitions · Theorems · Examples'],['route',routes.length,'条','学习路线','A connected way to learn'],['pen',exercises.length,'道','训练习题','Practice makes it yours']].map(([name,count,unit,label,en])=>`<div class="stat"><span class="stat-icon">${icon(name)}</span><div><div class="stat-number">${String(count).padStart(2,'0')}<span>${unit} ${label}</span></div><div class="stat-label">${en}</div></div></div>`).join('')}</section>
       ${selected.length?`<section><div class="section-head"><h2>${icon('book','sm')} 从这些材料开始 <span class="english-label">Selected materials</span></h2><a class="text-link" href="${url(s.slug,'materials')}">全部 ${mats.length} 份 ${icon('arrow','sm')}</a></div><div class="material-grid">${selected.map(materialCard).join('')}</div></section>`:''}`;
   }
   function materialList(s){const filter=filters[s.slug]??={type:'all',query:''};return `<div class="filters" role="group" aria-label="筛选材料类型">${[['all','全部材料'],['def','def · 定义'],['thm','thm · 定理'],['eg','eg · 例子']].map(([type,label])=>`<button class="filter-chip ${filter.type===type?'active':''}" data-action="filter" data-type="${type}" aria-pressed="${filter.type===type}">${label}</button>`).join('')}<label class="inline-search">${icon('search','sm')}<input id="material-query" type="search" placeholder="搜索当前学科…" aria-label="搜索当前学科材料" value="${h(filter.query)}"></label></div><div id="material-results"></div>`;}
+  function graphPage(s,preserve=false){
+    if(!graphModels.has(s.slug))graphModels.set(s.slug,window.FolioGraph.createModel(data,s.slug));
+    if(!graphStates.has(s.slug))graphStates.set(s.slug,window.FolioGraph.initialState());
+    const state=graphStates.get(s.slug);
+    if(!preserve&&current.id)state.request=current.id;
+    return window.FolioGraph.render(graphModels.get(s.slug),state,s);
+  }
   function updateMaterialResults(){const el=document.getElementById('material-results');if(!el)return;const filter=filters[current.subject]??{type:'all',query:''};const query=filter.query.trim().toLowerCase();const found=items(current.subject,'material').filter(e=>(filter.type==='all'||e.type===filter.type)&&query.split(/\s+/).every(q=>e.searchText.includes(q)));el.innerHTML=`<div class="result-meta">${query?'找到':'共'} ${found.length} 份材料${filter.type!=='all'?` · ${types[filter.type][0]}`:''}</div>${found.length?`<div class="material-grid">${found.map(materialCard).join('')}</div>`:emptyState('没有找到相关材料','试试英文别名、中文名称或标签。')}`;}
   function emptyState(title,text){return `<div class="empty-state">${icon('leaf')}<h3>${h(title)}</h3><p>${h(text)}</p></div>`;}
   const blockLabels={statement:['正式陈述','Statement'],intuition:['直观理解','Intuition'],remark:['留意这一点','Remark'],example:['具体例子','Example'],goal:['这条路线的目标','Learning goal'],problem:['试着独立完成','Problem'],solution:['参考解答','Solution'],original:['原想法 / 风险','Original thought'],correction:['正确认识','Correction'],counterexample:['反例 / 检验','Counterexample'],reviewtask:['闭卷复习任务','Retrieval practice']};
@@ -129,7 +139,7 @@
   function detailHeader(e){
     const view=entryView(e),backId=e.category==='roadmap'&&mapPurpose(e)==='review'?'review':'';
     const backLabel=e.category==='roadmap'?mapLabels[mapPurpose(e)]:({material:'材料库',exercise:'习题库',mistake:'错题集'})[e.category];
-    return `<a class="detail-back" href="${url(e.subject,view,backId)}">${icon('back','sm')} 返回${backLabel}</a><header class="detail-header">${badge(e)}<h1>${h(e.title)}</h1><div class="english">${h(e.english)}</div><div class="detail-tools">${e.category==='material'?`<button class="btn ${read(e.id)?'secondary':'primary'} small" data-action="read" data-id="${e.id}" aria-pressed="${read(e.id)}">${icon('check','sm')}${read(e.id)?'已读 · 取消标记':'标记为已读'}</button>`:''}<button class="btn secondary small" data-action="source" data-id="${e.id}" aria-pressed="${sourceVisible.has(e.id)}">${icon('code','sm')}${sourceVisible.has(e.id)?'收起 Markdown':'对照 Markdown'}</button><span class="row muted" style="font-size:10px;gap:5px">${icon('clock','sm')}约 ${e.minutes??5} 分钟</span>${(e.tags??[]).map(t=>`<span class="tag">${h(t)}</span>`).join('')}</div></header>`;
+    return `<a class="detail-back" href="${url(e.subject,view,backId)}">${icon('back','sm')} 返回${backLabel}</a><header class="detail-header">${badge(e)}<h1>${h(e.title)}</h1><div class="english">${h(e.english)}</div><div class="detail-tools">${e.category==='material'?`<button class="btn ${read(e.id)?'secondary':'primary'} small" data-action="read" data-id="${e.id}" aria-pressed="${read(e.id)}">${icon('check','sm')}${read(e.id)?'已读 · 取消标记':'标记为已读'}</button>`:''}<a class="btn secondary small" href="${url(e.subject,'graph',e.id)}">${icon('graph','sm')}在图谱中查看</a><button class="btn secondary small" data-action="source" data-id="${e.id}" aria-pressed="${sourceVisible.has(e.id)}">${icon('code','sm')}${sourceVisible.has(e.id)?'收起 Markdown':'对照 Markdown'}</button><span class="row muted" style="font-size:10px;gap:5px">${icon('clock','sm')}约 ${e.minutes??5} 分钟</span>${(e.tags??[]).map(t=>`<span class="tag">${h(t)}</span>`).join('')}</div></header>`;
   }
   function materialDetail(e){return `${detailHeader(e)}<div class="detail-grid ${sourceVisible.has(e.id)?'comparing':''}"><div class="article-layout"><article class="article-card">${e.blocks.map(blockHtml).join('')}</article></div>${sourcePane(e)}${relatedAside(e)}</div>${sourceVisible.has(e.id)?'<p class="source-notice">同一份 Markdown 提供数学内容，网页组件决定视觉布局与交互。</p>':''}`;}
   function embedMaterial(e){const statement=e.blocks.find(b=>['statement','example'].includes(b.kind)),proof=e.blocks.find(b=>b.kind==='proof');return `<article class="embedded-material"><div class="embed-head">${badge(e)}<h3><a href="${entryUrl(e)}">${h(e.title)}</a></h3><button class="read-button ${read(e.id)?'done':''}" data-action="read" data-id="${e.id}" aria-label="${read(e.id)?'取消已读':'标记已读'}：${h(e.title)}" aria-pressed="${read(e.id)}">${read(e.id)?'✓':icon('check','sm')}</button></div><div class="embed-body"><div class="prose">${statement?.html??h(e.summary)}</div>${proof?blockHtml(proof):''}</div><div class="embed-footer"><span>${h(e.english)}</span><a class="text-link" href="${entryUrl(e)}">完整材料与源码 ${icon('arrow','sm')}</a></div></article>`;}
@@ -253,7 +263,36 @@
     const list=maps(current.subject,'practice').filter(e=>(state.kind==='all'||(state.kind==='daily'?e.study_date:!e.study_date))&&(state.kind==='topic'||state.date==='all'||e.study_date===state.date)&&words.every(q=>(e.searchText+' '+e.blocks.filter(b=>b.kind==='exercise').map(b=>b.id+' '+entries.get(b.id).title).join(' ').toLowerCase()).includes(q))).sort((a,b)=>(b.study_date??'').localeCompare(a.study_date??'')||(a.order??99)-(b.order??99));
     el.innerHTML=`<p class="result-meta">共 ${list.length} 张刷题地图</p>${list.length?`<div class="practice-map-grid">${list.map(e=>roadmapCard(e,true)).join('')}</div>`:emptyState('没有找到这类题组','试试其他主题、日期，或直接浏览习题库。')}`;
   }
-  function render(preserve=false){const y=window.scrollY;const openProofs=preserve?[...document.querySelectorAll('details')].map(d=>d.open):[];current=parseRoute();const s=subjects.get(current.subject);if(!s){app.innerHTML=`<main class="not-found"><h1>还没有这个学科</h1><p>回到数学手记，选择已有学科。</p><a class="btn primary" href="${url(data.subjects[0].slug)}">返回首页</a></main>`;return;}let body='';const e=entries.get(current.id);if(['material','roadmap','exercise','mistake'].includes(current.view)){if(!e||e.subject!==s.slug||e.category!==current.view)body=emptyState('没有找到这个条目','请从当前学科的材料、路线或习题列表重新选择。');else body=({material:materialDetail,roadmap:roadmapDetail,exercise:exerciseDetail,mistake:mistakeDetail})[current.view](e);}else switch(current.view){case'overview':body=overview(s);break;case'materials':body=materialList(s);break;case'roadmaps':body=roadmapList(s);break;case'practice':body=practiceList(s);break;case'exercises':body=exercisesList(s);break;case'mistakes':body=mistakesList(s);break;case'source':body=sourcePage(s);break;case'review':body=reviewPage(s);break;default:body=emptyState('页面不存在','请使用上方导航继续浏览。');}app.innerHTML=shell(s,body);revealActiveTab();document.title=`${e?.subject===s.slug?e.title:s.title} · Folio 数学手记`;updateMaterialResults();updateMistakeResults();updatePracticeResults();if(preserve){document.querySelectorAll('details').forEach((d,i)=>d.open=openProofs[i]??false);window.scrollTo(0,y);}else window.scrollTo(0,0);}
+  function render(preserve=false){
+    const y=window.scrollY;
+    const openProofs=preserve?[...document.querySelectorAll('details')].map(d=>d.open):[];
+    activeGraph?.destroy();activeGraph=null;
+    current=parseRoute();
+    const s=subjects.get(current.subject);
+    if(!s){app.innerHTML=`<main class="not-found"><h1>还没有这个学科</h1><p>回到数学手记，选择已有学科。</p><a class="btn primary" href="${url(data.subjects[0].slug)}">返回首页</a></main>`;return;}
+    let body='';
+    const e=entries.get(current.id);
+    if(['material','roadmap','exercise','mistake'].includes(current.view)){
+      if(!e||e.subject!==s.slug||e.category!==current.view)body=emptyState('没有找到这个条目','请从当前学科的材料、路线或习题列表重新选择。');
+      else body=({material:materialDetail,roadmap:roadmapDetail,exercise:exerciseDetail,mistake:mistakeDetail})[current.view](e);
+    }else switch(current.view){
+      case'overview':body=overview(s);break;
+      case'materials':body=materialList(s);break;
+      case'graph':body=graphPage(s,preserve);break;
+      case'roadmaps':body=roadmapList(s);break;
+      case'practice':body=practiceList(s);break;
+      case'exercises':body=exercisesList(s);break;
+      case'mistakes':body=mistakesList(s);break;
+      case'source':body=sourcePage(s);break;
+      case'review':body=reviewPage(s);break;
+      default:body=emptyState('页面不存在','请使用上方导航继续浏览。');
+    }
+    app.innerHTML=shell(s,body);revealActiveTab();
+    document.title=`${e?.subject===s.slug?e.title:s.title} · Folio 数学手记`;
+    updateMaterialResults();updateMistakeResults();updatePracticeResults();
+    if(current.view==='graph')activeGraph=window.FolioGraph.mount(document.getElementById('knowledge-graph'),graphModels.get(s.slug),graphStates.get(s.slug),{entryUrl,read,subjectTitle:slug=>subjects.get(slug)?.title??slug});
+    if(preserve){document.querySelectorAll('details').forEach((d,i)=>d.open=openProofs[i]??false);window.scrollTo(0,y);}else window.scrollTo(0,0);
+  }
   function download(name,text,type='application/json'){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000);}
   function closeModal(){overlays.innerHTML='';document.body.style.overflow='';modalName=null;previousFocus?.focus();}
   function openModal(name,content){previousFocus=document.activeElement;modalName=name;document.body.style.overflow='hidden';overlays.innerHTML=`<div class="modal-backdrop"><section class="modal" role="dialog" aria-modal="true" aria-label="${name==='search'?'搜索知识':name==='github'?'GitHub 工作流':'学习记录'}">${content}</section></div>`;requestAnimationFrame(()=>overlays.querySelector('input,button,a')?.focus());}
