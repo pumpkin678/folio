@@ -274,6 +274,10 @@ study_date: 2026-11-11
 
 原 ZIP 与五份 Markdown 逐字节存档于 `imports/2026-11-17-am-ch2-modules/`，哈希和稳定 ID 映射见 `import-manifest.json`。原包的 A–M Chapter 2 Exercise 10 / 13 与页码保持未独立核实；没有完成记录，四题初始为未开始。通用易错提醒随题解保留，不推断为个人错题。转换副本将 `CD` 交换图改为 KaTeX 支持的 `array`，将 Obsidian callout 转为站内提示或普通提醒，并修正 Jacobian radical 为 Jacobson radical；存档原文不变。
 
+## 2026-11-20 微分形式、Stokes 与 de Rham 专题
+
+`Folio_DT_Forms_Stokes_DeRham.zip` 已整理成微分拓扑下的学习路线 `DT-RM-010`、复习速查 `DT-K-010` 和配套题组 `DT-P-010`，接续原有 Week 1–8。主线引用 9 份已有材料，只新增 8 份缺失定义/定理；函数芽、余切空间、形式、外微分、上同调等沿用原 ID。P03 直接引用原有 `dt-w3-13`，其余 11 题保留原包的题面、提示和验收标准。原始文件、逐项归并映射与检查结果保存在 `imports/2026-11-20-dt-forms-stokes-derham/`。
+
 ## 同步到自己的 GitHub
 
 当前 demo **尚未连接个人 GitHub 仓库**。附带的 `.github/workflows/pages.yml` 可在推送到 `main` 时检查、构建和发布；Pull Request 只检查构建。

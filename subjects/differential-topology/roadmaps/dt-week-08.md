@@ -50,3 +50,7 @@ week_prerequisites: ["dt-week-07"]
 来源：`W8DiffTop2026.pdf`。原题勘误与解释边界见[课程勘误](ref:dt-course-errata)。
 
 [返回八周总览](ref:dt-w1-w8-path)。
+
+## 继续学习
+
+由外微分与 de Rham 复形继续进入[从光滑函数环到 Stokes 定理与 de Rham 上同调](ref:DT-RM-010)。新专题复用本周材料，并补上定向、积分、Stokes 和上同调比较；[定义定理速查](ref:DT-K-010)与[证明检查点](ref:DT-P-010)分别用于回顾和练习。

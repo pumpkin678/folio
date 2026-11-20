@@ -1,0 +1,5 @@
+# Preserve the supplied files exactly for the recorded source checksums.
+00_Roadmap_Forms_Stokes_DeRham.md -text
+01_Knowledge_Forms_Stokes_DeRham.md -text
+02_Practice_Forms_Stokes_DeRham.md -text
+Folio_DT_Forms_Stokes_DeRham.zip -text

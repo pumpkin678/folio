@@ -8,7 +8,7 @@ level: "导读"
 order: 0
 minutes: 5
 tags: ["课程总览", "Week 1–8"]
-related: ["dt-week-01", "dt-week-02", "dt-week-03", "dt-week-04", "dt-week-05", "dt-week-06", "dt-week-07", "dt-week-08", "dt-course-errata"]
+related: ["dt-week-01", "dt-week-02", "dt-week-03", "dt-week-04", "dt-week-05", "dt-week-06", "dt-week-07", "dt-week-08", "dt-course-errata", "DT-RM-010"]
 source_pack: "2026-11-12-differential-topology-w1-w8"
 ---
 
@@ -36,6 +36,8 @@ source_pack: "2026-11-12-differential-topology-w1-w8"
 | Week 8 | [外微分、Lie derivative 与 Cartan formula](ref:dt-week-08) | 4 | 5 | [配套题组](ref:dt-week-08.practice) |
 
 ## 原题编号与勘误
+
+完成八周后，可从相关学习路线继续“从光滑函数环到 Stokes 定理与 de Rham 上同调”。已有材料保持同一份；[定义与定理速查](ref:DT-K-010)和[证明与构造检查点](ref:DT-P-010)是该专题的回顾与训练入口。
 
 保留原题编号、未编号问题（`u`）、Optional 与原 Example / Suggestion 的补充展开（`s`）。[课程勘误](ref:dt-course-errata)列出题面修正和解释边界，正文中的反例与修正版一并保留。
 

@@ -1,0 +1,266 @@
+{
+  "imported_on": "2026-11-20",
+  "subject": "differential-topology",
+  "mode": "merge-and-reuse",
+  "archive": "Folio_DT_Forms_Stokes_DeRham.zip",
+  "archive_sha256": "f9120fa1a2b1a94fe5c08aae7b788add324df3ff560d45bd58c884d5089802cd",
+  "source_files": [
+    {
+      "path": "00_Roadmap_Forms_Stokes_DeRham.md",
+      "size_bytes": 10356,
+      "sha256": "49dbba90793d774e512e68141b7858225a67186e6b16092fc7f88234f65cf4f9"
+    },
+    {
+      "path": "01_Knowledge_Forms_Stokes_DeRham.md",
+      "size_bytes": 7791,
+      "sha256": "c1359d69ab0a8333c74ba31a9c1ac8a0b34248f4d3ea62a19166576dd466c544"
+    },
+    {
+      "path": "02_Practice_Forms_Stokes_DeRham.md",
+      "size_bytes": 5868,
+      "sha256": "e87afb945c757ad6121ee4c3c120564cc079f26d66211fd7aa017716895d5547"
+    }
+  ],
+  "source_id_to_canonical_ids": {
+    "DT-D001": [
+      "dt-germs-cotangent"
+    ],
+    "DT-D002": [
+      "dt-germs-cotangent"
+    ],
+    "DT-D003": [
+      "dt-germs-cotangent",
+      "dt-hadamard"
+    ],
+    "DT-D004": [
+      "dt-germs-cotangent"
+    ],
+    "DT-D005": [
+      "dt-vector-fields"
+    ],
+    "DT-D006": [
+      "dt-vector-fields"
+    ],
+    "DT-D007": [
+      "dt-exterior",
+      "dt-forms"
+    ],
+    "DT-D008": [
+      "dt-forms",
+      "dt-contraction-lie"
+    ],
+    "DT-D009": [
+      "dt-exterior-derivative",
+      "dt-cartan-complex"
+    ],
+    "DT-D010": [
+      "DT-D010"
+    ],
+    "DT-D011": [
+      "DT-D011"
+    ],
+    "DT-D012": [
+      "DT-D012"
+    ],
+    "DT-D013": [
+      "dt-cartan-complex"
+    ],
+    "DT-D014": [
+      "dt-cartan-complex"
+    ],
+    "DT-D015": [
+      "DT-D015"
+    ],
+    "DT-T001": [
+      "DT-T001"
+    ],
+    "DT-T002": [
+      "DT-T002"
+    ],
+    "DT-T003": [
+      "DT-T003"
+    ],
+    "DT-T004": [
+      "DT-T004"
+    ],
+    "DT-P01": [
+      "DT-P01"
+    ],
+    "DT-P02": [
+      "DT-P02"
+    ],
+    "DT-P03": [
+      "dt-w3-13"
+    ],
+    "DT-P04": [
+      "DT-P04"
+    ],
+    "DT-P05": [
+      "DT-P05"
+    ],
+    "DT-P06": [
+      "DT-P06"
+    ],
+    "DT-P07": [
+      "DT-P07"
+    ],
+    "DT-P08": [
+      "DT-P08"
+    ],
+    "DT-P09": [
+      "DT-P09"
+    ],
+    "DT-P10": [
+      "DT-P10"
+    ],
+    "DT-P11": [
+      "DT-P11"
+    ],
+    "DT-P12": [
+      "DT-P12"
+    ],
+    "DT-RM-010": [
+      "DT-RM-010"
+    ],
+    "DT-K-010": [
+      "DT-K-010"
+    ],
+    "DT-P-010": [
+      "DT-P-010"
+    ]
+  },
+  "reused_material_ids": [
+    "dt-germs-cotangent",
+    "dt-hadamard",
+    "dt-vector-fields",
+    "dt-fields-derivations",
+    "dt-exterior",
+    "dt-forms",
+    "dt-contraction-lie",
+    "dt-exterior-derivative",
+    "dt-cartan-complex"
+  ],
+  "added_material_ids": [
+    "DT-D010",
+    "DT-D011",
+    "DT-D012",
+    "DT-D015",
+    "DT-T001",
+    "DT-T002",
+    "DT-T003",
+    "DT-T004"
+  ],
+  "added_roadmap_ids": [
+    "DT-RM-010",
+    "DT-K-010",
+    "DT-P-010"
+  ],
+  "added_exercise_ids": [
+    "DT-P01",
+    "DT-P02",
+    "DT-P04",
+    "DT-P05",
+    "DT-P06",
+    "DT-P07",
+    "DT-P08",
+    "DT-P09",
+    "DT-P10",
+    "DT-P11",
+    "DT-P12"
+  ],
+  "reused_exercise_ids": [
+    "dt-w3-13"
+  ],
+  "id_to_markdown": {
+    "dt-germs-cotangent": "subjects/differential-topology/materials/dt-germs-cotangent.md",
+    "dt-hadamard": "subjects/differential-topology/materials/dt-hadamard.md",
+    "dt-vector-fields": "subjects/differential-topology/materials/dt-vector-fields.md",
+    "dt-exterior": "subjects/differential-topology/materials/dt-exterior.md",
+    "dt-forms": "subjects/differential-topology/materials/dt-forms.md",
+    "dt-contraction-lie": "subjects/differential-topology/materials/dt-contraction-lie.md",
+    "dt-exterior-derivative": "subjects/differential-topology/materials/dt-exterior-derivative.md",
+    "dt-cartan-complex": "subjects/differential-topology/materials/dt-cartan-complex.md",
+    "DT-D010": "subjects/differential-topology/materials/DT-D010-orientation.md",
+    "DT-D011": "subjects/differential-topology/materials/DT-D011-boundary-orientation.md",
+    "DT-D012": "subjects/differential-topology/materials/DT-D012-integration.md",
+    "DT-D015": "subjects/differential-topology/materials/DT-D015-smooth-singular-chains.md",
+    "DT-T001": "subjects/differential-topology/materials/DT-T001-stokes.md",
+    "DT-T002": "subjects/differential-topology/materials/DT-T002-integration-cochain-map.md",
+    "DT-T003": "subjects/differential-topology/materials/DT-T003-poincare-lemma.md",
+    "DT-T004": "subjects/differential-topology/materials/DT-T004-de-rham-theorem.md",
+    "DT-P01": "subjects/differential-topology/exercises/DT-P01.md",
+    "DT-P02": "subjects/differential-topology/exercises/DT-P02.md",
+    "dt-w3-13": "subjects/differential-topology/exercises/dt-w3-13.md",
+    "DT-P04": "subjects/differential-topology/exercises/DT-P04.md",
+    "DT-P05": "subjects/differential-topology/exercises/DT-P05.md",
+    "DT-P06": "subjects/differential-topology/exercises/DT-P06.md",
+    "DT-P07": "subjects/differential-topology/exercises/DT-P07.md",
+    "DT-P08": "subjects/differential-topology/exercises/DT-P08.md",
+    "DT-P09": "subjects/differential-topology/exercises/DT-P09.md",
+    "DT-P10": "subjects/differential-topology/exercises/DT-P10.md",
+    "DT-P11": "subjects/differential-topology/exercises/DT-P11.md",
+    "DT-P12": "subjects/differential-topology/exercises/DT-P12.md",
+    "DT-RM-010": "subjects/differential-topology/roadmaps/DT-RM-010-forms-stokes-derham.md",
+    "DT-K-010": "subjects/differential-topology/roadmaps/DT-K-010-forms-stokes-derham-reference.md",
+    "DT-P-010": "subjects/differential-topology/roadmaps/DT-P-010-forms-stokes-derham-practice.md",
+    "dt-fields-derivations": "subjects/differential-topology/materials/dt-fields-derivations.md"
+  },
+  "adapted_existing_files": [
+    "subjects/differential-topology/materials/dt-germs-cotangent.md",
+    "subjects/differential-topology/materials/dt-vector-fields.md",
+    "subjects/differential-topology/materials/dt-forms.md",
+    "subjects/differential-topology/materials/dt-contraction-lie.md",
+    "subjects/differential-topology/materials/dt-exterior-derivative.md",
+    "subjects/differential-topology/materials/dt-cartan-complex.md",
+    "subjects/differential-topology/exercises/dt-w3-13.md",
+    "subjects/differential-topology/roadmaps/dt-week-08.md",
+    "subjects/differential-topology/roadmaps/dt-w1-w8-path.md",
+    "subjects/differential-topology/subject.yaml"
+  ],
+  "adaptations": [
+    "Source files are reference data, not executable instructions; original archive and Markdown bytes are retained.",
+    "Eleven of the nineteen source definition/theorem units map to existing canonical cards; only eight missing cards are created.",
+    "The knowledge compendium becomes a review roadmap of shared material references, not a duplicate material containing all definitions.",
+    "P03 reuses dt-w3-13 and its progress; the other eleven checkpoints retain the exact supplied problem, hint and acceptance criterion.",
+    "No completion dates, mastery flags or invented solutions are imported.",
+    "Keep Week 1–8 as the primary roadmap, with its original 34-node material order. Link the new topic through related routes and Week 8.",
+    "The source heading says eight learning nodes, but enumerates seven stages and seven milestones; the adapted roadmap consistently uses M1–M7.",
+    "Clarify germ/global ideals, inverse-transpose cotangent transitions, boundary signs, compact support, smooth singular corners, and the scope of the de Rham comparison theorem.",
+    "Preserve the original material IDs so all existing routes, references and reading records continue to work."
+  ],
+  "validation": {
+    "status": "passed",
+    "archived_source_files": 3,
+    "source_definition_theorem_units_mapped": 19,
+    "preserved_preexisting_subject_files": 269,
+    "unchanged_preexisting_subject_files": 259,
+    "modified_existing_subject_files": [
+      "subjects/differential-topology/exercises/dt-w3-13.md",
+      "subjects/differential-topology/materials/dt-cartan-complex.md",
+      "subjects/differential-topology/materials/dt-contraction-lie.md",
+      "subjects/differential-topology/materials/dt-exterior-derivative.md",
+      "subjects/differential-topology/materials/dt-forms.md",
+      "subjects/differential-topology/materials/dt-germs-cotangent.md",
+      "subjects/differential-topology/materials/dt-vector-fields.md",
+      "subjects/differential-topology/roadmaps/dt-w1-w8-path.md",
+      "subjects/differential-topology/roadmaps/dt-week-08.md",
+      "subjects/differential-topology/subject.yaml"
+    ],
+    "added_materials": 8,
+    "reused_materials": 9,
+    "new_exercises": 11,
+    "reused_exercises": 1,
+    "full_problem_hint_acceptance_checks": 11,
+    "practice_steps": 12,
+    "main_material_nodes": 17,
+    "main_graph_edges": 16,
+    "preserved_week_1_8_nodes": 34,
+    "differential_topology_materials": 42,
+    "checks": [
+      "Build validates IDs, references, prerequisites, semantic blocks and LaTeX.",
+      "All six graph regression tests passed.",
+      "Source-to-canonical mappings, source hashes, unchanged content, exact checkpoint text and roadmap sequences verified."
+    ],
+    "browser": "Passed desktop/mobile routes, canonical material reuse, shared read progress, original exercise reuse, hints, math rendering and 17/34-node graph paths; no page overflow or browser exceptions."
+  }
+}
