@@ -1,0 +1,142 @@
+/* Shared reading scale; rem values respect the browser's preferred text size. */
+:root {
+  --reading-size: 1.0625rem;
+  --reading-leading: 1.85;
+  --reading-measure: 46rem;
+  --content-copy-size: 1rem;
+  --content-meta-size: .875rem;
+}
+
+.prose,
+.article-card .prose,
+.roadmap-content .prose {
+  font-size: var(--reading-size);
+  line-height: var(--reading-leading);
+}
+
+.highlight-card .prose {
+  font-size: var(--content-copy-size);
+  line-height: var(--reading-leading);
+}
+
+.article-card {
+  padding: 2rem;
+}
+
+.article-card > :where(.prose, .semantic-block, .exercise-problem, .hint-section, .solution-gate, .self-assessment, .exercise-supplement, .mistake-assessment) {
+  max-width: var(--reading-measure);
+  margin-inline: auto;
+}
+
+.prose h2,
+.highlight-card .prose h2,
+.map-node-detail .prose h2 {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-block: 1.4em .6em;
+}
+
+.prose h3,
+.highlight-card .prose h3 {
+  font-size: 1.25rem;
+  line-height: 1.65;
+  margin-block: 1.25em .55em;
+}
+
+.prose p { margin-bottom: 1em; }
+.prose p:last-child { margin-bottom: 0; }
+.prose ul, .prose ol { padding-inline-start: 1.6em; }
+.prose li { margin-block: .4em; }
+.prose code { font-size: .875em; line-height: inherit; }
+.prose pre { max-width: 100%; overflow-x: auto; line-height: 1.7; }
+.prose pre code { font-size: .875rem; }
+.prose .katex-display { margin-block: 1em; padding-block: .5rem; }
+
+.prose table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  font-size: .9375em;
+  line-height: 1.75;
+}
+.prose th, .prose td { padding: .65em .8em; }
+
+.block-label,
+.proof-block > summary,
+.hint-title,
+.map-node-detail > summary,
+.highlight-details > summary {
+  font-size: var(--content-meta-size);
+  line-height: 1.65;
+}
+.block-label > span { font-size: .75rem; }
+.proof-content { padding: 1.25rem; }
+.semantic-block { margin-bottom: 1.75rem; }
+
+.subject-description,
+.card-summary,
+.highlight-summary,
+.highlight-primary .highlight-summary,
+.roadmap-panel > p,
+.map-node-content > p,
+.mistake-card > p,
+.exercise-summary,
+.map-page-intro,
+.route-header-description,
+.overview-source-explanation,
+.notebook-intro p,
+.notebook-toolbar p,
+.study-digest p {
+  font-size: var(--content-copy-size);
+  line-height: 1.8;
+}
+
+/* The original card headings use !important at smaller breakpoints. */
+.material-card .card-title { font-size: 1.25rem !important; line-height: 1.6; }
+.card-english { font-size: var(--content-meta-size); line-height: 1.6; }
+.roadmap-panel h3,
+.practice-map-card h3,
+.mistake-card h3,
+.map-node h3,
+.embed-head h3,
+.exercise-title { font-size: 1.375rem; line-height: 1.6; }
+.highlight-secondary h3 { font-size: 1.25rem; line-height: 1.6; }
+.section-head h2 { font-size: 1.0625rem; line-height: 1.6; }
+.section-head .english-label { font-size: .8125rem; }
+.highlight-intro { font-size: .875rem; }
+.highlight-statement-label { font-size: .8125rem; }
+.highlight-formula { font-size: 1rem; }
+.embedded-exercise strong { font-size: 1rem; line-height: 1.7; }
+.embedded-exercise small { font-size: .8125rem; line-height: 1.7; }
+.study-digest h2 { font-size: 1.1875rem; line-height: 1.7; }
+
+.detail-tools .btn.small,
+.article-card .btn.small,
+.map-node-detail .text-link,
+.highlight-footer .text-link { font-size: .875rem; }
+.self-assessment > p,
+.solution-gate p,
+.mistake-assessment h2,
+.mistake-note-label { font-size: .9375rem; line-height: 1.8; }
+.self-assessment .completion-note,
+.completion-note,
+.mistake-assessment small { font-size: .8125rem; line-height: 1.8; }
+.mistake-assessment textarea { font-size: 1rem; line-height: 1.85; }
+.source-code { font-size: .875rem; line-height: 1.8; }
+.aside-list a { font-size: .875rem; line-height: 1.7; }
+.aside-panel p { font-size: .8125rem; }
+.graph-node-summary { font-size: .9375rem; line-height: 1.8; }
+
+@media (max-width: 760px) {
+  :root { --reading-size: 1rem; }
+  .article-card { padding: 1.25rem; }
+  .proof-content { padding: 1rem; }
+  .prose h2, .highlight-card .prose h2, .map-node-detail .prose h2 { font-size: 1.375rem; }
+  .prose h3, .highlight-card .prose h3 { font-size: 1.1875rem; }
+  .roadmap-panel h3, .practice-map-card h3, .mistake-card h3, .map-node h3, .embed-head h3, .exercise-title { font-size: 1.25rem; }
+  .section-head { flex-wrap: wrap; row-gap: .625rem; }
+  .section-head h2 { flex-wrap: wrap; }
+  .embed-head { flex-wrap: wrap; }
+  .embed-head h3 { flex: 1; min-width: 9rem; }
+}
