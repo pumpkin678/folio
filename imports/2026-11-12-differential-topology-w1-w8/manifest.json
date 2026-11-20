@@ -1,0 +1,17 @@
+{
+  "format": "folio-knowledge-pack",
+  "schema_version": "1.0",
+  "pack_id": "2026-11-12-differential-topology-w1-w8",
+  "created_on": "2026-11-12",
+  "sources": [
+    "DiffTop2026.pdf",
+    "W2DiffTop2026.pdf",
+    "W3DiffTop2026.pdf",
+    "W4DiffTop2026.pdf",
+    "W5DiffTop2026.pdf",
+    "W6DiffTop2026(1).pdf",
+    "W7DiffTop2026.pdf",
+    "W8DiffTop2026.pdf"
+  ],
+  "notes": "新建稳定 dt-* IDs。按 Folio v1 导入；同 ID 不同内容会报告冲突。subject roadmap 作为独立配置导入。未替用户设定学习进度。"
+}

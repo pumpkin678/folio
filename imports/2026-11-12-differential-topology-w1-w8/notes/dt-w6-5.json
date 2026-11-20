@@ -1,0 +1,24 @@
+{
+  "id": "dt-w6-5",
+  "title": "坐标向量场的变换律",
+  "subject": "differential-topology",
+  "kind": "exercise",
+  "tags": [
+    "week-6",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-week-06",
+    "dt-curves-flow",
+    "dt-ode",
+    "dt-incomplete"
+  ],
+  "sources": [
+    {
+      "type": "course-handout",
+      "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 6, Problem 6.5; W6DiffTop2026(1).pdf",
+      "verified": true
+    }
+  ],
+  "review_status": "reviewed"
+}

@@ -1,0 +1,360 @@
+[
+  {
+    "id": "dt-week-01",
+    "week": 1,
+    "title": "拓扑基础与局部欧氏维数",
+    "prerequisites": [],
+    "goal": "能够用基比较拓扑；区分紧性与可数性；解释维数局部恒定。",
+    "definition_ids": [
+      "dt-topology",
+      "dt-metric",
+      "dt-separation",
+      "dt-induced-product"
+    ],
+    "theorem_ids": [
+      "dt-dimension-norm"
+    ],
+    "example_ids": [
+      "dt-compact-counterexample"
+    ],
+    "exercise_ids": [
+      "dt-w1-1",
+      "dt-w1-2",
+      "dt-w1-3",
+      "dt-w1-4",
+      "dt-w1-u1",
+      "dt-w1-u2",
+      "dt-w1-u3",
+      "dt-w1-u4"
+    ],
+    "reading_order": [
+      "dt-topology",
+      "dt-metric",
+      "dt-separation",
+      "dt-induced-product",
+      "dt-dimension-norm",
+      "dt-compact-counterexample",
+      "dt-w1-1",
+      "dt-w1-2",
+      "dt-w1-3",
+      "dt-w1-4",
+      "dt-w1-u1",
+      "dt-w1-u2",
+      "dt-w1-u3",
+      "dt-w1-u4"
+    ],
+    "completion_rule": "习题由用户独立复做后手动标记；提供解答不表示已掌握",
+    "source_file": "DiffTop2026.pdf"
+  },
+  {
+    "id": "dt-week-02",
+    "week": 2,
+    "title": "图册、射影空间与光滑结构",
+    "prerequisites": [
+      "dt-week-01"
+    ],
+    "goal": "能写出完整 chart 五要素；区分相容与微分同胚；构造 RPn、CPn 图。",
+    "definition_ids": [
+      "dt-atlas",
+      "dt-compatibility"
+    ],
+    "theorem_ids": [
+      "dt-atlas-topology"
+    ],
+    "example_ids": [
+      "dt-exotic-coordinate",
+      "dt-projective"
+    ],
+    "exercise_ids": [
+      "dt-w2-0",
+      "dt-w2-2",
+      "dt-w2-3",
+      "dt-w2-4",
+      "dt-w2-5",
+      "dt-w2-6",
+      "dt-w2-8",
+      "dt-w2-10",
+      "dt-w2-11"
+    ],
+    "reading_order": [
+      "dt-atlas",
+      "dt-compatibility",
+      "dt-atlas-topology",
+      "dt-exotic-coordinate",
+      "dt-projective",
+      "dt-w2-0",
+      "dt-w2-2",
+      "dt-w2-3",
+      "dt-w2-4",
+      "dt-w2-5",
+      "dt-w2-6",
+      "dt-w2-8",
+      "dt-w2-10",
+      "dt-w2-11"
+    ],
+    "completion_rule": "习题由用户独立复做后手动标记；提供解答不表示已掌握",
+    "source_file": "W2DiffTop2026.pdf"
+  },
+  {
+    "id": "dt-week-03",
+    "week": 3,
+    "title": "商空间、bump 与代数化切空间",
+    "prerequisites": [
+      "dt-week-02"
+    ],
+    "goal": "会用商泛性质；能造 bump；从 m/m² 严格构造点导子。",
+    "definition_ids": [
+      "dt-quotient",
+      "dt-germs-cotangent"
+    ],
+    "theorem_ids": [
+      "dt-bump-locality",
+      "dt-hadamard"
+    ],
+    "example_ids": [
+      "dt-flat"
+    ],
+    "exercise_ids": [
+      "dt-w3-0",
+      "dt-w3-1",
+      "dt-w3-2",
+      "dt-w3-3",
+      "dt-w3-4",
+      "dt-w3-5",
+      "dt-w3-6",
+      "dt-w3-7",
+      "dt-w3-8",
+      "dt-w3-9",
+      "dt-w3-10",
+      "dt-w3-11",
+      "dt-w3-12",
+      "dt-w3-optional",
+      "dt-w3-13"
+    ],
+    "reading_order": [
+      "dt-quotient",
+      "dt-germs-cotangent",
+      "dt-bump-locality",
+      "dt-hadamard",
+      "dt-flat",
+      "dt-w3-0",
+      "dt-w3-1",
+      "dt-w3-2",
+      "dt-w3-3",
+      "dt-w3-4",
+      "dt-w3-5",
+      "dt-w3-6",
+      "dt-w3-7",
+      "dt-w3-8",
+      "dt-w3-9",
+      "dt-w3-10",
+      "dt-w3-11",
+      "dt-w3-12",
+      "dt-w3-optional",
+      "dt-w3-13"
+    ],
+    "completion_rule": "习题由用户独立复做后手动标记；提供解答不表示已掌握",
+    "source_file": "W3DiffTop2026.pdf"
+  },
+  {
+    "id": "dt-week-04",
+    "week": 4,
+    "title": "逆函数定理、水平集与球面",
+    "prerequisites": [
+      "dt-week-03"
+    ],
+    "goal": "能把 Jacobian 假设搬到流形；写出 regular level 的 slice；计算球面换图。",
+    "definition_ids": [
+      "dt-rank-embedding"
+    ],
+    "theorem_ids": [
+      "dt-inverse-constant-rank"
+    ],
+    "example_ids": [
+      "dt-level-sphere"
+    ],
+    "exercise_ids": [
+      "dt-w4-0",
+      "dt-w4-1",
+      "dt-w4-2",
+      "dt-w4-3",
+      "dt-w4-4"
+    ],
+    "reading_order": [
+      "dt-rank-embedding",
+      "dt-inverse-constant-rank",
+      "dt-level-sphere",
+      "dt-w4-0",
+      "dt-w4-1",
+      "dt-w4-2",
+      "dt-w4-3",
+      "dt-w4-4"
+    ],
+    "completion_rule": "习题由用户独立复做后手动标记；提供解答不表示已掌握",
+    "source_file": "W4DiffTop2026.pdf"
+  },
+  {
+    "id": "dt-week-05",
+    "week": 5,
+    "title": "乘积、Grassmannian 与 Lie bracket",
+    "prerequisites": [
+      "dt-week-04"
+    ],
+    "goal": "掌握乘积泛性质；解释 Plücker；证明括号封闭与相关性。",
+    "definition_ids": [
+      "dt-vector-fields",
+      "dt-lie-related"
+    ],
+    "theorem_ids": [
+      "dt-fields-derivations"
+    ],
+    "example_ids": [
+      "dt-bracket-example"
+    ],
+    "exercise_ids": [
+      "dt-w5-1",
+      "dt-w5-2",
+      "dt-w5-3",
+      "dt-w5-s1",
+      "dt-w5-4",
+      "dt-w5-5",
+      "dt-w5-6",
+      "dt-w5-s2"
+    ],
+    "reading_order": [
+      "dt-vector-fields",
+      "dt-fields-derivations",
+      "dt-lie-related",
+      "dt-bracket-example",
+      "dt-w5-1",
+      "dt-w5-2",
+      "dt-w5-3",
+      "dt-w5-s1",
+      "dt-w5-4",
+      "dt-w5-5",
+      "dt-w5-6",
+      "dt-w5-s2"
+    ],
+    "completion_rule": "习题由用户独立复做后手动标记；提供解答不表示已掌握",
+    "source_file": "W5DiffTop2026.pdf"
+  },
+  {
+    "id": "dt-week-06",
+    "week": 6,
+    "title": "切向量、坐标方向与 flow",
+    "prerequisites": [
+      "dt-week-05"
+    ],
+    "goal": "能从代数切向量造曲线；从局部 ODE 推出紧流形完备；正确变换坐标场。",
+    "definition_ids": [
+      "dt-curves-flow"
+    ],
+    "theorem_ids": [
+      "dt-ode"
+    ],
+    "example_ids": [
+      "dt-incomplete"
+    ],
+    "exercise_ids": [
+      "dt-w6-1",
+      "dt-w6-2",
+      "dt-w6-3",
+      "dt-w6-4",
+      "dt-w6-5",
+      "dt-w6-6",
+      "dt-w6-7"
+    ],
+    "reading_order": [
+      "dt-curves-flow",
+      "dt-ode",
+      "dt-incomplete",
+      "dt-w6-1",
+      "dt-w6-2",
+      "dt-w6-3",
+      "dt-w6-4",
+      "dt-w6-5",
+      "dt-w6-6",
+      "dt-w6-7"
+    ],
+    "completion_rule": "习题由用户独立复做后手动标记；提供解答不表示已掌握",
+    "source_file": "W6DiffTop2026(1).pdf"
+  },
+  {
+    "id": "dt-week-07",
+    "week": 7,
+    "title": "外幂、determinant 与形式丛",
+    "prerequisites": [
+      "dt-week-06"
+    ],
+    "goal": "会用交替泛性质；证明外幂基；用 minors 写形式丛过渡。",
+    "definition_ids": [
+      "dt-exterior",
+      "dt-forms"
+    ],
+    "theorem_ids": [
+      "dt-exterior-basis"
+    ],
+    "example_ids": [
+      "dt-wedge-example"
+    ],
+    "exercise_ids": [
+      "dt-w7-1",
+      "dt-w7-2",
+      "dt-w7-3",
+      "dt-w7-4",
+      "dt-w7-5"
+    ],
+    "reading_order": [
+      "dt-exterior",
+      "dt-exterior-basis",
+      "dt-forms",
+      "dt-wedge-example",
+      "dt-w7-1",
+      "dt-w7-2",
+      "dt-w7-3",
+      "dt-w7-4",
+      "dt-w7-5"
+    ],
+    "completion_rule": "习题由用户独立复做后手动标记；提供解答不表示已掌握",
+    "source_file": "W7DiffTop2026.pdf"
+  },
+  {
+    "id": "dt-week-08",
+    "week": 8,
+    "title": "外微分、Lie derivative 与 Cartan formula",
+    "prerequisites": [
+      "dt-week-07"
+    ],
+    "goal": "能手算一、二形式的 d²；证明 A-多线性、flow 公式与 Cartan。",
+    "definition_ids": [
+      "dt-exterior-derivative",
+      "dt-contraction-lie"
+    ],
+    "theorem_ids": [
+      "dt-cartan-complex"
+    ],
+    "example_ids": [
+      "dt-cartan-example"
+    ],
+    "exercise_ids": [
+      "dt-w8-2",
+      "dt-w8-3",
+      "dt-w8-4",
+      "dt-w8-5",
+      "dt-w8-6"
+    ],
+    "reading_order": [
+      "dt-exterior-derivative",
+      "dt-contraction-lie",
+      "dt-cartan-complex",
+      "dt-cartan-example",
+      "dt-w8-2",
+      "dt-w8-3",
+      "dt-w8-4",
+      "dt-w8-5",
+      "dt-w8-6"
+    ],
+    "completion_rule": "习题由用户独立复做后手动标记；提供解答不表示已掌握",
+    "source_file": "W8DiffTop2026.pdf"
+  }
+]

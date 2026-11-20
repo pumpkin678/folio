@@ -1,0 +1,31 @@
+{
+  "id": "CA-K003",
+  "title": "Content ideal、primitive polynomial 与常数 annihilator",
+  "track": "交换代数",
+  "type": "concept",
+  "path": "concepts/CA-K003-content-primitive.md",
+  "created_date": "2026-11-12",
+  "verification_state": "已核对数学推导",
+  "source": "本次对话题目与讨论（2026-11-12）；原书精确题号未独立核对",
+  "source_verified": false,
+  "tags": [
+    "content-ideal",
+    "primitive",
+    "annihilator"
+  ],
+  "related_questions": [
+    "CA-Q003",
+    "CA-Q004",
+    "CA-Q005"
+  ],
+  "related_concepts": [
+    "CA-K004",
+    "CA-K005",
+    "CA-K006"
+  ],
+  "related_examples": [
+    "CA-E001",
+    "CA-E002"
+  ],
+  "related_mistakes": []
+}

@@ -1,0 +1,836 @@
+{
+  "operations": [
+    {
+      "op": "upsert",
+      "id": "dt-w1-1",
+      "content_file": "notes/dt-w1-1.md",
+      "metadata_file": "notes/dt-w1-1.json",
+      "content_sha256": "sha256:7b167cb00eae2f402776715037a895c01d1c6d0a11d1a1a4fdeb1777023ad31d",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w1-2",
+      "content_file": "notes/dt-w1-2.md",
+      "metadata_file": "notes/dt-w1-2.json",
+      "content_sha256": "sha256:63b0dab8dab1f6be60722492054798fa8aff0816e14e96c02f5adae1fa0a7ae0",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w1-3",
+      "content_file": "notes/dt-w1-3.md",
+      "metadata_file": "notes/dt-w1-3.json",
+      "content_sha256": "sha256:73116ff469d6cf42a43cfb646cdeb41d8d96221f0e80d60991970d82bbfaf398",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w1-4",
+      "content_file": "notes/dt-w1-4.md",
+      "metadata_file": "notes/dt-w1-4.json",
+      "content_sha256": "sha256:76cfe48ef7036417565ccdd13d84615d2099605ac33351d01c8d02944a829675",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w1-u1",
+      "content_file": "notes/dt-w1-u1.md",
+      "metadata_file": "notes/dt-w1-u1.json",
+      "content_sha256": "sha256:7ba63eca071ab8ba599257caa6b026c17754cd11ee4b27b410764995beae14a0",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w1-u2",
+      "content_file": "notes/dt-w1-u2.md",
+      "metadata_file": "notes/dt-w1-u2.json",
+      "content_sha256": "sha256:5facbc34233b35cc625e68506c81fa6c63290a9c978818ae0538755da1c2e28b",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w1-u3",
+      "content_file": "notes/dt-w1-u3.md",
+      "metadata_file": "notes/dt-w1-u3.json",
+      "content_sha256": "sha256:139c0dd4fc491b6476e5f1cb7cac041db3d5cd8bff74effdc781410d6bf8f12b",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w1-u4",
+      "content_file": "notes/dt-w1-u4.md",
+      "metadata_file": "notes/dt-w1-u4.json",
+      "content_sha256": "sha256:e0fcb5717c9fe4152be9c4eb7982f11895fe9b7c50f4368a014c12758b991115",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w2-0",
+      "content_file": "notes/dt-w2-0.md",
+      "metadata_file": "notes/dt-w2-0.json",
+      "content_sha256": "sha256:9da99951af43426d9f21bd2a9d2420e92bc2b37e1730cef36a3bb022d9bd247f",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w2-2",
+      "content_file": "notes/dt-w2-2.md",
+      "metadata_file": "notes/dt-w2-2.json",
+      "content_sha256": "sha256:b183258d4e67dc8c728613c6e87b6ee84ddf0205ca6f927aa558b0213529cf91",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w2-3",
+      "content_file": "notes/dt-w2-3.md",
+      "metadata_file": "notes/dt-w2-3.json",
+      "content_sha256": "sha256:330a0f092845a1d4e70aa8aa33c75b5a5b203acca4c60373fc24793a2209e763",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w2-4",
+      "content_file": "notes/dt-w2-4.md",
+      "metadata_file": "notes/dt-w2-4.json",
+      "content_sha256": "sha256:38f9a47b5f0465e7c63a3a6e143aae8c81bdef2d23a7dea5608f367af233ca85",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w2-5",
+      "content_file": "notes/dt-w2-5.md",
+      "metadata_file": "notes/dt-w2-5.json",
+      "content_sha256": "sha256:60275c3776384bfc4bdd89ca355155a540ea5e11eebe63c813e754ded74d953a",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w2-6",
+      "content_file": "notes/dt-w2-6.md",
+      "metadata_file": "notes/dt-w2-6.json",
+      "content_sha256": "sha256:b8968ef5ab60089d77d416364e86a200abbf9ec06b61fe25660c1eb208c867b9",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w2-8",
+      "content_file": "notes/dt-w2-8.md",
+      "metadata_file": "notes/dt-w2-8.json",
+      "content_sha256": "sha256:7289b2e1dba469ae6a5a175b044ff1894fe78abf126adc214d00350b6b1deaea",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w2-10",
+      "content_file": "notes/dt-w2-10.md",
+      "metadata_file": "notes/dt-w2-10.json",
+      "content_sha256": "sha256:977f0cd8b875b4e653ab45cb346b81a52e33cd1f3f3e0747bba7521d859580dd",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w2-11",
+      "content_file": "notes/dt-w2-11.md",
+      "metadata_file": "notes/dt-w2-11.json",
+      "content_sha256": "sha256:643df45731eb2df180a172a4aaff2785a763eef4e1c460e7ea58f16e81e76953",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w3-0",
+      "content_file": "notes/dt-w3-0.md",
+      "metadata_file": "notes/dt-w3-0.json",
+      "content_sha256": "sha256:9cae9444a364a355a79d5be9a7acd89aefb2ae515442d5bd05c5046b4de7a1c7",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w3-1",
+      "content_file": "notes/dt-w3-1.md",
+      "metadata_file": "notes/dt-w3-1.json",
+      "content_sha256": "sha256:e904c41520173fb6da6f5c281cbbd73e64ebcd9603bd7975d6484e52b46705ba",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w3-2",
+      "content_file": "notes/dt-w3-2.md",
+      "metadata_file": "notes/dt-w3-2.json",
+      "content_sha256": "sha256:96ee4aef78b89bf1dd67e86191953074d6198b1b3cf5cbb01f829f018f954f39",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w3-3",
+      "content_file": "notes/dt-w3-3.md",
+      "metadata_file": "notes/dt-w3-3.json",
+      "content_sha256": "sha256:6a8b3af5fcc3df076f8424f6640c6178854d5856c6e56313392128f42c2f84dc",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w3-4",
+      "content_file": "notes/dt-w3-4.md",
+      "metadata_file": "notes/dt-w3-4.json",
+      "content_sha256": "sha256:8459711b9c76d1d248120fda3d978e4fced743e612f6c1aea0ca18443c22effe",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w3-5",
+      "content_file": "notes/dt-w3-5.md",
+      "metadata_file": "notes/dt-w3-5.json",
+      "content_sha256": "sha256:9de17bde4e75bdf4ae99e8a1909c4361d2541b64d54d10d61db983bbb0125477",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w3-6",
+      "content_file": "notes/dt-w3-6.md",
+      "metadata_file": "notes/dt-w3-6.json",
+      "content_sha256": "sha256:0b7bab85f122d85ce7e3b96675afab5433e22e26caca7936288d64c4be4a2769",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w3-7",
+      "content_file": "notes/dt-w3-7.md",
+      "metadata_file": "notes/dt-w3-7.json",
+      "content_sha256": "sha256:cffc3ea539d590e97f3a1dc9e6488de53c9afb4ed7eaa7fa82cce6c0064a3b9f",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w3-8",
+      "content_file": "notes/dt-w3-8.md",
+      "metadata_file": "notes/dt-w3-8.json",
+      "content_sha256": "sha256:ccac7fcea9d37d843caa54a3d4adb68eb13205604efb73e5c74811aa74b45040",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w3-9",
+      "content_file": "notes/dt-w3-9.md",
+      "metadata_file": "notes/dt-w3-9.json",
+      "content_sha256": "sha256:78e6b355a42c75f122147940c876cce316426d8bf2a618237afe4b6ed29b3b9f",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w3-10",
+      "content_file": "notes/dt-w3-10.md",
+      "metadata_file": "notes/dt-w3-10.json",
+      "content_sha256": "sha256:c170febb6c0a327237490556a7a86115189a1d79b8692aaffe70731dd0aaf6ac",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w3-11",
+      "content_file": "notes/dt-w3-11.md",
+      "metadata_file": "notes/dt-w3-11.json",
+      "content_sha256": "sha256:751dd8c294d2ece0c1ddd73ac4ffe586655295bd12102172a06afec4547f5d7c",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w3-12",
+      "content_file": "notes/dt-w3-12.md",
+      "metadata_file": "notes/dt-w3-12.json",
+      "content_sha256": "sha256:48d8c9e86cf195c0218a4464709164c94b31a59e330c0afeaafad0e5a69eb0a9",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w3-optional",
+      "content_file": "notes/dt-w3-optional.md",
+      "metadata_file": "notes/dt-w3-optional.json",
+      "content_sha256": "sha256:387d05aab6e3337b767d94a22fcc109754500ae86e4f585765cee574e9397d90",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w3-13",
+      "content_file": "notes/dt-w3-13.md",
+      "metadata_file": "notes/dt-w3-13.json",
+      "content_sha256": "sha256:fbbe9a17752a7caa33dcc735ee9f59855d083bebd5e80aef2ae43594b2cfcc79",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w4-0",
+      "content_file": "notes/dt-w4-0.md",
+      "metadata_file": "notes/dt-w4-0.json",
+      "content_sha256": "sha256:107f5c8fefd80b3976b0d47d311a7092facda360014a46d146b90f97a2366d81",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w4-1",
+      "content_file": "notes/dt-w4-1.md",
+      "metadata_file": "notes/dt-w4-1.json",
+      "content_sha256": "sha256:a03b36c4f1dffc726b9c3c6ac64d1eeb19df071fca61262846abe30f945045c9",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w4-2",
+      "content_file": "notes/dt-w4-2.md",
+      "metadata_file": "notes/dt-w4-2.json",
+      "content_sha256": "sha256:410d5c80afa9fc258ac8754aed11aa15fd9161fc7c3c41b672b5188ab51a1680",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w4-3",
+      "content_file": "notes/dt-w4-3.md",
+      "metadata_file": "notes/dt-w4-3.json",
+      "content_sha256": "sha256:6a0195b447154afcbe90d1eb0b0ec95048c7efab030886b61883fb2404d11611",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w4-4",
+      "content_file": "notes/dt-w4-4.md",
+      "metadata_file": "notes/dt-w4-4.json",
+      "content_sha256": "sha256:ce5420a4d0a6ca3dd9e0de54a666b7586d19c46155ca9f8d1d64701e61347763",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w5-1",
+      "content_file": "notes/dt-w5-1.md",
+      "metadata_file": "notes/dt-w5-1.json",
+      "content_sha256": "sha256:10f5097860cf9fd45b4061504b9162d1bbef254a638aceaf304356a8ec4e2552",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w5-2",
+      "content_file": "notes/dt-w5-2.md",
+      "metadata_file": "notes/dt-w5-2.json",
+      "content_sha256": "sha256:9ce35cac4c15f51158a01239ca1ff4f298037949657c247082f6c064323ebc58",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w5-3",
+      "content_file": "notes/dt-w5-3.md",
+      "metadata_file": "notes/dt-w5-3.json",
+      "content_sha256": "sha256:665a61821d70590fdb9f0bb18d21dcf7ef69ec6b74c140d48464d82143f47c88",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w5-s1",
+      "content_file": "notes/dt-w5-s1.md",
+      "metadata_file": "notes/dt-w5-s1.json",
+      "content_sha256": "sha256:a1798afe694958a7d72c80429528cd52df96311506b761c8870f27add0f5b68e",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w5-4",
+      "content_file": "notes/dt-w5-4.md",
+      "metadata_file": "notes/dt-w5-4.json",
+      "content_sha256": "sha256:55a4169d34dd313acb4341a48255bf9d5b9083ea8472658f87eeebd6a3be6421",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w5-5",
+      "content_file": "notes/dt-w5-5.md",
+      "metadata_file": "notes/dt-w5-5.json",
+      "content_sha256": "sha256:a902e2683d7133673282e4449cdfe95361167c82a754767ee8b81f69744b1776",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w5-6",
+      "content_file": "notes/dt-w5-6.md",
+      "metadata_file": "notes/dt-w5-6.json",
+      "content_sha256": "sha256:c02b895852ff78e845a69ee4933e2f74e0676ce6bd1812eb23ab70b38b9be0be",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w5-s2",
+      "content_file": "notes/dt-w5-s2.md",
+      "metadata_file": "notes/dt-w5-s2.json",
+      "content_sha256": "sha256:46df57cc47d1af2be2f12f6ed02870697d68affb4fed5692016a3d5f968912a8",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w6-1",
+      "content_file": "notes/dt-w6-1.md",
+      "metadata_file": "notes/dt-w6-1.json",
+      "content_sha256": "sha256:c8bd292abb3f5d799a9380d51c32dfd5cb18cd64dc7722be84e1f9cf2d6dd126",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w6-2",
+      "content_file": "notes/dt-w6-2.md",
+      "metadata_file": "notes/dt-w6-2.json",
+      "content_sha256": "sha256:0011ecad82c5207b21ee351d742142e7eea47af71be8ff37df803662eaab759f",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w6-3",
+      "content_file": "notes/dt-w6-3.md",
+      "metadata_file": "notes/dt-w6-3.json",
+      "content_sha256": "sha256:4fa40bf31b96b1e6de34a1c86564b0bc8b01263079eb9207ecdf85e3f1b6d1eb",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w6-4",
+      "content_file": "notes/dt-w6-4.md",
+      "metadata_file": "notes/dt-w6-4.json",
+      "content_sha256": "sha256:dd2c5de3acab2f45649a873346af1d86dbdd3490651b680cefe7b3847fa186ff",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w6-5",
+      "content_file": "notes/dt-w6-5.md",
+      "metadata_file": "notes/dt-w6-5.json",
+      "content_sha256": "sha256:de03d6eefc6c3aa334270a89337652158ea88060050b684fe839a9b9deb98526",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w6-6",
+      "content_file": "notes/dt-w6-6.md",
+      "metadata_file": "notes/dt-w6-6.json",
+      "content_sha256": "sha256:f3c3a7dbaee79c651bb83df804f8c4ee60a3f6673eec9d8dd145f0731e6a8edb",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w6-7",
+      "content_file": "notes/dt-w6-7.md",
+      "metadata_file": "notes/dt-w6-7.json",
+      "content_sha256": "sha256:82f96036087cbc21963cf898e88af7ea0795c1ebb0a9e81981216ca594063d44",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w7-1",
+      "content_file": "notes/dt-w7-1.md",
+      "metadata_file": "notes/dt-w7-1.json",
+      "content_sha256": "sha256:40c49d368905275bf1b89ce731c00f087333ae318f6474d566077a10bc501a4c",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w7-2",
+      "content_file": "notes/dt-w7-2.md",
+      "metadata_file": "notes/dt-w7-2.json",
+      "content_sha256": "sha256:0ebbcce03e91dbabf7f00aa4012c2de6402ef15c16405be19d259aa8ae7236dc",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w7-3",
+      "content_file": "notes/dt-w7-3.md",
+      "metadata_file": "notes/dt-w7-3.json",
+      "content_sha256": "sha256:6251b8ec7a7dd33eecf3be05295454bc6e8fa96164215ac6075540d3ea5c80fa",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w7-4",
+      "content_file": "notes/dt-w7-4.md",
+      "metadata_file": "notes/dt-w7-4.json",
+      "content_sha256": "sha256:201bc5df9db0a0686b236a37bdd0d950a9218336cb92d0ae19389f420a494adf",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w7-5",
+      "content_file": "notes/dt-w7-5.md",
+      "metadata_file": "notes/dt-w7-5.json",
+      "content_sha256": "sha256:d4d4f501902a4a930f429b677df9e5fa41d2e4bafe738df7678588cade8452cd",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w8-2",
+      "content_file": "notes/dt-w8-2.md",
+      "metadata_file": "notes/dt-w8-2.json",
+      "content_sha256": "sha256:93a245d13f53ad1bb7af56e9c3a7ba43bde8509c266c8a3361461f2b748a8ff2",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w8-3",
+      "content_file": "notes/dt-w8-3.md",
+      "metadata_file": "notes/dt-w8-3.json",
+      "content_sha256": "sha256:57ccd638198f1cd3b45803c0d11aadb4b6ac532db186426d6ce876f7b834d3c3",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w8-4",
+      "content_file": "notes/dt-w8-4.md",
+      "metadata_file": "notes/dt-w8-4.json",
+      "content_sha256": "sha256:8b7da2d0d61b33b477dff21f7c711d4a12240ee92e7d80bc27d8fc8bac88ce69",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w8-5",
+      "content_file": "notes/dt-w8-5.md",
+      "metadata_file": "notes/dt-w8-5.json",
+      "content_sha256": "sha256:123ce79ca891fd6eb281b93bad2b8392d997b6b720eabbfb9474637942b3205d",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-w8-6",
+      "content_file": "notes/dt-w8-6.md",
+      "metadata_file": "notes/dt-w8-6.json",
+      "content_sha256": "sha256:2c3a03ac08212da8aeb73e193758df84c706ed6cd876ad48e7f6ebfe84519058",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-topology",
+      "content_file": "notes/dt-topology.md",
+      "metadata_file": "notes/dt-topology.json",
+      "content_sha256": "sha256:a30d4192524f7006c6ce1dd250986499252c663c60c8a6115ff4a9546a895c45",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-metric",
+      "content_file": "notes/dt-metric.md",
+      "metadata_file": "notes/dt-metric.json",
+      "content_sha256": "sha256:969eabb137a6d1f876dedcfd828d79596e459d6592a7e2d3e1e04e8089333b6f",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-separation",
+      "content_file": "notes/dt-separation.md",
+      "metadata_file": "notes/dt-separation.json",
+      "content_sha256": "sha256:b897683fd36d83efba967c7abf70a11c52d3bfe66efdfe6e974707cc15c462f7",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-induced-product",
+      "content_file": "notes/dt-induced-product.md",
+      "metadata_file": "notes/dt-induced-product.json",
+      "content_sha256": "sha256:c7a036765dce718ef7113963c51533935f1862609864e95d7b7a6be1106b7f4e",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-dimension-norm",
+      "content_file": "notes/dt-dimension-norm.md",
+      "metadata_file": "notes/dt-dimension-norm.json",
+      "content_sha256": "sha256:6aebf1c353afbad5a867e67c2689925f958ce4e1397ecefd511978ef6547b583",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-compact-counterexample",
+      "content_file": "notes/dt-compact-counterexample.md",
+      "metadata_file": "notes/dt-compact-counterexample.json",
+      "content_sha256": "sha256:164b4dd545b65b9f3c144facb7fb9242bdcdb9654be655e6d488e4ccc15f046a",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-atlas",
+      "content_file": "notes/dt-atlas.md",
+      "metadata_file": "notes/dt-atlas.json",
+      "content_sha256": "sha256:ba8a3b9c936efd088eedb75426eefa60d84ea01b4bb116fe8befd398dd8a16fb",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-compatibility",
+      "content_file": "notes/dt-compatibility.md",
+      "metadata_file": "notes/dt-compatibility.json",
+      "content_sha256": "sha256:2463081f7cf15cd385fa5d984ffb8c8678b3d73c7d3c1cb5bbc703075473857c",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-atlas-topology",
+      "content_file": "notes/dt-atlas-topology.md",
+      "metadata_file": "notes/dt-atlas-topology.json",
+      "content_sha256": "sha256:5a4bafceee6304a9e7c7a46cec987324091a68565dfe266078cc9e33b4c81807",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-exotic-coordinate",
+      "content_file": "notes/dt-exotic-coordinate.md",
+      "metadata_file": "notes/dt-exotic-coordinate.json",
+      "content_sha256": "sha256:01348932c24c80f710abb8964f83ab5cf0b4f6485a7cb80fa73b5234297e7262",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-projective",
+      "content_file": "notes/dt-projective.md",
+      "metadata_file": "notes/dt-projective.json",
+      "content_sha256": "sha256:dae57391a4f27cbe7c1ad009278736bc7125aad36111648252de53d9638c5623",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-quotient",
+      "content_file": "notes/dt-quotient.md",
+      "metadata_file": "notes/dt-quotient.json",
+      "content_sha256": "sha256:d1137846310aec95e74ee1a942e62c6650eecbcddd94e0f30864aab7c4fc6de1",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-germs-cotangent",
+      "content_file": "notes/dt-germs-cotangent.md",
+      "metadata_file": "notes/dt-germs-cotangent.json",
+      "content_sha256": "sha256:25bbfa98cab0cec0867574fa69e6324fed4d96060333cbf425da3de651d1c707",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-bump-locality",
+      "content_file": "notes/dt-bump-locality.md",
+      "metadata_file": "notes/dt-bump-locality.json",
+      "content_sha256": "sha256:ced332901e96e4ba7118a53e953ce4c3e15637ff6556e5ed78cc9aa601c7e902",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-hadamard",
+      "content_file": "notes/dt-hadamard.md",
+      "metadata_file": "notes/dt-hadamard.json",
+      "content_sha256": "sha256:49e0ad17343f76d556174eb671f115cea76a277106c0fab2e7c5cf6e3e4198f6",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-flat",
+      "content_file": "notes/dt-flat.md",
+      "metadata_file": "notes/dt-flat.json",
+      "content_sha256": "sha256:703a68f1cd7e36fccd926868acb0abed84621f03584ede9dc62011a9d75be902",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-rank-embedding",
+      "content_file": "notes/dt-rank-embedding.md",
+      "metadata_file": "notes/dt-rank-embedding.json",
+      "content_sha256": "sha256:2db632c50ddbdc6ef867f7ff57a410bfa9561c65c6e82912aa7a877bf394118c",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-inverse-constant-rank",
+      "content_file": "notes/dt-inverse-constant-rank.md",
+      "metadata_file": "notes/dt-inverse-constant-rank.json",
+      "content_sha256": "sha256:10fb715481084b4febd2bcea83143a6ff7f7a5c5befb03ad2b7b34b96057ab17",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-level-sphere",
+      "content_file": "notes/dt-level-sphere.md",
+      "metadata_file": "notes/dt-level-sphere.json",
+      "content_sha256": "sha256:fb062aeacbeaf35153e3fce2d5abad355185ac3c6204cdf2f3679f460ca7a3d6",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-vector-fields",
+      "content_file": "notes/dt-vector-fields.md",
+      "metadata_file": "notes/dt-vector-fields.json",
+      "content_sha256": "sha256:b205bcd8dc9c7208dee184e02e08df26c40dafa6911efed1f18aec3103fe989c",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-fields-derivations",
+      "content_file": "notes/dt-fields-derivations.md",
+      "metadata_file": "notes/dt-fields-derivations.json",
+      "content_sha256": "sha256:bbceedf900cc1065c64938ea45c53b64b5c7c4b210a47e1e2bf168b04125011b",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-lie-related",
+      "content_file": "notes/dt-lie-related.md",
+      "metadata_file": "notes/dt-lie-related.json",
+      "content_sha256": "sha256:5bcec9eef5db0dabe5e159e9c4ab240412c65d24a6c3394680b2bf331094b5fb",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-bracket-example",
+      "content_file": "notes/dt-bracket-example.md",
+      "metadata_file": "notes/dt-bracket-example.json",
+      "content_sha256": "sha256:791b97fb5dfc5a10f78b8affd7403b92cd3ac77d3a1b43daec1965db14c2b0a4",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-curves-flow",
+      "content_file": "notes/dt-curves-flow.md",
+      "metadata_file": "notes/dt-curves-flow.json",
+      "content_sha256": "sha256:0305d41e9d2dacc6cc522c2782d061de81ebdbf039d4cdb9abfe42e94e0da247",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-ode",
+      "content_file": "notes/dt-ode.md",
+      "metadata_file": "notes/dt-ode.json",
+      "content_sha256": "sha256:87f3fed3781d58febc318d9510f24068cfd038fbbf295d48b7823017aa89f8ee",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-incomplete",
+      "content_file": "notes/dt-incomplete.md",
+      "metadata_file": "notes/dt-incomplete.json",
+      "content_sha256": "sha256:20a1c3200812191c3b9fdc59157a16ff2321c18d2c1d58fa74f6d9c5890e7a26",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-exterior",
+      "content_file": "notes/dt-exterior.md",
+      "metadata_file": "notes/dt-exterior.json",
+      "content_sha256": "sha256:d61c987981d6784ad1471d8a31e01be93cfd8114fdca713a69887b085c1abf75",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-exterior-basis",
+      "content_file": "notes/dt-exterior-basis.md",
+      "metadata_file": "notes/dt-exterior-basis.json",
+      "content_sha256": "sha256:2ae54918faac1f6a51fe6f2651020b3d49b92d6f6869622b7419077a8fde979e",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-forms",
+      "content_file": "notes/dt-forms.md",
+      "metadata_file": "notes/dt-forms.json",
+      "content_sha256": "sha256:f951162b48b3552a088e4aec80b41e1471ff9db69622fd95b9cccefe58899ad3",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-wedge-example",
+      "content_file": "notes/dt-wedge-example.md",
+      "metadata_file": "notes/dt-wedge-example.json",
+      "content_sha256": "sha256:565993889e0a22d5c29f0217c21e38842773d538659c3f348a36b124be0786dc",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-exterior-derivative",
+      "content_file": "notes/dt-exterior-derivative.md",
+      "metadata_file": "notes/dt-exterior-derivative.json",
+      "content_sha256": "sha256:801113fc396765f09fedffe544bf857143f3cd8abdb5a896a83cbc4080ec4450",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-contraction-lie",
+      "content_file": "notes/dt-contraction-lie.md",
+      "metadata_file": "notes/dt-contraction-lie.json",
+      "content_sha256": "sha256:ad6b6f76d66a6c0bbe5ff8c98adad64c759ca354c8cd15fe4b47a39f7c05009e",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-cartan-complex",
+      "content_file": "notes/dt-cartan-complex.md",
+      "metadata_file": "notes/dt-cartan-complex.json",
+      "content_sha256": "sha256:1a7dd809b7452a6ca1122f23f291f09cf7dd95d1997c8ddf53f8c15e465f1fee",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-cartan-example",
+      "content_file": "notes/dt-cartan-example.md",
+      "metadata_file": "notes/dt-cartan-example.json",
+      "content_sha256": "sha256:a453a2d4682a47020d91359ead073483fb6a2200a6549decedf2f9445f25c765",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-week-01",
+      "content_file": "notes/dt-week-01.md",
+      "metadata_file": "notes/dt-week-01.json",
+      "content_sha256": "sha256:261f5c24e9651965aa2f2b99d23f09bbb7672385f7eb2efa3e00a1c88c4d615a",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-week-02",
+      "content_file": "notes/dt-week-02.md",
+      "metadata_file": "notes/dt-week-02.json",
+      "content_sha256": "sha256:3eb5f751c2b24b03516ae131c79d34e3099ef4c5352ae793c7b10ee955d322d2",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-week-03",
+      "content_file": "notes/dt-week-03.md",
+      "metadata_file": "notes/dt-week-03.json",
+      "content_sha256": "sha256:7e7fb52267ac79da4231a0422204a51d7cdb244b3090c014e5781d2841a667a7",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-week-04",
+      "content_file": "notes/dt-week-04.md",
+      "metadata_file": "notes/dt-week-04.json",
+      "content_sha256": "sha256:1b24f93714f517ef512981a0bafe2bfb90cade9f9d14ac48426f1f6e915ed3c5",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-week-05",
+      "content_file": "notes/dt-week-05.md",
+      "metadata_file": "notes/dt-week-05.json",
+      "content_sha256": "sha256:6198b6be4cff8e728802839cff02ad05b0e95eafffb4c971eee84f21b8cd1cc2",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-week-06",
+      "content_file": "notes/dt-week-06.md",
+      "metadata_file": "notes/dt-week-06.json",
+      "content_sha256": "sha256:e57566926219fdaf30dba2bfc5198f8858cfa15cb34145b6fafa93ef3b3162e1",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-week-07",
+      "content_file": "notes/dt-week-07.md",
+      "metadata_file": "notes/dt-week-07.json",
+      "content_sha256": "sha256:69b11723e92009171693d06311e7e6110325d488a3485ea5b52051ebec8e2e1d",
+      "expected_content_sha256": null
+    },
+    {
+      "op": "upsert",
+      "id": "dt-week-08",
+      "content_file": "notes/dt-week-08.md",
+      "metadata_file": "notes/dt-week-08.json",
+      "content_sha256": "sha256:a80840fee0e5f6d95f0fa3b3386255557f377d5d50777fef294c3fd782bfa1d3",
+      "expected_content_sha256": null
+    }
+  ]
+}

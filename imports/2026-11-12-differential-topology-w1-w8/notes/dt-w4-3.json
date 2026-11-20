@@ -1,0 +1,24 @@
+{
+  "id": "dt-w4-3",
+  "title": "球面 graph atlas 与 stereographic atlas 相容",
+  "subject": "differential-topology",
+  "kind": "exercise",
+  "tags": [
+    "week-4",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-week-04",
+    "dt-rank-embedding",
+    "dt-inverse-constant-rank",
+    "dt-level-sphere"
+  ],
+  "sources": [
+    {
+      "type": "course-handout",
+      "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 4, Problem 4.3; W4DiffTop2026.pdf",
+      "verified": true
+    }
+  ],
+  "review_status": "reviewed"
+}

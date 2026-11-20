@@ -1,0 +1,29 @@
+{
+  "id": "dt-separation",
+  "title": "Hausdorff、second countable、compact、connected",
+  "subject": "differential-topology",
+  "kind": "definition",
+  "tags": [
+    "week-1",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-week-01",
+    "dt-w1-1",
+    "dt-w1-2",
+    "dt-w1-3",
+    "dt-w1-4",
+    "dt-w1-u1",
+    "dt-w1-u2",
+    "dt-w1-u3",
+    "dt-w1-u4"
+  ],
+  "sources": [
+    {
+      "type": "editorial-companion",
+      "reference": "为 Week 1 roadmap 编写的配套知识卡；原课程文件 DiffTop2026.pdf；补充内容在正文标识",
+      "verified": false
+    }
+  ],
+  "review_status": "reviewed"
+}

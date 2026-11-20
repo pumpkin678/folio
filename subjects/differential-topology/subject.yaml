@@ -1,14 +1,17 @@
-slug: differential-topology
-title: 微分拓扑
-english: Differential Topology
-symbol: M
+slug: "differential-topology"
+title: "微分拓扑"
+english: "Differential Topology"
+symbol: "M"
 order: 1
-color: green
-description: 从局部坐标出发，理解光滑映射如何揭示流形的几何与拓扑。
-topics: [图册与射影空间, 切空间与切丛, 正则值, 积分曲线与流, 外幂与定向]
-quote: 从局部的微分，读懂整体的形状。
-featured: dt.regular-value-theorem
-primaryRoadmap: dt.course-index
-references:
-  - title: MIT · Forms on Manifolds, §4.1
-    url: https://math.mit.edu/classes/18.952/2016SP/docs/chapter4.pdf
+color: "green"
+description: "按 Week 1–8，从拓扑与图册学到切空间、向量场、流、外幂和 Cartan 公式。"
+topics: ["拓扑基础", "图册与商空间", "切空间", "正则水平集", "向量场与流", "微分形式", "Cartan 公式"]
+quote: "沿着八周主线，把定义、证明与计算连起来。"
+featured: "dt-atlas"
+highlights:
+  - dt-ode
+  - dt-inverse-constant-rank
+  - dt-cartan-complex
+primaryRoadmap: "dt-w1-w8-path"
+content_version: "2026-11-12-w1-w8"
+references: [{"title": "Week 1 · DiffTop2026.pdf", "url": "https://chatgpt.com/library?file_id=libfile_863f9877c1d08191877651f328b1e519&account_id=personal"}, {"title": "Week 2 · W2DiffTop2026.pdf", "url": "https://chatgpt.com/library?file_id=libfile_c56033540e1c81919cea4c5d8a68cd87&account_id=personal"}, {"title": "Week 3 · W3DiffTop2026.pdf", "url": "https://chatgpt.com/library?file_id=libfile_c4a8d2d8caa88191aec58d2a8a1467e4&account_id=personal"}, {"title": "Week 4 · W4DiffTop2026.pdf", "url": "https://chatgpt.com/library?file_id=libfile_56e27947ae9c81918310d78a845ad8a3&account_id=personal"}, {"title": "Week 5 · W5DiffTop2026.pdf", "url": "https://chatgpt.com/library?file_id=libfile_543abdb837cc81919834ea8909cc7c61&account_id=personal"}, {"title": "Week 6 · W6DiffTop2026(1).pdf", "url": "https://chatgpt.com/library?file_id=libfile_23c7d824cae081918dbc9ad3c9755bd0&account_id=personal"}, {"title": "Week 7 · W7DiffTop2026.pdf", "url": "https://chatgpt.com/library?file_id=libfile_90d38310d02481919a3c01bbc4ab2245&account_id=personal"}, {"title": "Week 8 · W8DiffTop2026.pdf", "url": "https://chatgpt.com/library?file_id=libfile_ba5b69a2490c8191acc228cba1ccc57b&account_id=personal"}]

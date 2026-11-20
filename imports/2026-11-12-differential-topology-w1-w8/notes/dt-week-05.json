@@ -1,0 +1,32 @@
+{
+  "id": "dt-week-05",
+  "title": "Week 5 · 乘积、Grassmannian 与 Lie bracket",
+  "subject": "differential-topology",
+  "kind": "note",
+  "tags": [
+    "week-5",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-vector-fields",
+    "dt-fields-derivations",
+    "dt-lie-related",
+    "dt-bracket-example",
+    "dt-w5-1",
+    "dt-w5-2",
+    "dt-w5-3",
+    "dt-w5-s1",
+    "dt-w5-4",
+    "dt-w5-5",
+    "dt-w5-6",
+    "dt-w5-s2"
+  ],
+  "sources": [
+    {
+      "type": "course-handout",
+      "reference": "课程 Week 5；W5DiffTop2026.pdf",
+      "verified": true
+    }
+  ],
+  "review_status": "reviewed"
+}

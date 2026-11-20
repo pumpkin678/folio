@@ -1,0 +1,25 @@
+{
+  "id": "dt-w7-4",
+  "title": "用 top wedge 定义 determinant",
+  "subject": "differential-topology",
+  "kind": "exercise",
+  "tags": [
+    "week-7",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-week-07",
+    "dt-exterior",
+    "dt-exterior-basis",
+    "dt-forms",
+    "dt-wedge-example"
+  ],
+  "sources": [
+    {
+      "type": "course-handout",
+      "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 7, Problem 7.4; W7DiffTop2026.pdf",
+      "verified": true
+    }
+  ],
+  "review_status": "reviewed"
+}

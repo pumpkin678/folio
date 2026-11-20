@@ -1,0 +1,26 @@
+{
+  "id": "dt-w2-10",
+  "title": "图册等价定义的单向性错误",
+  "subject": "differential-topology",
+  "kind": "exercise",
+  "tags": [
+    "week-2",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-week-02",
+    "dt-atlas",
+    "dt-compatibility",
+    "dt-atlas-topology",
+    "dt-exotic-coordinate",
+    "dt-projective"
+  ],
+  "sources": [
+    {
+      "type": "course-handout",
+      "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 2, Problem 2.10; W2DiffTop2026.pdf",
+      "verified": true
+    }
+  ],
+  "review_status": "reviewed"
+}

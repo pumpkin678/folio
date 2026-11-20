@@ -1,0 +1,37 @@
+{
+  "id": "CA-Q003",
+  "title": "McCoy theorem：多项式零因子的常数 annihilator",
+  "track": "交换代数",
+  "type": "question",
+  "path": "problems/CA-Q003-mccoy-zero-divisors.md",
+  "created_date": "2026-11-12",
+  "verification_state": "已核对数学推导",
+  "source": "本次对话题目与讨论（2026-11-12）；原书精确题号未独立核对",
+  "source_verified": false,
+  "tags": [
+    "polynomial-ring",
+    "zero-divisor",
+    "annihilator",
+    "minimal-degree",
+    "mccoy"
+  ],
+  "related_questions": [
+    "CA-Q004",
+    "CA-Q005"
+  ],
+  "related_concepts": [],
+  "related_examples": [
+    "CA-E003"
+  ],
+  "related_mistakes": [],
+  "chapter": "Chapter 1 · Polynomial rings",
+  "difficulty": 3,
+  "status": "待独立复做",
+  "concept_ids": [
+    "CA-K005",
+    "CA-K003"
+  ],
+  "mistake_ids": [
+    "CA-M007"
+  ]
+}

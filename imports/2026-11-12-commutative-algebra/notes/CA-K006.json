@@ -1,0 +1,29 @@
+{
+  "id": "CA-K006",
+  "title": "Content product 的包含关系、反例与强化结论",
+  "track": "交换代数",
+  "type": "concept",
+  "path": "concepts/CA-K006-content-product.md",
+  "created_date": "2026-11-12",
+  "verification_state": "已核对数学推导",
+  "source": "本次对话题目与讨论（2026-11-12）；原书精确题号未独立核对",
+  "source_verified": false,
+  "tags": [
+    "content-ideal",
+    "ideal-product",
+    "dedekind-mertens",
+    "primitive"
+  ],
+  "related_questions": [
+    "CA-Q004",
+    "CA-Q005"
+  ],
+  "related_concepts": [
+    "CA-K003",
+    "CA-K005"
+  ],
+  "related_examples": [
+    "CA-E004"
+  ],
+  "related_mistakes": []
+}

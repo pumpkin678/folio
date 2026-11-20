@@ -1,0 +1,24 @@
+{
+  "id": "dt-w4-1",
+  "title": "从 Euclidean IFT 到 manifold IFT",
+  "subject": "differential-topology",
+  "kind": "exercise",
+  "tags": [
+    "week-4",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-week-04",
+    "dt-rank-embedding",
+    "dt-inverse-constant-rank",
+    "dt-level-sphere"
+  ],
+  "sources": [
+    {
+      "type": "course-handout",
+      "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 4, Problem 4.1; W4DiffTop2026.pdf",
+      "verified": true
+    }
+  ],
+  "review_status": "reviewed"
+}

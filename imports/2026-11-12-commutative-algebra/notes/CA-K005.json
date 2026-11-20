@@ -1,0 +1,29 @@
+{
+  "id": "CA-K005",
+  "title": "McCoy theorem 与最小次数技巧",
+  "track": "交换代数",
+  "type": "concept",
+  "path": "concepts/CA-K005-mccoy.md",
+  "created_date": "2026-11-12",
+  "verification_state": "已核对数学推导",
+  "source": "本次对话题目与讨论（2026-11-12）；原书精确题号未独立核对",
+  "source_verified": false,
+  "tags": [
+    "mccoy",
+    "zero-divisor",
+    "annihilator",
+    "minimal-degree"
+  ],
+  "related_questions": [
+    "CA-Q003",
+    "CA-Q005"
+  ],
+  "related_concepts": [
+    "CA-K003",
+    "CA-K006"
+  ],
+  "related_examples": [
+    "CA-E003"
+  ],
+  "related_mistakes": []
+}

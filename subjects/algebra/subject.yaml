@@ -5,7 +5,11 @@ symbol: G
 order: 2
 color: amber
 description: 从运算与对称性出发，研究结构、映射，以及它们保持不变的性质。
-topics: [群与同态, Galois 理论, 整扩张, 赋值环, 交换代数, 代数集]
+topics: [Galois 理论, 整扩张, 赋值环, 交换代数, 代数集]
 quote: 透过运算，辨认结构。
-featured: alg.first-isomorphism
+featured: CA-K001
+highlights:
+  - CA-K001
+  - CA-K005
+  - CA-K006
 primaryRoadmap: alg.course-index

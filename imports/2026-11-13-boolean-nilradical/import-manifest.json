@@ -1,0 +1,118 @@
+{
+  "study_date": "2026-11-13",
+  "subject": "algebra",
+  "archive": "folio-boolean-nilradical-2026-11-13.zip",
+  "archive_sha256": "054ba01243be5b8bd4f7cb1de9a5fa8d307fec6a46fd34c197e38e1fd403c5d6",
+  "pack_id": "folio-ca-2026-11-13-boolean-nilradical",
+  "mode": "additive",
+  "verified_source_file_hashes": 17,
+  "entrypoint": "delta-site-data.json",
+  "source_verified": false,
+  "id_to_markdown": {
+    "CA-K20261113-01": "subjects/algebra/materials/CA-K20261113-01-boolean-rings.md",
+    "CA-K20261113-02": "subjects/algebra/materials/CA-K20261113-02-nilradical-local-rings.md",
+    "CA-K20261113-03": "subjects/algebra/materials/CA-K20261113-03-idempotent-ideals.md",
+    "CA-E20261113-01": "subjects/algebra/materials/CA-E20261113-01-f2-product.md",
+    "CA-E20261113-02": "subjects/algebra/materials/CA-E20261113-02-truncated-polynomials.md",
+    "CA-Q20261113-01": "subjects/algebra/exercises/CA-Q20261113-01-boolean-basic.md",
+    "CA-Q20261113-02": "subjects/algebra/exercises/CA-Q20261113-02-unique-prime-nilradical.md",
+    "CA-Q20261113-03": "subjects/algebra/exercises/CA-Q20261113-03-boolean-fg-ideals.md",
+    "CA-M20261113-01": "subjects/algebra/mistakes/ca-m20261113-01.md",
+    "CA-M20261113-02": "subjects/algebra/mistakes/ca-m20261113-02.md",
+    "CA-M20261113-03": "subjects/algebra/mistakes/ca-m20261113-03.md",
+    "CA-M20261113-04": "subjects/algebra/mistakes/ca-m20261113-04.md",
+    "CA-M20261113-05": "subjects/algebra/mistakes/ca-m20261113-05.md",
+    "CA-M20261113-06": "subjects/algebra/mistakes/ca-m20261113-06.md",
+    "ca.boolean-nilradical-path": "subjects/algebra/roadmaps/boolean-nilradical-knowledge.md",
+    "ca.daily-2026-11-13": "subjects/algebra/roadmaps/commutative-algebra-2026-11-13.md",
+    "CA-M-20261113": "subjects/algebra/roadmaps/commutative-algebra-2026-11-13-review.md"
+  },
+  "added_ids": [
+    "CA-K20261113-01",
+    "CA-K20261113-02",
+    "CA-K20261113-03",
+    "CA-E20261113-01",
+    "CA-E20261113-02",
+    "CA-Q20261113-01",
+    "CA-Q20261113-02",
+    "CA-Q20261113-03",
+    "CA-M20261113-01",
+    "CA-M20261113-02",
+    "CA-M20261113-03",
+    "CA-M20261113-04",
+    "CA-M20261113-05",
+    "CA-M20261113-06",
+    "ca.boolean-nilradical-path",
+    "ca.daily-2026-11-13",
+    "CA-M-20261113"
+  ],
+  "existing_ids": [],
+  "conflicting_ids": [],
+  "original_index_mapping": {
+    "CA-M-20261113": {
+      "category": "roadmap",
+      "purpose": "review",
+      "child_ids": [
+        "CA-M20261113-01",
+        "CA-M20261113-02",
+        "CA-M20261113-03",
+        "CA-M20261113-04",
+        "CA-M20261113-05",
+        "CA-M20261113-06"
+      ]
+    }
+  },
+  "observed_mistake_ids": [
+    "CA-M20261113-01",
+    "CA-M20261113-02",
+    "CA-M20261113-03",
+    "CA-M20261113-04"
+  ],
+  "suggested_review_ids": [
+    "CA-M20261113-05",
+    "CA-M20261113-06"
+  ],
+  "initial_exercise_status": {
+    "CA-Q20261113-01": "review",
+    "CA-Q20261113-02": "review",
+    "CA-Q20261113-03": "review"
+  },
+  "learning_records": "Existing stable IDs, browser storage, homepage highlights and relative ordering of existing roadmaps are unchanged. Personal self-assessments override initial exercise status.",
+  "adaptations": [
+    "Archive the original ZIP and every extracted file unchanged; verify all 17 listed hashes and JSON/Markdown body equivalence.",
+    "Convert 3 concepts, 2 examples, 3 questions and 6 classified review records into the existing Markdown/semantic-block model.",
+    "Convert relative Markdown links to validated ref:ID links, including the review-index ID CA-M-20261113.",
+    "Keep complete proofs in one solution block per exercise, split original hints, and preserve all assumptions, optional extensions and self-tests.",
+    "Use plain-text display titles so math delimiters do not appear literally in UI headings; retain original titles as aliases and in the archive.",
+    "Add 6 retrieval tasks derived from the original corrections and label their provenance in metadata.",
+    "Add a learning path and a dated practice map for the two suggested topic groups; map the original mistake index to a review roadmap.",
+    "Append the new learning path to the course index; preserve all previous links and their order."
+  ],
+  "changed_existing_files": [
+    "subjects/algebra/roadmaps/course-index.md",
+    "README.md"
+  ],
+  "verified_unchanged_existing_files": 244,
+  "preserved_existing_roadmap_order": true,
+  "validation": {
+    "build_check": "Passed: references, prerequisite cycles, semantic blocks and LaTeX.",
+    "build_counts": {
+      "subjects": 5,
+      "materials": 105,
+      "roadmaps": 42,
+      "exercises": 85,
+      "correction_review_records": 16
+    },
+    "browser_scenarios_passed": 26,
+    "browser_checks": [
+      "Learning path and daily date filter",
+      "All original proofs, hints and optional extensions",
+      "Classification of all 6 correction/review records",
+      "Mobile layouts at 320px and 390px",
+      "Stable-ID search and local offline assets",
+      "Existing browser progress and notes remain intact after new self-assessments"
+    ],
+    "browser_errors": 0,
+    "missing_assets": 0
+  }
+}

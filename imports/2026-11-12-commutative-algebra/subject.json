@@ -1,0 +1,23 @@
+{
+  "id": "commutative-algebra",
+  "name": "交换代数",
+  "status": "existing-subject-update",
+  "topic": "Polynomial rings / content / primitive / McCoy",
+  "note_ids": [
+    "CA-Q003",
+    "CA-Q004",
+    "CA-Q005",
+    "CA-K003",
+    "CA-K004",
+    "CA-K005",
+    "CA-K006",
+    "CA-E001",
+    "CA-E002",
+    "CA-E003",
+    "CA-E004",
+    "CA-M-ADD-20261112"
+  ],
+  "schema_version": 1,
+  "language": "zh-CN",
+  "math_renderer": "KaTeX or MathJax"
+}

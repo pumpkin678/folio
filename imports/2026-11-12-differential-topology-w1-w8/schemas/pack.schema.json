@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Folio Knowledge Pack manifest 1.0",
+  "type": "object",
+  "required": ["format", "schema_version", "pack_id"],
+  "properties": {
+    "format": {"const":"folio-knowledge-pack"},
+    "schema_version": {"const":"1.0"},
+    "pack_id": {"type":"string", "pattern":"^[A-Za-z0-9._-]{4,100}$"},
+    "created_on": {"type":"string", "format":"date"},
+    "sources": {"type":"array", "items":{"type":"string"}},
+    "notes": {"type":"string"}
+  },
+  "additionalProperties":false
+}

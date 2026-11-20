@@ -1,0 +1,25 @@
+{
+  "id": "dt-w5-6",
+  "title": "f-related 向量场的括号",
+  "subject": "differential-topology",
+  "kind": "exercise",
+  "tags": [
+    "week-5",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-week-05",
+    "dt-vector-fields",
+    "dt-fields-derivations",
+    "dt-lie-related",
+    "dt-bracket-example"
+  ],
+  "sources": [
+    {
+      "type": "course-handout",
+      "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 5, Problem 5.6; W5DiffTop2026.pdf",
+      "verified": true
+    }
+  ],
+  "review_status": "reviewed"
+}

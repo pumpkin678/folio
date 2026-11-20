@@ -1,0 +1,29 @@
+{
+  "id": "dt-week-07",
+  "title": "Week 7 · 外幂、determinant 与形式丛",
+  "subject": "differential-topology",
+  "kind": "note",
+  "tags": [
+    "week-7",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-exterior",
+    "dt-exterior-basis",
+    "dt-forms",
+    "dt-wedge-example",
+    "dt-w7-1",
+    "dt-w7-2",
+    "dt-w7-3",
+    "dt-w7-4",
+    "dt-w7-5"
+  ],
+  "sources": [
+    {
+      "type": "course-handout",
+      "reference": "课程 Week 7；W7DiffTop2026.pdf",
+      "verified": true
+    }
+  ],
+  "review_status": "reviewed"
+}

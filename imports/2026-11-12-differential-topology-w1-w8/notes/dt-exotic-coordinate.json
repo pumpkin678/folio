@@ -1,0 +1,30 @@
+{
+  "id": "dt-exotic-coordinate",
+  "title": "x 与 x³ 图册",
+  "subject": "differential-topology",
+  "kind": "example",
+  "tags": [
+    "week-2",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-week-02",
+    "dt-w2-0",
+    "dt-w2-2",
+    "dt-w2-3",
+    "dt-w2-4",
+    "dt-w2-5",
+    "dt-w2-6",
+    "dt-w2-8",
+    "dt-w2-10",
+    "dt-w2-11"
+  ],
+  "sources": [
+    {
+      "type": "editorial-companion",
+      "reference": "为 Week 2 roadmap 编写的配套知识卡；原课程文件 W2DiffTop2026.pdf；补充内容在正文标识",
+      "verified": false
+    }
+  ],
+  "review_status": "reviewed"
+}

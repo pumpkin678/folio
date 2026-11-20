@@ -1,0 +1,749 @@
+{
+  "import_date": "2026-11-12",
+  "subject": "differential-topology",
+  "mode": "replace-entire-subject",
+  "user_instruction": "按照所提供 Week 1–8 ZIP 重构微分拓扑，原先内容全部移除。",
+  "archive": "Folio-Differential-Topology-W1-W8-2026-11-12.zip",
+  "archive_sha256": "1dd59c9d566b6f02b9685f6936c37be1c06eef6c8f55fe739e89bfa6bf5d2a0a",
+  "pack_id": "2026-11-12-differential-topology-w1-w8",
+  "verified_source_content_hashes": 104,
+  "imported_source_ids": [
+    "dt-w1-1",
+    "dt-w1-2",
+    "dt-w1-3",
+    "dt-w1-4",
+    "dt-w1-u1",
+    "dt-w1-u2",
+    "dt-w1-u3",
+    "dt-w1-u4",
+    "dt-w2-0",
+    "dt-w2-2",
+    "dt-w2-3",
+    "dt-w2-4",
+    "dt-w2-5",
+    "dt-w2-6",
+    "dt-w2-8",
+    "dt-w2-10",
+    "dt-w2-11",
+    "dt-w3-0",
+    "dt-w3-1",
+    "dt-w3-2",
+    "dt-w3-3",
+    "dt-w3-4",
+    "dt-w3-5",
+    "dt-w3-6",
+    "dt-w3-7",
+    "dt-w3-8",
+    "dt-w3-9",
+    "dt-w3-10",
+    "dt-w3-11",
+    "dt-w3-12",
+    "dt-w3-optional",
+    "dt-w3-13",
+    "dt-w4-0",
+    "dt-w4-1",
+    "dt-w4-2",
+    "dt-w4-3",
+    "dt-w4-4",
+    "dt-w5-1",
+    "dt-w5-2",
+    "dt-w5-3",
+    "dt-w5-s1",
+    "dt-w5-4",
+    "dt-w5-5",
+    "dt-w5-6",
+    "dt-w5-s2",
+    "dt-w6-1",
+    "dt-w6-2",
+    "dt-w6-3",
+    "dt-w6-4",
+    "dt-w6-5",
+    "dt-w6-6",
+    "dt-w6-7",
+    "dt-w7-1",
+    "dt-w7-2",
+    "dt-w7-3",
+    "dt-w7-4",
+    "dt-w7-5",
+    "dt-w8-2",
+    "dt-w8-3",
+    "dt-w8-4",
+    "dt-w8-5",
+    "dt-w8-6",
+    "dt-topology",
+    "dt-metric",
+    "dt-separation",
+    "dt-induced-product",
+    "dt-dimension-norm",
+    "dt-compact-counterexample",
+    "dt-atlas",
+    "dt-compatibility",
+    "dt-atlas-topology",
+    "dt-exotic-coordinate",
+    "dt-projective",
+    "dt-quotient",
+    "dt-germs-cotangent",
+    "dt-bump-locality",
+    "dt-hadamard",
+    "dt-flat",
+    "dt-rank-embedding",
+    "dt-inverse-constant-rank",
+    "dt-level-sphere",
+    "dt-vector-fields",
+    "dt-fields-derivations",
+    "dt-lie-related",
+    "dt-bracket-example",
+    "dt-curves-flow",
+    "dt-ode",
+    "dt-incomplete",
+    "dt-exterior",
+    "dt-exterior-basis",
+    "dt-forms",
+    "dt-wedge-example",
+    "dt-exterior-derivative",
+    "dt-contraction-lie",
+    "dt-cartan-complex",
+    "dt-cartan-example",
+    "dt-week-01",
+    "dt-week-02",
+    "dt-week-03",
+    "dt-week-04",
+    "dt-week-05",
+    "dt-week-06",
+    "dt-week-07",
+    "dt-week-08"
+  ],
+  "counts": {
+    "materials": 34,
+    "definitions": 16,
+    "theorems": 9,
+    "examples": 9,
+    "exercises_and_supplements": 62,
+    "weekly_learning_roadmaps": 8,
+    "weekly_practice_maps": 8,
+    "overview_roadmaps": 1,
+    "errata_roadmaps": 1
+  },
+  "id_to_markdown": {
+    "dt-topology": "subjects/differential-topology/materials/dt-topology.md",
+    "dt-metric": "subjects/differential-topology/materials/dt-metric.md",
+    "dt-separation": "subjects/differential-topology/materials/dt-separation.md",
+    "dt-induced-product": "subjects/differential-topology/materials/dt-induced-product.md",
+    "dt-dimension-norm": "subjects/differential-topology/materials/dt-dimension-norm.md",
+    "dt-compact-counterexample": "subjects/differential-topology/materials/dt-compact-counterexample.md",
+    "dt-w1-1": "subjects/differential-topology/exercises/dt-w1-1.md",
+    "dt-w1-2": "subjects/differential-topology/exercises/dt-w1-2.md",
+    "dt-w1-3": "subjects/differential-topology/exercises/dt-w1-3.md",
+    "dt-w1-4": "subjects/differential-topology/exercises/dt-w1-4.md",
+    "dt-w1-u1": "subjects/differential-topology/exercises/dt-w1-u1.md",
+    "dt-w1-u2": "subjects/differential-topology/exercises/dt-w1-u2.md",
+    "dt-w1-u3": "subjects/differential-topology/exercises/dt-w1-u3.md",
+    "dt-w1-u4": "subjects/differential-topology/exercises/dt-w1-u4.md",
+    "dt-week-01": "subjects/differential-topology/roadmaps/dt-week-01.md",
+    "dt-week-01.practice": "subjects/differential-topology/roadmaps/dt-week-01.practice.md",
+    "dt-atlas": "subjects/differential-topology/materials/dt-atlas.md",
+    "dt-compatibility": "subjects/differential-topology/materials/dt-compatibility.md",
+    "dt-atlas-topology": "subjects/differential-topology/materials/dt-atlas-topology.md",
+    "dt-exotic-coordinate": "subjects/differential-topology/materials/dt-exotic-coordinate.md",
+    "dt-projective": "subjects/differential-topology/materials/dt-projective.md",
+    "dt-w2-0": "subjects/differential-topology/exercises/dt-w2-0.md",
+    "dt-w2-2": "subjects/differential-topology/exercises/dt-w2-2.md",
+    "dt-w2-3": "subjects/differential-topology/exercises/dt-w2-3.md",
+    "dt-w2-4": "subjects/differential-topology/exercises/dt-w2-4.md",
+    "dt-w2-5": "subjects/differential-topology/exercises/dt-w2-5.md",
+    "dt-w2-6": "subjects/differential-topology/exercises/dt-w2-6.md",
+    "dt-w2-8": "subjects/differential-topology/exercises/dt-w2-8.md",
+    "dt-w2-10": "subjects/differential-topology/exercises/dt-w2-10.md",
+    "dt-w2-11": "subjects/differential-topology/exercises/dt-w2-11.md",
+    "dt-week-02": "subjects/differential-topology/roadmaps/dt-week-02.md",
+    "dt-week-02.practice": "subjects/differential-topology/roadmaps/dt-week-02.practice.md",
+    "dt-quotient": "subjects/differential-topology/materials/dt-quotient.md",
+    "dt-germs-cotangent": "subjects/differential-topology/materials/dt-germs-cotangent.md",
+    "dt-bump-locality": "subjects/differential-topology/materials/dt-bump-locality.md",
+    "dt-hadamard": "subjects/differential-topology/materials/dt-hadamard.md",
+    "dt-flat": "subjects/differential-topology/materials/dt-flat.md",
+    "dt-w3-0": "subjects/differential-topology/exercises/dt-w3-0.md",
+    "dt-w3-1": "subjects/differential-topology/exercises/dt-w3-1.md",
+    "dt-w3-2": "subjects/differential-topology/exercises/dt-w3-2.md",
+    "dt-w3-3": "subjects/differential-topology/exercises/dt-w3-3.md",
+    "dt-w3-4": "subjects/differential-topology/exercises/dt-w3-4.md",
+    "dt-w3-5": "subjects/differential-topology/exercises/dt-w3-5.md",
+    "dt-w3-6": "subjects/differential-topology/exercises/dt-w3-6.md",
+    "dt-w3-7": "subjects/differential-topology/exercises/dt-w3-7.md",
+    "dt-w3-8": "subjects/differential-topology/exercises/dt-w3-8.md",
+    "dt-w3-9": "subjects/differential-topology/exercises/dt-w3-9.md",
+    "dt-w3-10": "subjects/differential-topology/exercises/dt-w3-10.md",
+    "dt-w3-11": "subjects/differential-topology/exercises/dt-w3-11.md",
+    "dt-w3-12": "subjects/differential-topology/exercises/dt-w3-12.md",
+    "dt-w3-optional": "subjects/differential-topology/exercises/dt-w3-optional.md",
+    "dt-w3-13": "subjects/differential-topology/exercises/dt-w3-13.md",
+    "dt-week-03": "subjects/differential-topology/roadmaps/dt-week-03.md",
+    "dt-week-03.practice": "subjects/differential-topology/roadmaps/dt-week-03.practice.md",
+    "dt-rank-embedding": "subjects/differential-topology/materials/dt-rank-embedding.md",
+    "dt-inverse-constant-rank": "subjects/differential-topology/materials/dt-inverse-constant-rank.md",
+    "dt-level-sphere": "subjects/differential-topology/materials/dt-level-sphere.md",
+    "dt-w4-0": "subjects/differential-topology/exercises/dt-w4-0.md",
+    "dt-w4-1": "subjects/differential-topology/exercises/dt-w4-1.md",
+    "dt-w4-2": "subjects/differential-topology/exercises/dt-w4-2.md",
+    "dt-w4-3": "subjects/differential-topology/exercises/dt-w4-3.md",
+    "dt-w4-4": "subjects/differential-topology/exercises/dt-w4-4.md",
+    "dt-week-04": "subjects/differential-topology/roadmaps/dt-week-04.md",
+    "dt-week-04.practice": "subjects/differential-topology/roadmaps/dt-week-04.practice.md",
+    "dt-vector-fields": "subjects/differential-topology/materials/dt-vector-fields.md",
+    "dt-fields-derivations": "subjects/differential-topology/materials/dt-fields-derivations.md",
+    "dt-lie-related": "subjects/differential-topology/materials/dt-lie-related.md",
+    "dt-bracket-example": "subjects/differential-topology/materials/dt-bracket-example.md",
+    "dt-w5-1": "subjects/differential-topology/exercises/dt-w5-1.md",
+    "dt-w5-2": "subjects/differential-topology/exercises/dt-w5-2.md",
+    "dt-w5-3": "subjects/differential-topology/exercises/dt-w5-3.md",
+    "dt-w5-s1": "subjects/differential-topology/exercises/dt-w5-s1.md",
+    "dt-w5-4": "subjects/differential-topology/exercises/dt-w5-4.md",
+    "dt-w5-5": "subjects/differential-topology/exercises/dt-w5-5.md",
+    "dt-w5-6": "subjects/differential-topology/exercises/dt-w5-6.md",
+    "dt-w5-s2": "subjects/differential-topology/exercises/dt-w5-s2.md",
+    "dt-week-05": "subjects/differential-topology/roadmaps/dt-week-05.md",
+    "dt-week-05.practice": "subjects/differential-topology/roadmaps/dt-week-05.practice.md",
+    "dt-curves-flow": "subjects/differential-topology/materials/dt-curves-flow.md",
+    "dt-ode": "subjects/differential-topology/materials/dt-ode.md",
+    "dt-incomplete": "subjects/differential-topology/materials/dt-incomplete.md",
+    "dt-w6-1": "subjects/differential-topology/exercises/dt-w6-1.md",
+    "dt-w6-2": "subjects/differential-topology/exercises/dt-w6-2.md",
+    "dt-w6-3": "subjects/differential-topology/exercises/dt-w6-3.md",
+    "dt-w6-4": "subjects/differential-topology/exercises/dt-w6-4.md",
+    "dt-w6-5": "subjects/differential-topology/exercises/dt-w6-5.md",
+    "dt-w6-6": "subjects/differential-topology/exercises/dt-w6-6.md",
+    "dt-w6-7": "subjects/differential-topology/exercises/dt-w6-7.md",
+    "dt-week-06": "subjects/differential-topology/roadmaps/dt-week-06.md",
+    "dt-week-06.practice": "subjects/differential-topology/roadmaps/dt-week-06.practice.md",
+    "dt-exterior": "subjects/differential-topology/materials/dt-exterior.md",
+    "dt-exterior-basis": "subjects/differential-topology/materials/dt-exterior-basis.md",
+    "dt-forms": "subjects/differential-topology/materials/dt-forms.md",
+    "dt-wedge-example": "subjects/differential-topology/materials/dt-wedge-example.md",
+    "dt-w7-1": "subjects/differential-topology/exercises/dt-w7-1.md",
+    "dt-w7-2": "subjects/differential-topology/exercises/dt-w7-2.md",
+    "dt-w7-3": "subjects/differential-topology/exercises/dt-w7-3.md",
+    "dt-w7-4": "subjects/differential-topology/exercises/dt-w7-4.md",
+    "dt-w7-5": "subjects/differential-topology/exercises/dt-w7-5.md",
+    "dt-week-07": "subjects/differential-topology/roadmaps/dt-week-07.md",
+    "dt-week-07.practice": "subjects/differential-topology/roadmaps/dt-week-07.practice.md",
+    "dt-exterior-derivative": "subjects/differential-topology/materials/dt-exterior-derivative.md",
+    "dt-contraction-lie": "subjects/differential-topology/materials/dt-contraction-lie.md",
+    "dt-cartan-complex": "subjects/differential-topology/materials/dt-cartan-complex.md",
+    "dt-cartan-example": "subjects/differential-topology/materials/dt-cartan-example.md",
+    "dt-w8-2": "subjects/differential-topology/exercises/dt-w8-2.md",
+    "dt-w8-3": "subjects/differential-topology/exercises/dt-w8-3.md",
+    "dt-w8-4": "subjects/differential-topology/exercises/dt-w8-4.md",
+    "dt-w8-5": "subjects/differential-topology/exercises/dt-w8-5.md",
+    "dt-w8-6": "subjects/differential-topology/exercises/dt-w8-6.md",
+    "dt-week-08": "subjects/differential-topology/roadmaps/dt-week-08.md",
+    "dt-week-08.practice": "subjects/differential-topology/roadmaps/dt-week-08.practice.md",
+    "dt-w1-w8-path": "subjects/differential-topology/roadmaps/dt-w1-w8-path.md",
+    "dt-course-errata": "subjects/differential-topology/roadmaps/dt-course-errata.md"
+  },
+  "removed_old_subject_files": [
+    "subjects/differential-topology/subject.yaml",
+    "subjects/differential-topology/roadmaps/atlas-course-review-practice.md",
+    "subjects/differential-topology/roadmaps/exterior-course-review-practice.md",
+    "subjects/differential-topology/roadmaps/first-course.md",
+    "subjects/differential-topology/roadmaps/differential-course-review-practice.md",
+    "subjects/differential-topology/roadmaps/regular-values-review.md",
+    "subjects/differential-topology/roadmaps/regular-values-review-practice.md",
+    "subjects/differential-topology/roadmaps/first-course-practice.md",
+    "subjects/differential-topology/roadmaps/integral-curves-and-flows.md",
+    "subjects/differential-topology/roadmaps/differential-course-review.md",
+    "subjects/differential-topology/roadmaps/atlas-course-review.md",
+    "subjects/differential-topology/roadmaps/course-index.md",
+    "subjects/differential-topology/roadmaps/integral-curves-and-flows-practice.md",
+    "subjects/differential-topology/roadmaps/exterior-course-review.md",
+    "subjects/differential-topology/materials/tangent-space.md",
+    "subjects/differential-topology/materials/regular-value-theorem.md",
+    "subjects/differential-topology/materials/critical-level.md",
+    "subjects/differential-topology/materials/smooth-cutoff.md",
+    "subjects/differential-topology/materials/tangent-bundle.md",
+    "subjects/differential-topology/materials/sphere.md",
+    "subjects/differential-topology/materials/atlas-compatibility.md",
+    "subjects/differential-topology/materials/regular-value.md",
+    "subjects/differential-topology/materials/smooth-manifold.md",
+    "subjects/differential-topology/materials/height-function.md",
+    "subjects/differential-topology/materials/orientation.md",
+    "subjects/differential-topology/materials/flow-examples.md",
+    "subjects/differential-topology/materials/exterior-powers.md",
+    "subjects/differential-topology/materials/tangent-derivations.md",
+    "subjects/differential-topology/materials/quotient-atlas.md",
+    "subjects/differential-topology/materials/grassmannian-charts.md",
+    "subjects/differential-topology/materials/integral-curve.md",
+    "subjects/differential-topology/materials/compact-flow.md",
+    "subjects/differential-topology/materials/local-normal-forms.md",
+    "subjects/differential-topology/materials/smooth-map.md",
+    "subjects/differential-topology/exercises/week6-compact-flow.md",
+    "subjects/differential-topology/exercises/week7-exterior-bundle.md",
+    "subjects/differential-topology/exercises/week3-quotient-map.md",
+    "subjects/differential-topology/exercises/week4-submersion-fiber.md",
+    "subjects/differential-topology/exercises/height.md",
+    "subjects/differential-topology/exercises/week5-projective-sphere.md",
+    "subjects/differential-topology/exercises/pset2-local-inverses.md",
+    "subjects/differential-topology/exercises/pset2-sphere-transition.md",
+    "subjects/differential-topology/exercises/pset2-smooth-urysohn.md",
+    "subjects/differential-topology/exercises/critical.md",
+    "subjects/differential-topology/exercises/week7-top-wedge.md",
+    "subjects/differential-topology/exercises/pset2-tangent-bundle.md",
+    "subjects/differential-topology/exercises/week6-coordinate-vector.md",
+    "subjects/differential-topology/exercises/week2-two-origins.md",
+    "subjects/differential-topology/exercises/circle.md"
+  ],
+  "removed_old_subject_ids": [
+    "dt.atlas-course-review.practice",
+    "dt.exterior-course-review.practice",
+    "dt.first-course",
+    "dt.differential-course-review.practice",
+    "dt.regular-values-review",
+    "dt.regular-values-review.practice",
+    "dt.first-course.practice",
+    "dt.integral-curves-path",
+    "dt.differential-course-review",
+    "dt.atlas-course-review",
+    "dt.course-index",
+    "dt.integral-curves-path.practice",
+    "dt.exterior-course-review",
+    "dt.tangent-space",
+    "dt.regular-value-theorem",
+    "dt.critical-level",
+    "dt.smooth-cutoff",
+    "dt.tangent-bundle",
+    "dt.sphere",
+    "dt.atlas-compatibility",
+    "dt.regular-value",
+    "dt.smooth-manifold",
+    "dt.height-function",
+    "dt.orientation",
+    "dt.flow-examples",
+    "dt.exterior-powers",
+    "dt.tangent-derivations",
+    "dt.quotient-atlas",
+    "dt.grassmannian-charts",
+    "dt.integral-curve",
+    "dt.compact-flow",
+    "dt.local-normal-forms",
+    "dt.smooth-map",
+    "dt.week6-compact-flow",
+    "dt.week7-exterior-bundle",
+    "dt.week3-quotient-map",
+    "dt.week4-submersion-fiber",
+    "dt.height-exercise",
+    "dt.week5-projective-sphere",
+    "dt.pset2-local-inverses",
+    "dt.pset2-sphere-transition",
+    "dt.pset2-smooth-urysohn",
+    "dt.critical-exercise",
+    "dt.week7-top-wedge",
+    "dt.pset2-tangent-bundle",
+    "dt.week6-coordinate-vector",
+    "dt.week2-two-origins",
+    "dt.circle-exercise"
+  ],
+  "progress_policy": "No browser storage is changed. Source reviewed/verified markers are not user completion or mastery; no old-to-new progress mapping is guessed.",
+  "source_verification_origin": "supplied-pack; original course PDFs were not independently reopened during this conversion",
+  "legacy_policy_override": "The supplied package recommends preserving legacy notes. The user explicitly requested removing the previous subject, so no legacy entries are retained in subjects or the generated site.",
+  "cross_subject_reference_updates": {
+    "subjects/complex-geometry/materials/complex-manifold.md": {
+      "dt.smooth-manifold": "dt-atlas"
+    }
+  },
+  "adaptations": [
+    "Convert source notes to the existing site Markdown/semantic-block schema, keeping all mathematical paragraphs, full answers, counterexamples, corrections, source descriptions and node associations.",
+    "Preserve all 104 source IDs; adapt the eight note-kind week nodes as learn roadmaps using their supplied reading_order.",
+    "Separate exercise statements from a single complete solution block so clicking the answer reveals every proof step and erratum.",
+    "Move the relation definition and optional gluing convention into their problem blocks; make contextual assumptions explicit for function-ring, compact-flow, determinant and Week 8 questions.",
+    "Add one overview, one course-errata review and eight separate practice maps to respect existing learn/review/practice semantics.",
+    "Retain original source numbers and distinguish unnumbered, optional and original Example/Suggestion supplementary tasks.",
+    "Convert relative dt-*.md links to validated ref:ID links. Give cards concise summaries and estimate reading minutes from text length.",
+    "Replace the old differential-topology homepage sphere-height demo with the featured card from the new subject.",
+    "Synchronize generated Markdown source copies on build so deleted notes are not left in dist/source."
+  ],
+  "content_preservation": {
+    "dt-topology": {
+      "original_main_sha256": "c115055c2d7439895a345c305a64ed90145063d2fbba5022183ace2d3afb7bac",
+      "paragraphs_preserved": 2
+    },
+    "dt-metric": {
+      "original_main_sha256": "4e4a0e94c14c02fe845f4f08f55621229004b54b90f3385893ca7bee65696715",
+      "paragraphs_preserved": 2
+    },
+    "dt-separation": {
+      "original_main_sha256": "797e46b052196314fe7c843ab006ecdf4666542dfc926c06bb096b09f45b8dfe",
+      "paragraphs_preserved": 2
+    },
+    "dt-induced-product": {
+      "original_main_sha256": "7507c0581ed13fc80ca375f45c0eab13627b2a4ec4324aa5f29a3ed4e77055d5",
+      "paragraphs_preserved": 2
+    },
+    "dt-dimension-norm": {
+      "original_main_sha256": "98f47c35ee598e8e1bae2048691ad67fabf9ec6b039111a45d7a12ab429e0bfa",
+      "paragraphs_preserved": 2
+    },
+    "dt-compact-counterexample": {
+      "original_main_sha256": "69a837ed2063310ce77d6af0531563cee4916139a48a70242f8c9b5213e929b2",
+      "paragraphs_preserved": 1
+    },
+    "dt-w1-1": {
+      "original_main_sha256": "0482d8ee5d2f0a1d3834017655c6db5d79dbb56ebf54725d9a2ba7d5e898eadf",
+      "paragraphs_preserved": 2
+    },
+    "dt-w1-2": {
+      "original_main_sha256": "cfdd8292dd4e36c2ea5ce1af17b9927972c4c6557407bdcbe23a71cba082949d",
+      "paragraphs_preserved": 2
+    },
+    "dt-w1-3": {
+      "original_main_sha256": "434a992ad371b92086736adb04780512aad22fe71fe1aad45b7b395bf8d97988",
+      "paragraphs_preserved": 5
+    },
+    "dt-w1-4": {
+      "original_main_sha256": "3188427ede7d53f460cca04d5684038fd7e839cbccfa41d3ac5b97ce447f8df8",
+      "paragraphs_preserved": 2
+    },
+    "dt-w1-u1": {
+      "original_main_sha256": "bf4d9de44fdd07fa2c5c5c6e2220d0f7481bfcbe99cb48d6b0ae3e4a5f02622a",
+      "paragraphs_preserved": 4
+    },
+    "dt-w1-u2": {
+      "original_main_sha256": "9f292fcd53d8c8887c2b29e424da8e37b9d6299ebee7a8d859202394f6134ff0",
+      "paragraphs_preserved": 2
+    },
+    "dt-w1-u3": {
+      "original_main_sha256": "e76d40f21a641e9a34ea5c210f05bce7f8edace919da8bf19304130bc43cf73b",
+      "paragraphs_preserved": 2
+    },
+    "dt-w1-u4": {
+      "original_main_sha256": "76a65f699f23741c81c1d794183032cd4da23aec1d7bfe67dd04842b275a9a53",
+      "paragraphs_preserved": 4
+    },
+    "dt-atlas": {
+      "original_main_sha256": "d66fc1e2f2795bfb912a797fd819a16793736f98f4dcc03a8f40e97db1287638",
+      "paragraphs_preserved": 3
+    },
+    "dt-compatibility": {
+      "original_main_sha256": "02cb8a8c672c1b50d8f59f55633866fda6690f966272936672a0eaa812f447fd",
+      "paragraphs_preserved": 2
+    },
+    "dt-atlas-topology": {
+      "original_main_sha256": "76e57997129956446fb8223838d1ea5787cd8e19f17acadd364ffcf7b64ce8dd",
+      "paragraphs_preserved": 1
+    },
+    "dt-exotic-coordinate": {
+      "original_main_sha256": "a4b4b826fe9046ac25d5ddeb89a46e8cd9f1c957530bb295b3fdfb3a4784525f",
+      "paragraphs_preserved": 1
+    },
+    "dt-projective": {
+      "original_main_sha256": "33a7d92bb2241f861b58b9b6df3c9edba4b2e6f03d06dfee3347958269a0fa52",
+      "paragraphs_preserved": 2
+    },
+    "dt-w2-0": {
+      "original_main_sha256": "73a55ea8990aadca1517cfcb495b8eda5bfabda45400dccb77c6caa878ca3343",
+      "paragraphs_preserved": 5
+    },
+    "dt-w2-2": {
+      "original_main_sha256": "96dee66b5e53f7e92819d991b995ecb151b840a01a56083d5ef3a0d8dc5137ef",
+      "paragraphs_preserved": 5
+    },
+    "dt-w2-3": {
+      "original_main_sha256": "e04d52aa660ee4354518015d186fcee5a60b30d27de491293773ae8f38a91f88",
+      "paragraphs_preserved": 4
+    },
+    "dt-w2-4": {
+      "original_main_sha256": "af1c930ec93b5c2a07aed50fffbf11896debe300a98d9c8630d2a1e558d7a255",
+      "paragraphs_preserved": 2
+    },
+    "dt-w2-5": {
+      "original_main_sha256": "9232caaba037a6a692c585937557c5f40bcebf71df73bc5839e13d7d48b68ab7",
+      "paragraphs_preserved": 2
+    },
+    "dt-w2-6": {
+      "original_main_sha256": "7e1573ac676f72787d6c44048d50ab194fb6f100311b86f844a4e021702aa669",
+      "paragraphs_preserved": 2
+    },
+    "dt-w2-8": {
+      "original_main_sha256": "7fa8cf9ce219840901014530772a6cd9133537f14771054e528bbb1d7b0bd460",
+      "paragraphs_preserved": 2
+    },
+    "dt-w2-10": {
+      "original_main_sha256": "5c70cb7507d29815960eefd8edf91c92170b0084ec59833482788e130e9534f6",
+      "paragraphs_preserved": 3
+    },
+    "dt-w2-11": {
+      "original_main_sha256": "9e85f061ac6c7a1b0a5726043a496caf053aa31e2b15f5d541911dcc87df0923",
+      "paragraphs_preserved": 3
+    },
+    "dt-quotient": {
+      "original_main_sha256": "2e67d10d651e2f337dfddc871768aed127c7dd8f6bdf7500e83efd98aa32bd6f",
+      "paragraphs_preserved": 3
+    },
+    "dt-germs-cotangent": {
+      "original_main_sha256": "47f28c1cce2fe95d66ef69b0cb7f7f218848055c48667664b395a5e9978028ae",
+      "paragraphs_preserved": 3
+    },
+    "dt-bump-locality": {
+      "original_main_sha256": "d5bca9261aed7765779efa193593f68a08cedef2a00bb87cffd5a1c10871ae14",
+      "paragraphs_preserved": 2
+    },
+    "dt-hadamard": {
+      "original_main_sha256": "854bd96e6005dba30cafc0c4325eb4db74450e6d72d93042af93029162b7856c",
+      "paragraphs_preserved": 2
+    },
+    "dt-flat": {
+      "original_main_sha256": "ac3546bc9ce7412e71b58950ff1897db310c004139e6578a56ff5826c8bdd64f",
+      "paragraphs_preserved": 2
+    },
+    "dt-w3-0": {
+      "original_main_sha256": "d1544a0b54a14439ea3f7b20dbb0d607a08112a0d97cb51111927f15f0d9bf7d",
+      "paragraphs_preserved": 2
+    },
+    "dt-w3-1": {
+      "original_main_sha256": "c17227744ef1fe7abf82c58f27c1fb10e89e420d1321bc31c9fbc620c6908ce3",
+      "paragraphs_preserved": 5
+    },
+    "dt-w3-2": {
+      "original_main_sha256": "47fff29dee44ab9d96237a83e803724abd09138d6777648abf4e010ed48194e0",
+      "paragraphs_preserved": 2
+    },
+    "dt-w3-3": {
+      "original_main_sha256": "6c13b899bcdfc6c420d626b663cdea106fe2717e0dc800157326ce000c97a33e",
+      "paragraphs_preserved": 2
+    },
+    "dt-w3-4": {
+      "original_main_sha256": "fae61800e5258e312732718bcb799671b8d0d644a321ecaaea54f3499494586d",
+      "paragraphs_preserved": 5
+    },
+    "dt-w3-5": {
+      "original_main_sha256": "28e461119e1d10676bae030314ccbf260f77274984929f54ab0a6aba2dfdbdf5",
+      "paragraphs_preserved": 2
+    },
+    "dt-w3-6": {
+      "original_main_sha256": "ee4b521da4a2dfd9f340142cc297ccc94f7d07b57566ef6a2f2db83b4a431c3b",
+      "paragraphs_preserved": 4
+    },
+    "dt-w3-7": {
+      "original_main_sha256": "68951c6b34f9683bf919e4073b291fd86ecad205b5caa4ce14164d4a21dbcada",
+      "paragraphs_preserved": 2
+    },
+    "dt-w3-8": {
+      "original_main_sha256": "8925870d1a85cf2351d49adbd4ebace4061c48bdf9d624bf4ecdd659897750be",
+      "paragraphs_preserved": 4
+    },
+    "dt-w3-9": {
+      "original_main_sha256": "d0e8245161adcece98a93a6f4cd2e8aea0e8cfc8de6de378566d28625ce3e1ec",
+      "paragraphs_preserved": 4
+    },
+    "dt-w3-10": {
+      "original_main_sha256": "c30c8ba2e49f8b6c4a7de909c0ad871b3708930d5faf9bffe59201f019e5a3c1",
+      "paragraphs_preserved": 3
+    },
+    "dt-w3-11": {
+      "original_main_sha256": "dfa59db34838c07f80529ca8b3e2a9201994006c83acf76853aa9aac633c13ca",
+      "paragraphs_preserved": 2
+    },
+    "dt-w3-12": {
+      "original_main_sha256": "97dd99f0133e5f77625d82edb2b0b6ad91b864247a47e2d5f2ee9be5e1ea7b9a",
+      "paragraphs_preserved": 5
+    },
+    "dt-w3-optional": {
+      "original_main_sha256": "5780b447b7fa100073416a09c863d1eaec3a2567d7fdbaa3e85e64cf73b0e5a0",
+      "paragraphs_preserved": 5
+    },
+    "dt-w3-13": {
+      "original_main_sha256": "2f25c0955469123470a3e5fcaa432ad1fc85c011f5ee80b6f18ebe3f79006710",
+      "paragraphs_preserved": 5
+    },
+    "dt-rank-embedding": {
+      "original_main_sha256": "25a6e480934d40d4921d6c86ad7101202b45a1545e61b44e02a84192713b2af1",
+      "paragraphs_preserved": 2
+    },
+    "dt-inverse-constant-rank": {
+      "original_main_sha256": "c16385730f47014599cdd2dca9d484054fb6987a7b6d2aa7a9f963728b5cda88",
+      "paragraphs_preserved": 3
+    },
+    "dt-level-sphere": {
+      "original_main_sha256": "ac5c34b4696ec9dd87cc746a93778f89596653faebd5c15457687e209ef713a8",
+      "paragraphs_preserved": 2
+    },
+    "dt-w4-0": {
+      "original_main_sha256": "ab9ab6f87a4b8d0f89543058b1be8406cc0d4b4004e88e889f9d3992a7b2a66d",
+      "paragraphs_preserved": 5
+    },
+    "dt-w4-1": {
+      "original_main_sha256": "e99349978cb2b26f129710258bbd87573ca9a3829275288587f89484f578b6b5",
+      "paragraphs_preserved": 4
+    },
+    "dt-w4-2": {
+      "original_main_sha256": "0230bd5d122e796b837aa80670a369278e641c21bd3e032377f9d5b112d348f1",
+      "paragraphs_preserved": 4
+    },
+    "dt-w4-3": {
+      "original_main_sha256": "0ab8e47500e77abface77c93598910da36fc6d8683c09f54bfa39d95deebee36",
+      "paragraphs_preserved": 6
+    },
+    "dt-w4-4": {
+      "original_main_sha256": "afb977f6ba6a4d5a6c26ea06476ccb52445e9d47f246561d4a8e5425b33418ca",
+      "paragraphs_preserved": 4
+    },
+    "dt-vector-fields": {
+      "original_main_sha256": "097b65b0baf2d9c02f614385d00f54e338a104ad5e5c63e83e075ff9c507242c",
+      "paragraphs_preserved": 2
+    },
+    "dt-fields-derivations": {
+      "original_main_sha256": "525d696eda32e087a2dbf88cb574e05f7833f24ea8c17b81997c05ceff057fdb",
+      "paragraphs_preserved": 2
+    },
+    "dt-lie-related": {
+      "original_main_sha256": "c92f6782d7e975aa19f1394ab0ce8f4b04c470d9dce8340879b208835f149d19",
+      "paragraphs_preserved": 2
+    },
+    "dt-bracket-example": {
+      "original_main_sha256": "ff94309ab4e11134da3db8362a58bc6112691e13b5542c086d5faf47d3f2b027",
+      "paragraphs_preserved": 1
+    },
+    "dt-w5-1": {
+      "original_main_sha256": "b0033386d73bbf90ac95e179482501e2540e9fda6d986eaa677c3c60725aeb5a",
+      "paragraphs_preserved": 4
+    },
+    "dt-w5-2": {
+      "original_main_sha256": "81bac954fafec0970b5e613df1ac0aad320eb5612f5626fa0ad562033138b19b",
+      "paragraphs_preserved": 5
+    },
+    "dt-w5-3": {
+      "original_main_sha256": "ca01441235b702cd9943eaac7c8f4c76a270a39044027460072b3c28ad02da58",
+      "paragraphs_preserved": 3
+    },
+    "dt-w5-s1": {
+      "original_main_sha256": "f5722da1834141dc629007eb575f1fb3bc3e10a7b6c4c06cf44751b27110d4dd",
+      "paragraphs_preserved": 6
+    },
+    "dt-w5-4": {
+      "original_main_sha256": "24412358f7dc9b56ff77045313c657d62fe8187b737482f39450790ac50dad00",
+      "paragraphs_preserved": 5
+    },
+    "dt-w5-5": {
+      "original_main_sha256": "dfc7734515912c0ca641b161ed0e7483b1f6bad9884011f04eda74ec52d616ff",
+      "paragraphs_preserved": 5
+    },
+    "dt-w5-6": {
+      "original_main_sha256": "9eb089e58308257c83cc731c532364c412482f57da1b562ad08193f56e3485b2",
+      "paragraphs_preserved": 3
+    },
+    "dt-w5-s2": {
+      "original_main_sha256": "4ed0b88d7c47e3d7869eeadc227b45593e30822ce1437f1cf66b065af5bb7ac2",
+      "paragraphs_preserved": 2
+    },
+    "dt-curves-flow": {
+      "original_main_sha256": "fa6bbba748c504d0b82cd0ec284a6a08a761511b8021d132662639dd85957deb",
+      "paragraphs_preserved": 3
+    },
+    "dt-ode": {
+      "original_main_sha256": "df62407adb4493316c04837c7c9d47c5db976f5eb1173b9d61732d9deec6a861",
+      "paragraphs_preserved": 2
+    },
+    "dt-incomplete": {
+      "original_main_sha256": "9a37005fc0a66c291f6ed23cc3e8c5469f52acca8d11d4936b9ef25d22b0944c",
+      "paragraphs_preserved": 1
+    },
+    "dt-w6-1": {
+      "original_main_sha256": "e48ef3db8855624a55b8e6f3ae5ac784b0f7e70626c489cb3fbdc4df2342240e",
+      "paragraphs_preserved": 2
+    },
+    "dt-w6-2": {
+      "original_main_sha256": "bfb81cf8f42547be7900c4301a3910908442977d242bec480a628ef5bfea6210",
+      "paragraphs_preserved": 2
+    },
+    "dt-w6-3": {
+      "original_main_sha256": "e1d2d394bc1f9518b9992346cb5ecf7c8774995674dfffab7a8c0ef52c5580cc",
+      "paragraphs_preserved": 4
+    },
+    "dt-w6-4": {
+      "original_main_sha256": "ce64935d38c0e39f69ca26e05e9b128fd4fd43a414b09fef6585ce6ece073b3a",
+      "paragraphs_preserved": 7
+    },
+    "dt-w6-5": {
+      "original_main_sha256": "8d2b484eecd6f986f81e373e68d9eb2f2b97039cb15cd328849a06235132dc8d",
+      "paragraphs_preserved": 2
+    },
+    "dt-w6-6": {
+      "original_main_sha256": "96e9e4b5950b13c17d878976ab51675fc8615cef33e11c29de6504117beb720e",
+      "paragraphs_preserved": 2
+    },
+    "dt-w6-7": {
+      "original_main_sha256": "78edfe555eab49d1b88486e7d888db1844723a4442df6ffcd2220339af4ad6f1",
+      "paragraphs_preserved": 2
+    },
+    "dt-exterior": {
+      "original_main_sha256": "1a445b03c05606cb5872aa3e628cc35bf455ed3777f5780424385e766b85dbe5",
+      "paragraphs_preserved": 2
+    },
+    "dt-exterior-basis": {
+      "original_main_sha256": "9fa7c8fe25939bf89db12b4fb3d5da59154a0ce92e0c9d36e36f6ee7da5eec31",
+      "paragraphs_preserved": 2
+    },
+    "dt-forms": {
+      "original_main_sha256": "1fa283086c955b43a38554b73b9c0e07ec19a7fe08247fe781f3394fee5d06d6",
+      "paragraphs_preserved": 3
+    },
+    "dt-wedge-example": {
+      "original_main_sha256": "67c1bec1cc9ebd1d660bf0872601424e1beeb409f88f3148c84290617b8c6459",
+      "paragraphs_preserved": 1
+    },
+    "dt-w7-1": {
+      "original_main_sha256": "d3118cc2a3347f404678c67969ec79a3d788e19c948e54a3eda87d52f27c5ad1",
+      "paragraphs_preserved": 3
+    },
+    "dt-w7-2": {
+      "original_main_sha256": "dc7199cce5f74b9a1b454cb6bded539fcd252fe283b5ad4533eae90d7f600079",
+      "paragraphs_preserved": 4
+    },
+    "dt-w7-3": {
+      "original_main_sha256": "deb4c6696f911dfc9a4f4b159077d640f4ccf7aa6fdc898c10a85f7298604ed5",
+      "paragraphs_preserved": 2
+    },
+    "dt-w7-4": {
+      "original_main_sha256": "5e4b8a8bd81875d13769006e9357feda8365b4674225e425bdf47a6297e9fadb",
+      "paragraphs_preserved": 4
+    },
+    "dt-w7-5": {
+      "original_main_sha256": "ef222b7aaf141e83be23f1c6d47888844183d7bac4454d929c2a8a96fd228621",
+      "paragraphs_preserved": 5
+    },
+    "dt-exterior-derivative": {
+      "original_main_sha256": "21184a699557c3fdabe6fa31becfff81a466d23c6e231fce5e877e845121c81a",
+      "paragraphs_preserved": 2
+    },
+    "dt-contraction-lie": {
+      "original_main_sha256": "d4647fea411a7a30b09feece3cbfb073dc65752b96e259486af49eaf05131dfe",
+      "paragraphs_preserved": 2
+    },
+    "dt-cartan-complex": {
+      "original_main_sha256": "f3fd7a44202bd043c146b341a2124617d94f011e1739b89edfb3590ae2598e0b",
+      "paragraphs_preserved": 3
+    },
+    "dt-cartan-example": {
+      "original_main_sha256": "585ad40d4eea64b1503efb8c44b5949a875c653a32472737503e27f18334d093",
+      "paragraphs_preserved": 2
+    },
+    "dt-w8-2": {
+      "original_main_sha256": "df67d7ee49cdb9641e01b53138f8fd215b20861cd0755aaf723c319f200f9975",
+      "paragraphs_preserved": 6
+    },
+    "dt-w8-3": {
+      "original_main_sha256": "57a2347f06149217862db0ae00e7d4df84f4e9e5c20ca3e6856ec6c8ffea75ad",
+      "paragraphs_preserved": 7
+    },
+    "dt-w8-4": {
+      "original_main_sha256": "2125c3fe25261b7221060d2dc3dad1a87411c934f65fbc72fa010f0a19011729",
+      "paragraphs_preserved": 4
+    },
+    "dt-w8-5": {
+      "original_main_sha256": "dc5a08d78928260d23f0fd9f6277b9c77e2d75375dbdf55fa8ebb13d16323162",
+      "paragraphs_preserved": 4
+    },
+    "dt-w8-6": {
+      "original_main_sha256": "94e88c9c6b49dffebe1a605ef5b701555879ca7537397a7b32d5a40f1fb3e93f",
+      "paragraphs_preserved": 6
+    }
+  }
+}

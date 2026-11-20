@@ -1,0 +1,64 @@
+{
+  "study_date": "2026-11-14",
+  "subject": "algebra",
+  "mode": "additive",
+  "archive": "folio_algebra_part2_part4_2026-11-14.zip",
+  "archive_sha256": "ef55cf6c129e8564e09d64281a44c802ada4376e45a323b68939766e98157cbc",
+  "source_files": [
+    {
+      "path": "01-Part2-finitely-generated-extensions.md",
+      "size_bytes": 3060,
+      "sha256": "331d645a421a45c89780d2e032785abc5c91849f6f521db3f514b994df231d61"
+    },
+    {
+      "path": "02-Part4-free-quotient-splitting.md",
+      "size_bytes": 3362,
+      "sha256": "a24536771e1da217eaae062905256762af5145b59a88169cc478a03614808233"
+    }
+  ],
+  "id_to_markdown": {
+    "alg.modules-fg-extension": "subjects/algebra/exercises/alg.modules-fg-extension.md",
+    "alg.modules-extension-theorem": "subjects/algebra/materials/alg.modules-extension-theorem.md",
+    "alg.modules-free-quotient-kernel": "subjects/algebra/exercises/alg.modules-free-quotient-kernel.md",
+    "alg.modules-free-quotient-splitting": "subjects/algebra/materials/alg.modules-free-quotient-splitting.md",
+    "alg.modules-exact-sequences": "subjects/algebra/roadmaps/modules-exact-sequences.md",
+    "alg.daily-2026-11-14": "subjects/algebra/roadmaps/algebra-2026-11-14-modules.md"
+  },
+  "added_ids": [
+    "alg.modules-fg-extension",
+    "alg.modules-extension-theorem",
+    "alg.modules-free-quotient-kernel",
+    "alg.modules-free-quotient-splitting",
+    "alg.modules-exact-sequences",
+    "alg.daily-2026-11-14"
+  ],
+  "existing_ids": [],
+  "conflicting_ids": [],
+  "baseline_path": "/var/folders/jb/n5zy1_ts731fv9x93s05yh140000gn/T/folio-modules-before-sq4am5hg",
+  "adaptations": [
+    "Keep all source sections and both Part 4 proofs in the exercise cards; convert cross-file links to stable ref:ID links.",
+    "Create two theorem cards linking to the full exercises instead of duplicating full proofs.",
+    "Keep conceptual pitfalls as authored remarks, without creating personal mistake records.",
+    "No completion state supplied: use initial_status new; personal browser records take precedence.",
+    "No bibliography or original exercise number inferred; preserve source Part 2 / Part 4 labels.",
+    "Add a learning route and dated practice map; preserve existing homepage highlights and old route order.",
+    "Replace unsupported LaTeX centernot Rightarrow with the equivalent KaTeX nRightarrow in the converted Part 2 exercise; the archived source is unchanged."
+  ],
+  "changed_existing_files": [
+    "subjects/algebra/roadmaps/course-index.md",
+    "README.md"
+  ],
+  "unchanged_existing_files_verified": 261,
+  "validation": {
+    "source_archive": "Original ZIP and both Markdown files preserved byte for byte.",
+    "content": "Every source line is retained in the exercise cards after link and equivalent LaTeX conversion.",
+    "build": "Passed references, prerequisite cycles, semantic blocks and LaTeX checks.",
+    "browser_scenarios_passed": 12,
+    "mobile_widths_checked": [
+      320,
+      390
+    ],
+    "existing_records_compatible": true,
+    "conflicts": 0
+  }
+}

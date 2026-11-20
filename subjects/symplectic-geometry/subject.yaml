@@ -1,0 +1,35 @@
+slug: symplectic-geometry
+title: 辛几何
+english: Symplectic Geometry
+symbol: ω
+order: 5
+color: green
+description: 从辛线性代数出发，理解辛正交、各向同性与 Lagrangian 子空间，再走向辛流形。
+topics:
+  - 辛向量空间与辛基
+  - 辛正交与维数公式
+  - 子空间分类
+  - Lagrangian
+  - 辛流形预习
+quote: 从线性的配对，走向辛几何。
+featured: SPG-DEF-009
+highlights:
+  - SPG-THM-002
+  - SPG-THM-004
+  - SPG-THM-005
+primaryRoadmap: SPG-ROUTE-001
+units:
+  - id: SPG-UNIT-001
+    title: Symplectic Linear Algebra
+    status: completed
+    completed_on: 2026-11-11
+    exercise_ids:
+      - SPG-HW-001
+      - SPG-HW-005
+      - SPG-HW-007
+  - id: SPG-UNIT-002
+    title: Cotangent Bundles and Lagrangians
+    status: planned
+references:
+  - title: Ana Cannas da Silva · Lectures on Symplectic Geometry
+    url: https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf

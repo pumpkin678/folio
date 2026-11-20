@@ -1,0 +1,27 @@
+{
+  "id": "dt-w1-1",
+  "title": "Norm 的定义",
+  "subject": "differential-topology",
+  "kind": "exercise",
+  "tags": [
+    "week-1",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-week-01",
+    "dt-topology",
+    "dt-metric",
+    "dt-separation",
+    "dt-induced-product",
+    "dt-dimension-norm",
+    "dt-compact-counterexample"
+  ],
+  "sources": [
+    {
+      "type": "course-handout",
+      "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 1, Problem 1.1; DiffTop2026.pdf",
+      "verified": true
+    }
+  ],
+  "review_status": "reviewed"
+}

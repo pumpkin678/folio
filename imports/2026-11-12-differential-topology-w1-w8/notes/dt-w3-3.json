@@ -1,0 +1,26 @@
+{
+  "id": "dt-w3-3",
+  "title": "Quotient map 未必 open",
+  "subject": "differential-topology",
+  "kind": "exercise",
+  "tags": [
+    "week-3",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-week-03",
+    "dt-quotient",
+    "dt-germs-cotangent",
+    "dt-bump-locality",
+    "dt-hadamard",
+    "dt-flat"
+  ],
+  "sources": [
+    {
+      "type": "course-handout",
+      "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.3; W3DiffTop2026.pdf",
+      "verified": true
+    }
+  ],
+  "review_status": "reviewed"
+}

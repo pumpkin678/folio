@@ -1,0 +1,25 @@
+{
+  "id": "CA-E002",
+  "title": "一个 prime quotient 非零不意味着 primitive",
+  "track": "交换代数",
+  "type": "example",
+  "path": "examples/CA-E002-one-prime-not-enough.md",
+  "created_date": "2026-11-12",
+  "verification_state": "已核对数学推导",
+  "source": "本次对话题目与讨论（2026-11-12）；原书精确题号未独立核对",
+  "source_verified": false,
+  "tags": [
+    "counterexample",
+    "prime-ideal",
+    "quantifier"
+  ],
+  "related_questions": [
+    "CA-Q004"
+  ],
+  "related_concepts": [
+    "CA-K003",
+    "CA-K004"
+  ],
+  "related_examples": [],
+  "related_mistakes": []
+}

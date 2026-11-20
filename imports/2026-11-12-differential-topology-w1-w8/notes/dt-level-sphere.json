@@ -1,0 +1,26 @@
+{
+  "id": "dt-level-sphere",
+  "title": "球面作为 regular level set",
+  "subject": "differential-topology",
+  "kind": "example",
+  "tags": [
+    "week-4",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-week-04",
+    "dt-w4-0",
+    "dt-w4-1",
+    "dt-w4-2",
+    "dt-w4-3",
+    "dt-w4-4"
+  ],
+  "sources": [
+    {
+      "type": "editorial-companion",
+      "reference": "为 Week 4 roadmap 编写的配套知识卡；原课程文件 W4DiffTop2026.pdf；补充内容在正文标识",
+      "verified": false
+    }
+  ],
+  "review_status": "reviewed"
+}

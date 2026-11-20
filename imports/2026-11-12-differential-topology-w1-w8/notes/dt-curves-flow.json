@@ -1,0 +1,28 @@
+{
+  "id": "dt-curves-flow",
+  "title": "Integral curve、maximal flow、complete",
+  "subject": "differential-topology",
+  "kind": "definition",
+  "tags": [
+    "week-6",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-week-06",
+    "dt-w6-1",
+    "dt-w6-2",
+    "dt-w6-3",
+    "dt-w6-4",
+    "dt-w6-5",
+    "dt-w6-6",
+    "dt-w6-7"
+  ],
+  "sources": [
+    {
+      "type": "editorial-companion",
+      "reference": "为 Week 6 roadmap 编写的配套知识卡；原课程文件 W6DiffTop2026(1).pdf；补充内容在正文标识",
+      "verified": false
+    }
+  ],
+  "review_status": "reviewed"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "CA-Q004",
+  "title": "Primitive product criterion：fg primitive 当且仅当 f、g primitive",
+  "track": "交换代数",
+  "type": "question",
+  "path": "problems/CA-Q004-primitive-product.md",
+  "created_date": "2026-11-12",
+  "verification_state": "已核对数学推导",
+  "source": "本次对话题目与讨论（2026-11-12）；原书精确题号未独立核对",
+  "source_verified": false,
+  "tags": [
+    "primitive",
+    "content-ideal",
+    "maximal-ideal",
+    "prime-ideal",
+    "integral-domain"
+  ],
+  "related_questions": [
+    "CA-Q003",
+    "CA-Q005"
+  ],
+  "related_concepts": [],
+  "related_examples": [
+    "CA-E001",
+    "CA-E002",
+    "CA-E004"
+  ],
+  "related_mistakes": [],
+  "chapter": "Chapter 1 · Polynomial rings",
+  "difficulty": 2,
+  "status": "待独立复做",
+  "concept_ids": [
+    "CA-K003",
+    "CA-K004",
+    "CA-K006"
+  ],
+  "mistake_ids": [
+    "CA-M008",
+    "CA-M009"
+  ]
+}

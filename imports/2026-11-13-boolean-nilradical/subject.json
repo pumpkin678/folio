@@ -1,0 +1,28 @@
+{
+  "id": "commutative-algebra",
+  "name": "交换代数",
+  "reference": "Atiyah–Macdonald / Intro to Commutative Algebra",
+  "roadmap_nodes": [
+    {
+      "slug": "chapter-1-boolean-rings",
+      "question_ids": [
+        "CA-Q20261113-01",
+        "CA-Q20261113-03"
+      ],
+      "concept_ids": [
+        "CA-K20261113-01",
+        "CA-K20261113-03"
+      ]
+    },
+    {
+      "slug": "chapter-1-nilradical-and-spectrum",
+      "question_ids": [
+        "CA-Q20261113-02"
+      ],
+      "concept_ids": [
+        "CA-K20261113-02"
+      ]
+    }
+  ],
+  "preserve_existing_roadmap": true
+}

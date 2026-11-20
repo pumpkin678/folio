@@ -1,0 +1,65 @@
+{
+  "study_date": "2026-11-11",
+  "subject": "symplectic-geometry",
+  "archive": "Folio_Symplectic_Geometry_Unit01_2026-11-11.zip",
+  "archive_sha256": "f2b7f6d3166a2cf7a048b6ff4d3177f67edc52f7d73867762794138c3a0b4f27",
+  "material_ids": [
+    "SPG-DEF-001",
+    "SPG-DEF-002",
+    "SPG-DEF-003",
+    "SPG-DEF-004",
+    "SPG-DEF-005",
+    "SPG-DEF-006",
+    "SPG-DEF-007",
+    "SPG-DEF-008",
+    "SPG-DEF-009",
+    "SPG-DEF-010",
+    "SPG-DEF-011",
+    "SPG-DEF-012",
+    "SPG-DEF-013",
+    "SPG-THM-001",
+    "SPG-THM-002",
+    "SPG-THM-003",
+    "SPG-THM-004",
+    "SPG-THM-005",
+    "SPG-THM-006",
+    "SPG-THM-007",
+    "SPG-EX-001",
+    "SPG-EX-002",
+    "SPG-EX-003",
+    "SPG-EX-004",
+    "SPG-EX-005",
+    "SPG-EX-006"
+  ],
+  "question_ids": [
+    "SPG-HW-001",
+    "SPG-HW-005",
+    "SPG-HW-007"
+  ],
+  "roadmap_ids": [
+    "SPG-ROUTE-001",
+    "SPG-LOG-2026-11-11"
+  ],
+  "observed_mistake_ids": [],
+  "suggested_review_ids": [],
+  "preview_ids": [
+    "SPG-THM-007",
+    "SPG-EX-006"
+  ],
+  "source_verified": false,
+  "mapping": {
+    "ex": "eg",
+    "hw": "exercise",
+    "prerequisites": "requires / targets",
+    "exercises": "related_questions",
+    "related": "related",
+    "completed": "initial_status: completed; completion method unspecified",
+    "study_logs": "dated roadmap"
+  },
+  "notes": [
+    "Original ZIP files are preserved in this directory without modification.",
+    "Related links and backlinks are generated from stable IDs.",
+    "General review reminders stay in the study log and are not personal mistake records.",
+    "Browser self-assessments override imported initial exercise status."
+  ]
+}

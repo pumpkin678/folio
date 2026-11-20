@@ -1,0 +1,26 @@
+{
+  "id": "dt-exterior-derivative",
+  "title": "Exterior derivative 的符号约定",
+  "subject": "differential-topology",
+  "kind": "definition",
+  "tags": [
+    "week-8",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-week-08",
+    "dt-w8-2",
+    "dt-w8-3",
+    "dt-w8-4",
+    "dt-w8-5",
+    "dt-w8-6"
+  ],
+  "sources": [
+    {
+      "type": "editorial-companion",
+      "reference": "为 Week 8 roadmap 编写的配套知识卡；原课程文件 W8DiffTop2026.pdf；补充内容在正文标识",
+      "verified": false
+    }
+  ],
+  "review_status": "reviewed"
+}

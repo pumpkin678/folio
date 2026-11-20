@@ -1,0 +1,25 @@
+{
+  "id": "dt-w5-3",
+  "title": "连续单射到 Hausdorff 空间",
+  "subject": "differential-topology",
+  "kind": "exercise",
+  "tags": [
+    "week-5",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-week-05",
+    "dt-vector-fields",
+    "dt-fields-derivations",
+    "dt-lie-related",
+    "dt-bracket-example"
+  ],
+  "sources": [
+    {
+      "type": "course-handout",
+      "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 5, Problem 5.3; W5DiffTop2026.pdf",
+      "verified": true
+    }
+  ],
+  "review_status": "reviewed"
+}

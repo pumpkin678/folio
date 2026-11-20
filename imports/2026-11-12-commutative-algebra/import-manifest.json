@@ -1,0 +1,62 @@
+{
+  "study_date": "2026-11-12",
+  "subject": "algebra",
+  "archive": "Folio-CA-Primitive-Content-McCoy-2026-11-12.zip",
+  "archive_sha256": "cf2bca5bca20efb206d0e65aeb8423f4b01abceb93d72709fc7a419e7c67a617",
+  "pack_id": "folio-ca-polynomial-content-2026-11-12",
+  "verified_source_file_hashes": 47,
+  "entrypoint": "delta-site-data.json",
+  "source_verified": false,
+  "id_to_markdown": {
+    "CA-K003": "subjects/algebra/materials/CA-K003-content-primitive.md",
+    "CA-K004": "subjects/algebra/materials/CA-K004-prime-maximal-detection.md",
+    "CA-K005": "subjects/algebra/materials/CA-K005-mccoy.md",
+    "CA-K006": "subjects/algebra/materials/CA-K006-content-product.md",
+    "CA-E001": "subjects/algebra/materials/CA-E001-z6-primitive.md",
+    "CA-E002": "subjects/algebra/materials/CA-E002-one-prime-not-enough.md",
+    "CA-E003": "subjects/algebra/materials/CA-E003-nilpotent-quotient.md",
+    "CA-E004": "subjects/algebra/materials/CA-E004-content-strict-inclusion.md",
+    "CA-Q003": "subjects/algebra/exercises/CA-Q003-mccoy-zero-divisors.md",
+    "CA-Q004": "subjects/algebra/exercises/CA-Q004-primitive-product.md",
+    "CA-Q005": "subjects/algebra/exercises/CA-Q005-primitive-content-preservation.md",
+    "CA-M007": "subjects/algebra/mistakes/ca-m007.md",
+    "CA-M008": "subjects/algebra/mistakes/ca-m008.md",
+    "CA-M009": "subjects/algebra/mistakes/ca-m009.md",
+    "CA-M010": "subjects/algebra/mistakes/ca-m010.md",
+    "CA-M-ADD-20261112": "subjects/algebra/roadmaps/commutative-algebra-2026-11-12-review.md",
+    "ca.daily-2026-11-12": "subjects/algebra/roadmaps/commutative-algebra-2026-11-12.md"
+  },
+  "original_index_mapping": {
+    "CA-M-ADD-20261112": {
+      "category": "roadmap",
+      "child_ids": [
+        "CA-M007",
+        "CA-M008",
+        "CA-M009",
+        "CA-M010"
+      ]
+    }
+  },
+  "observed_mistake_ids": [
+    "CA-M007"
+  ],
+  "suggested_review_ids": [
+    "CA-M008",
+    "CA-M009",
+    "CA-M010"
+  ],
+  "initial_exercise_status": {
+    "CA-Q003": "review",
+    "CA-Q004": "review",
+    "CA-Q005": "new"
+  },
+  "learning_records": "Existing stable IDs and browser storage are unchanged; personal exercise assessments override initial statuses.",
+  "adaptations": [
+    "Convert the 12 delta nodes into 8 material cards, 3 exercises, and a review roadmap; split its four correction/review records and add a daily roadmap.",
+    "Convert relative Markdown links into validated ref:ID links, preserving source wording in semantic blocks.",
+    "Normalize nested dollar delimiters in CA-Q004 display-math text for the site parser.",
+    "Add a derived CA-Q004 hint based on its existing quotient criterion and proof.",
+    "Keep the merged snapshot and old cards as archive-only sources; do not replace existing CA-Q001/Q002/K001/K002.",
+    "Group all adjacent proof sections into a single solution block so the current exercise view displays the complete proof."
+  ]
+}

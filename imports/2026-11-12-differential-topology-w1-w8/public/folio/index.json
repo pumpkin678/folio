@@ -1,0 +1,3038 @@
+{
+  "format": "folio-read-model",
+  "schema_version": "1.0",
+  "nodes": [
+    {
+      "id": "dt-w1-1",
+      "title": "Norm 的定义",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-1",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-01",
+        "dt-topology",
+        "dt-metric",
+        "dt-separation",
+        "dt-induced-product",
+        "dt-dimension-norm",
+        "dt-compact-counterexample"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 1, Problem 1.1; DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Norm 的定义\n\nID: `dt-w1-1` · Week 1 · exercise\n\n题目：陈述 $\\mathbb R^n$ 上范数的定义。\n\n解答：函数 $N:\\mathbb R^n\\to[0,\\infty)$ 是 norm，当且仅当：(1) $N(v)=0\\iff v=0$；(2) 对 $a\\in\\mathbb R$ 有 $N(av)=|a|N(v)$；(3) $N(u+v)\\le N(u)+N(v)$。三个条件对所有向量成立。例如 $N(v)=(\\sum v_i^2)^{1/2}$；三角不等式由 Cauchy–Schwarz 给出。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 1, Problem 1.1; DiffTop2026.pdf\n\n## 关联\n\n[dt-week-01](dt-week-01.md) · [dt-topology](dt-topology.md) · [dt-metric](dt-metric.md) · [dt-separation](dt-separation.md) · [dt-induced-product](dt-induced-product.md) · [dt-dimension-norm](dt-dimension-norm.md) · [dt-compact-counterexample](dt-compact-counterexample.md)\n",
+      "content_sha256": "sha256:7b167cb00eae2f402776715037a895c01d1c6d0a11d1a1a4fdeb1777023ad31d"
+    },
+    {
+      "id": "dt-w1-2",
+      "title": "Norm 诱导 metric",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-1",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-01",
+        "dt-topology",
+        "dt-metric",
+        "dt-separation",
+        "dt-induced-product",
+        "dt-dimension-norm",
+        "dt-compact-counterexample"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 1, Problem 1.2; DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Norm 诱导 metric\n\nID: `dt-w1-2` · Week 1 · exercise\n\n题目：由范数定义距离并核对公理。\n\n解答：令 $d(x,y)=N(x-y)$。非负性以及 $d(x,y)=0\\iff x=y$ 来自正定性；$d(y,x)=N(-(x-y))=d(x,y)$ 来自齐次性；$d(x,z)=N((x-y)+(y-z))\\le d(x,y)+d(y,z)$。故这是 metric。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 1, Problem 1.2; DiffTop2026.pdf\n\n## 关联\n\n[dt-week-01](dt-week-01.md) · [dt-topology](dt-topology.md) · [dt-metric](dt-metric.md) · [dt-separation](dt-separation.md) · [dt-induced-product](dt-induced-product.md) · [dt-dimension-norm](dt-dimension-norm.md) · [dt-compact-counterexample](dt-compact-counterexample.md)\n",
+      "content_sha256": "sha256:63b0dab8dab1f6be60722492054798fa8aff0816e14e96c02f5adae1fa0a7ae0"
+    },
+    {
+      "id": "dt-w1-3",
+      "title": "开球唯一生成拓扑",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-1",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-01",
+        "dt-topology",
+        "dt-metric",
+        "dt-separation",
+        "dt-induced-product",
+        "dt-dimension-norm",
+        "dt-compact-counterexample"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 1, Problem 1.3; DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 开球唯一生成拓扑\n\nID: `dt-w1-3` · Week 1 · exercise\n\n题目：证明 metric space 的开球构成唯一一个拓扑的 basis。\n\n步骤 1：每个 $x$ 属于 $B_1(x)$，所以开球覆盖 $X$。\n\n步骤 2：若 $x\\in B_r(a)\\cap B_s(b)$，令 $\\varepsilon=\\min(r-d(x,a),s-d(x,b))>0$。三角不等式给出 $B_\\varepsilon(x)\\subset B_r(a)\\cap B_s(b)$。\n\n步骤 3：令 $\\tau$ 为任意开球的并（允许空并）。它包含 $\\varnothing,X$，对任意并封闭。若 $U,V\\in\\tau$，对每个 $x\\in U\\cap V$ 取步骤 2 的小球，得到 $U\\cap V$ 是开球的并。因此 $\\tau$ 为拓扑，开球为基。\n\n步骤 4：任何以这些球为基的拓扑，其每个开集恰是球的并，故必为 $\\tau$。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 1, Problem 1.3; DiffTop2026.pdf\n\n## 关联\n\n[dt-week-01](dt-week-01.md) · [dt-topology](dt-topology.md) · [dt-metric](dt-metric.md) · [dt-separation](dt-separation.md) · [dt-induced-product](dt-induced-product.md) · [dt-dimension-norm](dt-dimension-norm.md) · [dt-compact-counterexample](dt-compact-counterexample.md)\n",
+      "content_sha256": "sha256:73116ff469d6cf42a43cfb646cdeb41d8d96221f0e80d60991970d82bbfaf398"
+    },
+    {
+      "id": "dt-w1-4",
+      "title": "Product topology",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-1",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-01",
+        "dt-topology",
+        "dt-metric",
+        "dt-separation",
+        "dt-induced-product",
+        "dt-dimension-norm",
+        "dt-compact-counterexample"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 1, Problem 1.4; DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Product topology\n\nID: `dt-w1-4` · Week 1 · exercise\n\n题目：定义 $X\\times Y$ 的乘积拓扑。\n\n解答：以全部 $U\\times V$（$U\\subset X,V\\subset Y$ 开）为基生成拓扑。它们覆盖乘积，且 $(U_1\\times V_1)\\cap(U_2\\times V_2)=(U_1\\cap U_2)\\times(V_1\\cap V_2)$，满足基公理。这也是令两个投影连续的最粗拓扑：投影原像生成这些矩形；反过来两个投影在该拓扑中连续。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 1, Problem 1.4; DiffTop2026.pdf\n\n## 关联\n\n[dt-week-01](dt-week-01.md) · [dt-topology](dt-topology.md) · [dt-metric](dt-metric.md) · [dt-separation](dt-separation.md) · [dt-induced-product](dt-induced-product.md) · [dt-dimension-norm](dt-dimension-norm.md) · [dt-compact-counterexample](dt-compact-counterexample.md)\n",
+      "content_sha256": "sha256:76cfe48ef7036417565ccdd13d84615d2099605ac33351d01c8d02944a829675"
+    },
+    {
+      "id": "dt-w1-u1",
+      "title": "Norm topology 等于 product topology",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-1",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-01",
+        "dt-topology",
+        "dt-metric",
+        "dt-separation",
+        "dt-induced-product",
+        "dt-dimension-norm",
+        "dt-compact-counterexample"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 1, 未编号问题 1.u1; DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Norm topology 等于 product topology\n\nID: `dt-w1-u1` · Week 1 · exercise\n\n题目：证明 $\\mathbb R^n$ 的范数拓扑与乘积拓扑一致（原题未编号）。\n\n步骤 1：先比较 Euclidean norm。给定 $q\\in B_r(p)$，令 $\\delta=(r-\\|q-p\\|_2)/\\sqrt n>0$。以 $q$ 为中心、各边半长 $\\delta$ 的开盒包含于 $B_r(p)$，因为 $\\|z-q\\|_2<\\sqrt n\\delta$。故每个欧氏球在乘积拓扑中开。\n\n步骤 2：给定开盒 $\\prod(a_i,b_i)$ 中的点 $p$，取 $r=\\min_i(p_i-a_i,b_i-p_i)>0$；由 $|z_i-p_i|\\le\\|z-p\\|_2$ 得 $B_r(p)$ 包含于该开盒。故两个拓扑相等。\n\n步骤 3：任意范数 $N$ 满足 $N(v)\\le\\sum |v_i|N(e_i)\\le C\\|v\\|_2$，其中 $C=(\\sum N(e_i)^2)^{1/2}$。于是 $|N(v)-N(w)|\\le C\\|v-w\\|_2$，故 $N$ 对欧氏拓扑连续。单位球面紧，$N$ 在其上取得正最小值 $c>0$，齐次性给出 $c\\|v\\|_2\\le N(v)$。这两个不等式说明两类范数球在每个点互相细化，拓扑相等。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 1, 未编号问题 1.u1; DiffTop2026.pdf\n\n## 关联\n\n[dt-week-01](dt-week-01.md) · [dt-topology](dt-topology.md) · [dt-metric](dt-metric.md) · [dt-separation](dt-separation.md) · [dt-induced-product](dt-induced-product.md) · [dt-dimension-norm](dt-dimension-norm.md) · [dt-compact-counterexample](dt-compact-counterexample.md)\n",
+      "content_sha256": "sha256:7ba63eca071ab8ba599257caa6b026c17754cd11ee4b27b410764995beae14a0"
+    },
+    {
+      "id": "dt-w1-u2",
+      "title": "Compact 不蕴含 second countable",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-1",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-01",
+        "dt-topology",
+        "dt-metric",
+        "dt-separation",
+        "dt-induced-product",
+        "dt-dimension-norm",
+        "dt-compact-counterexample"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 1, 未编号问题 1.u2; DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Compact 不蕴含 second countable\n\nID: `dt-w1-u2` · Week 1 · exercise\n\n题目：紧空间是否一定第二可数（原题 Question）？\n\n反例及证明：令 $D$ 为不可数离散集合，$X=D\\cup\\{\\infty\\}$；$D$ 的任意子集开，含 $\\infty$ 的集合开当且仅当补集为有限集。包含 $\\infty$ 的一个覆盖成员已覆盖除有限点外的全部空间，因此每个开覆盖有有限子覆盖。不同的 $D$ 中点用单点集分离，$d$ 与 $\\infty$ 用 $\\{d\\}$ 与 $X\\setminus\\{d\\}$ 分离，所以它甚至 Hausdorff。若有可数基 $\\mathcal B$，对每个 $d$，开集 $\\{d\\}$ 必含一个包含 $d$ 的基元素，只能是 $\\{d\\}$。不可数多个单点都必须在基中，矛盾。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 1, 未编号问题 1.u2; DiffTop2026.pdf\n\n## 关联\n\n[dt-week-01](dt-week-01.md) · [dt-topology](dt-topology.md) · [dt-metric](dt-metric.md) · [dt-separation](dt-separation.md) · [dt-induced-product](dt-induced-product.md) · [dt-dimension-norm](dt-dimension-norm.md) · [dt-compact-counterexample](dt-compact-counterexample.md)\n",
+      "content_sha256": "sha256:5facbc34233b35cc625e68506c81fa6c63290a9c978818ae0538755da1c2e28b"
+    },
+    {
+      "id": "dt-w1-u3",
+      "title": "非单射映射诱导的拓扑",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-1",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-01",
+        "dt-topology",
+        "dt-metric",
+        "dt-separation",
+        "dt-induced-product",
+        "dt-dimension-norm",
+        "dt-compact-counterexample"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 1, 未编号问题 1.u3; DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 非单射映射诱导的拓扑\n\nID: `dt-w1-u3` · Week 1 · exercise\n\n题目：举非单射 $f:X\\to Y$ 的 initial topology 的例子。\n\n解答：取 $X=\\mathbb R^2,Y=\\mathbb R,f(x,y)=x$。最粗拓扑恰为 $\\{U\\times\\mathbb R:U\\subset\\mathbb R\\text{ 开}\\}$，因为这是所有 $f^{-1}(U)$，而原像保持任意并、有限交。任何使 $f$ 连续的拓扑都必须包含它。点 $(0,0),(0,1)$ 的开邻域完全相同，所以该拓扑不是 Hausdorff，也不是通常的平面拓扑。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 1, 未编号问题 1.u3; DiffTop2026.pdf\n\n## 关联\n\n[dt-week-01](dt-week-01.md) · [dt-topology](dt-topology.md) · [dt-metric](dt-metric.md) · [dt-separation](dt-separation.md) · [dt-induced-product](dt-induced-product.md) · [dt-dimension-norm](dt-dimension-norm.md) · [dt-compact-counterexample](dt-compact-counterexample.md)\n",
+      "content_sha256": "sha256:139c0dd4fc491b6476e5f1cb7cac041db3d5cd8bff74effdc781410d6bf8f12b"
+    },
+    {
+      "id": "dt-w1-u4",
+      "title": "连通局部欧氏空间的维数恒定",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-1",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-01",
+        "dt-topology",
+        "dt-metric",
+        "dt-separation",
+        "dt-induced-product",
+        "dt-dimension-norm",
+        "dt-compact-counterexample"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 1, 未编号问题 1.u4; DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 连通局部欧氏空间的维数恒定\n\nID: `dt-w1-u4` · Week 1 · exercise\n\n题目：在非空连通空间上，各点具有可能不同维数的欧氏邻域；用 Theorem 1.5 证明维数恒定。\n\n步骤 1：若两个这样的邻域相交，在交点附近的非空开交集中，两张坐标图分别给出维数 $m,n$ 的局部欧氏结构。维数不变性给出 $m=n$，故每点的局部维数定义良好。\n\n步骤 2：令 $X_n$ 为局部维数为 $n$ 的点集。一张 $n$ 维图内每点维数均为 $n$，故 $X_n$ 开。其补集为其他 $X_m$ 的并，也开。\n\n步骤 3：非空连通性使某个非空 $X_n$ 必为全空间，因此维数恒为 $n$。若 $X=\\varnothing$，则按约定任意维数皆可，不存在唯一维数；原题的非空情形才有此唯一性。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 1, 未编号问题 1.u4; DiffTop2026.pdf\n\n## 关联\n\n[dt-week-01](dt-week-01.md) · [dt-topology](dt-topology.md) · [dt-metric](dt-metric.md) · [dt-separation](dt-separation.md) · [dt-induced-product](dt-induced-product.md) · [dt-dimension-norm](dt-dimension-norm.md) · [dt-compact-counterexample](dt-compact-counterexample.md)\n",
+      "content_sha256": "sha256:e0fcb5717c9fe4152be9c4eb7982f11895fe9b7c50f4368a014c12758b991115"
+    },
+    {
+      "id": "dt-w2-0",
+      "title": "双原点直线",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-2",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-02",
+        "dt-atlas",
+        "dt-compatibility",
+        "dt-atlas-topology",
+        "dt-exotic-coordinate",
+        "dt-projective"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 2, Problem 2.0; W2DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 双原点直线\n\nID: `dt-w2-0` · Week 2 · exercise\n\n题目：构造连通、第二可数、局部欧氏但非 Hausdorff 空间。\n\n步骤 1：在 $\\mathbb R\\times\\{a,b\\}$ 中把 $(t,a)\\sim(t,b)$ 当 $t\\ne0$，而两个原点不识别，赋予商拓扑。记商映射 $q$，两个原点为 $0_a,0_b$。\n\n步骤 2：$U_a=X\\setminus\\{0_b\\}$ 和 $U_b=X\\setminus\\{0_a\\}$ 开。把每个点送到其实坐标给出 $U_a,U_b\\cong\\mathbb R$：对直线上开集，其在商前像中是该支开集和另一支去掉原点的同一开集，因此像开。故这两张图确实为同胚。\n\n步骤 3：每个 $U_a,U_b$ 连通且交集非空，所以它们的并 $X$ 连通。两张图中有理端点区间的像之并给出可数基。\n\n步骤 4：任意 $0_a,0_b$ 的邻域都含充分小的非零实数的像，因此相交，不能分离，故非 Hausdorff。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 2, Problem 2.0; W2DiffTop2026.pdf\n\n## 关联\n\n[dt-week-02](dt-week-02.md) · [dt-atlas](dt-atlas.md) · [dt-compatibility](dt-compatibility.md) · [dt-atlas-topology](dt-atlas-topology.md) · [dt-exotic-coordinate](dt-exotic-coordinate.md) · [dt-projective](dt-projective.md)\n",
+      "content_sha256": "sha256:9da99951af43426d9f21bd2a9d2420e92bc2b37e1730cef36a3bb022d9bd247f"
+    },
+    {
+      "id": "dt-w2-2",
+      "title": "Atlas 生成拓扑",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-2",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-02",
+        "dt-atlas",
+        "dt-compatibility",
+        "dt-atlas-topology",
+        "dt-exotic-coordinate",
+        "dt-projective"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 2, Problem 2.2; W2DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Atlas 生成拓扑\n\nID: `dt-w2-2` · Week 2 · exercise\n\n题目：由集合上的 atlas 构造使图域开、坐标图为同胚的拓扑。\n\n步骤 1：定义 $O\\subset X$ 为开，当且仅当每个 $a$ 都有 $\\varphi_a(O\\cap U_a)$ 在 $V_a$ 中开。原像与并、交的相容性立即给出空集、全体、任意并及有限交公理。\n\n步骤 2：对每个 $a$，$\\varphi_b(U_a\\cap U_b)$ 开是 atlas 假设，所以 $U_a$ 开。\n\n步骤 3：若 $W\\subset V_a$ 开，令 $O=\\varphi_a^{-1}(W)$。在 $b$ 图中，其像是过渡同胚将 $W\\cap\\varphi_a(U_a\\cap U_b)$ 映出的开集，故 $O$ 在 $X$ 中开。这证明 $\\varphi_a$ 连续。\n\n步骤 4：若 $O\\subset U_a$ 在子空间中开，由 $U_a$ 开知 $O$ 在 $X$ 中也开，定义给出 $\\varphi_a(O)$ 开，故逆映射连续。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 2, Problem 2.2; W2DiffTop2026.pdf\n\n## 关联\n\n[dt-week-02](dt-week-02.md) · [dt-atlas](dt-atlas.md) · [dt-compatibility](dt-compatibility.md) · [dt-atlas-topology](dt-atlas-topology.md) · [dt-exotic-coordinate](dt-exotic-coordinate.md) · [dt-projective](dt-projective.md)\n",
+      "content_sha256": "sha256:b183258d4e67dc8c728613c6e87b6ee84ddf0205ca6f927aa558b0213529cf91"
+    },
+    {
+      "id": "dt-w2-3",
+      "title": "平面中全部仿射直线的 atlas",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-2",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-02",
+        "dt-atlas",
+        "dt-compatibility",
+        "dt-atlas-topology",
+        "dt-exotic-coordinate",
+        "dt-projective"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 2, Problem 2.3; W2DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 平面中全部仿射直线的 atlas\n\nID: `dt-w2-3` · Week 2 · exercise\n\n题目：给平面中直线的集合构造二维 atlas。\n\n步骤 1：$U$ 为非竖直线，唯一写作 $y=mx+b$，取坐标 $(m,b)$。$V$ 为非水平线，唯一写作 $x=ny+c$，取坐标 $(n,c)$。任意直线至少属于其中一个图，两个坐标像均为 $\\mathbb R^2$。\n\n步骤 2：在交集上 $m\\ne0$，由 $y=mx+b$ 得 $x=m^{-1}y-b/m$，所以过渡为 $(m,b)\\mapsto(1/m,-b/m)$，定义域 $\\{m\\ne0\\}$ 开。\n\n步骤 3：反向公式 $(n,c)\\mapsto(1/n,-c/n)$ 在 $n\\ne0$ 上光滑，因而是二维 atlas。这里是所有仿射直线，不能误用过原点直线的 $\\mathbb{RP}^1$。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 2, Problem 2.3; W2DiffTop2026.pdf\n\n## 关联\n\n[dt-week-02](dt-week-02.md) · [dt-atlas](dt-atlas.md) · [dt-compatibility](dt-compatibility.md) · [dt-atlas-topology](dt-atlas-topology.md) · [dt-exotic-coordinate](dt-exotic-coordinate.md) · [dt-projective](dt-projective.md)\n",
+      "content_sha256": "sha256:330a0f092845a1d4e70aa8aa33c75b5a5b203acca4c60373fc24793a2209e763"
+    },
+    {
+      "id": "dt-w2-4",
+      "title": "圆周商 R/Z 的 atlas",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-2",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-02",
+        "dt-atlas",
+        "dt-compatibility",
+        "dt-atlas-topology",
+        "dt-exotic-coordinate",
+        "dt-projective"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 2, Problem 2.4; W2DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 圆周商 R/Z 的 atlas\n\nID: `dt-w2-4` · Week 2 · exercise\n\n题目：在集合 $\\mathbb R/\\mathbb Z$ 上构造一维 atlas。\n\n解答：设 $q:\\mathbb R\\to\\mathbb R/\\mathbb Z$。对每个 $a\\in\\mathbb R$ 取 $I_a=(a-1/3,a+1/3)$，其长度小于 1，故 $q|_{I_a}$ 单射。令 $U_a=q(I_a)$，$\\varphi_a=(q|_{I_a})^{-1}:U_a\\to I_a$。图域覆盖。交叠在 $a$ 坐标中为 $\\bigcup_{k\\in\\mathbb Z}(I_a\\cap(I_b+k))$，是开集；在每个这样的区间，过渡是 $t\\mapsto t-k$，其中 $k$ 唯一。故过渡局部为平移，光滑且逆光滑。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 2, Problem 2.4; W2DiffTop2026.pdf\n\n## 关联\n\n[dt-week-02](dt-week-02.md) · [dt-atlas](dt-atlas.md) · [dt-compatibility](dt-compatibility.md) · [dt-atlas-topology](dt-atlas-topology.md) · [dt-exotic-coordinate](dt-exotic-coordinate.md) · [dt-projective](dt-projective.md)\n",
+      "content_sha256": "sha256:38f9a47b5f0465e7c63a3a6e143aae8c81bdef2d23a7dea5608f367af233ca85"
+    },
+    {
+      "id": "dt-w2-5",
+      "title": "实射影空间的 atlas",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-2",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-02",
+        "dt-atlas",
+        "dt-compatibility",
+        "dt-atlas-topology",
+        "dt-exotic-coordinate",
+        "dt-projective"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 2, Problem 2.5; W2DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 实射影空间的 atlas\n\nID: `dt-w2-5` · Week 2 · exercise\n\n题目：为 $\\mathbb R^{n+1}$ 中过原点的直线集合构造 $n$ 维 atlas。\n\n解答：令 $U_i$ 为第 $i$ 坐标非零的直线。对非零代表 $x$ 定义 $\\varphi_i([x])=(x_j/x_i)_{j\\ne i}$。缩放不改变比值，所以良定义；逆映射把 $u\\in\\mathbb R^n$ 送到第 $i$ 坐标为 1、其余为 $u$ 的向量所张成的直线，因此是双射。图域覆盖。在 $i$ 图里写 $u_i=1$，与 $j$ 图的交集是 $u_j\\ne0$，过渡的第 $\\ell\\ne j$ 个分量为 $u_\\ell/u_j$。它们及其反向公式均为分母不为零的有理函数，所以光滑。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 2, Problem 2.5; W2DiffTop2026.pdf\n\n## 关联\n\n[dt-week-02](dt-week-02.md) · [dt-atlas](dt-atlas.md) · [dt-compatibility](dt-compatibility.md) · [dt-atlas-topology](dt-atlas-topology.md) · [dt-exotic-coordinate](dt-exotic-coordinate.md) · [dt-projective](dt-projective.md)\n",
+      "content_sha256": "sha256:60275c3776384bfc4bdd89ca355155a540ea5e11eebe63c813e754ded74d953a"
+    },
+    {
+      "id": "dt-w2-6",
+      "title": "复射影空间的实 atlas",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-2",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-02",
+        "dt-atlas",
+        "dt-compatibility",
+        "dt-atlas-topology",
+        "dt-exotic-coordinate",
+        "dt-projective"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 2, Problem 2.6; W2DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 复射影空间的实 atlas\n\nID: `dt-w2-6` · Week 2 · exercise\n\n题目：为 $\\mathbb C^{n+1}$ 的复直线集合构造 $2n$ 维实 atlas。\n\n解答：同 2.5，$U_i=\\{[z]:z_i\\ne0\\}$，$\\varphi_i([z])=(z_j/z_i)_{j\\ne i}\\in\\mathbb C^n\\cong\\mathbb R^{2n}$，逆映射把归一化向量送到其复线。交集由复坐标 $u_j\\ne0$ 定义，是实开集。复除法 $a/b=a\\bar b/|b|^2$ 在 $b\\ne0$ 时是实坐标的光滑函数，因此所有过渡和逆过渡实光滑。这已证明实 $2n$ 维 atlas，不需要引用复流形理论。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 2, Problem 2.6; W2DiffTop2026.pdf\n\n## 关联\n\n[dt-week-02](dt-week-02.md) · [dt-atlas](dt-atlas.md) · [dt-compatibility](dt-compatibility.md) · [dt-atlas-topology](dt-atlas-topology.md) · [dt-exotic-coordinate](dt-exotic-coordinate.md) · [dt-projective](dt-projective.md)\n",
+      "content_sha256": "sha256:b8968ef5ab60089d77d416364e86a200abbf9ec06b61fe25660c1eb208c867b9"
+    },
+    {
+      "id": "dt-w2-8",
+      "title": "不相容图册仍可微分同胚",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-2",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-02",
+        "dt-atlas",
+        "dt-compatibility",
+        "dt-atlas-topology",
+        "dt-exotic-coordinate",
+        "dt-projective"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 2, Problem 2.8; W2DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 不相容图册仍可微分同胚\n\nID: `dt-w2-8` · Week 2 · exercise\n\n题目：$\\mathbb R$ 上图册 $A=\\{\\mathrm{id}\\}$ 与 $B=\\{\\varphi(x)=x^3\\}$ 所得流形微分同胚。\n\n解答：定义底层映射 $F(x)=\\sqrt[3]{x}$，它是双射。其从 $A$ 到 $B$ 的坐标表达为 $\\varphi\\circ F\\circ\\mathrm{id}^{-1}(u)=u$，光滑。逆映射的坐标表达为 $\\mathrm{id}\\circ F^{-1}\\circ\\varphi^{-1}(v)=v$，也光滑。故 $F$ 是所求 diffeomorphism。不能用底层函数在标准坐标中是否光滑来替代两端实际图册中的判断。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 2, Problem 2.8; W2DiffTop2026.pdf\n\n## 关联\n\n[dt-week-02](dt-week-02.md) · [dt-atlas](dt-atlas.md) · [dt-compatibility](dt-compatibility.md) · [dt-atlas-topology](dt-atlas-topology.md) · [dt-exotic-coordinate](dt-exotic-coordinate.md) · [dt-projective](dt-projective.md)\n",
+      "content_sha256": "sha256:7289b2e1dba469ae6a5a175b044ff1894fe78abf126adc214d00350b6b1deaea"
+    },
+    {
+      "id": "dt-w2-10",
+      "title": "图册等价定义的单向性错误",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-2",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-02",
+        "dt-atlas",
+        "dt-compatibility",
+        "dt-atlas-topology",
+        "dt-exotic-coordinate",
+        "dt-projective"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 2, Problem 2.10; W2DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 图册等价定义的单向性错误\n\nID: `dt-w2-10` · Week 2 · exercise\n\n题目：原题 Definition 2.9 仅要求 $\\mathrm{id}:(X,A)\\to(X,B)$ 光滑，却声称这等价于 $A\\cup B$ 为 atlas。\n\n原文按字面是错误命题。反例：取 2.8 的 $A,B$。$\\mathrm{id}:(X,A)\\to(X,B)$ 的坐标表达是 $u\\mapsto u^3$，确实光滑；但反向过渡 $u\\mapsto\\sqrt[3]u$ 在零点不可微，所以并集不是 atlas。不能写出原命题的正确证明。\n\n修正版：定义 $A,B$ 等价为恒等映射是 diffeomorphism（两个方向光滑）。证明：若两个方向光滑，则每个跨图册过渡 $\\psi\\circ\\varphi^{-1}$ 及其逆光滑，图册内部过渡原已光滑，所以 $A\\cup B$ 为 atlas。反过来，并集是 atlas 就保证每个跨图册过渡及逆过渡光滑，正是两个恒等映射光滑的坐标判据。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 2, Problem 2.10; W2DiffTop2026.pdf\n\n## 关联\n\n[dt-week-02](dt-week-02.md) · [dt-atlas](dt-atlas.md) · [dt-compatibility](dt-compatibility.md) · [dt-atlas-topology](dt-atlas-topology.md) · [dt-exotic-coordinate](dt-exotic-coordinate.md) · [dt-projective](dt-projective.md)\n",
+      "content_sha256": "sha256:977f0cd8b875b4e653ab45cb346b81a52e33cd1f3f3e0747bba7521d859580dd"
+    },
+    {
+      "id": "dt-w2-11",
+      "title": "两种意义下判断图册等价",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-2",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-02",
+        "dt-atlas",
+        "dt-compatibility",
+        "dt-atlas-topology",
+        "dt-exotic-coordinate",
+        "dt-projective"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 2, Problem 2.11; W2DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 两种意义下判断图册等价\n\nID: `dt-w2-11` · Week 2 · exercise\n\n题目：证明 2.8 中图册不等价。\n\n按修正后的标准定义：两图册的过渡之一为 $t^{1/3}$；其零点差商 $t^{1/3}/t=|t|^{-2/3}$ 无有限极限，故非光滑，图册不相容，因而不等价。\n\n按原 Definition 2.9 的单向定义：$\\mathrm{id}:(\\mathbb R,A)\\to(\\mathbb R,B)$ 是光滑的，故题目结论不成立。这与 2.10 是同一处定义缺失，必须一并勘误。相同底层集合上的相同光滑结构要求 identity 为 diffeomorphism；仅存在某个 diffeomorphism 是更弱的分类意义。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 2, Problem 2.11; W2DiffTop2026.pdf\n\n## 关联\n\n[dt-week-02](dt-week-02.md) · [dt-atlas](dt-atlas.md) · [dt-compatibility](dt-compatibility.md) · [dt-atlas-topology](dt-atlas-topology.md) · [dt-exotic-coordinate](dt-exotic-coordinate.md) · [dt-projective](dt-projective.md)\n",
+      "content_sha256": "sha256:643df45731eb2df180a172a4aaff2785a763eef4e1c460e7ea58f16e81e76953"
+    },
+    {
+      "id": "dt-w3-0",
+      "title": "两个拓扑的逐点细化",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-3",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-03",
+        "dt-quotient",
+        "dt-germs-cotangent",
+        "dt-bump-locality",
+        "dt-hadamard",
+        "dt-flat"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.0; W3DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 两个拓扑的逐点细化\n\nID: `dt-w3-0` · Week 3 · exercise\n\n题目：证明 $\\mathbb R^2$ 的范数拓扑与乘积拓扑相同。\n\n解答：先取欧氏范数。对球 $B_r(p)$ 中的 $q$，取 $\\delta=(r-\\|q-p\\|)/\\sqrt2$。矩形 $(q_1-\\delta,q_1+\\delta)\\times(q_2-\\delta,q_2+\\delta)$ 包含 $q$ 且包含于球中，故球乘积开。对矩形 $(a,b)\\times(c,d)$ 中的 $q$，取 $\\varepsilon=\\min(q_1-a,b-q_1,q_2-c,d-q_2)$，则 $B_\\varepsilon(q)$ 包含于矩形。因此两类基元素均在另一拓扑中开，任意开集作为基元素之并也开。其他范数由有限维范数等价归结到欧氏范数，证明见 1.u1。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.0; W3DiffTop2026.pdf\n\n## 关联\n\n[dt-week-03](dt-week-03.md) · [dt-quotient](dt-quotient.md) · [dt-germs-cotangent](dt-germs-cotangent.md) · [dt-bump-locality](dt-bump-locality.md) · [dt-hadamard](dt-hadamard.md) · [dt-flat](dt-flat.md)\n",
+      "content_sha256": "sha256:9cae9444a364a355a79d5be9a7acd89aefb2ae515442d5bd05c5046b4de7a1c7"
+    },
+    {
+      "id": "dt-w3-1",
+      "title": "关系生成的等价关系",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-3",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-03",
+        "dt-quotient",
+        "dt-germs-cotangent",
+        "dt-bump-locality",
+        "dt-hadamard",
+        "dt-flat"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.1; W3DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 关系生成的等价关系\n\nID: `dt-w3-1` · Week 3 · exercise\n\n题目勘误：链中的点应属于 $X$ 而非 $R\\subset X\\times X$；$R''$ 应为所有**包含 $R$**的等价关系之交；链须允许长度零，并检查最后一条边。以下证明这个标准修正版。\n\n定义 $xR'y$ 当且仅当存在 $m\\ge0$ 和 $z_0=x,\\ldots,z_m=y$，相邻点满足 $(z_i,z_{i+1})\\in R$ 或其逆属于 $R$。\n\n步骤 1：长度零给自反性；反转链给对称性；拼接两条链给传递性。因此 $R'$ 是等价关系，长度一说明 $R\\subset R'$。\n\n步骤 2：若 $E$ 是任何包含 $R$ 的等价关系，其对称性使每条链边属于 $E$，传递性使两个端点属于 $E$，所以 $R'\\subset E$。因此 $R'\\subset R''$。\n\n步骤 3：因为 $R'$ 本身是交中的一个成员，$R''\\subset R'$，从而相等。原文若不要求包含 $R$，交会成为对角关系，一般不等于 $R'$。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.1; W3DiffTop2026.pdf\n\n## 关联\n\n[dt-week-03](dt-week-03.md) · [dt-quotient](dt-quotient.md) · [dt-germs-cotangent](dt-germs-cotangent.md) · [dt-bump-locality](dt-bump-locality.md) · [dt-hadamard](dt-hadamard.md) · [dt-flat](dt-flat.md)\n",
+      "content_sha256": "sha256:e904c41520173fb6da6f5c281cbbd73e64ebcd9603bd7975d6484e52b46705ba"
+    },
+    {
+      "id": "dt-w3-2",
+      "title": "群作用的商映射是开映射",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-3",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-03",
+        "dt-quotient",
+        "dt-germs-cotangent",
+        "dt-bump-locality",
+        "dt-hadamard",
+        "dt-flat"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.2; W3DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 群作用的商映射是开映射\n\nID: `dt-w3-2` · Week 3 · exercise\n\n题目：群以同胚作用在 $X$ 上，证明轨道投影 $q:X\\to X/G$ 开。\n\n解答：对开集 $U\\subset X$，$q^{-1}(q(U))=\\bigcup_{g\\in G}gU$。每个 $g$ 为同胚，所以右边开。按商拓扑的定义，$q(U)$ 开。此论证不需要群本身的拓扑。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.2; W3DiffTop2026.pdf\n\n## 关联\n\n[dt-week-03](dt-week-03.md) · [dt-quotient](dt-quotient.md) · [dt-germs-cotangent](dt-germs-cotangent.md) · [dt-bump-locality](dt-bump-locality.md) · [dt-hadamard](dt-hadamard.md) · [dt-flat](dt-flat.md)\n",
+      "content_sha256": "sha256:96ee4aef78b89bf1dd67e86191953074d6198b1b3cf5cbb01f829f018f954f39"
+    },
+    {
+      "id": "dt-w3-3",
+      "title": "Quotient map 未必 open",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-3",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-03",
+        "dt-quotient",
+        "dt-germs-cotangent",
+        "dt-bump-locality",
+        "dt-hadamard",
+        "dt-flat"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.3; W3DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Quotient map 未必 open\n\nID: `dt-w3-3` · Week 3 · exercise\n\n题目：一般商映射是否是开映射？\n\n反例：$q:[0,1]\\to S^1$，$q(t)=e^{2\\pi it}$。它连续满射，且是闭映射：闭子集在紧空间中紧，其连续像紧，在 Hausdorff 空间中闭。因此它是商映射（若 $q^{-1}(A)$ 闭，则 $A=q(q^{-1}(A))$ 闭）。$[0,1/4)$ 在 $[0,1]$ 中开，但像包含 $1\\in S^1$ 而不包含从负角度逼近 1 的点，故像不是开集。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.3; W3DiffTop2026.pdf\n\n## 关联\n\n[dt-week-03](dt-week-03.md) · [dt-quotient](dt-quotient.md) · [dt-germs-cotangent](dt-germs-cotangent.md) · [dt-bump-locality](dt-bump-locality.md) · [dt-hadamard](dt-hadamard.md) · [dt-flat](dt-flat.md)\n",
+      "content_sha256": "sha256:6a8b3af5fcc3df076f8424f6640c6178854d5856c6e56313392128f42c2f84dc"
+    },
+    {
+      "id": "dt-w3-4",
+      "title": "射影坐标与商拓扑相容",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-3",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-03",
+        "dt-quotient",
+        "dt-germs-cotangent",
+        "dt-bump-locality",
+        "dt-hadamard",
+        "dt-flat"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.4; W3DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 射影坐标与商拓扑相容\n\nID: `dt-w3-4` · Week 3 · exercise\n\n题目：证明 $U_a\\subset\\mathbb{RP}^n$ 开，坐标及逆连续，过渡光滑。\n\n步骤 1：$q^{-1}(U_a)=\\{x:x_a\\ne0\\}$ 开，故 $U_a$ 开。\n\n步骤 2：$q$ 是开商映射（3.2），限制到 $q^{-1}(U_a)$ 仍是商映射。$\\varphi_a\\circ q(x)=(x_j/x_a)_{j\\ne a}$ 连续，由商映射的泛性质，$\\varphi_a$ 连续。\n\n步骤 3：令 $s_a:\\mathbb R^n\\to\\mathbb R^{n+1}\\setminus0$ 在第 $a$ 位插入 1。它连续，$\\varphi_a^{-1}=q\\circ s_a$，故逆连续。\n\n步骤 4：置 $u_a=1$，交叠域为 $u_b\\ne0$，过渡分量是 $u_j/u_b$（$j\\ne b$），均光滑。反向交换 $a,b$ 同理。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.4; W3DiffTop2026.pdf\n\n## 关联\n\n[dt-week-03](dt-week-03.md) · [dt-quotient](dt-quotient.md) · [dt-germs-cotangent](dt-germs-cotangent.md) · [dt-bump-locality](dt-bump-locality.md) · [dt-hadamard](dt-hadamard.md) · [dt-flat](dt-flat.md)\n",
+      "content_sha256": "sha256:8459711b9c76d1d248120fda3d978e4fced743e612f6c1aea0ca18443c22effe"
+    },
+    {
+      "id": "dt-w3-5",
+      "title": "所有扩张的并与极大性",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-3",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-03",
+        "dt-quotient",
+        "dt-germs-cotangent",
+        "dt-bump-locality",
+        "dt-hadamard",
+        "dt-flat"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.5; W3DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 所有扩张的并与极大性\n\nID: `dt-w3-5` · Week 3 · exercise\n\n题目：$S\\subset2^T$，$a\\in S$，令 $\\bar a=\\bigcup_{a\\subset b\\in S}b$。若 $\\bar a\\in S$，证明其极大。\n\n解答：因 $a$ 自身在并中，$a\\subset\\bar a$。若 $\\bar a\\subset c\\in S$，则 $a\\subset c$，所以 $c$ 是定义 $\\bar a$ 的一个并项，故 $c\\subset\\bar a$。两包含给出 $c=\\bar a$，这正是极大性。一般 $\\bar a$ 未必属于 $S$，故该假设不可省。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.5; W3DiffTop2026.pdf\n\n## 关联\n\n[dt-week-03](dt-week-03.md) · [dt-quotient](dt-quotient.md) · [dt-germs-cotangent](dt-germs-cotangent.md) · [dt-bump-locality](dt-bump-locality.md) · [dt-hadamard](dt-hadamard.md) · [dt-flat](dt-flat.md)\n",
+      "content_sha256": "sha256:9de17bde4e75bdf4ae99e8a1909c4361d2541b64d54d10d61db983bbb0125477"
+    },
+    {
+      "id": "dt-w3-6",
+      "title": "Maximal atlas 的构造",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-3",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-03",
+        "dt-quotient",
+        "dt-germs-cotangent",
+        "dt-bump-locality",
+        "dt-hadamard",
+        "dt-flat"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.6; W3DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Maximal atlas 的构造\n\nID: `dt-w3-6` · Week 3 · exercise\n\n题目：证明所有包含 atlas $A$ 的 atlas 之并 $\\bar A$ 仍是 atlas。\n\n步骤 1：它包含 $A$，故覆盖 $X$，每个成员本来就是图。\n\n步骤 2：取 $\\varphi\\in B\\supset A$ 与 $\\psi\\in C\\supset A$，以及图域交点 $p$。在 $A$ 中取包含 $p$ 的图 $\\theta$。在三图共同域，\n$$\\psi\\circ\\varphi^{-1}=(\\psi\\circ\\theta^{-1})\\circ(\\theta\\circ\\varphi^{-1}).$$\n两个因子分别由 $C,B$ 的相容性光滑。这样的局部域覆盖整个交叠域，光滑性是局部性质，故整个过渡光滑；逆方向同理。\n\n步骤 3：所以 $\\bar A$ 是 atlas，由 3.5 极大。它恰包含全部与 $A$ 相容的图。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.6; W3DiffTop2026.pdf\n\n## 关联\n\n[dt-week-03](dt-week-03.md) · [dt-quotient](dt-quotient.md) · [dt-germs-cotangent](dt-germs-cotangent.md) · [dt-bump-locality](dt-bump-locality.md) · [dt-hadamard](dt-hadamard.md) · [dt-flat](dt-flat.md)\n",
+      "content_sha256": "sha256:0b7bab85f122d85ce7e3b96675afab5433e22e26caca7936288d64c4be4a2769"
+    },
+    {
+      "id": "dt-w3-7",
+      "title": "光滑函数之和",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-3",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-03",
+        "dt-quotient",
+        "dt-germs-cotangent",
+        "dt-bump-locality",
+        "dt-hadamard",
+        "dt-flat"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.7; W3DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 光滑函数之和\n\nID: `dt-w3-7` · Week 3 · exercise\n\n题目：证明 $f,g\\in C^\\infty(X)$ 蕴含 $f+g\\in C^\\infty(X)$。\n\n解答：任取图 $(U,\\varphi)$，$(f+g)\\circ\\varphi^{-1}=f\\circ\\varphi^{-1}+g\\circ\\varphi^{-1}$ 为欧氏开集上的光滑函数之和，故光滑。图覆盖 $X$，所以 $f+g$ 光滑。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.7; W3DiffTop2026.pdf\n\n## 关联\n\n[dt-week-03](dt-week-03.md) · [dt-quotient](dt-quotient.md) · [dt-germs-cotangent](dt-germs-cotangent.md) · [dt-bump-locality](dt-bump-locality.md) · [dt-hadamard](dt-hadamard.md) · [dt-flat](dt-flat.md)\n",
+      "content_sha256": "sha256:cffc3ea539d590e97f3a1dc9e6488de53c9afb4ed7eaa7fa82cce6c0064a3b9f"
+    },
+    {
+      "id": "dt-w3-8",
+      "title": "Open submanifold",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-3",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-03",
+        "dt-quotient",
+        "dt-germs-cotangent",
+        "dt-bump-locality",
+        "dt-hadamard",
+        "dt-flat"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.8; W3DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Open submanifold\n\nID: `dt-w3-8` · Week 3 · exercise\n\n题目：把流形图册限制到开集 $U$，证明所得为 atlas，且包含映射光滑。\n\n步骤 1：$U\\cap V_a$ 在 $U$ 中开，坐标像是原图下开集的像，因此在 $\\mathbb R^n$ 中开；限制仍为同胚，图域覆盖 $U$。\n\n步骤 2：新过渡是原过渡在开子集上的限制，故光滑。$U$ 继承 Hausdorff 和第二可数性，所以是流形。\n\n步骤 3：在限制图与对应原图中，包含映射的坐标表达是欧氏开集之间的包含，即恒等公式，故光滑。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.8; W3DiffTop2026.pdf\n\n## 关联\n\n[dt-week-03](dt-week-03.md) · [dt-quotient](dt-quotient.md) · [dt-germs-cotangent](dt-germs-cotangent.md) · [dt-bump-locality](dt-bump-locality.md) · [dt-hadamard](dt-hadamard.md) · [dt-flat](dt-flat.md)\n",
+      "content_sha256": "sha256:ccac7fcea9d37d843caa54a3d4adb68eb13205604efb73e5c74811aa74b45040"
+    },
+    {
+      "id": "dt-w3-9",
+      "title": "指数平坦函数在零点的导数",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-3",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-03",
+        "dt-quotient",
+        "dt-germs-cotangent",
+        "dt-bump-locality",
+        "dt-hadamard",
+        "dt-flat"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.9; W3DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 指数平坦函数在零点的导数\n\nID: `dt-w3-9` · Week 3 · exercise\n\n题目：$\\chi(t)=\\omega(t)e^{-1/t}$（$t>0$），$t\\le0$ 时为零，其中 $\\omega$ 为 $t^{-1}$ 的多项式；证明零点导数及两侧导数极限相等。\n\n步骤 1：对任意整数 $m\\ge0$，令 $s=1/t$，由 $e^s\\ge s^{m+1}/(m+1)!$ 得 $s^me^{-s}\\le(m+1)!/s\\to0$。故 $t^{-m}e^{-1/t}\\to0$。\n\n步骤 2：正侧差商 $\\chi(t)/t$ 是有限个 $t^{-m}e^{-1/t}$ 的线性组合，极限为零；负侧差商恒为零。因此 $\\chi'(0)=0$。\n\n步骤 3：对 $t>0$，$\\chi'(t)=(\\omega'(t)+t^{-2}\\omega(t))e^{-1/t}$，系数仍为 $t^{-1}$ 的多项式，极限为零。负侧导数为零，所以三者相等。同一论证归纳给出所有阶导数存在、连续并在零点为零。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.9; W3DiffTop2026.pdf\n\n## 关联\n\n[dt-week-03](dt-week-03.md) · [dt-quotient](dt-quotient.md) · [dt-germs-cotangent](dt-germs-cotangent.md) · [dt-bump-locality](dt-bump-locality.md) · [dt-hadamard](dt-hadamard.md) · [dt-flat](dt-flat.md)\n",
+      "content_sha256": "sha256:78e6b355a42c75f122147940c876cce316426d8bf2a618237afe4b6ed29b3b9f"
+    },
+    {
+      "id": "dt-w3-10",
+      "title": "光滑函数环中的非零无限阶消失元",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-3",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-03",
+        "dt-quotient",
+        "dt-germs-cotangent",
+        "dt-bump-locality",
+        "dt-hadamard",
+        "dt-flat"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.10; W3DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 光滑函数环中的非零无限阶消失元\n\nID: `dt-w3-10` · Week 3 · exercise\n\n题目：证明 $\\bigcap_{k\\ge0}(t^{k+1})\\ne0$。\n\n解答：令 $h(t)=e^{-1/t}$ 当 $t>0$，否则为零。它非零且光滑。对每个 $m\\ge1$，定义 $g_m(t)=t^{-m}e^{-1/t}$ 当 $t>0$，否则零。3.9 的归纳证明说明 $g_m$ 光滑，且处处 $h=t^mg_m$。故 $0\\ne h\\in\\bigcap_m(t^m)$。\n\n补充严格证明非 Noetherian：$\\operatorname{Ann}(h)$ 是在 $(0,\\infty)$ 恒零的光滑函数组成的非零理想 $J$。每个 $f\\in J$ 在零点平坦，$f/t$ 零点延拓为光滑函数且仍在 $J$，所以 $J=tJ$。若 $J$ 有限生成，determinant trick 给出某个 $a\\in C^\\infty(\\mathbb R)$ 满足 $(1-ta)J=0$。因 $1-ta$ 在零附近非零，所有 $J$ 元素应在某个固定零邻域为零。但 $h(-t)\\in J$ 在每个负的零邻域非零，矛盾。因此该环非 Noetherian。不能不核对 Krull intersection 的假设就把交非零直接作为普遍判据。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.10; W3DiffTop2026.pdf\n\n## 关联\n\n[dt-week-03](dt-week-03.md) · [dt-quotient](dt-quotient.md) · [dt-germs-cotangent](dt-germs-cotangent.md) · [dt-bump-locality](dt-bump-locality.md) · [dt-hadamard](dt-hadamard.md) · [dt-flat](dt-flat.md)\n",
+      "content_sha256": "sha256:c170febb6c0a327237490556a7a86115189a1d79b8692aaffe70731dd0aaf6ac"
+    },
+    {
+      "id": "dt-w3-11",
+      "title": "非零零因子",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-3",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-03",
+        "dt-quotient",
+        "dt-germs-cotangent",
+        "dt-bump-locality",
+        "dt-hadamard",
+        "dt-flat"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.11; W3DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 非零零因子\n\nID: `dt-w3-11` · Week 3 · exercise\n\n题目：构造非零光滑函数 $a,b$ 且 $ab=0$。\n\n解答：取 3.10 的 $h$，令 $a(t)=h(t),b(t)=h(-t)$。两者光滑，分别在 $t>0$ 和 $t<0$ 非零；每个 $t$ 至少一个因子为零，所以乘积恒零。这证明 $C^\\infty(\\mathbb R)$ 不是 integral domain。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.11; W3DiffTop2026.pdf\n\n## 关联\n\n[dt-week-03](dt-week-03.md) · [dt-quotient](dt-quotient.md) · [dt-germs-cotangent](dt-germs-cotangent.md) · [dt-bump-locality](dt-bump-locality.md) · [dt-hadamard](dt-hadamard.md) · [dt-flat](dt-flat.md)\n",
+      "content_sha256": "sha256:751dd8c294d2ece0c1ddd73ac4ffe586655295bd12102172a06afec4547f5d7c"
+    },
+    {
+      "id": "dt-w3-12",
+      "title": "分离函数与 bump function",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-3",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-03",
+        "dt-quotient",
+        "dt-germs-cotangent",
+        "dt-bump-locality",
+        "dt-hadamard",
+        "dt-flat"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.12; W3DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 分离函数与 bump function\n\nID: `dt-w3-12` · Week 3 · exercise\n\n题目：$f,g\\ge0$ 的零点集分别为不交的 $A,B$，构造零点集 $A$、取值 1 的集合为 $B$ 的 $h:X\\to[0,1]$。\n\n步骤 1：$f+g$ 处处正，否则有点同时属于 $A,B$。令 $h=f/(f+g)$，则 $0\\le h\\le1$，$h=0\\iff f=0$，$h=1\\iff g=0$，满足要求。若 $f,g$ 光滑，$h$ 光滑。\n\n步骤 2：取 $E(t)=e^{-1/t}$（正半轴），非正时零。令 $\\alpha(t)=E(1-t)/(E(t)+E(1-t))$，则 $\\alpha=1$ 于 $t\\le0$，$\\alpha=0$ 于 $t\\ge1$。\n\n步骤 3：令 $\\beta(t)=\\alpha(t-1)\\alpha(-t-1)$，则 $\\beta=1$ 于 $[-1,1]$、在 $|t|\\ge2$ 为零。原文第二因子写作 $\\alpha(1-t)$ 不满足所述性质（例如 $t=0$），此处已修正。令 $\\eta(x)=\\prod_i\\beta(x_i)$ 得欧氏 bump。\n\n步骤 4：对流形中 $p\\in U$，选图域 $A\\subset U$ 并取坐标以 $p$ 为原点，包含闭盒 $[-3,3]^n$。缩小图域为该开盒的原像。取 $V=\\varphi^{-1}((-1,1)^n)$，$W=\\varphi^{-1}((-5/2,5/2)^n)$。坐标 bump 支撑在 $[-2,2]^n$ 的原像，紧包含于图域，故零延拓到 $M$ 光滑；$\\bar W$ 紧且包含于 $U$，所需性质成立。图像必须是开集，不能把闭盒当成图像。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.12; W3DiffTop2026.pdf\n\n## 关联\n\n[dt-week-03](dt-week-03.md) · [dt-quotient](dt-quotient.md) · [dt-germs-cotangent](dt-germs-cotangent.md) · [dt-bump-locality](dt-bump-locality.md) · [dt-hadamard](dt-hadamard.md) · [dt-flat](dt-flat.md)\n",
+      "content_sha256": "sha256:48d8c9e86cf195c0218a4464709164c94b31a59e330c0afeaafad0e5a69eb0a9"
+    },
+    {
+      "id": "dt-w3-optional",
+      "title": "非 Hausdorff 空间上的延拓障碍",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-3",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-03",
+        "dt-quotient",
+        "dt-germs-cotangent",
+        "dt-bump-locality",
+        "dt-hadamard",
+        "dt-flat"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Optional Problem; W3DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 非 Hausdorff 空间上的延拓障碍\n\nID: `dt-w3-optional` · Week 3 · exercise\n\n题目：对原题粘合直线空间 $X$，证明实线上的紧支撑、在某点附近为 1 的连续函数不能延拓。\n\n粘合约定：将主直线的 $t<a$ 对应到 $\\mathbb R_{ab}$ 的坐标 $t-a<0$，将 $t>b$ 对应到坐标 $t-b>0$。这是原文“identify”采用的自然平移识别。\n\n步骤 1：若 $\\xi:X\\to\\mathbb R$ 连续，$\\eta=\\xi|_{\\mathbb R}$，在 $\\mathbb R_{ab}$ 上连续性给出\n$$\\eta(a)=\\lim_{t\\uparrow a}\\eta(t)=\\xi(0_{ab})=\\lim_{t\\downarrow b}\\eta(t)=\\eta(b).$$\n所以任意有理数 $a<b$ 的函数值相等。\n\n步骤 2：所有有理点的值相同，由有理数稠密及 $\\eta$ 连续，$\\eta$ 在整条实线上常值。\n\n步骤 3：紧支撑常值函数只能恒为零，与某邻域恒为 1 矛盾。因此无连续延拓。这个例子说明局部 bump 的全局零延拓需要支撑在整个空间中闭等条件，Hausdorff 假设保证上述紧支撑构造可用。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Optional Problem; W3DiffTop2026.pdf\n\n## 关联\n\n[dt-week-03](dt-week-03.md) · [dt-quotient](dt-quotient.md) · [dt-germs-cotangent](dt-germs-cotangent.md) · [dt-bump-locality](dt-bump-locality.md) · [dt-hadamard](dt-hadamard.md) · [dt-flat](dt-flat.md)\n",
+      "content_sha256": "sha256:387d05aab6e3337b767d94a22fcc109754500ae86e4f585765cee574e9397d90"
+    },
+    {
+      "id": "dt-w3-13",
+      "title": "Cotangent dual 与点导子",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-3",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-03",
+        "dt-quotient",
+        "dt-germs-cotangent",
+        "dt-bump-locality",
+        "dt-hadamard",
+        "dt-flat"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.13; W3DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Cotangent dual 与点导子\n\nID: `dt-w3-13` · Week 3 · exercise\n\n题目：证明 $(\\mathfrak m_p/\\mathfrak m_p^2)^*\\cong\\operatorname{Der}_p(C^\\infty(M),\\mathbb R)$。\n\n步骤 1：导子 $D$ 满足 $D(1)=D(1\\cdot1)=2D(1)$，所以 $D(1)=0$，由实线性消灭所有常数。若 $u,v\\in\\mathfrak m_p$，$D(uv)=u(p)D(v)+v(p)D(u)=0$，故 $D$ 消灭有限乘积和构成的 $\\mathfrak m_p^2$。于是 $\\lambda_D([u])=D(u)$ 是良定义线性泛函。\n\n步骤 2：给定 $\\lambda$，令 $D_\\lambda(f)=\\lambda([f-f(p)])$。模 $\\mathfrak m_p^2$ 有\n$$[fg-f(p)g(p)]=f(p)[g-g(p)]+g(p)[f-f(p)],$$\n因为差是 $(f-f(p))(g-g(p))$。应用 $\\lambda$ 得 Leibniz 公式，所以 $D_\\lambda$ 是导子。\n\n步骤 3：$D_{\\lambda_D}(f)=D(f-f(p))=D(f)$，$\\lambda_{D_\\lambda}([u])=\\lambda([u])$，故构造互逆且线性。\n\n自然性：光滑 $F:M\\to N$ 的拉回把 $\\mathfrak m_{F(p)}$ 及其平方分别送到 $\\mathfrak m_p$ 及其平方。商空间映射的对偶在上述同构下为 $D\\mapsto(h\\mapsto D(h\\circ F))$，正是 $dF_p$，故原题交换图成立。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 3, Problem 3.13; W3DiffTop2026.pdf\n\n## 关联\n\n[dt-week-03](dt-week-03.md) · [dt-quotient](dt-quotient.md) · [dt-germs-cotangent](dt-germs-cotangent.md) · [dt-bump-locality](dt-bump-locality.md) · [dt-hadamard](dt-hadamard.md) · [dt-flat](dt-flat.md)\n",
+      "content_sha256": "sha256:fbbe9a17752a7caa33dcc735ee9f59855d083bebd5e80aef2ae43594b2cfcc79"
+    },
+    {
+      "id": "dt-w4-0",
+      "title": "光滑过渡推出维数恒定",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-4",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-04",
+        "dt-rank-embedding",
+        "dt-inverse-constant-rank",
+        "dt-level-sphere"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 4, Problem 4.0; W4DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 光滑过渡推出维数恒定\n\nID: `dt-w4-0` · Week 4 · exercise\n\n题目：连通空间有欧氏图，过渡为 diffeomorphism，直接证明各图维数相同。\n\n勘误：须忽略空图域，否则可以加入任意维数的空图，原结论不成立。\n\n步骤 1：非空交叠处，设过渡为 $F:\\mathbb R^m\\supset O\\to P\\subset\\mathbb R^n$，逆为 $G$。链式法则给 $DG\\,DF=I_m$ 和 $DF\\,DG=I_n$。前式推出 $m\\le n$，后式推出 $n\\le m$，故 $m=n$。\n\n步骤 2：固定一张非空图，取所有可经有限个非空图域交叠连接到它的图域之并 $C$。它开。任何未在其中的图域不与 $C$ 相交，否则也可连接，所以补集也是图域之并，开。\n\n步骤 3：$C$ 非空，由连通性为全空间，每张非空图都与其中某图相交，故全部图维数相同。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 4, Problem 4.0; W4DiffTop2026.pdf\n\n## 关联\n\n[dt-week-04](dt-week-04.md) · [dt-rank-embedding](dt-rank-embedding.md) · [dt-inverse-constant-rank](dt-inverse-constant-rank.md) · [dt-level-sphere](dt-level-sphere.md)\n",
+      "content_sha256": "sha256:107f5c8fefd80b3976b0d47d311a7092facda360014a46d146b90f97a2366d81"
+    },
+    {
+      "id": "dt-w4-1",
+      "title": "从 Euclidean IFT 到 manifold IFT",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-4",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-04",
+        "dt-rank-embedding",
+        "dt-inverse-constant-rank",
+        "dt-level-sphere"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 4, Problem 4.1; W4DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 从 Euclidean IFT 到 manifold IFT\n\nID: `dt-w4-1` · Week 4 · exercise\n\n题目：从 Jacobian 版反函数定理推出切空间版及流形版。\n\n步骤 1：在欧氏坐标基下 $d f_0(\\partial_i)=\\sum_j(\\partial_i f^j)(0)\\partial_j$，所以 $df_0$ 的矩阵正是 $Jf(0)$。线性同构等价于矩阵可逆，故 (i) 推出 (ii)。\n\n步骤 2：对流形映射取以 $p,f(p)$ 为中心、原点为坐标值的图 $\\varphi,\\psi$，缩小源图以使其像在目标图域内。令 $F=\\psi\\circ f\\circ\\varphi^{-1}$。链式法则给\n$$dF_0=d\\psi_{f(p)}\\circ df_p\\circ(d\\varphi_p)^{-1},$$\n三个因子均同构，故 $DF_0$ 可逆。\n\n步骤 3：由 (i) 取 $F:O\\to P$ 为局部微分同胚。于是 $f:\\varphi^{-1}(O)\\to\\psi^{-1}(P)$ 的逆为 $\\varphi^{-1}\\circ(F|_O)^{-1}\\circ\\psi$，光滑，得到 (iii)。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 4, Problem 4.1; W4DiffTop2026.pdf\n\n## 关联\n\n[dt-week-04](dt-week-04.md) · [dt-rank-embedding](dt-rank-embedding.md) · [dt-inverse-constant-rank](dt-inverse-constant-rank.md) · [dt-level-sphere](dt-level-sphere.md)\n",
+      "content_sha256": "sha256:a03b36c4f1dffc726b9c3c6ac64d1eeb19df071fca61262846abe30f945045c9"
+    },
+    {
+      "id": "dt-w4-2",
+      "title": "Regular level set 的 slice",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-4",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-04",
+        "dt-rank-embedding",
+        "dt-inverse-constant-rank",
+        "dt-level-sphere"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 4, Problem 4.2; W4DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Regular level set 的 slice\n\nID: `dt-w4-2` · Week 4 · exercise\n\n题目修正：$f:\\mathbb R^{n+k}\\to\\mathbb R^n$ 处处满秩，则非空纤维是 **$k$ 维**，局部 slice 为 $\\mathbb R^k\\times\\{0\\}\\subset\\mathbb R^{k+n}$。原文写 $n$ 维是笔误。\n\n步骤 1：给 $p\\in f^{-1}(y)$。满秩保证可重排源坐标为 $(u,v)\\in\\mathbb R^k\\times\\mathbb R^n$，使 $\\partial f/\\partial v(p)$ 可逆。\n\n步骤 2：令 $H(u,v)=(u,f(u,v)-y)$。其导数为块矩阵\n$$DH_p=\\begin{pmatrix}I_k&0\\\\ *&\\partial f/\\partial v(p)\\end{pmatrix},$$\n可逆。反函数定理给邻域 $U,V$ 使 $H:U\\to V$ 微分同胚。\n\n步骤 3：对 $q\\in U$，$f(q)=y$ 当且仅当 $H(q)$ 最后 $n$ 坐标为零，故 $H(U\\cap f^{-1}(y))=V\\cap(\\mathbb R^k\\times\\{0\\})$。这正是 embedded submanifold 的 slice 条件，维数 $k$。纤维空时按空子流形约定处理。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 4, Problem 4.2; W4DiffTop2026.pdf\n\n## 关联\n\n[dt-week-04](dt-week-04.md) · [dt-rank-embedding](dt-rank-embedding.md) · [dt-inverse-constant-rank](dt-inverse-constant-rank.md) · [dt-level-sphere](dt-level-sphere.md)\n",
+      "content_sha256": "sha256:410d5c80afa9fc258ac8754aed11aa15fd9161fc7c3c41b672b5188ab51a1680"
+    },
+    {
+      "id": "dt-w4-3",
+      "title": "球面 graph atlas 与 stereographic atlas 相容",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-4",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-04",
+        "dt-rank-embedding",
+        "dt-inverse-constant-rank",
+        "dt-level-sphere"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 4, Problem 4.3; W4DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 球面 graph atlas 与 stereographic atlas 相容\n\nID: `dt-w4-3` · Week 4 · exercise\n\n题目：从四种球面结构中选两种，直接证明微分同胚。\n\n选择：图像坐标与球极投影坐标。图像图在 $U_{i,\\epsilon}=\\{x\\in S^2:\\epsilon x_i>0\\}$ 上删去第 $i$ 坐标，像为单位开圆盘；逆在第 $i$ 位补入 $\\epsilon\\sqrt{1-\\|u\\|^2}$，在圆盘中光滑。\n\n北极投影 $s_N(x,y,z)=(x/(1-z),y/(1-z))$，其逆为\n$$s_N^{-1}(u,v)=\\frac{(2u,2v,u^2+v^2-1)}{1+u^2+v^2}.$$\n南极投影 $s_S(x,y,z)=(x/(1+z),y/(1+z))$，逆为 $(2u,2v,1-u^2-v^2)/(1+u^2+v^2)$。\n\n步骤 1：graph 坐标到 stereographic 坐标，是上述平方根逆图代入分式；在实际交叠上分母不为零，因此光滑。\n\n步骤 2：stereographic 到 graph 坐标，是上述有理逆图后删去坐标，也光滑。\n\n步骤 3：这些交叠覆盖球面，所以底层恒等映射在两个方向均光滑，给出所求 diffeomorphism。这里没有使用结构唯一性定理。全局极坐标因极点及经度接缝不能单独作为一张图。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 4, Problem 4.3; W4DiffTop2026.pdf\n\n## 关联\n\n[dt-week-04](dt-week-04.md) · [dt-rank-embedding](dt-rank-embedding.md) · [dt-inverse-constant-rank](dt-inverse-constant-rank.md) · [dt-level-sphere](dt-level-sphere.md)\n",
+      "content_sha256": "sha256:6a0195b447154afcbe90d1eb0b0ec95048c7efab030886b61883fb2404d11611"
+    },
+    {
+      "id": "dt-w4-4",
+      "title": "Antipodal quotient 与 RP2",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-4",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-04",
+        "dt-rank-embedding",
+        "dt-inverse-constant-rank",
+        "dt-level-sphere"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 4, Problem 4.4; W4DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Antipodal quotient 与 RP2\n\nID: `dt-w4-4` · Week 4 · exercise\n\n题目：证明 $S^2/\\{\\pm1\\}\\to\\mathbb{RP}^2$ 为同胚。\n\n步骤 1：包含映射与射影商映射复合 $S^2\\to\\mathbb{RP}^2$ 连续，且对反足识别恒定，故下降为连续 $F:S^2/\\{\\pm1\\}\\to\\mathbb{RP}^2$。\n\n步骤 2：归一化 $N(x)=x/\\|x\\|$ 连续。对任意 $\\lambda\\ne0$，$N(\\lambda x)=\\operatorname{sgn}(\\lambda)N(x)$，所以其到反足商的复合在每条射影轨道上恒定。商泛性质给连续 $G:\\mathbb{RP}^2\\to S^2/\\{\\pm1\\}$。\n\n步骤 3：单位向量归一化不变；非零向量和其归一化张成相同直线。因此 $GF=\\mathrm{id}$、$FG=\\mathrm{id}$，故同胚。不需要提前使用 $\\mathbb{RP}^2$ Hausdorff。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 4, Problem 4.4; W4DiffTop2026.pdf\n\n## 关联\n\n[dt-week-04](dt-week-04.md) · [dt-rank-embedding](dt-rank-embedding.md) · [dt-inverse-constant-rank](dt-inverse-constant-rank.md) · [dt-level-sphere](dt-level-sphere.md)\n",
+      "content_sha256": "sha256:ce5420a4d0a6ca3dd9e0de54a666b7586d19c46155ca9f8d1d64701e61347763"
+    },
+    {
+      "id": "dt-w5-1",
+      "title": "RPn 的度量与 Hausdorff 性",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-5",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-05",
+        "dt-vector-fields",
+        "dt-fields-derivations",
+        "dt-lie-related",
+        "dt-bracket-example"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 5, Problem 5.1; W5DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# RPn 的度量与 Hausdorff 性\n\nID: `dt-w5-1` · Week 5 · exercise\n\n题目：证明 $\\mathbb{RP}^n$ 的商拓扑 Hausdorff 且可度量。\n\n步骤 1：用 4.4 的归一化证明（任意 $n$ 同样成立）识别为 $S^n/\\{\\pm1\\}$。对单位代表定义\n$$d([u],[v])=\\min\\{\\|u-v\\|,\\|u+v\\|\\}.$$\n改变代表符号不改变两项最小值，故良定义；对称性显然，$d=0$ 当且仅当 $u=\\pm v$。\n\n步骤 2：选符号 $\\epsilon,\\delta$ 分别实现 $d([u],[v])=\\|u-\\epsilon v\\|$ 和 $d([v],[w])=\\|v-\\delta w\\|$，则\n$$d([u],[w])\\le\\|u-\\epsilon\\delta w\\|\\le\\|u-\\epsilon v\\|+\\|v-\\delta w\\|.$$\n故为距离。\n\n步骤 3：若 $B_d([u],r)$ 是度量球，其商前像为 $S^n\\cap(B_r(u)\\cup B_r(-u))$，开，故度量开集商开。若 $O$ 商开且 $[u]\\in O$，则 $q^{-1}(O)$ 是包含 $u,-u$ 的开集，取 $r>0$ 使两个半径 $r$ 的球面邻域均在其中，则 $B_d([u],r)\\subset O$。故两个拓扑一致，因而 Hausdorff。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 5, Problem 5.1; W5DiffTop2026.pdf\n\n## 关联\n\n[dt-week-05](dt-week-05.md) · [dt-vector-fields](dt-vector-fields.md) · [dt-fields-derivations](dt-fields-derivations.md) · [dt-lie-related](dt-lie-related.md) · [dt-bracket-example](dt-bracket-example.md)\n",
+      "content_sha256": "sha256:10f5097860cf9fd45b4061504b9162d1bbef254a638aceaf304356a8ec4e2552"
+    },
+    {
+      "id": "dt-w5-2",
+      "title": "S2 与 CP1 的显式微分同胚",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-5",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-05",
+        "dt-vector-fields",
+        "dt-fields-derivations",
+        "dt-lie-related",
+        "dt-bracket-example"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 5, Problem 5.2; W5DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# S2 与 CP1 的显式微分同胚\n\nID: `dt-w5-2` · Week 5 · exercise\n\n题目：构造两张对应图与双射 $S^2\\cong\\mathbb{CP}^1$，证明坐标表达光滑。\n\n步骤 1：$\\mathbb{CP}^1$ 的图 $V_0=\\{[z_0:z_1]:z_0\\ne0\\}$，$w=z_1/z_0$；$V_1=\\{z_1\\ne0\\}$，$\\zeta=z_0/z_1$。过渡 $\\zeta=1/w$。\n\n步骤 2：球面上取 $U_0=S^2\\setminus\\{N\\}$，坐标 $w=(x+iy)/(1-z)$；$U_1=S^2\\setminus\\{S\\}$，坐标 $\\zeta=(x-iy)/(1+z)$。在交叠上利用 $x^2+y^2=1-z^2$ 得 $w\\zeta=1$。每张图是球极投影或其与复共轭的复合，均为 $\\mathbb R^2$ 坐标图。\n\n步骤 3：在 $U_0$ 定义 $F(p)=[1:w(p)]$，在 $U_1$ 定义 $F(p)=[\\zeta(p):1]$，交叠因 $\\zeta=1/w$ 一致。逆映射对 $[1:w]$ 为\n$$\\left(\\frac{2\\Re w}{1+|w|^2},\\frac{2\\Im w}{1+|w|^2},\\frac{|w|^2-1}{1+|w|^2}\\right),$$\n并把 $[0:1]$ 送到 $N$；由上述图也知北极附近逆光滑。\n\n步骤 4：对应图下 $F$ 及其逆均为恒等表达，因此双射是 diffeomorphism。若两张球极图都用 $x+iy$，过渡会是 $1/\\bar w$；这里显式调整第二张图避免混淆。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 5, Problem 5.2; W5DiffTop2026.pdf\n\n## 关联\n\n[dt-week-05](dt-week-05.md) · [dt-vector-fields](dt-vector-fields.md) · [dt-fields-derivations](dt-fields-derivations.md) · [dt-lie-related](dt-lie-related.md) · [dt-bracket-example](dt-bracket-example.md)\n",
+      "content_sha256": "sha256:9ce35cac4c15f51158a01239ca1ff4f298037949657c247082f6c064323ebc58"
+    },
+    {
+      "id": "dt-w5-3",
+      "title": "连续单射到 Hausdorff 空间",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-5",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-05",
+        "dt-vector-fields",
+        "dt-fields-derivations",
+        "dt-lie-related",
+        "dt-bracket-example"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 5, Problem 5.3; W5DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 连续单射到 Hausdorff 空间\n\nID: `dt-w5-3` · Week 5 · exercise\n\n题目：$X$ 紧、$q:X\\to Y$ 连续商满射、$i:Y\\to Z$ 连续单射且 $Z$ Hausdorff，证明 $Y$ Hausdorff。\n\n解答：给 $y_1\\ne y_2$，单射给 $i(y_1)\\ne i(y_2)$。在 $Z$ 中取不交开邻域 $O_1,O_2$，连续性使 $i^{-1}(O_1),i^{-1}(O_2)$ 成为不交开邻域，故 $Y$ Hausdorff。此结论事实上不需要紧性或商条件。\n\n较强结论：$q(X)=Y$ 紧，故连续单射 $i$ 是到其像的同胚。因为对闭集 $C\\subset Y$，$C$ 紧，其像在 Hausdorff 的 $i(Y)$ 中闭，所以逆映射连续。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 5, Problem 5.3; W5DiffTop2026.pdf\n\n## 关联\n\n[dt-week-05](dt-week-05.md) · [dt-vector-fields](dt-vector-fields.md) · [dt-fields-derivations](dt-fields-derivations.md) · [dt-lie-related](dt-lie-related.md) · [dt-bracket-example](dt-bracket-example.md)\n",
+      "content_sha256": "sha256:665a61821d70590fdb9f0bb18d21dcf7ef69ec6b74c140d48464d82143f47c88"
+    },
+    {
+      "id": "dt-w5-s1",
+      "title": "Grassmannian 与 Plücker 映射（原题 Example 展开）",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-5",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-05",
+        "dt-vector-fields",
+        "dt-fields-derivations",
+        "dt-lie-related",
+        "dt-bracket-example"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 5, Example / Suggestion（补充展开）; W5DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Grassmannian 与 Plücker 映射（原题 Example 展开）\n\nID: `dt-w5-s1` · Week 5 · exercise\n\n补充任务：补全原讲义 Grassmannian 例子的关键证明。\n\n步骤 1：Stiefel 空间应为有序正交标架 $V_k(\\mathbb R^n)=\\{Q\\in\\mathbb R^{n\\times k}:Q^TQ=I_k\\}$。它是多项式方程的闭集，且 $\\|Q\\|_F^2=k$，故紧。右作用群是 $O(k)$，不是原文误写的整个 $GL_k$（后者不保持正交标架）。\n\n步骤 2：同一 $k$ 维子空间的两个正交标架满足 $Q'=QA$ 且 $A\\in O(k)$，所以商正好参数化 $k$ 维子空间。\n\n步骤 3：若换标架 $v'_j=\\sum_i v_iA_{ij}$，多重线性和交替性给 $v'_1\\wedge\\cdots\\wedge v'_k=(\\det A)v_1\\wedge\\cdots\\wedge v_k$，射影类不变。对 $k\\ge1$，非零可分解 $\\omega=v_1\\wedge\\cdots\\wedge v_k$ 满足\n$$\\operatorname{span}(v_1,\\ldots,v_k)=\\{v:v\\wedge\\omega=0\\}.$$\n包含正向由重复因子；逆向把 $v_i$ 扩充为基，$v$ 的其余分量对应线性独立的 $(k+1)$ 重楔，必须为零。因此射影楔确定子空间，Plücker 映射单射。$k=n$ 时两边全空间；$k=0$ 时 Grassmannian 只有一点，单射直接成立。\n\n步骤 4：楔的坐标是标架矩阵的 minors，连续；投影到射影空间连续，因此商泛性质使 Plücker 映射连续。目标射影空间 Hausdorff，由 5.3 源空间 Hausdorff；又因源紧，此映射是 topological embedding。\n\n步骤 5（补充局部坐标）：固定分解 $\\mathbb R^n=E\\oplus F$，$\\dim E=k$。投影到 $E$ 可逆的子空间唯一为 $\\operatorname{graph}(A)$，$A:E\\to F$，给 $k(n-k)$ 个坐标。换分解后的坐标为 $(c+dA)(a+bA)^{-1}$，定义域 $\\det(a+bA)\\ne0$ 开，且公式光滑。图映射连续可由 $(I,A)$ 的 Gram–Schmidt 正交化后取商得到；逆坐标在标架分块 $(Q_E,Q_F)$ 上为 $Q_FQ_E^{-1}$，连续并下降到商。故这些图与商拓扑相容，给出 Grassmannian 光滑结构。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 5, Example / Suggestion（补充展开）; W5DiffTop2026.pdf\n\n## 关联\n\n[dt-week-05](dt-week-05.md) · [dt-vector-fields](dt-vector-fields.md) · [dt-fields-derivations](dt-fields-derivations.md) · [dt-lie-related](dt-lie-related.md) · [dt-bracket-example](dt-bracket-example.md)\n",
+      "content_sha256": "sha256:a1798afe694958a7d72c80429528cd52df96311506b761c8870f27add0f5b68e"
+    },
+    {
+      "id": "dt-w5-4",
+      "title": "Product manifold 的构造与唯一性",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-5",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-05",
+        "dt-vector-fields",
+        "dt-fields-derivations",
+        "dt-lie-related",
+        "dt-bracket-example"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 5, Problem 5.4; W5DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Product manifold 的构造与唯一性\n\nID: `dt-w5-4` · Week 5 · exercise\n\n题目：构造乘积流形并证明光滑映射的乘积泛性质。\n\n步骤 1：给 $M,N$ 的图 $\\varphi:U\\to O\\subset\\mathbb R^m$、$\\psi:V\\to P\\subset\\mathbb R^n$，定义 $\\varphi\\times\\psi:U\\times V\\to O\\times P$。乘积空间 Hausdorff；两个可数基的全部成对乘积仍可数，故第二可数。上述图是同胚且覆盖。\n\n步骤 2：过渡为 $(u,v)\\mapsto(F(u),G(v))$，两个分量光滑，因此是光滑 atlas。投影的坐标表达为标准线性投影，故光滑。\n\n步骤 3：若 $h:Z\\to M\\times N$ 光滑，投影复合光滑。反之若两个分量光滑，则它们连续，所以 $h$ 连续；在任意积图中，$h$ 的坐标表达是两个光滑分量拼成的向量值函数，因此光滑。\n\n步骤 4：若另一光滑结构也满足相同性质，则到底层乘积的 identity 两个投影均光滑，泛性质使 identity 光滑；交换结构再用一次，逆也光滑。因此两个结构相容。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 5, Problem 5.4; W5DiffTop2026.pdf\n\n## 关联\n\n[dt-week-05](dt-week-05.md) · [dt-vector-fields](dt-vector-fields.md) · [dt-fields-derivations](dt-fields-derivations.md) · [dt-lie-related](dt-lie-related.md) · [dt-bracket-example](dt-bracket-example.md)\n",
+      "content_sha256": "sha256:55a4169d34dd313acb4341a48255bf9d5b9083ea8472658f87eeebd6a3be6421"
+    },
+    {
+      "id": "dt-w5-5",
+      "title": "Derivations 的 Lie algebra",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-5",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-05",
+        "dt-vector-fields",
+        "dt-fields-derivations",
+        "dt-lie-related",
+        "dt-bracket-example"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 5, Problem 5.5; W5DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Derivations 的 Lie algebra\n\nID: `dt-w5-5` · Week 5 · exercise\n\n题目：证明导子构成向量空间，交换子仍为导子，并验证 Jacobi。\n\n约定：本包使用交换含幺实代数 $A$，与后续 $A$-模外幂一致。\n\n步骤 1：若 $X,Y$ 为导子，$a,b\\in\\mathbb R$，则 $(aX+bY)(uv)=u(aX+bY)(v)+v(aX+bY)(u)$，零映射也满足，故是实向量子空间。\n\n步骤 2：展开\n$$XY(uv)=X(u)Y(v)+uXY(v)+X(v)Y(u)+vXY(u).$$\n减去交换 $X,Y$ 的式子，交叉项因 $A$ 交换抵消，剩下 $[X,Y](uv)=u[X,Y](v)+v[X,Y](u)$。双线性由复合分配律得出，$[X,X]=0$。\n\n步骤 3：逐项展开\n$$[[X,Y],Z]=XYZ-YXZ-ZXY+ZYX,$$\n$$[[Y,Z],X]=YZX-ZYX-XYZ+XZY,$$\n$$[[Z,X],Y]=ZXY-XZY-YZX+YXZ.$$\n每个三重复合恰出现一次正号一次负号，总和零，即 Jacobi。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 5, Problem 5.5; W5DiffTop2026.pdf\n\n## 关联\n\n[dt-week-05](dt-week-05.md) · [dt-vector-fields](dt-vector-fields.md) · [dt-fields-derivations](dt-fields-derivations.md) · [dt-lie-related](dt-lie-related.md) · [dt-bracket-example](dt-bracket-example.md)\n",
+      "content_sha256": "sha256:a902e2683d7133673282e4449cdfe95361167c82a754767ee8b81f69744b1776"
+    },
+    {
+      "id": "dt-w5-6",
+      "title": "f-related 向量场的括号",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-5",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-05",
+        "dt-vector-fields",
+        "dt-fields-derivations",
+        "dt-lie-related",
+        "dt-bracket-example"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 5, Problem 5.6; W5DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# f-related 向量场的括号\n\nID: `dt-w5-6` · Week 5 · exercise\n\n题目：$X_i$ 与 $Y_i$ 分别 $f$-related，证明其 Lie brackets 也相关。\n\n步骤 1：相关性等价于对任意 $h\\in C^\\infty(N)$，$X_i(h\\circ f)=(Y_i h)\\circ f$。这是 $df_p(X_i(p))=Y_i(f(p))$ 在函数上的作用。\n\n步骤 2：两次应用得到\n$$[X_0,X_1](h\\circ f)=X_0((Y_1h)\\circ f)-X_1((Y_0h)\\circ f)=([Y_0,Y_1]h)\\circ f.$$\n函数上的相等确定切向量，故结论成立。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 5, Problem 5.6; W5DiffTop2026.pdf\n\n## 关联\n\n[dt-week-05](dt-week-05.md) · [dt-vector-fields](dt-vector-fields.md) · [dt-fields-derivations](dt-fields-derivations.md) · [dt-lie-related](dt-lie-related.md) · [dt-bracket-example](dt-bracket-example.md)\n",
+      "content_sha256": "sha256:c02b895852ff78e845a69ee4933e2f74e0676ce6bd1812eb23ab70b38b9be0be"
+    },
+    {
+      "id": "dt-w5-s2",
+      "title": "Frobenius 的必要方向（原题 Suggestion）",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-5",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-05",
+        "dt-vector-fields",
+        "dt-fields-derivations",
+        "dt-lie-related",
+        "dt-bracket-example"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 5, Example / Suggestion（补充展开）; W5DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Frobenius 的必要方向（原题 Suggestion）\n\nID: `dt-w5-s2` · Week 5 · exercise\n\n补充题目：可积光滑分布必 involutive。\n\n设每个 $p$ 在积分子流形 $i:L\\hookrightarrow M$ 上，且 $di(T_qL)=D_{i(q)}$。任取 $X,Y\\in\\Gamma(D)$，沿 $L$ 的限制可唯一拉回为光滑向量场 $\\widetilde X,\\widetilde Y$（局部子流形图中这只是保留切向分量），它们与 $X,Y$ 分别 $i$-related。5.6 给\n$$[X,Y]_{i(q)}=di_q([\\widetilde X,\\widetilde Y]_q)\\in D_{i(q)}.$$\n每点都在某积分子流形上，所以 $[X,Y]\\in\\Gamma(D)$，即 involutive。这里仅证明必要性，充分性是 Frobenius theorem。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 5, Example / Suggestion（补充展开）; W5DiffTop2026.pdf\n\n## 关联\n\n[dt-week-05](dt-week-05.md) · [dt-vector-fields](dt-vector-fields.md) · [dt-fields-derivations](dt-fields-derivations.md) · [dt-lie-related](dt-lie-related.md) · [dt-bracket-example](dt-bracket-example.md)\n",
+      "content_sha256": "sha256:46df57cc47d1af2be2f12f6ed02870697d68affb4fed5692016a3d5f968912a8"
+    },
+    {
+      "id": "dt-w6-1",
+      "title": "有限乘积的泛性质",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-6",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-06",
+        "dt-curves-flow",
+        "dt-ode",
+        "dt-incomplete"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 6, Problem 6.1; W6DiffTop2026(1).pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 有限乘积的泛性质\n\nID: `dt-w6-1` · Week 6 · exercise\n\n题目：陈述 $M_1\\times\\cdots\\times M_n$ 的流形泛性质。\n\n解答：存在流形 $P$ 及光滑投影 $\\pi_i:P\\to M_i$，使对任意流形 $Z$ 和光滑 $f_i:Z\\to M_i$，存在唯一光滑 $f:Z\\to P$ 满足 $\\pi_i f=f_i$。在集合乘积上必为 $f(z)=(f_1(z),\\ldots,f_n(z))$，唯一性逐分量成立。等价地 $C^\\infty(Z,P)\\cong\\prod_i C^\\infty(Z,M_i)$，自然于 $Z$。存在性由积图（5.4）有限次迭代得到。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 6, Problem 6.1; W6DiffTop2026(1).pdf\n\n## 关联\n\n[dt-week-06](dt-week-06.md) · [dt-curves-flow](dt-curves-flow.md) · [dt-ode](dt-ode.md) · [dt-incomplete](dt-incomplete.md)\n",
+      "content_sha256": "sha256:c8bd292abb3f5d799a9380d51c32dfd5cb18cd64dc7722be84e1f9cf2d6dd126"
+    },
+    {
+      "id": "dt-w6-2",
+      "title": "Smooth functional calculus",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-6",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-06",
+        "dt-curves-flow",
+        "dt-ode",
+        "dt-incomplete"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 6, Problem 6.2; W6DiffTop2026(1).pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Smooth functional calculus\n\nID: `dt-w6-2` · Week 6 · exercise\n\n题目：$f_i\\in C^\\infty(M)$、$\\Phi:\\mathbb R^n\\to\\mathbb R$ 光滑，证明 $\\Phi(f_1,\\ldots,f_n)$ 光滑。\n\n解答：由 6.1，$F=(f_1,\\ldots,f_n):M\\to\\mathbb R^n$ 光滑。$\\Phi\\circ F$ 为光滑映射复合，因此光滑。直接坐标验证为 $\\Phi\\circ(f_1\\circ\\varphi^{-1},\\ldots,f_n\\circ\\varphi^{-1})$，由多变量链式法则光滑。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 6, Problem 6.2; W6DiffTop2026(1).pdf\n\n## 关联\n\n[dt-week-06](dt-week-06.md) · [dt-curves-flow](dt-curves-flow.md) · [dt-ode](dt-ode.md) · [dt-incomplete](dt-incomplete.md)\n",
+      "content_sha256": "sha256:0011ecad82c5207b21ee351d742142e7eea47af71be8ff37df803662eaab759f"
+    },
+    {
+      "id": "dt-w6-3",
+      "title": "每个切向量由全局曲线实现",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-6",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-06",
+        "dt-curves-flow",
+        "dt-ode",
+        "dt-incomplete"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 6, Problem 6.3; W6DiffTop2026(1).pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 每个切向量由全局曲线实现\n\nID: `dt-w6-3` · Week 6 · exercise\n\n题目：按 $T_pM=(\\mathfrak m_p/\\mathfrak m_p^2)^*$ 定义，构造 $\\gamma:\\mathbb R\\to M$ 光滑，$\\gamma'(0)=v$。\n\n步骤 1：选以 $p$ 为原点的坐标图。Hadamard lemma：在原点的星形小邻域，\n$$f(x)-f(0)=\\sum_i x_i g_i(x),\\qquad g_i(x)=\\int_0^1\\partial_i f(tx)\\,dt.$$\n所以模平方理想 $[f-f(p)]=\\sum_i\\partial_i f(p)[x_i]$。全局函数与局部函数的芽可用 bump 延拓比较：若函数在 $p$ 附近零，取 $\\chi=1$ 于更小邻域且支撑在该邻域，则 $f=(1-\\chi)f\\in\\mathfrak m_p^2$。因此此局部计算也适用于题目的全局理想。\n\n步骤 2：$[x_i]$ 线性独立，因为坐标偏导消灭平方理想，对这些类取值为 $\\delta_{ij}$；所以它们为余切基。置 $a_i=v([x_i])$，则 $v(f)=\\sum_i a_i\\partial_i f(p)$。\n\n步骤 3：取 $r>0$ 使 $B_r(0)$ 在图像中。选 $\\delta>0$ 使 $\\delta\\|a\\|<r$，取光滑 $\\chi:\\mathbb R\\to[0,1]$，零附近为 1、在 $|t|\\ge\\delta$ 为零。定义\n$$\\gamma(t)=\\varphi^{-1}(t\\chi(t)a).$$\n其参数始终在图像内，因此在全实轴光滑；零附近是直线，故对任意 $f$，$(f\\circ\\gamma)'(0)=\\sum a_i\\partial_i(f\\circ\\varphi^{-1})(0)=v(f)$。这证明所需等式，不能只构造小区间曲线而不延拓。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 6, Problem 6.3; W6DiffTop2026(1).pdf\n\n## 关联\n\n[dt-week-06](dt-week-06.md) · [dt-curves-flow](dt-curves-flow.md) · [dt-ode](dt-ode.md) · [dt-incomplete](dt-incomplete.md)\n",
+      "content_sha256": "sha256:4fa40bf31b96b1e6de34a1c86564b0bc8b01263079eb9207ecdf85e3f1b6d1eb"
+    },
+    {
+      "id": "dt-w6-4",
+      "title": "Compact manifold 上向量场 complete",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-6",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-06",
+        "dt-curves-flow",
+        "dt-ode",
+        "dt-incomplete"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 6, Problem 6.4; W6DiffTop2026(1).pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Compact manifold 上向量场 complete\n\nID: `dt-w6-4` · Week 6 · exercise\n\n题目：构造由 $X$ 生成的全局光滑 flow，证明初值和群律。\n\n局部定理：对每个 $p$，存在邻域 $U_p$、$\\varepsilon_p>0$ 和光滑 $F_p:(-\\varepsilon_p,\\varepsilon_p)\\times U_p\\to M$，满足 $F_p(0,q)=q$、$\\partial_tF_p=X(F_p)$，且同初值解唯一。它由坐标 ODE 的局部存在、唯一和参数光滑依赖推出。\n\n步骤 1：紧性取有限子覆盖 $U_{p_j}$，令 $\\varepsilon=\\min_j\\varepsilon_{p_j}>0$。因此从任意点出发均有至少 $(-\\varepsilon,\\varepsilon)$ 的解。\n\n步骤 2：设某最大积分曲线 $\\gamma:(a,b)\\to M$ 有有限右端点 $b$。取 $t_0\\in(a,b)$ 使 $b-t_0<\\varepsilon/2$。从 $\\gamma(t_0)$ 出发存在长度 $\\varepsilon$ 的局部解，平移时间后与 $\\gamma$ 在交区间因唯一性一致，因此延拓到 $t_0+\\varepsilon>b$，矛盾。左端同理，故所有最大区间为 $\\mathbb R$。\n\n步骤 3：令 $F(t,p)=\\gamma_p(t)$。初值给 $F(0,p)=p$。对固定 $t,p$，曲线 $s\\mapsto F(s,F(t,p))$ 与 $s\\mapsto F(s+t,p)$ 都解同一 ODE 且在 $s=0$ 取相同值，唯一性给群律。\n\n步骤 4：局部解在重叠处唯一，粘成 $(-\\varepsilon,\\varepsilon)\\times M$ 上的光滑映射。对任意 $(T,p)$，取固定正整数 $N$ 使 $|T|/N<\\varepsilon$，在 $T$ 的小邻域仍如此。由群律，$F(t,q)$ 等于把局部时间 $t/N$ 的光滑映射复合 $N$ 次，故在该邻域光滑。得到全局光滑 flow。\n\n原题只列初值和群律，字面上 identity flow 对任何 $X$ 都满足；这里补上 $\\partial_tF=X\\circ F$，证明其真正意图。默认流形无边界；有边界时须加切于边界等条件。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 6, Problem 6.4; W6DiffTop2026(1).pdf\n\n## 关联\n\n[dt-week-06](dt-week-06.md) · [dt-curves-flow](dt-curves-flow.md) · [dt-ode](dt-ode.md) · [dt-incomplete](dt-incomplete.md)\n",
+      "content_sha256": "sha256:dd2c5de3acab2f45649a873346af1d86dbdd3490651b680cefe7b3847fa186ff"
+    },
+    {
+      "id": "dt-w6-5",
+      "title": "坐标向量场的变换律",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-6",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-06",
+        "dt-curves-flow",
+        "dt-ode",
+        "dt-incomplete"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 6, Problem 6.5; W6DiffTop2026(1).pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 坐标向量场的变换律\n\nID: `dt-w6-5` · Week 6 · exercise\n\n题目：证明两张平面坐标图下 $\\partial/\\partial x_a$ 的 Jacobian 变换公式。\n\n解答：对任意光滑函数 $h$，令 $H=h\\circ\\varphi_b^{-1}$、$(F^1,F^2)=\\varphi_b\\circ\\varphi_a^{-1}$。链式法则给\n$$\\partial_{x_a}(h\\circ\\varphi_a^{-1})(\\varphi_a(p))=\\sum_{j=1}^2(\\partial_jH)(\\varphi_b(p))\\,\\partial_{x_a}F^j(\\varphi_a(p)).$$\n因此作为作用于任意 $h$ 的导子，\n$$\\left.\\partial_{x_a}\\right|_p=\\partial_{x_a}F^1(\\varphi_a(p))\\left.\\partial_{x_b}\\right|_p+\\partial_{x_a}F^2(\\varphi_a(p))\\left.\\partial_{y_b}\\right|_p.$$\n系数随 $p$ 光滑，故是向量场恒等式。原式的系数必须在 $\\varphi_a(p)$ 处求值，不能把坐标域函数直接当作 $M$ 上函数而省去拉回含义。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 6, Problem 6.5; W6DiffTop2026(1).pdf\n\n## 关联\n\n[dt-week-06](dt-week-06.md) · [dt-curves-flow](dt-curves-flow.md) · [dt-ode](dt-ode.md) · [dt-incomplete](dt-incomplete.md)\n",
+      "content_sha256": "sha256:de03d6eefc6c3aa334270a89337652158ea88060050b684fe839a9b9deb98526"
+    },
+    {
+      "id": "dt-w6-6",
+      "title": "同一个坐标函数，不同坐标方向",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-6",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-06",
+        "dt-curves-flow",
+        "dt-ode",
+        "dt-incomplete"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 6, Problem 6.6; W6DiffTop2026(1).pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 同一个坐标函数，不同坐标方向\n\nID: `dt-w6-6` · Week 6 · exercise\n\n题目：给两张全局坐标图使 $x_a=x_b$，但 $\\partial_{x_a}\\ne\\partial_{x_b}$。\n\n解答：取 $\\varphi_a(x,y)=(x,y)$、$\\varphi_b(x,y)=(x,y+x)$。第二张逆为 $(u,v)\\mapsto(u,v-u)$，是全局微分同胚。两图的第一坐标均为 $x$。保持 $y_a$ 不变而变化 $x_a$ 得 $\\partial_{x_a}=\\partial_x$；保持 $y_b=y+x$ 不变则 $dy/dx=-1$，得 $\\partial_{x_b}=\\partial_x-\\partial_y$。例如它们作用于原函数 $y$ 的结果分别为 0 和 $-1$，确实不同。另一方面 $dx_a=dx_b=dx$，因为 differential 只由函数本身决定。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 6, Problem 6.6; W6DiffTop2026(1).pdf\n\n## 关联\n\n[dt-week-06](dt-week-06.md) · [dt-curves-flow](dt-curves-flow.md) · [dt-ode](dt-ode.md) · [dt-incomplete](dt-incomplete.md)\n",
+      "content_sha256": "sha256:f3c3a7dbaee79c651bb83df804f8c4ee60a3f6673eec9d8dd145f0731e6a8edb"
+    },
+    {
+      "id": "dt-w6-7",
+      "title": "Coordinate vector fields commute",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-6",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-06",
+        "dt-curves-flow",
+        "dt-ode",
+        "dt-incomplete"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 6, Problem 6.7; W6DiffTop2026(1).pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Coordinate vector fields commute\n\nID: `dt-w6-7` · Week 6 · exercise\n\n题目：证明 $[\\partial_{x^a},\\partial_{x^b}]=0$。\n\n解答：对任意局部光滑 $f$，\n$$[\\partial_{x^a},\\partial_{x^b}]f=\\partial_a\\partial_b(f\\circ\\varphi^{-1})-\\partial_b\\partial_a(f\\circ\\varphi^{-1})=0,$$\n最后由光滑函数二阶混合偏导可交换。导子由其对所有函数的作用确定，因此括号为零。结论在图域 $U$ 上成立，不声称单张图的坐标向量场都能按该公式全局定义。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 6, Problem 6.7; W6DiffTop2026(1).pdf\n\n## 关联\n\n[dt-week-06](dt-week-06.md) · [dt-curves-flow](dt-curves-flow.md) · [dt-ode](dt-ode.md) · [dt-incomplete](dt-incomplete.md)\n",
+      "content_sha256": "sha256:82f96036087cbc21963cf898e88af7ea0795c1ebb0a9e81981216ca594063d44"
+    },
+    {
+      "id": "dt-w7-1",
+      "title": "Top exterior power 一维",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-7",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-07",
+        "dt-exterior",
+        "dt-exterior-basis",
+        "dt-forms",
+        "dt-wedge-example"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 7, Problem 7.1; W7DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Top exterior power 一维\n\nID: `dt-w7-1` · Week 7 · exercise\n\n题目：$\\dim V=n$，证明 $\\dim\\Lambda^nV=1$。\n\n步骤 1：选基 $e_1,\\ldots,e_n$。展开任意 $n$ 重楔，每项有重复基向量即为零，无重复者为 $e_1\\wedge\\cdots\\wedge e_n$ 的带符号排列。因此该元素生成 $\\Lambda^nV$。\n\n步骤 2：相对所选基的坐标行列式 $D(v_1,\\ldots,v_n)$ 是交替多线性映射，泛性质给线性 $\\bar D:\\Lambda^nV\\to\\mathbb R$，满足 $\\bar D(e_1\\wedge\\cdots\\wedge e_n)=1$。故生成元不为零，维数为 1。$n=0$ 时约定 $\\Lambda^0(0)=\\mathbb R$，结论仍成立。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 7, Problem 7.1; W7DiffTop2026.pdf\n\n## 关联\n\n[dt-week-07](dt-week-07.md) · [dt-exterior](dt-exterior.md) · [dt-exterior-basis](dt-exterior-basis.md) · [dt-forms](dt-forms.md) · [dt-wedge-example](dt-wedge-example.md)\n",
+      "content_sha256": "sha256:40c49d368905275bf1b89ce731c00f087333ae318f6474d566077a10bc501a4c"
+    },
+    {
+      "id": "dt-w7-2",
+      "title": "Exterior power 的基",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-7",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-07",
+        "dt-exterior",
+        "dt-exterior-basis",
+        "dt-forms",
+        "dt-wedge-example"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 7, Problem 7.2; W7DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Exterior power 的基\n\nID: `dt-w7-2` · Week 7 · exercise\n\n题目：求 $\\Lambda^pV$ 的一组基。\n\n步骤 1：给 $V$ 的基 $e_1,\\ldots,e_n$，取所有 $e_I=e_{i_1}\\wedge\\cdots\\wedge e_{i_p}$，其中 $i_1<\\cdots<i_p$。由多线性展开、重复因子为零、交换因子变号，所有纯楔都在其张成中；纯楔生成外幂，故它们张成。\n\n步骤 2：对每个递增指标 $I$，令 $D_I(v_1,\\ldots,v_p)=\\det(e^{i_a}(v_b))_{a,b=1}^p$，其中 $e^i$ 为对偶基。它是交替多线性，下降为线性 $\\bar D_I$，且 $\\bar D_I(e_J)=\\delta_{IJ}$。对线性关系逐一应用 $\\bar D_I$，得到全部系数零，所以独立。\n\n结论：维数 $\\binom np$；$p>n$ 时无递增指标，空间为零；$p=0$ 时基为 $\\{1\\}$。原讲义泛性质须限定为 **alternating multilinear**，不能只说任意 multilinear；后者刻画 tensor power。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 7, Problem 7.2; W7DiffTop2026.pdf\n\n## 关联\n\n[dt-week-07](dt-week-07.md) · [dt-exterior](dt-exterior.md) · [dt-exterior-basis](dt-exterior-basis.md) · [dt-forms](dt-forms.md) · [dt-wedge-example](dt-wedge-example.md)\n",
+      "content_sha256": "sha256:0ebbcce03e91dbabf7f00aa4012c2de6402ef15c16405be19d259aa8ae7236dc"
+    },
+    {
+      "id": "dt-w7-3",
+      "title": "Exterior power 的函子性",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-7",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-07",
+        "dt-exterior",
+        "dt-exterior-basis",
+        "dt-forms",
+        "dt-wedge-example"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 7, Problem 7.3; W7DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Exterior power 的函子性\n\nID: `dt-w7-3` · Week 7 · exercise\n\n题目：线性 $f:V\\to W$ 诱导 $\\Lambda^pf$，满足对纯楔逐因子作用。\n\n解答：$(v_1,\\ldots,v_p)\\mapsto f(v_1)\\wedge\\cdots\\wedge f(v_p)$ 是交替多线性，泛性质给唯一线性映射 $\\Lambda^pf$，满足所求公式。若 $g:W\\to Z$，则 $\\Lambda^pg\\circ\\Lambda^pf$ 与 $\\Lambda^p(gf)$ 在每个纯楔上相等，纯楔张成，故两映射相等。同理 $\\Lambda^p\\mathrm{id}=\\mathrm{id}$。$p=0$ 时诱导映射是 $\\mathbb R$ 的恒等映射。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 7, Problem 7.3; W7DiffTop2026.pdf\n\n## 关联\n\n[dt-week-07](dt-week-07.md) · [dt-exterior](dt-exterior.md) · [dt-exterior-basis](dt-exterior-basis.md) · [dt-forms](dt-forms.md) · [dt-wedge-example](dt-wedge-example.md)\n",
+      "content_sha256": "sha256:6251b8ec7a7dd33eecf3be05295454bc6e8fa96164215ac6075540d3ea5c80fa"
+    },
+    {
+      "id": "dt-w7-4",
+      "title": "用 top wedge 定义 determinant",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-7",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-07",
+        "dt-exterior",
+        "dt-exterior-basis",
+        "dt-forms",
+        "dt-wedge-example"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 7, Problem 7.4; W7DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 用 top wedge 定义 determinant\n\nID: `dt-w7-4` · Week 7 · exercise\n\n题目：定义 $\\det f$ 并证明乘法性。\n\n补上有限维假设 $\\dim V=n<\\infty$；一般无限维线性算子不存在这里的普通行列式。\n\n步骤 1：$\\Lambda^nV$ 一维，故其自同态 $\\Lambda^nf$ 必为唯一标量乘法，定义该标量为 $\\det f$。这一定义不依赖生成元：替换 $\\omega$ 为 $c\\omega$（$c\\ne0$）不会改变标量。\n\n步骤 2：由 7.3，$\\Lambda^n(gf)=\\Lambda^ng\\circ\\Lambda^nf$。作用于非零 $\\omega$，左侧为 $\\det(gf)\\omega$，右侧为 $(\\det g)(\\det f)\\omega$，故乘法性成立。$n=0$ 时定义给 $\\det f=1$。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 7, Problem 7.4; W7DiffTop2026.pdf\n\n## 关联\n\n[dt-week-07](dt-week-07.md) · [dt-exterior](dt-exterior.md) · [dt-exterior-basis](dt-exterior-basis.md) · [dt-forms](dt-forms.md) · [dt-wedge-example](dt-wedge-example.md)\n",
+      "content_sha256": "sha256:201bc5df9db0a0686b236a37bdd0d950a9218336cb92d0ae19389f420a494adf"
+    },
+    {
+      "id": "dt-w7-5",
+      "title": "Exterior cotangent bundle 的流形结构",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-7",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-07",
+        "dt-exterior",
+        "dt-exterior-basis",
+        "dt-forms",
+        "dt-wedge-example"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 7, Problem 7.5; W7DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Exterior cotangent bundle 的流形结构\n\nID: `dt-w7-5` · Week 7 · exercise\n\n题目：为 $E=\\coprod_{p\\in M}\\Lambda^kT_p^*M$ 构造光滑流形结构。\n\n步骤 1：设 $\\dim M=n$、$r=\\binom nk$（$k>n$ 时 $r=0$）。在图 $(U,x)$ 上，每个纤维元唯一写为 $\\omega_p=\\sum_I a_I dx^{i_1}|_p\\wedge\\cdots\\wedge dx^{i_k}|_p$。定义 $\\Phi_x(\\omega_p)=(x(p),(a_I))\\in x(U)\\times\\mathbb R^r$，双射。\n\n步骤 2：在另一图 $y$ 中，$dx^i=\\sum_j(\\partial x^i/\\partial y^j)dy^j$，楔展开给\n$$b_J=\\sum_I a_I\\det\\left(\\frac{\\partial x^{i_a}}{\\partial y^{j_b}}\\right)_{a,b=1}^k.$$\n故过渡 $(x,a)\\mapsto(y(x),C(x)a)$，$C(x)$ 的元素为光滑 Jacobian minors。反向坐标同理，矩阵互逆，过渡是微分同胚。\n\n步骤 3：由 atlas 生成拓扑的构造得到局部欧氏空间。投影 $\\pi:E\\to M$ 在图中是 $(x,a)\\mapsto x$，连续。两点底点不同可用基空间的不交邻域原像分离；底点相同则同在一个平凡化域，在欧氏图中用不交开集分离，所以 Hausdorff。\n\n步骤 4：第二可数流形有可数图覆盖（第二可数推出 Lindelöf）；每个平凡化域有可数欧氏基，其可数并是 $E$ 的可数基。因此 $E$ 是维数 $n+r$ 的流形。$k=0$ 时是 $M\\times\\mathbb R$；$k>n$ 时为零丛，总空间同胚且微分同胚于 $M$。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 7, Problem 7.5; W7DiffTop2026.pdf\n\n## 关联\n\n[dt-week-07](dt-week-07.md) · [dt-exterior](dt-exterior.md) · [dt-exterior-basis](dt-exterior-basis.md) · [dt-forms](dt-forms.md) · [dt-wedge-example](dt-wedge-example.md)\n",
+      "content_sha256": "sha256:d4d4f501902a4a930f429b677df9e5fa41d2e4bafe738df7678588cade8452cd"
+    },
+    {
+      "id": "dt-w8-2",
+      "title": "一形式的 d² 逐项计算",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-8",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-08",
+        "dt-exterior-derivative",
+        "dt-contraction-lie",
+        "dt-cartan-complex",
+        "dt-cartan-example"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 8, Problem 8.2; W8DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 一形式的 d² 逐项计算\n\nID: `dt-w8-2` · Week 8 · exercise\n\n题目：对 $\\omega\\in\\operatorname{Hom}_A(\\operatorname{Der}(A),A)$ 计算 $d^2\\omega$。\n\n统一勘误与约定：$A$ 是交换含幺实代数，$L=\\operatorname{Der}_{\\mathbb R}(A,A)$，$\\Omega^p=\\operatorname{Hom}_A(\\Lambda_A^pL,A)$，$\\Omega^0=A$，负次数为零。外微分使用\n$$d\\omega(X_1,\\ldots,X_{p+1})=\\sum_i(-1)^{i-1}X_i\\omega(X_1,\\widehat X_i,\\ldots,X_{p+1})+\\sum_{i<j}(-1)^{i+j}\\omega([X_i,X_j],X_1,\\widehat X_i,\\widehat X_j,\\ldots,X_{p+1}).$$\n原文第二个求和缺少 $(-1)^{i+j}$，末尾参数和定义域也有笔误。以下均按此标准公式计算。\n\n步骤 1：$d\\omega(X,Y)=X\\omega(Y)-Y\\omega(X)-\\omega([X,Y])$。\n\n步骤 2：代入二形式的外微分得到完整展开\n$$\\begin{aligned}\nd^2\\omega(X,Y,Z)={}&XY\\omega(Z)-XZ\\omega(Y)-X\\omega([Y,Z])\\\\\n&-YX\\omega(Z)+YZ\\omega(X)+Y\\omega([X,Z])\\\\\n&+ZX\\omega(Y)-ZY\\omega(X)-Z\\omega([X,Y])\\\\\n&-[X,Y]\\omega(Z)+Z\\omega([X,Y])+\\omega([[X,Y],Z])\\\\\n&+[X,Z]\\omega(Y)-Y\\omega([X,Z])-\\omega([[X,Z],Y])\\\\\n&-[Y,Z]\\omega(X)+X\\omega([Y,Z])+\\omega([[Y,Z],X]).\n\\end{aligned}$$\n\n步骤 3：形如 $X\\omega([Y,Z])$ 的六项成对抵消；作用于 $\\omega(Z)$ 的项合成 $(XY-YX-[X,Y])\\omega(Z)=0$，其他两个同理。\n\n步骤 4：剩下 $\\omega([[X,Y],Z]-[[X,Z],Y]+[[Y,Z],X])=0$，因为括号内为 Jacobi 恒等式。因此 $d^2\\omega=0$。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 8, Problem 8.2; W8DiffTop2026.pdf\n\n## 关联\n\n[dt-week-08](dt-week-08.md) · [dt-exterior-derivative](dt-exterior-derivative.md) · [dt-contraction-lie](dt-contraction-lie.md) · [dt-cartan-complex](dt-cartan-complex.md) · [dt-cartan-example](dt-cartan-example.md)\n",
+      "content_sha256": "sha256:93a245d13f53ad1bb7af56e9c3a7ba43bde8509c266c8a3361461f2b748a8ff2"
+    },
+    {
+      "id": "dt-w8-3",
+      "title": "二形式的 d² 手算与抵消表",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-8",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-08",
+        "dt-exterior-derivative",
+        "dt-contraction-lie",
+        "dt-cartan-complex",
+        "dt-cartan-example"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 8, Problem 8.3; W8DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 二形式的 d² 手算与抵消表\n\nID: `dt-w8-3` · Week 8 · exercise\n\n题目：对二形式 $\\omega$ 逐项计算 $d^2\\omega$。\n\n记 $A=X_1,B=X_2,C=X_3,D=X_4$（此处字母 $A$ 表示导子，底层代数仍按上下文区分）。设 $\\eta=d\\omega$，三变量公式是\n$$\\eta(U,V,W)=U\\omega(V,W)-V\\omega(U,W)+W\\omega(U,V)-\\omega([U,V],W)+\\omega([U,W],V)-\\omega([V,W],U).$$\n\n步骤 1：四变量完整外层展开为\n$$\\begin{aligned}\nd\\eta(A,B,C,D)={}&A\\eta(B,C,D)-B\\eta(A,C,D)+C\\eta(A,B,D)-D\\eta(A,B,C)\\\\\n&-\\eta([A,B],C,D)+\\eta([A,C],B,D)-\\eta([A,D],B,C)\\\\\n&-\\eta([B,C],A,D)+\\eta([B,D],A,C)-\\eta([C,D],A,B).\n\\end{aligned}$$\n每个 $\\eta$ 都替换为上述六项，以下按类型列出全部 60 项的归并，保证无遗漏。\n\n步骤 2（18 项）：前四项产生 12 个双重导子项，后六项各产生一个括号导子作用项，合并为\n$$\\begin{aligned}\n&(AB-BA-[A,B])\\omega(C,D)\\\\\n&-(AC-CA-[A,C])\\omega(B,D)\\\\\n&+(AD-DA-[A,D])\\omega(B,C)\\\\\n&+(BC-CB-[B,C])\\omega(A,D)\\\\\n&-(BD-DB-[B,D])\\omega(A,C)\\\\\n&+(CD-DC-[C,D])\\omega(A,B)=0.\n\\end{aligned}$$\n\n步骤 3（24 项）：前四项产生以下 12 项\n$$\\begin{aligned}\n&-A\\omega([B,C],D)+A\\omega([B,D],C)-A\\omega([C,D],B)\\\\\n&+B\\omega([A,C],D)-B\\omega([A,D],C)+B\\omega([C,D],A)\\\\\n&-C\\omega([A,B],D)+C\\omega([A,D],B)-C\\omega([B,D],A)\\\\\n&+D\\omega([A,B],C)-D\\omega([A,C],B)+D\\omega([B,C],A).\n\\end{aligned}$$\n后六项中，每个 $\\eta([U,V],W,Z)$ 的第二、三项分别为 $-W\\omega([U,V],Z)$ 与 $Z\\omega([U,V],W)$；乘上外层符号后正好得到上面 12 项的相反数。例如 $-\\eta([B,C],A,D)$ 贡献 $+A\\omega([B,C],D)-D\\omega([B,C],A)$，逐一抵消。\n\n步骤 4（6 项）：两个不相交括号的项为\n$$\\begin{aligned}\n&\\omega([C,D],[A,B])+\\omega([A,B],[C,D])\\\\\n&-\\omega([B,D],[A,C])-\\omega([A,C],[B,D])\\\\\n&+\\omega([B,C],[A,D])+\\omega([A,D],[B,C])=0,\n\\end{aligned}$$\n由 $\\omega$ 交替性每对为零。\n\n步骤 5（12 项）：令 $J(U,V,W)=[[U,V],W]-[[U,W],V]+[[V,W],U]$，剩余嵌套括号项为\n$$\\omega(J(A,B,C),D)-\\omega(J(A,B,D),C)+\\omega(J(A,C,D),B)-\\omega(J(B,C,D),A)=0.$$\n每个 $J=0$ 由 Jacobi。四类共 $18+24+6+12=60$ 项，全部消去，故 $d^2\\omega=0$。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 8, Problem 8.3; W8DiffTop2026.pdf\n\n## 关联\n\n[dt-week-08](dt-week-08.md) · [dt-exterior-derivative](dt-exterior-derivative.md) · [dt-contraction-lie](dt-contraction-lie.md) · [dt-cartan-complex](dt-cartan-complex.md) · [dt-cartan-example](dt-cartan-example.md)\n",
+      "content_sha256": "sha256:57ccd638198f1cd3b45803c0d11aadb4b6ac532db186426d6ce876f7b834d3c3"
+    },
+    {
+      "id": "dt-w8-4",
+      "title": "Lie derivative 的 A-multilinearity",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-8",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-08",
+        "dt-exterior-derivative",
+        "dt-contraction-lie",
+        "dt-cartan-complex",
+        "dt-cartan-example"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 8, Problem 8.4; W8DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Lie derivative 的 A-multilinearity\n\nID: `dt-w8-4` · Week 8 · exercise\n\n题目：证明\n$$L_X\\omega(Y_1,\\ldots,Y_p)=X\\omega(Y_1,\\ldots,Y_p)-\\sum_j\\omega(Y_1,\\ldots,[X,Y_j],\\ldots,Y_p)$$\n对每个参数 $A$-线性。\n\n步骤 1：先由导子 Leibniz 规则直接计算 $[X,aY]=X(a)Y+a[X,Y]$。\n\n步骤 2：把第 $j$ 槽换成 $aY_j$。首项变为 $X(a)\\omega(Y_1,\\ldots,Y_p)+aX(\\omega(Y_1,\\ldots,Y_p))$。和式中第 $j$ 项是 $-X(a)\\omega(Y_1,\\ldots,Y_p)-a\\omega(\\ldots,[X,Y_j],\\ldots)$；其他各项因 $\\omega$ 的 $A$-多线性均可提出 $a$。\n\n步骤 3：两项 $X(a)\\omega$ 抵消，剩下恰为 $aL_X\\omega(Y_1,\\ldots,Y_p)$。加法性由各运算的实线性和括号加法性直接得到，因此每个槽均 $A$-线性。$p=0$ 时没有槽，$L_Xf=Xf$。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 8, Problem 8.4; W8DiffTop2026.pdf\n\n## 关联\n\n[dt-week-08](dt-week-08.md) · [dt-exterior-derivative](dt-exterior-derivative.md) · [dt-contraction-lie](dt-contraction-lie.md) · [dt-cartan-complex](dt-cartan-complex.md) · [dt-cartan-example](dt-cartan-example.md)\n",
+      "content_sha256": "sha256:8b7da2d0d61b33b477dff21f7c711d4a12240ee92e7d80bc27d8fc8bac88ce69"
+    },
+    {
+      "id": "dt-w8-5",
+      "title": "Flow pullback 的导数等于 Lie derivative",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-8",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-08",
+        "dt-exterior-derivative",
+        "dt-contraction-lie",
+        "dt-cartan-complex",
+        "dt-cartan-example"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 8, Problem 8.5; W8DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Flow pullback 的导数等于 Lie derivative\n\nID: `dt-w8-5` · Week 8 · exercise\n\n题目：对 $p$-形式证明 $\\left.\\frac d{dt}\\right|_0F_t^*\\omega=L_X\\omega$。\n\n步骤 1：固定 $m$，取坐标包含 $m$ 及小时间轨迹。对任意向量场 $Y$，由 flow 方程有\n$$F_t^i(m)=m^i+tX^i(m)+O(t^2),\\qquad (dF_t)_mY_m=Y^i(m)\\partial_i|_{F_t(m)}+t\\,\\partial_jX^i(m)Y^j(m)\\partial_i|_{F_t(m)}+O(t^2).$$\n另一方面 $Y^i(F_t(m))=Y^i(m)+tX^j\\partial_jY^i(m)+O(t^2)$。所以在该坐标平凡化中\n$$\\left.\\frac d{dt}\\right|_0\\big((dF_t)_mY_m-Y_{F_t(m)}\\big)=-[X,Y]_m.$$\n\n步骤 2：定义标量函数 $g=\\omega(Y_1,\\ldots,Y_p)$。由拉回定义，\n$$ (F_t^*\\omega)_m(Y_1(m),\\ldots,Y_p(m))=\\omega_{F_t(m)}((dF_t)_mY_1(m),\\ldots,(dF_t)_mY_p(m)).$$\n把每个参数写成 $Y_j(F_t(m))$ 加上一阶差，利用多线性求导得\n$$Xg(m)-\\sum_j\\omega_m(Y_1(m),\\ldots,[X,Y_j]_m,\\ldots,Y_p(m)),$$\n即 $L_X\\omega$ 的定义。两个或更多差因子的乘积是 $O(t^2)$，求一阶导数不贡献。\n\n步骤 3：$m$ 任意，所以形式相等。局部 flow 只需在每个 $m$ 附近的小时间定义；不能假定不完备向量场的 $F_t$ 对所有时间全局存在。$p=0$ 时公式就是 $(f\\circ F_t)'|_0=Xf$。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 8, Problem 8.5; W8DiffTop2026.pdf\n\n## 关联\n\n[dt-week-08](dt-week-08.md) · [dt-exterior-derivative](dt-exterior-derivative.md) · [dt-contraction-lie](dt-contraction-lie.md) · [dt-cartan-complex](dt-cartan-complex.md) · [dt-cartan-example](dt-cartan-example.md)\n",
+      "content_sha256": "sha256:123ce79ca891fd6eb281b93bad2b8392d997b6b720eabbfb9474637942b3205d"
+    },
+    {
+      "id": "dt-w8-6",
+      "title": "Cartan formula 的逐类消去证明",
+      "subject": "differential-topology",
+      "kind": "exercise",
+      "tags": [
+        "week-8",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-08",
+        "dt-exterior-derivative",
+        "dt-contraction-lie",
+        "dt-cartan-complex",
+        "dt-cartan-example"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 8, Problem 8.6; W8DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Cartan formula 的逐类消去证明\n\nID: `dt-w8-6` · Week 8 · exercise\n\n题目：定义 contraction 并证明 $L_X=di_X+i_Xd$。\n\n定义：对 $p\\ge1$，$(i_X\\omega)(Y_1,\\ldots,Y_{p-1})=\\omega(X,Y_1,\\ldots,Y_{p-1})$；$p=0$ 时 $i_X=0$。它显然 $A$-多线性且交替，故值在 $\\Omega^{p-1}$。原题右侧参数数目应为 $p-1$。\n\n步骤 1：对 $p\\ge1$，把 $d(i_X\\omega)$ 应用于 $Y_1,\\ldots,Y_p$：\n$$\\sum_j(-1)^{j-1}Y_j\\omega(X,Y_1,\\widehat Y_j,\\ldots,Y_p)+\\sum_{j<k}(-1)^{j+k}\\omega(X,[Y_j,Y_k],Y_1,\\widehat Y_j,\\widehat Y_k,\\ldots,Y_p).$$\n\n步骤 2：$i_Xd\\omega(Y_1,\\ldots,Y_p)=d\\omega(X,Y_1,\\ldots,Y_p)$ 的展开分四类：\n$$X\\omega(Y_1,\\ldots,Y_p),$$\n$$\\sum_j(-1)^jY_j\\omega(X,Y_1,\\widehat Y_j,\\ldots,Y_p),$$\n$$\\sum_j(-1)^j\\omega([X,Y_j],Y_1,\\widehat Y_j,\\ldots,Y_p),$$\n$$\\sum_{j<k}(-1)^{j+k}\\omega([Y_j,Y_k],X,Y_1,\\widehat Y_j,\\widehat Y_k,\\ldots,Y_p).$$\n\n步骤 3：第二类与步骤 1 的第一和抵消。第四类把 $X$ 与前面的括号交换一次，出现负号，与步骤 1 的第二和抵消。第三类把 $[X,Y_j]$ 从首槽移到第 $j$ 槽，产生 $(-1)^{j-1}$，乘上原符号 $(-1)^j$ 得 $-1$。因此剩下\n$$X\\omega(Y_1,\\ldots,Y_p)-\\sum_j\\omega(Y_1,\\ldots,[X,Y_j],\\ldots,Y_p)=L_X\\omega.$$\n\n步骤 4：$p=0$ 时右侧 $di_Xf+i_Xdf=0+df(X)=Xf=L_Xf$。负次数空间按零处理。所以各次数均成立。\n\n## 来源\n\n- Yohsuke Imagi, Differential Topology, Autumn 2026, Week 8, Problem 8.6; W8DiffTop2026.pdf\n\n## 关联\n\n[dt-week-08](dt-week-08.md) · [dt-exterior-derivative](dt-exterior-derivative.md) · [dt-contraction-lie](dt-contraction-lie.md) · [dt-cartan-complex](dt-cartan-complex.md) · [dt-cartan-example](dt-cartan-example.md)\n",
+      "content_sha256": "sha256:2c3a03ac08212da8aeb73e193758df84c706ed6cd876ad48e7f6ebfe84519058"
+    },
+    {
+      "id": "dt-topology",
+      "title": "Topology、basis 与邻域",
+      "subject": "differential-topology",
+      "kind": "definition",
+      "tags": [
+        "week-1",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-01",
+        "dt-w1-1",
+        "dt-w1-2",
+        "dt-w1-3",
+        "dt-w1-4",
+        "dt-w1-u1",
+        "dt-w1-u2",
+        "dt-w1-u3",
+        "dt-w1-u4"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 1 roadmap 编写的配套知识卡；原课程文件 DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Topology、basis 与邻域\n\nID: `dt-topology` · Week 1 · definition\n\nTopology 是集合 $X$ 的子集族 $\\tau$，包含 $\\varnothing,X$，对任意并和有限交封闭。Basis $\\mathcal B$ 满足覆盖性及交点细化性：若 $x\\in B_1\\cap B_2$，存在 $B_3\\in\\mathcal B$ 使 $x\\in B_3\\subset B_1\\cap B_2$。生成的开集恰为基元素的并。\n\n判定 $U$ 开只需对每个 $x\\in U$ 找到一个 $x\\in B\\subset U$，因为此时 $U=\\bigcup_{x\\in U}B_x$。这里证明的是某集合为开集，不是证明某个“集合族属于另一个集合族”。比较两拓扑通常对基元素做这种逐点细化。\n\n## 来源\n\n- 为 Week 1 roadmap 编写的配套知识卡；原课程文件 DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-01](dt-week-01.md) · [dt-w1-1](dt-w1-1.md) · [dt-w1-2](dt-w1-2.md) · [dt-w1-3](dt-w1-3.md) · [dt-w1-4](dt-w1-4.md) · [dt-w1-u1](dt-w1-u1.md) · [dt-w1-u2](dt-w1-u2.md) · [dt-w1-u3](dt-w1-u3.md) · [dt-w1-u4](dt-w1-u4.md)\n",
+      "content_sha256": "sha256:a30d4192524f7006c6ce1dd250986499252c663c60c8a6115ff4a9546a895c45"
+    },
+    {
+      "id": "dt-metric",
+      "title": "Norm、metric 与 continuity",
+      "subject": "differential-topology",
+      "kind": "definition",
+      "tags": [
+        "week-1",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-01",
+        "dt-w1-1",
+        "dt-w1-2",
+        "dt-w1-3",
+        "dt-w1-4",
+        "dt-w1-u1",
+        "dt-w1-u2",
+        "dt-w1-u3",
+        "dt-w1-u4"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 1 roadmap 编写的配套知识卡；原课程文件 DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Norm、metric 与 continuity\n\nID: `dt-metric` · Week 1 · definition\n\nNorm $N$ 满足正定性、绝对齐次性、三角不等式。Metric $d:X^2\\to[0,\\infty)$ 满足正定性、对称性、三角不等式；其开球 $B_r(x)=\\{y:d(x,y)<r\\}$ 生成 metric topology。范数给距离 $d(x,y)=N(x-y)$。\n\n映射 $f:X\\to Y$ 连续当且仅当每个开集 $V\\subset Y$ 的原像开；homeomorphism 是连续双射且逆连续。连续双射本身一般不够。\n\n## 来源\n\n- 为 Week 1 roadmap 编写的配套知识卡；原课程文件 DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-01](dt-week-01.md) · [dt-w1-1](dt-w1-1.md) · [dt-w1-2](dt-w1-2.md) · [dt-w1-3](dt-w1-3.md) · [dt-w1-4](dt-w1-4.md) · [dt-w1-u1](dt-w1-u1.md) · [dt-w1-u2](dt-w1-u2.md) · [dt-w1-u3](dt-w1-u3.md) · [dt-w1-u4](dt-w1-u4.md)\n",
+      "content_sha256": "sha256:969eabb137a6d1f876dedcfd828d79596e459d6592a7e2d3e1e04e8089333b6f"
+    },
+    {
+      "id": "dt-separation",
+      "title": "Hausdorff、second countable、compact、connected",
+      "subject": "differential-topology",
+      "kind": "definition",
+      "tags": [
+        "week-1",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-01",
+        "dt-w1-1",
+        "dt-w1-2",
+        "dt-w1-3",
+        "dt-w1-4",
+        "dt-w1-u1",
+        "dt-w1-u2",
+        "dt-w1-u3",
+        "dt-w1-u4"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 1 roadmap 编写的配套知识卡；原课程文件 DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Hausdorff、second countable、compact、connected\n\nID: `dt-separation` · Week 1 · definition\n\nHausdorff：任意不同两点有不交开邻域。Second countable：存在可数拓扑基。Compact：任意开覆盖有有限子覆盖。Connected：不存在把空间写成两个非空不交开集的并。\n\nLocally Euclidean of dimension $n$：每点有开邻域同胚于 $\\mathbb R^n$ 的开子集。Topological manifold 通常还要求 Hausdorff、第二可数。非空连通局部欧氏空间的维数恒定；一般不连通空间可以逐分支具有不同局部维数，课程的固定维数定义则排除此情况。\n\n## 来源\n\n- 为 Week 1 roadmap 编写的配套知识卡；原课程文件 DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-01](dt-week-01.md) · [dt-w1-1](dt-w1-1.md) · [dt-w1-2](dt-w1-2.md) · [dt-w1-3](dt-w1-3.md) · [dt-w1-4](dt-w1-4.md) · [dt-w1-u1](dt-w1-u1.md) · [dt-w1-u2](dt-w1-u2.md) · [dt-w1-u3](dt-w1-u3.md) · [dt-w1-u4](dt-w1-u4.md)\n",
+      "content_sha256": "sha256:b897683fd36d83efba967c7abf70a11c52d3bfe66efdfe6e974707cc15c462f7"
+    },
+    {
+      "id": "dt-induced-product",
+      "title": "Subspace、initial 与 product topology",
+      "subject": "differential-topology",
+      "kind": "definition",
+      "tags": [
+        "week-1",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-01",
+        "dt-w1-1",
+        "dt-w1-2",
+        "dt-w1-3",
+        "dt-w1-4",
+        "dt-w1-u1",
+        "dt-w1-u2",
+        "dt-w1-u3",
+        "dt-w1-u4"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 1 roadmap 编写的配套知识卡；原课程文件 DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Subspace、initial 与 product topology\n\nID: `dt-induced-product` · Week 1 · definition\n\n子空间 $S\\subset X$ 的开集为 $S\\cap U$（$U$ 在 $X$ 开）。给映射 $f:X\\to Y$，initial topology 是所有 $f^{-1}(V)$（$V$ 开）构成的拓扑；它是令 $f$ 连续的最粗拓扑。对多个映射要取这些原像生成的拓扑。\n\n有限乘积以开矩形 $\\prod U_i$ 为基，是使投影均连续的最粗拓扑。$f:Z\\to\\prod X_i$ 连续当且仅当每个分量连续：逆像的矩形为有限个分量逆像的交。\n\n## 来源\n\n- 为 Week 1 roadmap 编写的配套知识卡；原课程文件 DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-01](dt-week-01.md) · [dt-w1-1](dt-w1-1.md) · [dt-w1-2](dt-w1-2.md) · [dt-w1-3](dt-w1-3.md) · [dt-w1-4](dt-w1-4.md) · [dt-w1-u1](dt-w1-u1.md) · [dt-w1-u2](dt-w1-u2.md) · [dt-w1-u3](dt-w1-u3.md) · [dt-w1-u4](dt-w1-u4.md)\n",
+      "content_sha256": "sha256:c7a036765dce718ef7113963c51533935f1862609864e95d7b7a6be1106b7f4e"
+    },
+    {
+      "id": "dt-dimension-norm",
+      "title": "Norm equivalence 与 invariance of dimension",
+      "subject": "differential-topology",
+      "kind": "theorem",
+      "tags": [
+        "week-1",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-01",
+        "dt-w1-1",
+        "dt-w1-2",
+        "dt-w1-3",
+        "dt-w1-4",
+        "dt-w1-u1",
+        "dt-w1-u2",
+        "dt-w1-u3",
+        "dt-w1-u4"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 1 roadmap 编写的配套知识卡；原课程文件 DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Norm equivalence 与 invariance of dimension\n\nID: `dt-dimension-norm` · Week 1 · theorem\n\n有限维范数等价：对 $\\mathbb R^n$ 的任意两范数 $N_1,N_2$，存在 $c,C>0$ 使 $cN_1(v)\\le N_2(v)\\le CN_1(v)$，故诱导同一拓扑。证明见 1.u1。\n\n维数不变性：若非空空间同时局部欧氏维数 $m,n$，则 $m=n$。这是 Week 1 允许使用的定理。局部同调解释：$H_k(U,U\\setminus\\{p\\};\\mathbb Q)$ 仅在 $k=n$ 为 $\\mathbb Q$，其余为零。由切除缩到欧氏小球，再用 pair 的长正合列及穿孔球形变收缩到 $S^{n-1}$ 得出。与仅比较 $\\mathbb R^m$ 和 $\\mathbb R^n$ 整体同胚不同，局部结论需要该局部不变量。\n\n## 来源\n\n- 为 Week 1 roadmap 编写的配套知识卡；原课程文件 DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-01](dt-week-01.md) · [dt-w1-1](dt-w1-1.md) · [dt-w1-2](dt-w1-2.md) · [dt-w1-3](dt-w1-3.md) · [dt-w1-4](dt-w1-4.md) · [dt-w1-u1](dt-w1-u1.md) · [dt-w1-u2](dt-w1-u2.md) · [dt-w1-u3](dt-w1-u3.md) · [dt-w1-u4](dt-w1-u4.md)\n",
+      "content_sha256": "sha256:6aebf1c353afbad5a867e67c2689925f958ce4e1397ecefd511978ef6547b583"
+    },
+    {
+      "id": "dt-compact-counterexample",
+      "title": "Compact 不必 second countable",
+      "subject": "differential-topology",
+      "kind": "example",
+      "tags": [
+        "week-1",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-01",
+        "dt-w1-1",
+        "dt-w1-2",
+        "dt-w1-3",
+        "dt-w1-4",
+        "dt-w1-u1",
+        "dt-w1-u2",
+        "dt-w1-u3",
+        "dt-w1-u4"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 1 roadmap 编写的配套知识卡；原课程文件 DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Compact 不必 second countable\n\nID: `dt-compact-counterexample` · Week 1 · example\n\n不可数离散集 $D$ 的一点紧化 $D\\cup\\{\\infty\\}$：有限补集为 $\\infty$ 的邻域，$D$ 内所有子集开。它紧且 Hausdorff，却不是第二可数，因为基中必须含所有不可数个开单点。完整证明见 1.u2。因此不能把“compact”当作“可数坐标图”的替代假设。\n\n## 来源\n\n- 为 Week 1 roadmap 编写的配套知识卡；原课程文件 DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-01](dt-week-01.md) · [dt-w1-1](dt-w1-1.md) · [dt-w1-2](dt-w1-2.md) · [dt-w1-3](dt-w1-3.md) · [dt-w1-4](dt-w1-4.md) · [dt-w1-u1](dt-w1-u1.md) · [dt-w1-u2](dt-w1-u2.md) · [dt-w1-u3](dt-w1-u3.md) · [dt-w1-u4](dt-w1-u4.md)\n",
+      "content_sha256": "sha256:164b4dd545b65b9f3c144facb7fb9242bdcdb9654be655e6d488e4ccc15f046a"
+    },
+    {
+      "id": "dt-atlas",
+      "title": "Chart、atlas 与 smooth map",
+      "subject": "differential-topology",
+      "kind": "definition",
+      "tags": [
+        "week-2",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-02",
+        "dt-w2-0",
+        "dt-w2-2",
+        "dt-w2-3",
+        "dt-w2-4",
+        "dt-w2-5",
+        "dt-w2-6",
+        "dt-w2-8",
+        "dt-w2-10",
+        "dt-w2-11"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 2 roadmap 编写的配套知识卡；原课程文件 W2DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Chart、atlas 与 smooth map\n\nID: `dt-atlas` · Week 2 · definition\n\n在已给拓扑的 $X$ 上，$n$ 维 chart 为 $(U,\\varphi)$，其中 $U$ 开、$\\varphi:U\\to V\\subset\\mathbb R^n$ 为同胚，$V$ 开。Atlas 是覆盖 $X$ 的图族，各过渡 $\\psi\\circ\\varphi^{-1}$ 在其开交叠域上光滑（把两图交换也要求，故逆光滑）。\n\nSmooth manifold 是 Hausdorff、第二可数的空间加这样的 atlas（或其 maximal atlas）。映射 $f:M\\to N$ 光滑指在每点附近的源图和目标图中，坐标表达 $\\psi\\circ f\\circ\\varphi^{-1}$ 光滑。Diffeomorphism 是光滑双射且逆光滑。\n\n若只有集合没有拓扑，可先给满足开交叠、光滑可逆过渡的双射图，再按 2.2 生成拓扑；此步骤**不自动保证 Hausdorff 或第二可数**，必须另查。\n\n## 来源\n\n- 为 Week 2 roadmap 编写的配套知识卡；原课程文件 W2DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-02](dt-week-02.md) · [dt-w2-0](dt-w2-0.md) · [dt-w2-2](dt-w2-2.md) · [dt-w2-3](dt-w2-3.md) · [dt-w2-4](dt-w2-4.md) · [dt-w2-5](dt-w2-5.md) · [dt-w2-6](dt-w2-6.md) · [dt-w2-8](dt-w2-8.md) · [dt-w2-10](dt-w2-10.md) · [dt-w2-11](dt-w2-11.md)\n",
+      "content_sha256": "sha256:ba8a3b9c936efd088eedb75426eefa60d84ea01b4bb116fe8befd398dd8a16fb"
+    },
+    {
+      "id": "dt-compatibility",
+      "title": "Compatibility、equivalence、maximal atlas",
+      "subject": "differential-topology",
+      "kind": "definition",
+      "tags": [
+        "week-2",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-02",
+        "dt-w2-0",
+        "dt-w2-2",
+        "dt-w2-3",
+        "dt-w2-4",
+        "dt-w2-5",
+        "dt-w2-6",
+        "dt-w2-8",
+        "dt-w2-10",
+        "dt-w2-11"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 2 roadmap 编写的配套知识卡；原课程文件 W2DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Compatibility、equivalence、maximal atlas\n\nID: `dt-compatibility` · Week 2 · definition\n\n两张图 compatible：交叠过渡及逆都光滑。两个 atlas compatible/equivalent：并集为 atlas，等价于同一底层空间上的 identity 是 diffeomorphism。Maximal atlas 是按包含极大的 atlas，也就是所有与给定 atlas 相容的图。\n\n相同光滑结构是同一个 maximal atlas；微分同胚类则允许非 identity 的双射。二者不是同一个概念。Week 2 原文只要求单向 identity 光滑，不能定义对称的等价关系，见 2.10–2.11 的反例。\n\n## 来源\n\n- 为 Week 2 roadmap 编写的配套知识卡；原课程文件 W2DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-02](dt-week-02.md) · [dt-w2-0](dt-w2-0.md) · [dt-w2-2](dt-w2-2.md) · [dt-w2-3](dt-w2-3.md) · [dt-w2-4](dt-w2-4.md) · [dt-w2-5](dt-w2-5.md) · [dt-w2-6](dt-w2-6.md) · [dt-w2-8](dt-w2-8.md) · [dt-w2-10](dt-w2-10.md) · [dt-w2-11](dt-w2-11.md)\n",
+      "content_sha256": "sha256:2463081f7cf15cd385fa5d984ffb8c8678b3d73c7d3c1cb5bbc703075473857c"
+    },
+    {
+      "id": "dt-atlas-topology",
+      "title": "Atlas 诱导唯一拓扑",
+      "subject": "differential-topology",
+      "kind": "theorem",
+      "tags": [
+        "week-2",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-02",
+        "dt-w2-0",
+        "dt-w2-2",
+        "dt-w2-3",
+        "dt-w2-4",
+        "dt-w2-5",
+        "dt-w2-6",
+        "dt-w2-8",
+        "dt-w2-10",
+        "dt-w2-11"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 2 roadmap 编写的配套知识卡；原课程文件 W2DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Atlas 诱导唯一拓扑\n\nID: `dt-atlas-topology` · Week 2 · theorem\n\n若集合上的图族覆盖，各交叠在坐标中开且过渡同胚，则存在唯一使各图域开、各图为同胚的拓扑：$O$ 开当且仅当每个 $\\varphi_a(O\\cap U_a)$ 开。存在性见 2.2；唯一性来自在任何满足条件的拓扑中，$O$ 开当且仅当它与开覆盖中每个图域的交开。\n\n## 来源\n\n- 为 Week 2 roadmap 编写的配套知识卡；原课程文件 W2DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-02](dt-week-02.md) · [dt-w2-0](dt-w2-0.md) · [dt-w2-2](dt-w2-2.md) · [dt-w2-3](dt-w2-3.md) · [dt-w2-4](dt-w2-4.md) · [dt-w2-5](dt-w2-5.md) · [dt-w2-6](dt-w2-6.md) · [dt-w2-8](dt-w2-8.md) · [dt-w2-10](dt-w2-10.md) · [dt-w2-11](dt-w2-11.md)\n",
+      "content_sha256": "sha256:5a4bafceee6304a9e7c7a46cec987324091a68565dfe266078cc9e33b4c81807"
+    },
+    {
+      "id": "dt-exotic-coordinate",
+      "title": "x 与 x³ 图册",
+      "subject": "differential-topology",
+      "kind": "example",
+      "tags": [
+        "week-2",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-02",
+        "dt-w2-0",
+        "dt-w2-2",
+        "dt-w2-3",
+        "dt-w2-4",
+        "dt-w2-5",
+        "dt-w2-6",
+        "dt-w2-8",
+        "dt-w2-10",
+        "dt-w2-11"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 2 roadmap 编写的配套知识卡；原课程文件 W2DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# x 与 x³ 图册\n\nID: `dt-exotic-coordinate` · Week 2 · example\n\n$A=\\{\\mathrm{id}\\}$、$B=\\{x\\mapsto x^3\\}$ 在同一实线上不相容，原因是反向过渡 $x^{1/3}$ 零点不可微。但 $F(x)=x^{1/3}:(\\mathbb R,A)\\to(\\mathbb R,B)$ 的坐标表达是 identity，给出微分同胚。此例区分“同一光滑结构”和“微分同胚”。见 2.8、2.10、2.11。\n\n## 来源\n\n- 为 Week 2 roadmap 编写的配套知识卡；原课程文件 W2DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-02](dt-week-02.md) · [dt-w2-0](dt-w2-0.md) · [dt-w2-2](dt-w2-2.md) · [dt-w2-3](dt-w2-3.md) · [dt-w2-4](dt-w2-4.md) · [dt-w2-5](dt-w2-5.md) · [dt-w2-6](dt-w2-6.md) · [dt-w2-8](dt-w2-8.md) · [dt-w2-10](dt-w2-10.md) · [dt-w2-11](dt-w2-11.md)\n",
+      "content_sha256": "sha256:01348932c24c80f710abb8964f83ab5cf0b4f6485a7cb80fa73b5234297e7262"
+    },
+    {
+      "id": "dt-projective",
+      "title": "射影坐标的计算模板",
+      "subject": "differential-topology",
+      "kind": "example",
+      "tags": [
+        "week-2",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-02",
+        "dt-w2-0",
+        "dt-w2-2",
+        "dt-w2-3",
+        "dt-w2-4",
+        "dt-w2-5",
+        "dt-w2-6",
+        "dt-w2-8",
+        "dt-w2-10",
+        "dt-w2-11"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 2 roadmap 编写的配套知识卡；原课程文件 W2DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 射影坐标的计算模板\n\nID: `dt-projective` · Week 2 · example\n\n$\\mathbb{RP}^n$ 是非零实向量按非零缩放的商，$\\mathbb{CP}^n$ 是对应复商。图 $U_i=\\{[x]:x_i\\ne0\\}$ 的坐标是其余分量除以 $x_i$；逆操作是第 $i$ 位插入 1 后取 span。\n\n例如 $\\mathbb{RP}^2$ 中 $i=0$ 图坐标 $(u,v)=(x_1/x_0,x_2/x_0)$，换到 $i=1$ 图为 $(1/u,v/u)$，要求 $u\\ne0$。每次写图都应注明：图域、坐标像、逆映射、交叠域、过渡公式。\n\n## 来源\n\n- 为 Week 2 roadmap 编写的配套知识卡；原课程文件 W2DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-02](dt-week-02.md) · [dt-w2-0](dt-w2-0.md) · [dt-w2-2](dt-w2-2.md) · [dt-w2-3](dt-w2-3.md) · [dt-w2-4](dt-w2-4.md) · [dt-w2-5](dt-w2-5.md) · [dt-w2-6](dt-w2-6.md) · [dt-w2-8](dt-w2-8.md) · [dt-w2-10](dt-w2-10.md) · [dt-w2-11](dt-w2-11.md)\n",
+      "content_sha256": "sha256:dae57391a4f27cbe7c1ad009278736bc7125aad36111648252de53d9638c5623"
+    },
+    {
+      "id": "dt-quotient",
+      "title": "Quotient topology 与 quotient map",
+      "subject": "differential-topology",
+      "kind": "definition",
+      "tags": [
+        "week-3",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-03",
+        "dt-w3-0",
+        "dt-w3-1",
+        "dt-w3-2",
+        "dt-w3-3",
+        "dt-w3-4",
+        "dt-w3-5",
+        "dt-w3-6",
+        "dt-w3-7",
+        "dt-w3-8",
+        "dt-w3-9",
+        "dt-w3-10",
+        "dt-w3-11",
+        "dt-w3-12",
+        "dt-w3-optional",
+        "dt-w3-13"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 3 roadmap 编写的配套知识卡；原课程文件 W3DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Quotient topology 与 quotient map\n\nID: `dt-quotient` · Week 3 · definition\n\n满射 $q:X\\to Y$ 是 quotient map 指 $V\\subset Y$ 开当且仅当 $q^{-1}(V)$ 开。连续满射仅保证一个方向，不必是商映射。给等价关系时，商集使用这个拓扑。\n\n泛性质：$h:Y\\to Z$ 连续当且仅当 $h\\circ q$ 连续。证明由 $(h\\circ q)^{-1}(O)=q^{-1}(h^{-1}(O))$ 和定义得到。若 $q$ 连续满射且开或闭，则是商映射。群轨道投影是开映射；一般商映射不必开（3.3）。\n\n“连续满射未必商”的简单例子：identity 从离散拓扑的 $\\mathbb R$ 到通常拓扑的 $\\mathbb R$ 连续满射，但若是商映射，目标应也离散。\n\n## 来源\n\n- 为 Week 3 roadmap 编写的配套知识卡；原课程文件 W3DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-03](dt-week-03.md) · [dt-w3-0](dt-w3-0.md) · [dt-w3-1](dt-w3-1.md) · [dt-w3-2](dt-w3-2.md) · [dt-w3-3](dt-w3-3.md) · [dt-w3-4](dt-w3-4.md) · [dt-w3-5](dt-w3-5.md) · [dt-w3-6](dt-w3-6.md) · [dt-w3-7](dt-w3-7.md) · [dt-w3-8](dt-w3-8.md) · [dt-w3-9](dt-w3-9.md) · [dt-w3-10](dt-w3-10.md) · [dt-w3-11](dt-w3-11.md) · [dt-w3-12](dt-w3-12.md) · [dt-w3-optional](dt-w3-optional.md) · [dt-w3-13](dt-w3-13.md)\n",
+      "content_sha256": "sha256:d1137846310aec95e74ee1a942e62c6650eecbcddd94e0f30864aab7c4fc6de1"
+    },
+    {
+      "id": "dt-germs-cotangent",
+      "title": "Function germs、maximal ideal、cotangent、derivation",
+      "subject": "differential-topology",
+      "kind": "definition",
+      "tags": [
+        "week-3",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-03",
+        "dt-w3-0",
+        "dt-w3-1",
+        "dt-w3-2",
+        "dt-w3-3",
+        "dt-w3-4",
+        "dt-w3-5",
+        "dt-w3-6",
+        "dt-w3-7",
+        "dt-w3-8",
+        "dt-w3-9",
+        "dt-w3-10",
+        "dt-w3-11",
+        "dt-w3-12",
+        "dt-w3-optional",
+        "dt-w3-13"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 3 roadmap 编写的配套知识卡；原课程文件 W3DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Function germs、maximal ideal、cotangent、derivation\n\nID: `dt-germs-cotangent` · Week 3 · definition\n\n$C^\\infty_{M,p}$ 是 $p$ 附近光滑函数的芽环：两个函数若在更小邻域一致则同芽。局部极大理想为在 $p$ 消失的芽。课程也使用全局环 $C^\\infty(M)$ 的理想 $\\mathfrak m_p=\\{f:f(p)=0\\}$；其平方是有限和 $\\sum u_iv_i$，$u_i,v_i\\in\\mathfrak m_p$。\n\n定义 $T_p^*M=\\mathfrak m_p/\\mathfrak m_p^2$，$T_pM=(T_p^*M)^*$。点导子是实线性 $D:C^\\infty(M)\\to\\mathbb R$ 满足 $D(fg)=f(p)Dg+g(p)Df$。3.13 给两定义的自然同构。Bump 与局部性使全局理想和芽理想的这一商同构（6.3）。\n\n$df_p=[f-f(p)]$；光滑 $F:M\\to N$ 的 differential 由 $dF_p(v)(h)=v(h\\circ F)$ 定义，是余切拉回的对偶。局部坐标矩阵为 Jacobian。\n\n## 来源\n\n- 为 Week 3 roadmap 编写的配套知识卡；原课程文件 W3DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-03](dt-week-03.md) · [dt-w3-0](dt-w3-0.md) · [dt-w3-1](dt-w3-1.md) · [dt-w3-2](dt-w3-2.md) · [dt-w3-3](dt-w3-3.md) · [dt-w3-4](dt-w3-4.md) · [dt-w3-5](dt-w3-5.md) · [dt-w3-6](dt-w3-6.md) · [dt-w3-7](dt-w3-7.md) · [dt-w3-8](dt-w3-8.md) · [dt-w3-9](dt-w3-9.md) · [dt-w3-10](dt-w3-10.md) · [dt-w3-11](dt-w3-11.md) · [dt-w3-12](dt-w3-12.md) · [dt-w3-optional](dt-w3-optional.md) · [dt-w3-13](dt-w3-13.md)\n",
+      "content_sha256": "sha256:25bbfa98cab0cec0867574fa69e6324fed4d96060333cbf425da3de651d1c707"
+    },
+    {
+      "id": "dt-bump-locality",
+      "title": "Bump theorem 与导子局部性",
+      "subject": "differential-topology",
+      "kind": "theorem",
+      "tags": [
+        "week-3",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-03",
+        "dt-w3-0",
+        "dt-w3-1",
+        "dt-w3-2",
+        "dt-w3-3",
+        "dt-w3-4",
+        "dt-w3-5",
+        "dt-w3-6",
+        "dt-w3-7",
+        "dt-w3-8",
+        "dt-w3-9",
+        "dt-w3-10",
+        "dt-w3-11",
+        "dt-w3-12",
+        "dt-w3-optional",
+        "dt-w3-13"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 3 roadmap 编写的配套知识卡；原课程文件 W3DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Bump theorem 与导子局部性\n\nID: `dt-bump-locality` · Week 3 · theorem\n\n对无边界光滑流形 $M$、$p\\in U$ 开，存在 $\\eta\\in C^\\infty(M,[0,1])$，在 $p$ 的某邻域为 1，且支撑紧包含于 $U$。支撑定义为非零集的闭包。完整构造见 3.12。\n\n若 $f$ 在 $p$ 附近为零，取支撑于该邻域且在更小邻域为 1 的 $\\eta$，则 $f=(1-\\eta)f$，两个因子在 $p$ 都为零，所以 $f\\in\\mathfrak m_p^2$，点导子消灭 $f$。这证明点导子仅取决于函数芽。\n\n## 来源\n\n- 为 Week 3 roadmap 编写的配套知识卡；原课程文件 W3DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-03](dt-week-03.md) · [dt-w3-0](dt-w3-0.md) · [dt-w3-1](dt-w3-1.md) · [dt-w3-2](dt-w3-2.md) · [dt-w3-3](dt-w3-3.md) · [dt-w3-4](dt-w3-4.md) · [dt-w3-5](dt-w3-5.md) · [dt-w3-6](dt-w3-6.md) · [dt-w3-7](dt-w3-7.md) · [dt-w3-8](dt-w3-8.md) · [dt-w3-9](dt-w3-9.md) · [dt-w3-10](dt-w3-10.md) · [dt-w3-11](dt-w3-11.md) · [dt-w3-12](dt-w3-12.md) · [dt-w3-optional](dt-w3-optional.md) · [dt-w3-13](dt-w3-13.md)\n",
+      "content_sha256": "sha256:ced332901e96e4ba7118a53e953ce4c3e15637ff6556e5ed78cc9aa601c7e902"
+    },
+    {
+      "id": "dt-hadamard",
+      "title": "Hadamard lemma 与坐标切基",
+      "subject": "differential-topology",
+      "kind": "theorem",
+      "tags": [
+        "week-3",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-03",
+        "dt-w3-0",
+        "dt-w3-1",
+        "dt-w3-2",
+        "dt-w3-3",
+        "dt-w3-4",
+        "dt-w3-5",
+        "dt-w3-6",
+        "dt-w3-7",
+        "dt-w3-8",
+        "dt-w3-9",
+        "dt-w3-10",
+        "dt-w3-11",
+        "dt-w3-12",
+        "dt-w3-optional",
+        "dt-w3-13"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 3 roadmap 编写的配套知识卡；原课程文件 W3DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Hadamard lemma 与坐标切基\n\nID: `dt-hadamard` · Week 3 · theorem\n\n在原点的星形开邻域上，光滑 $f$ 满足 $f(x)-f(0)=\\sum_i x_i g_i(x)$，$g_i(x)=\\int_0^1\\partial_i f(tx)dt$ 光滑，且 $g_i(0)=\\partial_i f(0)$。因而模平方理想只保留线性部分。\n\n所以 $[x^i-x^i(p)]$ 为 $T_p^*M$ 的基，对偶基 $\\partial_i|_p$ 为 $T_pM$ 的基；$v(f)=\\sum_i v(x^i)\\partial_i f(p)$（局部坐标函数通过芽解释）。完整连接全局定义的论证见 6.3。\n\n## 来源\n\n- 为 Week 3 roadmap 编写的配套知识卡；原课程文件 W3DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-03](dt-week-03.md) · [dt-w3-0](dt-w3-0.md) · [dt-w3-1](dt-w3-1.md) · [dt-w3-2](dt-w3-2.md) · [dt-w3-3](dt-w3-3.md) · [dt-w3-4](dt-w3-4.md) · [dt-w3-5](dt-w3-5.md) · [dt-w3-6](dt-w3-6.md) · [dt-w3-7](dt-w3-7.md) · [dt-w3-8](dt-w3-8.md) · [dt-w3-9](dt-w3-9.md) · [dt-w3-10](dt-w3-10.md) · [dt-w3-11](dt-w3-11.md) · [dt-w3-12](dt-w3-12.md) · [dt-w3-optional](dt-w3-optional.md) · [dt-w3-13](dt-w3-13.md)\n",
+      "content_sha256": "sha256:49e0ad17343f76d556174eb671f115cea76a277106c0fab2e7c5cf6e3e4198f6"
+    },
+    {
+      "id": "dt-flat",
+      "title": "Flat function 与零因子",
+      "subject": "differential-topology",
+      "kind": "example",
+      "tags": [
+        "week-3",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-03",
+        "dt-w3-0",
+        "dt-w3-1",
+        "dt-w3-2",
+        "dt-w3-3",
+        "dt-w3-4",
+        "dt-w3-5",
+        "dt-w3-6",
+        "dt-w3-7",
+        "dt-w3-8",
+        "dt-w3-9",
+        "dt-w3-10",
+        "dt-w3-11",
+        "dt-w3-12",
+        "dt-w3-optional",
+        "dt-w3-13"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 3 roadmap 编写的配套知识卡；原课程文件 W3DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Flat function 与零因子\n\nID: `dt-flat` · Week 3 · example\n\n$E(t)=e^{-1/t}$（$t>0$），否则为零。对每个 $m$，$t^{-m}E(t)\\to0$，且每阶导数是 $t^{-1}$ 的多项式乘 $E(t)$，故 $E$ 光滑并在零点所有阶导数为零，但不是零函数。\n\n$E$ 属于所有 $(t^m)$；$E(t)E(-t)=0$ 而两个因子都非零。这同时展示光滑函数不能由一点的 Taylor series 唯一确定、光滑函数环有零因子。严格证明见 3.9–3.11。\n\n## 来源\n\n- 为 Week 3 roadmap 编写的配套知识卡；原课程文件 W3DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-03](dt-week-03.md) · [dt-w3-0](dt-w3-0.md) · [dt-w3-1](dt-w3-1.md) · [dt-w3-2](dt-w3-2.md) · [dt-w3-3](dt-w3-3.md) · [dt-w3-4](dt-w3-4.md) · [dt-w3-5](dt-w3-5.md) · [dt-w3-6](dt-w3-6.md) · [dt-w3-7](dt-w3-7.md) · [dt-w3-8](dt-w3-8.md) · [dt-w3-9](dt-w3-9.md) · [dt-w3-10](dt-w3-10.md) · [dt-w3-11](dt-w3-11.md) · [dt-w3-12](dt-w3-12.md) · [dt-w3-optional](dt-w3-optional.md) · [dt-w3-13](dt-w3-13.md)\n",
+      "content_sha256": "sha256:703a68f1cd7e36fccd926868acb0abed84621f03584ede9dc62011a9d75be902"
+    },
+    {
+      "id": "dt-rank-embedding",
+      "title": "Immersion、submersion、embedding、regular value",
+      "subject": "differential-topology",
+      "kind": "definition",
+      "tags": [
+        "week-4",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-04",
+        "dt-w4-0",
+        "dt-w4-1",
+        "dt-w4-2",
+        "dt-w4-3",
+        "dt-w4-4"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 4 roadmap 编写的配套知识卡；原课程文件 W4DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Immersion、submersion、embedding、regular value\n\nID: `dt-rank-embedding` · Week 4 · definition\n\n光滑 $f:M^m\\to N^n$：每点 $df_p$ 单射称 immersion；每点满射称 submersion；若 immersion 且 $f$ 是到像（子空间拓扑）的 homeomorphism，则称 smooth embedding。\n\n$y\\in N$ 为 regular value 指对每个 $p\\in f^{-1}(y)$，$df_p$ 满射；空纤维也满足。Embedded submanifold $S^k\\subset M^m$ 局部可在图中表示为 $\\mathbb R^k\\times0$ 与图像之交。仅“单射 immersion”并不足以保证 embedding，必须控制像的拓扑。\n\n## 来源\n\n- 为 Week 4 roadmap 编写的配套知识卡；原课程文件 W4DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-04](dt-week-04.md) · [dt-w4-0](dt-w4-0.md) · [dt-w4-1](dt-w4-1.md) · [dt-w4-2](dt-w4-2.md) · [dt-w4-3](dt-w4-3.md) · [dt-w4-4](dt-w4-4.md)\n",
+      "content_sha256": "sha256:2db632c50ddbdc6ef867f7ff57a410bfa9561c65c6e82912aa7a877bf394118c"
+    },
+    {
+      "id": "dt-inverse-constant-rank",
+      "title": "Inverse function 与 constant rank theorem",
+      "subject": "differential-topology",
+      "kind": "theorem",
+      "tags": [
+        "week-4",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-04",
+        "dt-w4-0",
+        "dt-w4-1",
+        "dt-w4-2",
+        "dt-w4-3",
+        "dt-w4-4"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 4 roadmap 编写的配套知识卡；原课程文件 W4DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Inverse function 与 constant rank theorem\n\nID: `dt-inverse-constant-rank` · Week 4 · theorem\n\nInverse function theorem：$df_p$ 同构，则 $f$ 在 $p$ 附近为到目标开邻域的 diffeomorphism。由欧氏版本推导见 4.1。\n\nConstant rank theorem：若 $f:M^m\\to N^n$ 在 $p$ 附近秩恒为 $r$，存在源目标坐标使 $f(u_1,\\ldots,u_m)=(u_1,\\ldots,u_r,0,\\ldots,0)$。定理要求邻域内恒秩，不只是单点秩为 $r$。\n\nRegular level set theorem：$y$ 为 regular value，则非空 $f^{-1}(y)$ 为 $m-n$ 维嵌入子流形，且 $T_p(f^{-1}(y))=\\ker df_p$。切空间公式从 slice 坐标下的投影直接可见；4.2 给 Euclidean 源目标情况下的完整证明。\n\n## 来源\n\n- 为 Week 4 roadmap 编写的配套知识卡；原课程文件 W4DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-04](dt-week-04.md) · [dt-w4-0](dt-w4-0.md) · [dt-w4-1](dt-w4-1.md) · [dt-w4-2](dt-w4-2.md) · [dt-w4-3](dt-w4-3.md) · [dt-w4-4](dt-w4-4.md)\n",
+      "content_sha256": "sha256:10fb715481084b4febd2bcea83143a6ff7f7a5c5befb03ad2b7b34b96057ab17"
+    },
+    {
+      "id": "dt-level-sphere",
+      "title": "球面作为 regular level set",
+      "subject": "differential-topology",
+      "kind": "example",
+      "tags": [
+        "week-4",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-04",
+        "dt-w4-0",
+        "dt-w4-1",
+        "dt-w4-2",
+        "dt-w4-3",
+        "dt-w4-4"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 4 roadmap 编写的配套知识卡；原课程文件 W4DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 球面作为 regular level set\n\nID: `dt-level-sphere` · Week 4 · example\n\n取 $f:\\mathbb R^{n+1}\\to\\mathbb R$，$f(x)=\\sum x_i^2$。$df_x(v)=2\\langle x,v\\rangle$，在 $f^{-1}(1)$ 上因 $x\\ne0$ 满射，故 $S^n$ 是 $n$ 维嵌入子流形，$T_xS^n=x^\\perp$。\n\n球面点的单位长度约束不意味着坐标变换导数是单位矩阵。标准两张球极图过渡为 $T(u)=u/\\|u\\|^2$，定义于 $\\mathbb R^n\\setminus0$；\n$$DT_u=\\|u\\|^{-2}I-2\\|u\\|^{-4}uu^T.$$\n这是坐标域中变量 $u$ 的导数，$u$ 并非单位球面上的点。\n\n## 来源\n\n- 为 Week 4 roadmap 编写的配套知识卡；原课程文件 W4DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-04](dt-week-04.md) · [dt-w4-0](dt-w4-0.md) · [dt-w4-1](dt-w4-1.md) · [dt-w4-2](dt-w4-2.md) · [dt-w4-3](dt-w4-3.md) · [dt-w4-4](dt-w4-4.md)\n",
+      "content_sha256": "sha256:fb062aeacbeaf35153e3fce2d5abad355185ac3c6204cdf2f3679f460ca7a3d6"
+    },
+    {
+      "id": "dt-vector-fields",
+      "title": "Tangent bundle、section 与 vector field",
+      "subject": "differential-topology",
+      "kind": "definition",
+      "tags": [
+        "week-5",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-05",
+        "dt-w5-1",
+        "dt-w5-2",
+        "dt-w5-3",
+        "dt-w5-s1",
+        "dt-w5-4",
+        "dt-w5-5",
+        "dt-w5-6",
+        "dt-w5-s2"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 5 roadmap 编写的配套知识卡；原课程文件 W5DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Tangent bundle、section 与 vector field\n\nID: `dt-vector-fields` · Week 5 · definition\n\n$TM=\\coprod_pT_pM$，坐标平凡化把 $v=\\sum v^i\\partial_i|_p$ 送到 $(x(p),v^1,\\ldots,v^n)$；过渡为 $(x,v)\\mapsto(y(x),D y_xv)$。Smooth vector field 为光滑截面 $X:M\\to TM$，$\\pi X=\\mathrm{id}$，局部 $X=\\sum X^i\\partial_i$，各 $X^i$ 光滑。\n\n它作用于函数为 $(Xf)(p)=X_p(f)$。导子模 $\\operatorname{Der}(C^\\infty(M),C^\\infty(M))$ 以 $(aD)(f)=aD(f)$ 定义 $C^\\infty(M)$-模结构。\n\n## 来源\n\n- 为 Week 5 roadmap 编写的配套知识卡；原课程文件 W5DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-05](dt-week-05.md) · [dt-w5-1](dt-w5-1.md) · [dt-w5-2](dt-w5-2.md) · [dt-w5-3](dt-w5-3.md) · [dt-w5-s1](dt-w5-s1.md) · [dt-w5-4](dt-w5-4.md) · [dt-w5-5](dt-w5-5.md) · [dt-w5-6](dt-w5-6.md) · [dt-w5-s2](dt-w5-s2.md)\n",
+      "content_sha256": "sha256:b205bcd8dc9c7208dee184e02e08df26c40dafa6911efed1f18aec3103fe989c"
+    },
+    {
+      "id": "dt-fields-derivations",
+      "title": "光滑向量场与函数环导子同构",
+      "subject": "differential-topology",
+      "kind": "theorem",
+      "tags": [
+        "week-5",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-05",
+        "dt-w5-1",
+        "dt-w5-2",
+        "dt-w5-3",
+        "dt-w5-s1",
+        "dt-w5-4",
+        "dt-w5-5",
+        "dt-w5-6",
+        "dt-w5-s2"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 5 roadmap 编写的配套知识卡；原课程文件 W5DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 光滑向量场与函数环导子同构\n\nID: `dt-fields-derivations` · Week 5 · theorem\n\n映射 $X\\mapsto(f\\mapsto Xf)$ 是 $C^\\infty(M)$-模同构到导子模。\n\n证明：向量场的坐标表达说明 $Xf$ 光滑并满足 Leibniz。反之，对环导子 $D$，$D_p(f)=(Df)(p)$ 是点导子，故确定唯一 $X_p\\in T_pM$。在坐标图中任取较小邻域，用 bump 把局部 $x^i$ 延拓为全局 $\\widetilde x^i$，在该小邻域 $X^i=D\\widetilde x^i$ 光滑。故 $p\\mapsto X_p$ 光滑。两构造在所有函数上的作用互逆，且保持函数乘法，所以为模同构。\n\n## 来源\n\n- 为 Week 5 roadmap 编写的配套知识卡；原课程文件 W5DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-05](dt-week-05.md) · [dt-w5-1](dt-w5-1.md) · [dt-w5-2](dt-w5-2.md) · [dt-w5-3](dt-w5-3.md) · [dt-w5-s1](dt-w5-s1.md) · [dt-w5-4](dt-w5-4.md) · [dt-w5-5](dt-w5-5.md) · [dt-w5-6](dt-w5-6.md) · [dt-w5-s2](dt-w5-s2.md)\n",
+      "content_sha256": "sha256:bbceedf900cc1065c64938ea45c53b64b5c7c4b210a47e1e2bf168b04125011b"
+    },
+    {
+      "id": "dt-lie-related",
+      "title": "Lie bracket、f-related 与 distribution",
+      "subject": "differential-topology",
+      "kind": "definition",
+      "tags": [
+        "week-5",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-05",
+        "dt-w5-1",
+        "dt-w5-2",
+        "dt-w5-3",
+        "dt-w5-s1",
+        "dt-w5-4",
+        "dt-w5-5",
+        "dt-w5-6",
+        "dt-w5-s2"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 5 roadmap 编写的配套知识卡；原课程文件 W5DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Lie bracket、f-related 与 distribution\n\nID: `dt-lie-related` · Week 5 · definition\n\n向量场括号 $[X,Y]f=X(Yf)-Y(Xf)$；坐标为 $[X,Y]^i=\\sum_j(X^j\\partial_jY^i-Y^j\\partial_jX^i)$。它仍是向量场并满足 Jacobi（5.5 与向量场–导子同构）。\n\n$X$ 与 $Y$ 为 $f$-related 指 $df_pX_p=Y_{f(p)}$。光滑 rank-$r$ distribution 是 $TM$ 的秩 $r$ 光滑子丛。Involutive 指其局部光滑截面对 Lie bracket 封闭。Integral submanifold 指切空间恰等于该分布的子流形；每点存在此类局部积分子流形称可积。Frobenius theorem 断言光滑常秩分布可积当且仅当 involutive；本周只证明必要方向。\n\n## 来源\n\n- 为 Week 5 roadmap 编写的配套知识卡；原课程文件 W5DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-05](dt-week-05.md) · [dt-w5-1](dt-w5-1.md) · [dt-w5-2](dt-w5-2.md) · [dt-w5-3](dt-w5-3.md) · [dt-w5-s1](dt-w5-s1.md) · [dt-w5-4](dt-w5-4.md) · [dt-w5-5](dt-w5-5.md) · [dt-w5-6](dt-w5-6.md) · [dt-w5-s2](dt-w5-s2.md)\n",
+      "content_sha256": "sha256:5bcec9eef5db0dabe5e159e9c4ab240412c65d24a6c3394680b2bf331094b5fb"
+    },
+    {
+      "id": "dt-bracket-example",
+      "title": "一个非零 Lie bracket",
+      "subject": "differential-topology",
+      "kind": "example",
+      "tags": [
+        "week-5",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-05",
+        "dt-w5-1",
+        "dt-w5-2",
+        "dt-w5-3",
+        "dt-w5-s1",
+        "dt-w5-4",
+        "dt-w5-5",
+        "dt-w5-6",
+        "dt-w5-s2"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 5 roadmap 编写的配套知识卡；原课程文件 W5DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 一个非零 Lie bracket\n\nID: `dt-bracket-example` · Week 5 · example\n\n在 $\\mathbb R^2$ 取 $X=\\partial_x$、$Y=x\\partial_y$。对任意 $f$，\n$$[X,Y]f=\\partial_x(x\\partial_yf)-x\\partial_y\\partial_xf=\\partial_yf.$$\n故 $[X,Y]=\\partial_y$。括号来自系数的变化，不只是两个偏导的交换。与 6.7 的坐标场可交换对照。\n\n## 来源\n\n- 为 Week 5 roadmap 编写的配套知识卡；原课程文件 W5DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-05](dt-week-05.md) · [dt-w5-1](dt-w5-1.md) · [dt-w5-2](dt-w5-2.md) · [dt-w5-3](dt-w5-3.md) · [dt-w5-s1](dt-w5-s1.md) · [dt-w5-4](dt-w5-4.md) · [dt-w5-5](dt-w5-5.md) · [dt-w5-6](dt-w5-6.md) · [dt-w5-s2](dt-w5-s2.md)\n",
+      "content_sha256": "sha256:791b97fb5dfc5a10f78b8affd7403b92cd3ac77d3a1b43daec1965db14c2b0a4"
+    },
+    {
+      "id": "dt-curves-flow",
+      "title": "Integral curve、maximal flow、complete",
+      "subject": "differential-topology",
+      "kind": "definition",
+      "tags": [
+        "week-6",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-06",
+        "dt-w6-1",
+        "dt-w6-2",
+        "dt-w6-3",
+        "dt-w6-4",
+        "dt-w6-5",
+        "dt-w6-6",
+        "dt-w6-7"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 6 roadmap 编写的配套知识卡；原课程文件 W6DiffTop2026(1).pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Integral curve、maximal flow、complete\n\nID: `dt-curves-flow` · Week 6 · definition\n\n$X$ 的积分曲线是光滑 $\\gamma:I\\to M$（$I$ 为开区间），满足 $\\gamma'(t)=X_{\\gamma(t)}$。$\\gamma'(t)(f)=\\frac d{dt}(f\\circ\\gamma)(t)$。同初值的最大积分曲线是不能再延拓到更大区间的解。\n\n最大 flow 的域 $\\mathcal D\\subset\\mathbb R\\times M$ 开，每个纤维 $\\mathcal D_p=I_p$ 是含零的最大存在区间，$F(t,p)=\\gamma_p(t)$。$X$ complete 指所有 $I_p=\\mathbb R$。全局 flow 是光滑 $\\mathbb R$-作用，$F_{s+t}=F_s\\circ F_t$，$F_0=\\mathrm{id}$，各 $F_t$ 的逆为 $F_{-t}$。\n\n局部 flow 的群律仅在相应复合有定义时陈述；不能把“maximal”误认为“complete”。\n\n## 来源\n\n- 为 Week 6 roadmap 编写的配套知识卡；原课程文件 W6DiffTop2026(1).pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-06](dt-week-06.md) · [dt-w6-1](dt-w6-1.md) · [dt-w6-2](dt-w6-2.md) · [dt-w6-3](dt-w6-3.md) · [dt-w6-4](dt-w6-4.md) · [dt-w6-5](dt-w6-5.md) · [dt-w6-6](dt-w6-6.md) · [dt-w6-7](dt-w6-7.md)\n",
+      "content_sha256": "sha256:0305d41e9d2dacc6cc522c2782d061de81ebdbf039d4cdb9abfe42e94e0da247"
+    },
+    {
+      "id": "dt-ode",
+      "title": "流形上的局部 ODE 定理",
+      "subject": "differential-topology",
+      "kind": "theorem",
+      "tags": [
+        "week-6",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-06",
+        "dt-w6-1",
+        "dt-w6-2",
+        "dt-w6-3",
+        "dt-w6-4",
+        "dt-w6-5",
+        "dt-w6-6",
+        "dt-w6-7"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 6 roadmap 编写的配套知识卡；原课程文件 W6DiffTop2026(1).pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 流形上的局部 ODE 定理\n\nID: `dt-ode` · Week 6 · theorem\n\n对光滑 $X$ 和 $p\\in M$，存在 $U\\ni p$、$\\varepsilon>0$、光滑 $F:(-\\varepsilon,\\varepsilon)\\times U\\to M$，满足 $F(0,q)=q$、$\\partial_tF(t,q)=X(F(t,q))$，且积分曲线局部唯一。这是对一整个初值邻域的统一时间与光滑依赖，不只是一个初值的存在性。\n\n推导：图中写 $X=\\sum a^i(x)\\partial_i$，求解欧氏方程 $x'=a(x)$，其右端光滑故局部 Lipschitz，应用欧氏局部存在唯一和光滑依赖定理，再用逆坐标图搬回。重叠图上解由唯一性一致。所有局部解粘成最大积分曲线；紧流形上通过有限子覆盖得到统一短时间，进而 complete，完整证明见 6.4。\n\n## 来源\n\n- 为 Week 6 roadmap 编写的配套知识卡；原课程文件 W6DiffTop2026(1).pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-06](dt-week-06.md) · [dt-w6-1](dt-w6-1.md) · [dt-w6-2](dt-w6-2.md) · [dt-w6-3](dt-w6-3.md) · [dt-w6-4](dt-w6-4.md) · [dt-w6-5](dt-w6-5.md) · [dt-w6-6](dt-w6-6.md) · [dt-w6-7](dt-w6-7.md)\n",
+      "content_sha256": "sha256:87f3fed3781d58febc318d9510f24068cfd038fbbf295d48b7823017aa89f8ee"
+    },
+    {
+      "id": "dt-incomplete",
+      "title": "非完备向量场的显式例子",
+      "subject": "differential-topology",
+      "kind": "example",
+      "tags": [
+        "week-6",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-06",
+        "dt-w6-1",
+        "dt-w6-2",
+        "dt-w6-3",
+        "dt-w6-4",
+        "dt-w6-5",
+        "dt-w6-6",
+        "dt-w6-7"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 6 roadmap 编写的配套知识卡；原课程文件 W6DiffTop2026(1).pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 非完备向量场的显式例子\n\nID: `dt-incomplete` · Week 6 · example\n\n在 $\\mathbb R$ 上取 $X=x^2\\partial_x$。初值 $a$ 的解为 $x(t)=a/(1-at)$，代入可验 $x'=x^2$、$x(0)=a$。若 $a>0$，最大区间为 $(-\\infty,1/a)$；若 $a<0$，为 $(1/a,\\infty)$；若 $a=0$，解恒为零且全局。有限端点处函数发散，不能作为实值连续曲线延拓。所以这是 maximal 但非 complete 的例子。\n\n## 来源\n\n- 为 Week 6 roadmap 编写的配套知识卡；原课程文件 W6DiffTop2026(1).pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-06](dt-week-06.md) · [dt-w6-1](dt-w6-1.md) · [dt-w6-2](dt-w6-2.md) · [dt-w6-3](dt-w6-3.md) · [dt-w6-4](dt-w6-4.md) · [dt-w6-5](dt-w6-5.md) · [dt-w6-6](dt-w6-6.md) · [dt-w6-7](dt-w6-7.md)\n",
+      "content_sha256": "sha256:20a1c3200812191c3b9fdc59157a16ff2321c18d2c1d58fa74f6d9c5890e7a26"
+    },
+    {
+      "id": "dt-exterior",
+      "title": "Exterior power 的严格泛性质",
+      "subject": "differential-topology",
+      "kind": "definition",
+      "tags": [
+        "week-7",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-07",
+        "dt-w7-1",
+        "dt-w7-2",
+        "dt-w7-3",
+        "dt-w7-4",
+        "dt-w7-5"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 7 roadmap 编写的配套知识卡；原课程文件 W7DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Exterior power 的严格泛性质\n\nID: `dt-exterior` · Week 7 · definition\n\n对实向量空间 $V$，$\\Lambda^pV$ 配备交替多线性映射 $V^p\\to\\Lambda^pV$，使每个交替多线性映射 $b:V^p\\to W$ 唯一因子化为线性 $\\bar b:\\Lambda^pV\\to W$。交替指重复参数时为零；在实数域上等价于交换两个参数变号。\n\n可构造为 tensor power 对交替关系取商，或作为 $T(V)/\\langle v\\otimes v:v\\in V\\rangle$ 的 $p$ 次齐次部分。约定 $\\Lambda^0V=\\mathbb R$。只有 multilinear 而无 alternating 的泛性质对应 $V^{\\otimes p}$，不是 $\\Lambda^pV$。\n\n## 来源\n\n- 为 Week 7 roadmap 编写的配套知识卡；原课程文件 W7DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-07](dt-week-07.md) · [dt-w7-1](dt-w7-1.md) · [dt-w7-2](dt-w7-2.md) · [dt-w7-3](dt-w7-3.md) · [dt-w7-4](dt-w7-4.md) · [dt-w7-5](dt-w7-5.md)\n",
+      "content_sha256": "sha256:d61c987981d6784ad1471d8a31e01be93cfd8114fdca713a69887b085c1abf75"
+    },
+    {
+      "id": "dt-exterior-basis",
+      "title": "外幂基、维数、determinant",
+      "subject": "differential-topology",
+      "kind": "theorem",
+      "tags": [
+        "week-7",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-07",
+        "dt-w7-1",
+        "dt-w7-2",
+        "dt-w7-3",
+        "dt-w7-4",
+        "dt-w7-5"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 7 roadmap 编写的配套知识卡；原课程文件 W7DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 外幂基、维数、determinant\n\nID: `dt-exterior-basis` · Week 7 · theorem\n\n若 $e_1,\\ldots,e_n$ 是基，递增指标的楔 $e_{i_1}\\wedge\\cdots\\wedge e_{i_p}$ 是 $\\Lambda^pV$ 的基，维数 $\\binom np$。证明用多线性张成和 minor 泛函检测独立，见 7.1–7.2。\n\n线性映射诱导 $\\Lambda^pf$，保持复合与 identity。有限维 $V$ 上，$\\Lambda^nf$ 在一维空间中作用的标量为 $\\det f$，故 $\\det(gf)=\\det g\\det f$，见 7.3–7.4。\n\n## 来源\n\n- 为 Week 7 roadmap 编写的配套知识卡；原课程文件 W7DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-07](dt-week-07.md) · [dt-w7-1](dt-w7-1.md) · [dt-w7-2](dt-w7-2.md) · [dt-w7-3](dt-w7-3.md) · [dt-w7-4](dt-w7-4.md) · [dt-w7-5](dt-w7-5.md)\n",
+      "content_sha256": "sha256:2ae54918faac1f6a51fe6f2651020b3d49b92d6f6869622b7419077a8fde979e"
+    },
+    {
+      "id": "dt-forms",
+      "title": "Differential form 与 wedge",
+      "subject": "differential-topology",
+      "kind": "definition",
+      "tags": [
+        "week-7",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-07",
+        "dt-w7-1",
+        "dt-w7-2",
+        "dt-w7-3",
+        "dt-w7-4",
+        "dt-w7-5"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 7 roadmap 编写的配套知识卡；原课程文件 W7DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Differential form 与 wedge\n\nID: `dt-forms` · Week 7 · definition\n\n$p$-形式是 $\\Lambda^pT^*M$ 的光滑截面，记 $\\Omega^p(M)$。等价地，它是向量场上的交替 $C^\\infty(M)$-多线性函数，值在 $C^\\infty(M)$。局部唯一写成 $\\sum_{i_1<\\cdots<i_p}a_I dx^{i_1}\\wedge\\cdots\\wedge dx^{i_p}$。\n\n等价性的局部理由：截面可逐点评价；反向由 $C^\\infty$-多线性和 bump 得到局部性，用坐标向量场的取值确定光滑系数 $a_I$。点值只依赖各参数在该点的值，因为局部坐标分量在该点消失时，每项都乘上一个在该点为零的函数。\n\nWedge 用 shuffle convention：$(\\alpha\\wedge\\beta)(v_1,\\ldots,v_{p+q})=\\sum_{\\sigma\\in\\mathrm{Sh}(p,q)}\\operatorname{sgn}(\\sigma)\\alpha(v_{\\sigma1},\\ldots,v_{\\sigma p})\\beta(v_{\\sigma(p+1)},\\ldots,v_{\\sigma(p+q)})$。因此 $\\alpha\\wedge\\beta=(-1)^{pq}\\beta\\wedge\\alpha$。\n\n## 来源\n\n- 为 Week 7 roadmap 编写的配套知识卡；原课程文件 W7DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-07](dt-week-07.md) · [dt-w7-1](dt-w7-1.md) · [dt-w7-2](dt-w7-2.md) · [dt-w7-3](dt-w7-3.md) · [dt-w7-4](dt-w7-4.md) · [dt-w7-5](dt-w7-5.md)\n",
+      "content_sha256": "sha256:f951162b48b3552a088e4aec80b41e1471ff9db69622fd95b9cccefe58899ad3"
+    },
+    {
+      "id": "dt-wedge-example",
+      "title": "外积不是普通乘积",
+      "subject": "differential-topology",
+      "kind": "example",
+      "tags": [
+        "week-7",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-07",
+        "dt-w7-1",
+        "dt-w7-2",
+        "dt-w7-3",
+        "dt-w7-4",
+        "dt-w7-5"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 7 roadmap 编写的配套知识卡；原课程文件 W7DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 外积不是普通乘积\n\nID: `dt-wedge-example` · Week 7 · example\n\n在 $\\mathbb R^3$，$\\Lambda^2V$ 的基为 $e_1\\wedge e_2,e_1\\wedge e_3,e_2\\wedge e_3$。计算\n$$(e_1+2e_2)\\wedge(e_2+e_3)=e_1\\wedge e_2+e_1\\wedge e_3+2e_2\\wedge e_3.$$\n因为 $e_2\\wedge e_2=0$。对 $\\mathbb R^2$ 的余切形式，$(dx\\wedge dy)(a\\partial_x+b\\partial_y,c\\partial_x+d\\partial_y)=ad-bc$，即有向面积；这也说明顶外幂与 determinant 的联系。\n\n## 来源\n\n- 为 Week 7 roadmap 编写的配套知识卡；原课程文件 W7DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-07](dt-week-07.md) · [dt-w7-1](dt-w7-1.md) · [dt-w7-2](dt-w7-2.md) · [dt-w7-3](dt-w7-3.md) · [dt-w7-4](dt-w7-4.md) · [dt-w7-5](dt-w7-5.md)\n",
+      "content_sha256": "sha256:565993889e0a22d5c29f0217c21e38842773d538659c3f348a36b124be0786dc"
+    },
+    {
+      "id": "dt-exterior-derivative",
+      "title": "Exterior derivative 的符号约定",
+      "subject": "differential-topology",
+      "kind": "definition",
+      "tags": [
+        "week-8",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-08",
+        "dt-w8-2",
+        "dt-w8-3",
+        "dt-w8-4",
+        "dt-w8-5",
+        "dt-w8-6"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 8 roadmap 编写的配套知识卡；原课程文件 W8DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Exterior derivative 的符号约定\n\nID: `dt-exterior-derivative` · Week 8 · definition\n\n对 $p$-形式采用\n$$d\\omega(X_1,\\ldots,X_{p+1})=\\sum_i(-1)^{i-1}X_i\\omega(X_1,\\widehat X_i,\\ldots,X_{p+1})+\\sum_{i<j}(-1)^{i+j}\\omega([X_i,X_j],X_1,\\widehat X_i,\\widehat X_j,\\ldots,X_{p+1}).$$\n后面未删参数保持原顺序。特别地 $df(X)=Xf$，$d\\alpha(X,Y)=X\\alpha(Y)-Y\\alpha(X)-\\alpha([X,Y])$。\n\n在流形坐标中，若 $\\omega=\\sum_Ia_I dx^I$，则 $d\\omega=\\sum_{j,I}\\partial_ja_I dx^j\\wedge dx^I$。与上式相等可在坐标向量场上检验：它们括号为零，二者都是张量，坐标基取值决定形式。上式的 $A$-多线性来自 $[X,aY]=X(a)Y+a[X,Y]$ 中的额外项与第一和的 Leibniz 项抵消。\n\n## 来源\n\n- 为 Week 8 roadmap 编写的配套知识卡；原课程文件 W8DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-08](dt-week-08.md) · [dt-w8-2](dt-w8-2.md) · [dt-w8-3](dt-w8-3.md) · [dt-w8-4](dt-w8-4.md) · [dt-w8-5](dt-w8-5.md) · [dt-w8-6](dt-w8-6.md)\n",
+      "content_sha256": "sha256:801113fc396765f09fedffe544bf857143f3cd8abdb5a896a83cbc4080ec4450"
+    },
+    {
+      "id": "dt-contraction-lie",
+      "title": "Pullback、contraction 与 Lie derivative",
+      "subject": "differential-topology",
+      "kind": "definition",
+      "tags": [
+        "week-8",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-08",
+        "dt-w8-2",
+        "dt-w8-3",
+        "dt-w8-4",
+        "dt-w8-5",
+        "dt-w8-6"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 8 roadmap 编写的配套知识卡；原课程文件 W8DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Pullback、contraction 与 Lie derivative\n\nID: `dt-contraction-lie` · Week 8 · definition\n\n光滑 $F:M\\to N$ 对 $k$-形式的拉回为 $(F^*\\omega)_p(v_1,\\ldots,v_k)=\\omega_{F(p)}(dF_pv_1,\\ldots,dF_pv_k)$，其中 $p\\in M$、$v_j\\in T_pM$。\n\nContraction $i_X:\\Omega^p\\to\\Omega^{p-1}$ 定义为首槽插入 $X$；对函数为零。Lie derivative 定义为 $L_X\\omega=\\left.\\frac d{dt}\\right|_0F_t^*\\omega$，其中 $F_t$ 为 $X$ 的局部 flow。等价代数公式是 $X(\\omega(Y_1,\\ldots,Y_p))-\\sum_j\\omega(\\ldots,[X,Y_j],\\ldots)$，见 8.5。\n\n## 来源\n\n- 为 Week 8 roadmap 编写的配套知识卡；原课程文件 W8DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-08](dt-week-08.md) · [dt-w8-2](dt-w8-2.md) · [dt-w8-3](dt-w8-3.md) · [dt-w8-4](dt-w8-4.md) · [dt-w8-5](dt-w8-5.md) · [dt-w8-6](dt-w8-6.md)\n",
+      "content_sha256": "sha256:ad6b6f76d66a6c0bbe5ff8c98adad64c759ca354c8cd15fe4b47a39f7c05009e"
+    },
+    {
+      "id": "dt-cartan-complex",
+      "title": "Cartan formula 与 de Rham complex",
+      "subject": "differential-topology",
+      "kind": "theorem",
+      "tags": [
+        "week-8",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-08",
+        "dt-w8-2",
+        "dt-w8-3",
+        "dt-w8-4",
+        "dt-w8-5",
+        "dt-w8-6"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 8 roadmap 编写的配套知识卡；原课程文件 W8DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Cartan formula 与 de Rham complex\n\nID: `dt-cartan-complex` · Week 8 · theorem\n\nCartan identity：$L_X=di_X+i_Xd$，逐项证明见 8.6。\n\nExterior derivative 满足 $d^2=0$。对流形，在坐标展开中 $d^2\\omega=\\sum_{i,j,I}\\partial_i\\partial_ja_I\\,dx^i\\wedge dx^j\\wedge dx^I$；$i=j$ 项为零，$i,j$ 互换的项因混合偏导相等与楔反对称相消，故为零。对一般交换代数的导子形式，同样结论来自括号定义与 Jacobi；1、2 次的完整代数计算见 8.2–8.3。\n\n于是 $0\\to\\Omega^0(M)\\xrightarrow d\\Omega^1(M)\\xrightarrow d\\cdots$ 为 cochain complex。Closed 指 $d\\omega=0$，exact 指 $\\omega=d\\eta$；$H^p_{dR}(M)=\\ker(d:\\Omega^p\\to\\Omega^{p+1})/\\operatorname{im}(d:\\Omega^{p-1}\\to\\Omega^p)$。这是后续延伸定义，并非 Week 8 原作业要求计算的内容。\n\n## 来源\n\n- 为 Week 8 roadmap 编写的配套知识卡；原课程文件 W8DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-08](dt-week-08.md) · [dt-w8-2](dt-w8-2.md) · [dt-w8-3](dt-w8-3.md) · [dt-w8-4](dt-w8-4.md) · [dt-w8-5](dt-w8-5.md) · [dt-w8-6](dt-w8-6.md)\n",
+      "content_sha256": "sha256:1a7dd809b7452a6ca1122f23f291f09cf7dd95d1997c8ddf53f8c15e465f1fee"
+    },
+    {
+      "id": "dt-cartan-example",
+      "title": "用一个可计算例子检查符号",
+      "subject": "differential-topology",
+      "kind": "example",
+      "tags": [
+        "week-8",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-week-08",
+        "dt-w8-2",
+        "dt-w8-3",
+        "dt-w8-4",
+        "dt-w8-5",
+        "dt-w8-6"
+      ],
+      "sources": [
+        {
+          "type": "editorial-companion",
+          "reference": "为 Week 8 roadmap 编写的配套知识卡；原课程文件 W8DiffTop2026.pdf；补充内容在正文标识",
+          "verified": false
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# 用一个可计算例子检查符号\n\nID: `dt-cartan-example` · Week 8 · example\n\n在 $\\mathbb R^2$ 取 $\\omega=x\\,dy$、$X=\\partial_x$。$d\\omega=dx\\wedge dy$，$i_X\\omega=0$，$i_Xd\\omega=dy$，故 Cartan 给 $L_X\\omega=dy$。\n\n直接验证：flow 为 $F_t(x,y)=(x+t,y)$，所以 $F_t^*\\omega=(x+t)dy$，在零时求导也是 $dy$。另外 $d(d\\omega)=d(dx\\wedge dy)=0$。这个例子可同时核对 pullback、contraction 的首槽位置以及 Lie derivative 的正负号。\n\n## 来源\n\n- 为 Week 8 roadmap 编写的配套知识卡；原课程文件 W8DiffTop2026.pdf；补充内容在正文标识\n\n## 关联\n\n[dt-week-08](dt-week-08.md) · [dt-w8-2](dt-w8-2.md) · [dt-w8-3](dt-w8-3.md) · [dt-w8-4](dt-w8-4.md) · [dt-w8-5](dt-w8-5.md) · [dt-w8-6](dt-w8-6.md)\n",
+      "content_sha256": "sha256:a453a2d4682a47020d91359ead073483fb6a2200a6549decedf2f9445f25c765"
+    },
+    {
+      "id": "dt-week-01",
+      "title": "Week 1 · 拓扑基础与局部欧氏维数",
+      "subject": "differential-topology",
+      "kind": "note",
+      "tags": [
+        "week-1",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-topology",
+        "dt-metric",
+        "dt-separation",
+        "dt-induced-product",
+        "dt-dimension-norm",
+        "dt-compact-counterexample",
+        "dt-w1-1",
+        "dt-w1-2",
+        "dt-w1-3",
+        "dt-w1-4",
+        "dt-w1-u1",
+        "dt-w1-u2",
+        "dt-w1-u3",
+        "dt-w1-u4"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "课程 Week 1；DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Week 1 · 拓扑基础与局部欧氏维数\n\nID: `dt-week-01` · Week 1 · note\n\n学习目标：能够用基比较拓扑；区分紧性与可数性；解释维数局部恒定。\n\n阅读顺序：先 definitions，再 theorems 与 examples，然后逐题练习。\n\n- [Norm 的定义](dt-w1-1.md)\n- [Norm 诱导 metric](dt-w1-2.md)\n- [开球唯一生成拓扑](dt-w1-3.md)\n- [Product topology](dt-w1-4.md)\n- [Norm topology 等于 product topology](dt-w1-u1.md)\n- [Compact 不蕴含 second countable](dt-w1-u2.md)\n- [非单射映射诱导的拓扑](dt-w1-u3.md)\n- [连通局部欧氏空间的维数恒定](dt-w1-u4.md)\n- [Topology、basis 与邻域](dt-topology.md)\n- [Norm、metric 与 continuity](dt-metric.md)\n- [Hausdorff、second countable、compact、connected](dt-separation.md)\n- [Subspace、initial 与 product topology](dt-induced-product.md)\n- [Norm equivalence 与 invariance of dimension](dt-dimension-norm.md)\n- [Compact 不必 second countable](dt-compact-counterexample.md)\n\n## 来源\n\n- 课程 Week 1；DiffTop2026.pdf\n\n## 关联\n\n[dt-topology](dt-topology.md) · [dt-metric](dt-metric.md) · [dt-separation](dt-separation.md) · [dt-induced-product](dt-induced-product.md) · [dt-dimension-norm](dt-dimension-norm.md) · [dt-compact-counterexample](dt-compact-counterexample.md) · [dt-w1-1](dt-w1-1.md) · [dt-w1-2](dt-w1-2.md) · [dt-w1-3](dt-w1-3.md) · [dt-w1-4](dt-w1-4.md) · [dt-w1-u1](dt-w1-u1.md) · [dt-w1-u2](dt-w1-u2.md) · [dt-w1-u3](dt-w1-u3.md) · [dt-w1-u4](dt-w1-u4.md)\n",
+      "content_sha256": "sha256:261f5c24e9651965aa2f2b99d23f09bbb7672385f7eb2efa3e00a1c88c4d615a"
+    },
+    {
+      "id": "dt-week-02",
+      "title": "Week 2 · 图册、射影空间与光滑结构",
+      "subject": "differential-topology",
+      "kind": "note",
+      "tags": [
+        "week-2",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-atlas",
+        "dt-compatibility",
+        "dt-atlas-topology",
+        "dt-exotic-coordinate",
+        "dt-projective",
+        "dt-w2-0",
+        "dt-w2-2",
+        "dt-w2-3",
+        "dt-w2-4",
+        "dt-w2-5",
+        "dt-w2-6",
+        "dt-w2-8",
+        "dt-w2-10",
+        "dt-w2-11"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "课程 Week 2；W2DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Week 2 · 图册、射影空间与光滑结构\n\nID: `dt-week-02` · Week 2 · note\n\n学习目标：能写出完整 chart 五要素；区分相容与微分同胚；构造 RPn、CPn 图。\n\n阅读顺序：先 definitions，再 theorems 与 examples，然后逐题练习。\n\n- [双原点直线](dt-w2-0.md)\n- [Atlas 生成拓扑](dt-w2-2.md)\n- [平面中全部仿射直线的 atlas](dt-w2-3.md)\n- [圆周商 R/Z 的 atlas](dt-w2-4.md)\n- [实射影空间的 atlas](dt-w2-5.md)\n- [复射影空间的实 atlas](dt-w2-6.md)\n- [不相容图册仍可微分同胚](dt-w2-8.md)\n- [图册等价定义的单向性错误](dt-w2-10.md)\n- [两种意义下判断图册等价](dt-w2-11.md)\n- [Chart、atlas 与 smooth map](dt-atlas.md)\n- [Compatibility、equivalence、maximal atlas](dt-compatibility.md)\n- [Atlas 诱导唯一拓扑](dt-atlas-topology.md)\n- [x 与 x³ 图册](dt-exotic-coordinate.md)\n- [射影坐标的计算模板](dt-projective.md)\n\n## 来源\n\n- 课程 Week 2；W2DiffTop2026.pdf\n\n## 关联\n\n[dt-atlas](dt-atlas.md) · [dt-compatibility](dt-compatibility.md) · [dt-atlas-topology](dt-atlas-topology.md) · [dt-exotic-coordinate](dt-exotic-coordinate.md) · [dt-projective](dt-projective.md) · [dt-w2-0](dt-w2-0.md) · [dt-w2-2](dt-w2-2.md) · [dt-w2-3](dt-w2-3.md) · [dt-w2-4](dt-w2-4.md) · [dt-w2-5](dt-w2-5.md) · [dt-w2-6](dt-w2-6.md) · [dt-w2-8](dt-w2-8.md) · [dt-w2-10](dt-w2-10.md) · [dt-w2-11](dt-w2-11.md)\n",
+      "content_sha256": "sha256:3eb5f751c2b24b03516ae131c79d34e3099ef4c5352ae793c7b10ee955d322d2"
+    },
+    {
+      "id": "dt-week-03",
+      "title": "Week 3 · 商空间、bump 与代数化切空间",
+      "subject": "differential-topology",
+      "kind": "note",
+      "tags": [
+        "week-3",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-quotient",
+        "dt-germs-cotangent",
+        "dt-bump-locality",
+        "dt-hadamard",
+        "dt-flat",
+        "dt-w3-0",
+        "dt-w3-1",
+        "dt-w3-2",
+        "dt-w3-3",
+        "dt-w3-4",
+        "dt-w3-5",
+        "dt-w3-6",
+        "dt-w3-7",
+        "dt-w3-8",
+        "dt-w3-9",
+        "dt-w3-10",
+        "dt-w3-11",
+        "dt-w3-12",
+        "dt-w3-optional",
+        "dt-w3-13"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "课程 Week 3；W3DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Week 3 · 商空间、bump 与代数化切空间\n\nID: `dt-week-03` · Week 3 · note\n\n学习目标：会用商泛性质；能造 bump；从 m/m² 严格构造点导子。\n\n阅读顺序：先 definitions，再 theorems 与 examples，然后逐题练习。\n\n- [两个拓扑的逐点细化](dt-w3-0.md)\n- [关系生成的等价关系](dt-w3-1.md)\n- [群作用的商映射是开映射](dt-w3-2.md)\n- [Quotient map 未必 open](dt-w3-3.md)\n- [射影坐标与商拓扑相容](dt-w3-4.md)\n- [所有扩张的并与极大性](dt-w3-5.md)\n- [Maximal atlas 的构造](dt-w3-6.md)\n- [光滑函数之和](dt-w3-7.md)\n- [Open submanifold](dt-w3-8.md)\n- [指数平坦函数在零点的导数](dt-w3-9.md)\n- [光滑函数环中的非零无限阶消失元](dt-w3-10.md)\n- [非零零因子](dt-w3-11.md)\n- [分离函数与 bump function](dt-w3-12.md)\n- [非 Hausdorff 空间上的延拓障碍](dt-w3-optional.md)\n- [Cotangent dual 与点导子](dt-w3-13.md)\n- [Quotient topology 与 quotient map](dt-quotient.md)\n- [Function germs、maximal ideal、cotangent、derivation](dt-germs-cotangent.md)\n- [Bump theorem 与导子局部性](dt-bump-locality.md)\n- [Hadamard lemma 与坐标切基](dt-hadamard.md)\n- [Flat function 与零因子](dt-flat.md)\n\n## 来源\n\n- 课程 Week 3；W3DiffTop2026.pdf\n\n## 关联\n\n[dt-quotient](dt-quotient.md) · [dt-germs-cotangent](dt-germs-cotangent.md) · [dt-bump-locality](dt-bump-locality.md) · [dt-hadamard](dt-hadamard.md) · [dt-flat](dt-flat.md) · [dt-w3-0](dt-w3-0.md) · [dt-w3-1](dt-w3-1.md) · [dt-w3-2](dt-w3-2.md) · [dt-w3-3](dt-w3-3.md) · [dt-w3-4](dt-w3-4.md) · [dt-w3-5](dt-w3-5.md) · [dt-w3-6](dt-w3-6.md) · [dt-w3-7](dt-w3-7.md) · [dt-w3-8](dt-w3-8.md) · [dt-w3-9](dt-w3-9.md) · [dt-w3-10](dt-w3-10.md) · [dt-w3-11](dt-w3-11.md) · [dt-w3-12](dt-w3-12.md) · [dt-w3-optional](dt-w3-optional.md) · [dt-w3-13](dt-w3-13.md)\n",
+      "content_sha256": "sha256:7e7fb52267ac79da4231a0422204a51d7cdb244b3090c014e5781d2841a667a7"
+    },
+    {
+      "id": "dt-week-04",
+      "title": "Week 4 · 逆函数定理、水平集与球面",
+      "subject": "differential-topology",
+      "kind": "note",
+      "tags": [
+        "week-4",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-rank-embedding",
+        "dt-inverse-constant-rank",
+        "dt-level-sphere",
+        "dt-w4-0",
+        "dt-w4-1",
+        "dt-w4-2",
+        "dt-w4-3",
+        "dt-w4-4"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "课程 Week 4；W4DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Week 4 · 逆函数定理、水平集与球面\n\nID: `dt-week-04` · Week 4 · note\n\n学习目标：能把 Jacobian 假设搬到流形；写出 regular level 的 slice；计算球面换图。\n\n阅读顺序：先 definitions，再 theorems 与 examples，然后逐题练习。\n\n- [光滑过渡推出维数恒定](dt-w4-0.md)\n- [从 Euclidean IFT 到 manifold IFT](dt-w4-1.md)\n- [Regular level set 的 slice](dt-w4-2.md)\n- [球面 graph atlas 与 stereographic atlas 相容](dt-w4-3.md)\n- [Antipodal quotient 与 RP2](dt-w4-4.md)\n- [Immersion、submersion、embedding、regular value](dt-rank-embedding.md)\n- [Inverse function 与 constant rank theorem](dt-inverse-constant-rank.md)\n- [球面作为 regular level set](dt-level-sphere.md)\n\n## 来源\n\n- 课程 Week 4；W4DiffTop2026.pdf\n\n## 关联\n\n[dt-rank-embedding](dt-rank-embedding.md) · [dt-inverse-constant-rank](dt-inverse-constant-rank.md) · [dt-level-sphere](dt-level-sphere.md) · [dt-w4-0](dt-w4-0.md) · [dt-w4-1](dt-w4-1.md) · [dt-w4-2](dt-w4-2.md) · [dt-w4-3](dt-w4-3.md) · [dt-w4-4](dt-w4-4.md)\n",
+      "content_sha256": "sha256:1b24f93714f517ef512981a0bafe2bfb90cade9f9d14ac48426f1f6e915ed3c5"
+    },
+    {
+      "id": "dt-week-05",
+      "title": "Week 5 · 乘积、Grassmannian 与 Lie bracket",
+      "subject": "differential-topology",
+      "kind": "note",
+      "tags": [
+        "week-5",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-vector-fields",
+        "dt-fields-derivations",
+        "dt-lie-related",
+        "dt-bracket-example",
+        "dt-w5-1",
+        "dt-w5-2",
+        "dt-w5-3",
+        "dt-w5-s1",
+        "dt-w5-4",
+        "dt-w5-5",
+        "dt-w5-6",
+        "dt-w5-s2"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "课程 Week 5；W5DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Week 5 · 乘积、Grassmannian 与 Lie bracket\n\nID: `dt-week-05` · Week 5 · note\n\n学习目标：掌握乘积泛性质；解释 Plücker；证明括号封闭与相关性。\n\n阅读顺序：先 definitions，再 theorems 与 examples，然后逐题练习。\n\n- [RPn 的度量与 Hausdorff 性](dt-w5-1.md)\n- [S2 与 CP1 的显式微分同胚](dt-w5-2.md)\n- [连续单射到 Hausdorff 空间](dt-w5-3.md)\n- [Grassmannian 与 Plücker 映射（原题 Example 展开）](dt-w5-s1.md)\n- [Product manifold 的构造与唯一性](dt-w5-4.md)\n- [Derivations 的 Lie algebra](dt-w5-5.md)\n- [f-related 向量场的括号](dt-w5-6.md)\n- [Frobenius 的必要方向（原题 Suggestion）](dt-w5-s2.md)\n- [Tangent bundle、section 与 vector field](dt-vector-fields.md)\n- [光滑向量场与函数环导子同构](dt-fields-derivations.md)\n- [Lie bracket、f-related 与 distribution](dt-lie-related.md)\n- [一个非零 Lie bracket](dt-bracket-example.md)\n\n## 来源\n\n- 课程 Week 5；W5DiffTop2026.pdf\n\n## 关联\n\n[dt-vector-fields](dt-vector-fields.md) · [dt-fields-derivations](dt-fields-derivations.md) · [dt-lie-related](dt-lie-related.md) · [dt-bracket-example](dt-bracket-example.md) · [dt-w5-1](dt-w5-1.md) · [dt-w5-2](dt-w5-2.md) · [dt-w5-3](dt-w5-3.md) · [dt-w5-s1](dt-w5-s1.md) · [dt-w5-4](dt-w5-4.md) · [dt-w5-5](dt-w5-5.md) · [dt-w5-6](dt-w5-6.md) · [dt-w5-s2](dt-w5-s2.md)\n",
+      "content_sha256": "sha256:6198b6be4cff8e728802839cff02ad05b0e95eafffb4c971eee84f21b8cd1cc2"
+    },
+    {
+      "id": "dt-week-06",
+      "title": "Week 6 · 切向量、坐标方向与 flow",
+      "subject": "differential-topology",
+      "kind": "note",
+      "tags": [
+        "week-6",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-curves-flow",
+        "dt-ode",
+        "dt-incomplete",
+        "dt-w6-1",
+        "dt-w6-2",
+        "dt-w6-3",
+        "dt-w6-4",
+        "dt-w6-5",
+        "dt-w6-6",
+        "dt-w6-7"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "课程 Week 6；W6DiffTop2026(1).pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Week 6 · 切向量、坐标方向与 flow\n\nID: `dt-week-06` · Week 6 · note\n\n学习目标：能从代数切向量造曲线；从局部 ODE 推出紧流形完备；正确变换坐标场。\n\n阅读顺序：先 definitions，再 theorems 与 examples，然后逐题练习。\n\n- [有限乘积的泛性质](dt-w6-1.md)\n- [Smooth functional calculus](dt-w6-2.md)\n- [每个切向量由全局曲线实现](dt-w6-3.md)\n- [Compact manifold 上向量场 complete](dt-w6-4.md)\n- [坐标向量场的变换律](dt-w6-5.md)\n- [同一个坐标函数，不同坐标方向](dt-w6-6.md)\n- [Coordinate vector fields commute](dt-w6-7.md)\n- [Integral curve、maximal flow、complete](dt-curves-flow.md)\n- [流形上的局部 ODE 定理](dt-ode.md)\n- [非完备向量场的显式例子](dt-incomplete.md)\n\n## 来源\n\n- 课程 Week 6；W6DiffTop2026(1).pdf\n\n## 关联\n\n[dt-curves-flow](dt-curves-flow.md) · [dt-ode](dt-ode.md) · [dt-incomplete](dt-incomplete.md) · [dt-w6-1](dt-w6-1.md) · [dt-w6-2](dt-w6-2.md) · [dt-w6-3](dt-w6-3.md) · [dt-w6-4](dt-w6-4.md) · [dt-w6-5](dt-w6-5.md) · [dt-w6-6](dt-w6-6.md) · [dt-w6-7](dt-w6-7.md)\n",
+      "content_sha256": "sha256:e57566926219fdaf30dba2bfc5198f8858cfa15cb34145b6fafa93ef3b3162e1"
+    },
+    {
+      "id": "dt-week-07",
+      "title": "Week 7 · 外幂、determinant 与形式丛",
+      "subject": "differential-topology",
+      "kind": "note",
+      "tags": [
+        "week-7",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-exterior",
+        "dt-exterior-basis",
+        "dt-forms",
+        "dt-wedge-example",
+        "dt-w7-1",
+        "dt-w7-2",
+        "dt-w7-3",
+        "dt-w7-4",
+        "dt-w7-5"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "课程 Week 7；W7DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Week 7 · 外幂、determinant 与形式丛\n\nID: `dt-week-07` · Week 7 · note\n\n学习目标：会用交替泛性质；证明外幂基；用 minors 写形式丛过渡。\n\n阅读顺序：先 definitions，再 theorems 与 examples，然后逐题练习。\n\n- [Top exterior power 一维](dt-w7-1.md)\n- [Exterior power 的基](dt-w7-2.md)\n- [Exterior power 的函子性](dt-w7-3.md)\n- [用 top wedge 定义 determinant](dt-w7-4.md)\n- [Exterior cotangent bundle 的流形结构](dt-w7-5.md)\n- [Exterior power 的严格泛性质](dt-exterior.md)\n- [外幂基、维数、determinant](dt-exterior-basis.md)\n- [Differential form 与 wedge](dt-forms.md)\n- [外积不是普通乘积](dt-wedge-example.md)\n\n## 来源\n\n- 课程 Week 7；W7DiffTop2026.pdf\n\n## 关联\n\n[dt-exterior](dt-exterior.md) · [dt-exterior-basis](dt-exterior-basis.md) · [dt-forms](dt-forms.md) · [dt-wedge-example](dt-wedge-example.md) · [dt-w7-1](dt-w7-1.md) · [dt-w7-2](dt-w7-2.md) · [dt-w7-3](dt-w7-3.md) · [dt-w7-4](dt-w7-4.md) · [dt-w7-5](dt-w7-5.md)\n",
+      "content_sha256": "sha256:69b11723e92009171693d06311e7e6110325d488a3485ea5b52051ebec8e2e1d"
+    },
+    {
+      "id": "dt-week-08",
+      "title": "Week 8 · 外微分、Lie derivative 与 Cartan formula",
+      "subject": "differential-topology",
+      "kind": "note",
+      "tags": [
+        "week-8",
+        "differential-topology"
+      ],
+      "links": [
+        "dt-exterior-derivative",
+        "dt-contraction-lie",
+        "dt-cartan-complex",
+        "dt-cartan-example",
+        "dt-w8-2",
+        "dt-w8-3",
+        "dt-w8-4",
+        "dt-w8-5",
+        "dt-w8-6"
+      ],
+      "sources": [
+        {
+          "type": "course-handout",
+          "reference": "课程 Week 8；W8DiffTop2026.pdf",
+          "verified": true
+        }
+      ],
+      "review_status": "reviewed",
+      "markdown": "# Week 8 · 外微分、Lie derivative 与 Cartan formula\n\nID: `dt-week-08` · Week 8 · note\n\n学习目标：能手算一、二形式的 d²；证明 A-多线性、flow 公式与 Cartan。\n\n阅读顺序：先 definitions，再 theorems 与 examples，然后逐题练习。\n\n- [一形式的 d² 逐项计算](dt-w8-2.md)\n- [二形式的 d² 手算与抵消表](dt-w8-3.md)\n- [Lie derivative 的 A-multilinearity](dt-w8-4.md)\n- [Flow pullback 的导数等于 Lie derivative](dt-w8-5.md)\n- [Cartan formula 的逐类消去证明](dt-w8-6.md)\n- [Exterior derivative 的符号约定](dt-exterior-derivative.md)\n- [Pullback、contraction 与 Lie derivative](dt-contraction-lie.md)\n- [Cartan formula 与 de Rham complex](dt-cartan-complex.md)\n- [用一个可计算例子检查符号](dt-cartan-example.md)\n\n## 来源\n\n- 课程 Week 8；W8DiffTop2026.pdf\n\n## 关联\n\n[dt-exterior-derivative](dt-exterior-derivative.md) · [dt-contraction-lie](dt-contraction-lie.md) · [dt-cartan-complex](dt-cartan-complex.md) · [dt-cartan-example](dt-cartan-example.md) · [dt-w8-2](dt-w8-2.md) · [dt-w8-3](dt-w8-3.md) · [dt-w8-4](dt-w8-4.md) · [dt-w8-5](dt-w8-5.md) · [dt-w8-6](dt-w8-6.md)\n",
+      "content_sha256": "sha256:a80840fee0e5f6d95f0fa3b3386255557f377d5d50777fef294c3fd782bfa1d3"
+    }
+  ]
+}

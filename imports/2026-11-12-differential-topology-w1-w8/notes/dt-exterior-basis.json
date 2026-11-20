@@ -1,0 +1,26 @@
+{
+  "id": "dt-exterior-basis",
+  "title": "外幂基、维数、determinant",
+  "subject": "differential-topology",
+  "kind": "theorem",
+  "tags": [
+    "week-7",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-week-07",
+    "dt-w7-1",
+    "dt-w7-2",
+    "dt-w7-3",
+    "dt-w7-4",
+    "dt-w7-5"
+  ],
+  "sources": [
+    {
+      "type": "editorial-companion",
+      "reference": "为 Week 7 roadmap 编写的配套知识卡；原课程文件 W7DiffTop2026.pdf；补充内容在正文标识",
+      "verified": false
+    }
+  ],
+  "review_status": "reviewed"
+}

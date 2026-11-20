@@ -1,0 +1,33 @@
+{
+  "id": "CA-M-ADD-20261112",
+  "title": "Content 与 primitive 讨论：易错点补充",
+  "track": "交换代数",
+  "type": "mistake-index",
+  "path": "mistakes/CA-mistakes-addendum.md",
+  "created_date": "2026-11-12",
+  "verification_state": "已核对数学推导",
+  "source": "本次对话题目与讨论（2026-11-12）；原书精确题号未独立核对",
+  "source_verified": false,
+  "tags": [
+    "mistakes",
+    "review"
+  ],
+  "related_questions": [
+    "CA-Q003",
+    "CA-Q004",
+    "CA-Q005"
+  ],
+  "related_concepts": [
+    "CA-K003",
+    "CA-K004",
+    "CA-K005",
+    "CA-K006"
+  ],
+  "related_examples": [
+    "CA-E001",
+    "CA-E002",
+    "CA-E003",
+    "CA-E004"
+  ],
+  "related_mistakes": []
+}

@@ -1,0 +1,30 @@
+{
+  "id": "dt-week-06",
+  "title": "Week 6 · 切向量、坐标方向与 flow",
+  "subject": "differential-topology",
+  "kind": "note",
+  "tags": [
+    "week-6",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-curves-flow",
+    "dt-ode",
+    "dt-incomplete",
+    "dt-w6-1",
+    "dt-w6-2",
+    "dt-w6-3",
+    "dt-w6-4",
+    "dt-w6-5",
+    "dt-w6-6",
+    "dt-w6-7"
+  ],
+  "sources": [
+    {
+      "type": "course-handout",
+      "reference": "课程 Week 6；W6DiffTop2026(1).pdf",
+      "verified": true
+    }
+  ],
+  "review_status": "reviewed"
+}

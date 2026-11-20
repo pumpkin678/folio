@@ -1,0 +1,116 @@
+{
+  "package_id": "folio-ca-2026-11-13-boolean-nilradical",
+  "schema_version": 1,
+  "created_date": "2026-11-13",
+  "mode": "incremental",
+  "source_track": "交换代数",
+  "question_ids": [
+    "CA-Q20261113-01",
+    "CA-Q20261113-02",
+    "CA-Q20261113-03"
+  ],
+  "concept_ids": [
+    "CA-K20261113-01",
+    "CA-K20261113-02",
+    "CA-K20261113-03"
+  ],
+  "example_ids": [
+    "CA-E20261113-01",
+    "CA-E20261113-02"
+  ],
+  "mistake_ids": [
+    "CA-M20261113-01",
+    "CA-M20261113-02",
+    "CA-M20261113-03",
+    "CA-M20261113-04",
+    "CA-M20261113-05",
+    "CA-M20261113-06"
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "size_bytes": 3077,
+      "sha256": "3cdd54243e2ebb8afcb14f1e350e6f25c3e961b7f31996a8d228ee3ff0dfc37d"
+    },
+    {
+      "path": "all-in-one.md",
+      "size_bytes": 16107,
+      "sha256": "91ae924f646d4484e62cc52c33dd2cda7b8b4abfe85d5319ff64b33526114b36"
+    },
+    {
+      "path": "changes.json",
+      "size_bytes": 2432,
+      "sha256": "d9cd0de6d63d0dc8b614e6ee4ee38318e4940a2c2f3657cb464fbfc07b5bde4c"
+    },
+    {
+      "path": "concepts/CA-K20261113-01-boolean-rings.md",
+      "size_bytes": 1141,
+      "sha256": "7d2d275f9e12fa638707e1657d8cbb89704193e3e57e160cfe30a2cd564ab471"
+    },
+    {
+      "path": "concepts/CA-K20261113-02-nilradical-local-rings.md",
+      "size_bytes": 1649,
+      "sha256": "a656808dcfdb054c4f0924d3d0f67069e44d87f5f001e76ff856bd5a832a8c97"
+    },
+    {
+      "path": "concepts/CA-K20261113-03-idempotent-ideals.md",
+      "size_bytes": 958,
+      "sha256": "5ce71dc896c230ee9596b59c8adc14082177a58fbe078ff43192420557fdc192"
+    },
+    {
+      "path": "delta-site-data.json",
+      "size_bytes": 22881,
+      "sha256": "2b958ab2da6abb8a787cf8c53a9098d5dd56ea9d7f58e100f80c61d700e8c265"
+    },
+    {
+      "path": "docs/CLOUD_IMPORT_PROMPT.md",
+      "size_bytes": 1187,
+      "sha256": "ca1e528667299447e09b01d4862b4ab5e84b311fdccb5015b08510c5fd426168"
+    },
+    {
+      "path": "examples/CA-E20261113-01-f2-product.md",
+      "size_bytes": 963,
+      "sha256": "b4ba7166f661842bb746711e48a499b7f2d68d885cebfe5d9ee3b82c7227c2b9"
+    },
+    {
+      "path": "examples/CA-E20261113-02-truncated-polynomials.md",
+      "size_bytes": 801,
+      "sha256": "9cfdd03ab9be3838dc6354aff2b728f1096768e8b9b2d89779a9d86bfd224673"
+    },
+    {
+      "path": "mistakes/CA-mistakes-2026-11-13.md",
+      "size_bytes": 2245,
+      "sha256": "359c1406e503fb60a6a1a107c811c714ede98e5ac0d4de006f7aa2dda4913603"
+    },
+    {
+      "path": "problems/CA-Q20261113-01-boolean-basic.md",
+      "size_bytes": 2817,
+      "sha256": "307bc0caa63bfa828bf76a5326c6f02894bd9d472c611c5d43e11d9e9f721523"
+    },
+    {
+      "path": "problems/CA-Q20261113-02-unique-prime-nilradical.md",
+      "size_bytes": 3098,
+      "sha256": "2371b3534f724e763807c0f595cf83c72aaa4b1eeb674069b9c986c7aa464f9a"
+    },
+    {
+      "path": "problems/CA-Q20261113-03-boolean-fg-ideals.md",
+      "size_bytes": 2234,
+      "sha256": "4fa437506c6703ed793fed14b8356b99ac93e3735df0c972fdfb6a4f811cc780"
+    },
+    {
+      "path": "scripts/merge_site_data.py",
+      "size_bytes": 3363,
+      "sha256": "b189f725d37b01cbd994e977f0caf91a97332110a94062e4080c956d01bb57fa"
+    },
+    {
+      "path": "site-data.json",
+      "size_bytes": 22881,
+      "sha256": "2b958ab2da6abb8a787cf8c53a9098d5dd56ea9d7f58e100f80c61d700e8c265"
+    },
+    {
+      "path": "subject.json",
+      "size_bytes": 594,
+      "sha256": "470e13423af61489ea511809a79bb92d23b869180fed26113e85ed8c77af15c6"
+    }
+  ]
+}

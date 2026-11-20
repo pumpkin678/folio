@@ -1,0 +1,1499 @@
+{
+  "schema": "folio.math.subject.v1",
+  "schema_note": "Standalone interchange format; not verified as the current Folio app internal schema. Use README mapping or adapter.",
+  "subject": {
+    "id": "symplectic-geometry",
+    "slug": "symplectic-geometry",
+    "title": "辛几何",
+    "title_en": "Symplectic Geometry",
+    "category": "Geometry",
+    "description": "从 Symplectic Linear Algebra 到 Lagrangian / Hamiltonian / Fukaya theory 的概念—定理—例子—习题知识网络。",
+    "created_at": "2026-11-11",
+    "language": "zh-CN",
+    "technical_terms": "en",
+    "latex_renderer": "MathJax/KaTeX compatible Markdown ($...$ and $$...$$)",
+    "source": {
+      "author": "Ana Cannas da Silva",
+      "book": "Lectures on Symplectic Geometry",
+      "part": "Chapter 1 §1.1–1.4; Homework 1",
+      "page": 8,
+      "url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf"
+    },
+    "units": [
+      {
+        "id": "SPG-UNIT-001",
+        "title": "Symplectic Linear Algebra",
+        "status": "completed",
+        "completed_on": "2026-11-11",
+        "exercise_ids": [
+          "SPG-HW-001",
+          "SPG-HW-005",
+          "SPG-HW-007"
+        ]
+      },
+      {
+        "id": "SPG-UNIT-002",
+        "title": "Cotangent Bundles and Lagrangians",
+        "status": "planned"
+      }
+    ],
+    "navigation_order": [
+      "definitions",
+      "theorems",
+      "examples",
+      "exercises",
+      "roadmap",
+      "study-logs"
+    ],
+    "exercise_count_completed": 3,
+    "personal_mistake_count": 0,
+    "recommended_ui": {
+      "math": "MathJax/KaTeX",
+      "show_bidirectional_links": true,
+      "exercise_status": "completed",
+      "mistakes": []
+    }
+  },
+  "items": [
+    {
+      "id": "SPG-DEF-001",
+      "type": "def",
+      "category": "definitions",
+      "subject_id": "symplectic-geometry",
+      "title": "反对称双线性型",
+      "title_en": "Skew-symmetric bilinear form",
+      "summary": "一个满足 Ω(u,v)=−Ω(v,u) 的双线性形式。",
+      "prerequisites": [],
+      "related": [
+        "SPG-DEF-002",
+        "SPG-DEF-003"
+      ],
+      "exercises": [],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/definitions/SPG-DEF-001.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-002",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-DEF-003",
+          "kind": "prerequisites"
+        }
+      ],
+      "content": "### Definition\n设 $V$ 为有限维实向量空间。双线性映射 $\\Omega:V\\times V\\to\\mathbb R$ 称为 **skew-symmetric**，若\n$$\n\\Omega(u,v)=-\\Omega(v,u)\\qquad (u,v\\in V).\n$$\n因此 $\\Omega(v,v)=0$。在特征不为 $2$ 的域上，skew-symmetric 与 alternating 等价。\n\n### Intuition\n$\\Omega(u,v)$ 测量的是带方向的二元配对，而不是向量的长度或夹角。",
+      "link_ids": [
+        "SPG-DEF-002",
+        "SPG-DEF-003"
+      ]
+    },
+    {
+      "id": "SPG-DEF-002",
+      "type": "def",
+      "category": "definitions",
+      "subject_id": "symplectic-geometry",
+      "title": "非退化性",
+      "title_en": "Nondegeneracy",
+      "summary": "v 与所有向量配对均为零，就只能 v=0。",
+      "prerequisites": [
+        "SPG-DEF-001"
+      ],
+      "related": [
+        "SPG-THM-001",
+        "SPG-HW-001"
+      ],
+      "exercises": [],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/definitions/SPG-DEF-002.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-001",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-DEF-003",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-HW-001",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-THM-001",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-THM-002",
+          "kind": "prerequisites"
+        }
+      ],
+      "content": "### Definition\n双线性型 $\\Omega$ 非退化指\n$$\n\\bigl(\\forall w\\in V,\\ \\Omega(v,w)=0\\bigr)\\ \\Longrightarrow\\ v=0.\n$$\n等价于线性映射\n$$\n\\Omega^\\flat:V\\to V^*,\\qquad v\\mapsto\\Omega(v,\\cdot)\n$$\n是同构（有限维情形）。\n\n### Check\n若 $\\Omega$ 在某一基下的矩阵为 $J$，则非退化当且仅当 $\\det J\\ne0$。",
+      "link_ids": [
+        "SPG-DEF-001",
+        "SPG-DEF-003",
+        "SPG-HW-001",
+        "SPG-THM-001",
+        "SPG-THM-002"
+      ]
+    },
+    {
+      "id": "SPG-DEF-003",
+      "type": "def",
+      "category": "definitions",
+      "subject_id": "symplectic-geometry",
+      "title": "辛向量空间",
+      "title_en": "Symplectic vector space",
+      "summary": "有限维实向量空间及其非退化反对称形式。",
+      "prerequisites": [
+        "SPG-DEF-001",
+        "SPG-DEF-002"
+      ],
+      "related": [
+        "SPG-DEF-004",
+        "SPG-DEF-011"
+      ],
+      "exercises": [],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/definitions/SPG-DEF-003.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-001",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-DEF-004",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-DEF-005",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-DEF-010",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-DEF-011",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-EX-001",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-THM-001",
+          "kind": "prerequisites"
+        }
+      ],
+      "content": "### Definition\n**Symplectic vector space** 是一对 $(V,\\Omega)$，其中 $V$ 是有限维实向量空间，$\\Omega:V\\times V\\to\\mathbb R$ 是非退化的 skew-symmetric bilinear form。\n\n### Properties\n由 symplectic basis normal form，$\\dim V=2n$ 必为偶数。向量空间上的这一概念不要求 $d\\Omega=0$；闭性只在流形上的微分形式语境才有意义。",
+      "link_ids": [
+        "SPG-DEF-001",
+        "SPG-DEF-002",
+        "SPG-DEF-004",
+        "SPG-DEF-005",
+        "SPG-DEF-010",
+        "SPG-DEF-011",
+        "SPG-EX-001",
+        "SPG-THM-001"
+      ]
+    },
+    {
+      "id": "SPG-DEF-004",
+      "type": "def",
+      "category": "definitions",
+      "subject_id": "symplectic-geometry",
+      "title": "辛基",
+      "title_en": "Symplectic basis",
+      "summary": "基 e₁,…,eₙ,f₁,…,fₙ 满足标准配对关系。",
+      "prerequisites": [
+        "SPG-DEF-003"
+      ],
+      "related": [
+        "SPG-THM-001",
+        "SPG-EX-001"
+      ],
+      "exercises": [],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/definitions/SPG-DEF-004.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-003",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-DEF-010",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-EX-001",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-THM-001",
+          "kind": "related"
+        }
+      ],
+      "content": "### Definition\n$(V^{2n},\\Omega)$ 的基 $e_1,\\ldots,e_n,f_1,\\ldots,f_n$ 是 **symplectic basis**，若\n$$\n\\Omega(e_i,e_j)=0,\\quad \\Omega(f_i,f_j)=0,\\quad \\Omega(e_i,f_j)=\\delta_{ij}.\n$$\n在这组基中\n$$\n[\\Omega]=J=\\begin{pmatrix}0&I_n\\\\-I_n&0\\end{pmatrix}.\n$$",
+      "link_ids": [
+        "SPG-DEF-003",
+        "SPG-DEF-010",
+        "SPG-EX-001",
+        "SPG-THM-001"
+      ]
+    },
+    {
+      "id": "SPG-DEF-005",
+      "type": "def",
+      "category": "definitions",
+      "subject_id": "symplectic-geometry",
+      "title": "辛正交补",
+      "title_en": "Symplectic orthogonal",
+      "summary": "Y^Ω={v:Ω(v,y)=0 对所有 y∈Y}。",
+      "prerequisites": [
+        "SPG-DEF-003"
+      ],
+      "related": [
+        "SPG-THM-002",
+        "SPG-DEF-007",
+        "SPG-DEF-008"
+      ],
+      "exercises": [
+        "SPG-HW-001"
+      ],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/definitions/SPG-DEF-005.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-006",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-DEF-007",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-DEF-008",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-EX-002",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-HW-001",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-THM-002",
+          "kind": "prerequisites"
+        }
+      ],
+      "content": "### Definition\n对线性子空间 $Y\\subseteq V$，定义\n$$\nY^\\Omega=\\{v\\in V:\\Omega(v,y)=0\\ \\forall y\\in Y\\}.\n$$\n这是线性子空间。它与欧氏内积正交补不同：辛正交补**可能与 $Y$ 有非零交集**。\n\n### Algebraic representation\n若 $\\Omega(u,v)=u^T Jv$ 且 $Y=\\operatorname{Im}B$，则\n$$\nY^\\Omega=\\ker(B^T J).\n$$\n这里 $B$ 的列是 $Y$ 的一组生成向量。",
+      "link_ids": [
+        "SPG-DEF-003",
+        "SPG-DEF-006",
+        "SPG-DEF-007",
+        "SPG-DEF-008",
+        "SPG-EX-002",
+        "SPG-HW-001",
+        "SPG-THM-002"
+      ]
+    },
+    {
+      "id": "SPG-DEF-006",
+      "type": "def",
+      "category": "definitions",
+      "subject_id": "symplectic-geometry",
+      "title": "辛子空间",
+      "title_en": "Symplectic subspace",
+      "summary": "Ω 限制到 Y×Y 非退化。",
+      "prerequisites": [
+        "SPG-DEF-005"
+      ],
+      "related": [
+        "SPG-THM-005",
+        "SPG-EX-002"
+      ],
+      "exercises": [],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/definitions/SPG-DEF-006.md",
+      "backlinks": [
+        {
+          "from": "SPG-EX-002",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-THM-005",
+          "kind": "prerequisites"
+        }
+      ],
+      "content": "### Definition\n$Y\\subseteq V$ 是 **symplectic subspace** 若限制 $\\Omega|_{Y\\times Y}$ 非退化。\n\n### Equivalent criteria\n$$\nY\\cap Y^\\Omega=\\{0\\}\\iff V=Y\\oplus Y^\\Omega.\n$$\n请注意：symplectic subspace 不等同于 isotropic subspace。",
+      "link_ids": [
+        "SPG-DEF-005",
+        "SPG-EX-002",
+        "SPG-THM-005"
+      ]
+    },
+    {
+      "id": "SPG-DEF-007",
+      "type": "def",
+      "category": "definitions",
+      "subject_id": "symplectic-geometry",
+      "title": "各向同性子空间",
+      "title_en": "Isotropic subspace",
+      "summary": "Ω|_Y=0，亦即 Y⊆Y^Ω。",
+      "prerequisites": [
+        "SPG-DEF-005"
+      ],
+      "related": [
+        "SPG-DEF-008",
+        "SPG-DEF-009",
+        "SPG-THM-003"
+      ],
+      "exercises": [
+        "SPG-HW-005",
+        "SPG-HW-007"
+      ],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/definitions/SPG-DEF-007.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-005",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-DEF-008",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-DEF-009",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-EX-001",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-EX-002",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-HW-005",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-HW-007",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-THM-003",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-THM-004",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-THM-006",
+          "kind": "prerequisites"
+        }
+      ],
+      "content": "### Definition\n$Y\\subseteq(V,\\Omega)$ 称为 **isotropic**，若\n$$\n\\Omega|_{Y\\times Y}=0\\quad\\iff\\quad Y\\subseteq Y^\\Omega.\n$$\n即 $Y$ 中任意两向量的辛配对为零。\n\n### Dimension and matrix test\n$$\n\\dim Y\\le\\tfrac12\\dim V.\n$$\n若 $Y=\\operatorname{Im}B$，则 $Y$ isotropic 当且仅当 $B^TJB=0$。\n\n### Examples\n$\\operatorname{span}\\{e_1,\\ldots,e_k\\}$（$0\\le k\\le n$）是 isotropic；任意一维子空间也是 isotropic。",
+      "link_ids": [
+        "SPG-DEF-005",
+        "SPG-DEF-008",
+        "SPG-DEF-009",
+        "SPG-EX-001",
+        "SPG-EX-002",
+        "SPG-HW-005",
+        "SPG-HW-007",
+        "SPG-THM-003",
+        "SPG-THM-004",
+        "SPG-THM-006"
+      ]
+    },
+    {
+      "id": "SPG-DEF-008",
+      "type": "def",
+      "category": "definitions",
+      "subject_id": "symplectic-geometry",
+      "title": "余各向同性子空间",
+      "title_en": "Coisotropic subspace",
+      "summary": "Y^Ω⊆Y，亦即 Y^Ω 为 isotropic。",
+      "prerequisites": [
+        "SPG-DEF-005"
+      ],
+      "related": [
+        "SPG-DEF-007",
+        "SPG-EX-003",
+        "SPG-THM-006"
+      ],
+      "exercises": [
+        "SPG-HW-007"
+      ],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/definitions/SPG-DEF-008.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-005",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-DEF-007",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-DEF-009",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-EX-002",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-EX-003",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-HW-007",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-THM-004",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-THM-006",
+          "kind": "prerequisites"
+        }
+      ],
+      "content": "### Definition\n$Y\\subseteq(V,\\Omega)$ 称为 **coisotropic**，若\n$$\nY^\\Omega\\subseteq Y.\n$$\n等价地，$Y^\\Omega$ 是 isotropic subspace，因为 $(Y^\\Omega)^\\Omega=Y$。\n\n### Dimension and representation\n必有 $\\dim Y\\ge\\tfrac12\\dim V$。在标准坐标下\n$$\nY=\\{(q,p):p_1=\\cdots=p_k=0\\}\\quad(0\\le k\\le n)\n$$\n是 coisotropic，其正交补为 $\\operatorname{span}\\{e_1,\\ldots,e_k\\}$。\n\n若 $Y=\\ker A$，其中 $A$ 为满行秩矩阵，且 $\\Omega(u,v)=u^T Jv$，则\n$$\nY\\text{ coisotropic}\\iff AJ^{-1}A^T=0.\n$$",
+      "link_ids": [
+        "SPG-DEF-005",
+        "SPG-DEF-007",
+        "SPG-DEF-009",
+        "SPG-EX-002",
+        "SPG-EX-003",
+        "SPG-HW-007",
+        "SPG-THM-004",
+        "SPG-THM-006"
+      ]
+    },
+    {
+      "id": "SPG-DEF-009",
+      "type": "def",
+      "category": "definitions",
+      "subject_id": "symplectic-geometry",
+      "title": "拉格朗日子空间",
+      "title_en": "Lagrangian subspace",
+      "summary": "最大维数 isotropic；等价于 Y=Y^Ω。",
+      "prerequisites": [
+        "SPG-DEF-007",
+        "SPG-DEF-008",
+        "SPG-THM-002"
+      ],
+      "related": [
+        "SPG-THM-004",
+        "SPG-DEF-013",
+        "SPG-EX-004"
+      ],
+      "exercises": [
+        "SPG-HW-007"
+      ],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/definitions/SPG-DEF-009.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-007",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-DEF-013",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-EX-002",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-EX-004",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-EX-005",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-HW-007",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-THM-004",
+          "kind": "related"
+        }
+      ],
+      "content": "### Definition (依照原书 Homework 1 Problem 7)\n在 $(V^{2n},\\Omega)$ 中，**Lagrangian subspace** 指一个 isotropic 子空间 $Y$，且\n$$\n\\dim Y=n=\\tfrac12\\dim V.\n$$\n\n### Equivalent characterizations\n$$\n\\boxed{Y\\text{ Lagrangian}\\iff (Y\\text{ isotropic and coisotropic})\\iff Y=Y^\\Omega.}\n$$\n\n### Interpretation\nLagrangian = **maximal possible dimension of isotropic subspace**（不要误读为仅仅“任意极大”而不考虑维数证明）。",
+      "link_ids": [
+        "SPG-DEF-007",
+        "SPG-DEF-008",
+        "SPG-DEF-013",
+        "SPG-EX-002",
+        "SPG-EX-004",
+        "SPG-EX-005",
+        "SPG-HW-007",
+        "SPG-THM-002",
+        "SPG-THM-004"
+      ]
+    },
+    {
+      "id": "SPG-DEF-010",
+      "type": "def",
+      "category": "definitions",
+      "subject_id": "symplectic-geometry",
+      "title": "辛同胚（线性）",
+      "title_en": "Linear symplectomorphism",
+      "summary": "保持 Ω 的可逆线性映射。",
+      "prerequisites": [
+        "SPG-DEF-003",
+        "SPG-DEF-004"
+      ],
+      "related": [
+        "SPG-THM-001"
+      ],
+      "exercises": [],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/definitions/SPG-DEF-010.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-012",
+          "kind": "related"
+        }
+      ],
+      "content": "### Definition\n$\\Phi:(V,\\Omega)\\to(V',\\Omega')$ 是 **linear symplectomorphism**，若 $\\Phi$ 是线性同构且\n$$\n\\Omega'(\\Phi u,\\Phi v)=\\Omega(u,v)\\quad\\forall u,v\\in V.\n$$\n在同一标准基下，矩阵条件为 $S^TJS=J$。\n\n### Remark\n满足这一条件的可逆矩阵组成 symplectic group $\\operatorname{Sp}(2n,\\mathbb R)$。",
+      "link_ids": [
+        "SPG-DEF-003",
+        "SPG-DEF-004",
+        "SPG-DEF-012",
+        "SPG-THM-001"
+      ]
+    },
+    {
+      "id": "SPG-DEF-011",
+      "type": "def",
+      "category": "definitions",
+      "subject_id": "symplectic-geometry",
+      "title": "辛流形与辛形式",
+      "title_en": "Symplectic manifold and symplectic form",
+      "summary": "流形上的闭且逐点非退化的 2-form。",
+      "prerequisites": [
+        "SPG-DEF-003"
+      ],
+      "related": [
+        "SPG-DEF-012",
+        "SPG-THM-007",
+        "SPG-EX-001"
+      ],
+      "exercises": [],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/definitions/SPG-DEF-011.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-003",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-DEF-012",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-DEF-013",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-EX-006",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-THM-007",
+          "kind": "prerequisites"
+        }
+      ],
+      "content": "### Definition\n**Symplectic manifold** $(M^{2n},\\omega)$ 是光滑流形及一个 2-form $\\omega\\in\\Omega^2(M)$，使得\n1. $d\\omega=0$ (**closed**);\n2. 对每个 $x\\in M$，双线性型 $\\omega_x$ 在 $T_xM$ 上 **nondegenerate**。\n\n### Difference from linear algebra\n线性辛向量空间只要求非退化的 skew-symmetric form；流形还需要 $d\\omega=0$。\n\n### Local model\n$(\\mathbb R^{2n},\\omega_0)$，$\\omega_0=\\sum_{i=1}^n dq_i\\wedge dp_i$。",
+      "link_ids": [
+        "SPG-DEF-003",
+        "SPG-DEF-012",
+        "SPG-DEF-013",
+        "SPG-EX-001",
+        "SPG-EX-006",
+        "SPG-THM-007"
+      ]
+    },
+    {
+      "id": "SPG-DEF-012",
+      "type": "def",
+      "category": "definitions",
+      "subject_id": "symplectic-geometry",
+      "title": "辛微分同胚",
+      "title_en": "Symplectomorphism (manifold)",
+      "summary": "微分同胚 φ 满足 φ*ω′=ω。",
+      "prerequisites": [
+        "SPG-DEF-011"
+      ],
+      "related": [
+        "SPG-DEF-010",
+        "SPG-THM-007"
+      ],
+      "exercises": [],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/definitions/SPG-DEF-012.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-011",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-THM-007",
+          "kind": "related"
+        }
+      ],
+      "content": "### Definition\n辛流形间的光滑映射 $\\varphi:(M,\\omega)\\to(M',\\omega')$ 为 **symplectomorphism** 若它是 diffeomorphism 且\n$$\n\\varphi^*\\omega'=\\omega.\n$$\n即 $\\omega'_{\\varphi(x)}(d\\varphi_xu,d\\varphi_xv)=\\omega_x(u,v)$。",
+      "link_ids": [
+        "SPG-DEF-010",
+        "SPG-DEF-011",
+        "SPG-THM-007"
+      ]
+    },
+    {
+      "id": "SPG-DEF-013",
+      "type": "def",
+      "category": "definitions",
+      "subject_id": "symplectic-geometry",
+      "title": "拉格朗日子流形",
+      "title_en": "Lagrangian submanifold",
+      "summary": "每一点的切空间都是拉格朗日子空间。",
+      "prerequisites": [
+        "SPG-DEF-009",
+        "SPG-DEF-011"
+      ],
+      "related": [
+        "SPG-EX-006"
+      ],
+      "exercises": [],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/definitions/SPG-DEF-013.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-009",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-EX-006",
+          "kind": "prerequisites"
+        }
+      ],
+      "content": "### Definition\n设 $(M^{2n},\\omega)$ 为辛流形，$i:L\\hookrightarrow M$ 为嵌入子流形。称 $L$ 为 **Lagrangian submanifold**，若\n$$\nT_xL=(T_xL)^{\\omega_x}\\quad\\forall x\\in L.\n$$\n等价于\n$$\n\\dim L=n,\\qquad i^*\\omega=0.\n$$\n\n### Example and connection\n在余切丛 $T^*X$ 的典范辛形式下，zero section 是 Lagrangian；这也是后续 Fukaya category 的基本几何对象之一。",
+      "link_ids": [
+        "SPG-DEF-009",
+        "SPG-DEF-011",
+        "SPG-EX-006"
+      ]
+    },
+    {
+      "id": "SPG-THM-001",
+      "type": "thm",
+      "category": "theorems",
+      "subject_id": "symplectic-geometry",
+      "title": "辛基标准形与偶维性",
+      "title_en": "Symplectic normal form",
+      "summary": "非退化反对称型在辛基下有标准矩阵，故维数为偶数。",
+      "prerequisites": [
+        "SPG-DEF-002",
+        "SPG-DEF-003"
+      ],
+      "related": [
+        "SPG-DEF-004",
+        "SPG-EX-001"
+      ],
+      "exercises": [],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/theorems/SPG-THM-001.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-002",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-DEF-004",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-DEF-010",
+          "kind": "related"
+        }
+      ],
+      "content": "### Statement\n任意有限维 symplectic vector space $(V,\\Omega)$ 都存在 symplectic basis $e_1,\\ldots,e_n,f_1,\\ldots,f_n$。特别地 $\\dim V=2n$，且矩阵为\n$$J=\\begin{pmatrix}0&I_n\\\\-I_n&0\\end{pmatrix}.$$\n\n### Proof sketch\n取 $e_1\\ne0$。由非退化性存在 $f_1$ 使 $\\Omega(e_1,f_1)=1$。令 $U_1=\\operatorname{span}\\{e_1,f_1\\}$，则 $\\Omega|_{U_1}$ 非退化，且 $V=U_1\\oplus U_1^\\Omega$。在 $U_1^\\Omega$ 上归纳，直到维数为零。",
+      "link_ids": [
+        "SPG-DEF-002",
+        "SPG-DEF-003",
+        "SPG-DEF-004",
+        "SPG-DEF-010",
+        "SPG-EX-001"
+      ]
+    },
+    {
+      "id": "SPG-THM-002",
+      "type": "thm",
+      "category": "theorems",
+      "subject_id": "symplectic-geometry",
+      "title": "辛正交补维数公式与双重正交",
+      "title_en": "Orthogonal dimension and double complement",
+      "summary": "dimY+dimYΩ=dimV 且 (YΩ)Ω=Y。",
+      "prerequisites": [
+        "SPG-DEF-002",
+        "SPG-DEF-005"
+      ],
+      "related": [
+        "SPG-THM-003",
+        "SPG-THM-004"
+      ],
+      "exercises": [
+        "SPG-HW-001"
+      ],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/theorems/SPG-THM-002.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-005",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-DEF-009",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-HW-001",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-HW-005",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-HW-007",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-THM-003",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-THM-004",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-THM-005",
+          "kind": "prerequisites"
+        },
+        {
+          "from": "SPG-THM-006",
+          "kind": "prerequisites"
+        }
+      ],
+      "content": "### Statement\n设 $(V,\\Omega)$ 为有限维 symplectic vector space，$Y\\subseteq V$ 为任意线性子空间，则\n$$\n\\boxed{\\dim Y+\\dim Y^\\Omega=\\dim V},\\qquad\\boxed{(Y^\\Omega)^\\Omega=Y}.\n$$\n\n### Proof\n映射 $\\Phi:V\\to Y^*$，$\\Phi(v)(y)=\\Omega(v,y)$。由于 $\\Omega^\\flat:V\\to V^*$ 是同构，而 restriction $V^*\\twoheadrightarrow Y^*$ 是满射，$\\Phi$ 满射。且 $\\ker\\Phi=Y^\\Omega$。由 rank-nullity，\n$$\\dim V=\\dim Y^\\Omega+\\dim Y^*=\\dim Y^\\Omega+\\dim Y.$$\n对 $y\\in Y$、$v\\in Y^\\Omega$，有 $\\Omega(y,v)=-\\Omega(v,y)=0$，所以 $Y\\subseteq(Y^\\Omega)^\\Omega$。对 $Y^\\Omega$ 再使用维数公式，得 $\\dim (Y^\\Omega)^\\Omega=\\dim Y$。两者相等。",
+      "link_ids": [
+        "SPG-DEF-002",
+        "SPG-DEF-005",
+        "SPG-DEF-009",
+        "SPG-HW-001",
+        "SPG-HW-005",
+        "SPG-HW-007",
+        "SPG-THM-003",
+        "SPG-THM-004",
+        "SPG-THM-005",
+        "SPG-THM-006"
+      ]
+    },
+    {
+      "id": "SPG-THM-003",
+      "type": "thm",
+      "category": "theorems",
+      "subject_id": "symplectic-geometry",
+      "title": "各向同性维数上界",
+      "title_en": "Isotropic dimension bound",
+      "summary": "Isotropic Y 满足 dimY≤n。",
+      "prerequisites": [
+        "SPG-DEF-007",
+        "SPG-THM-002"
+      ],
+      "related": [
+        "SPG-THM-004"
+      ],
+      "exercises": [
+        "SPG-HW-005"
+      ],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/theorems/SPG-THM-003.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-007",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-HW-005",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-THM-002",
+          "kind": "related"
+        }
+      ],
+      "content": "### Statement\n若 $\\dim V=2n$，且 $Y\\subseteq V$ isotropic，则 $\\dim Y\\le n$。\n\n### Proof\n$Y$ isotropic 等价于 $Y\\subseteq Y^\\Omega$，于是\n$$\\dim Y\\le\\dim Y^\\Omega=2n-\\dim Y.$$\n因此 $2\\dim Y\\le2n$，即 $\\dim Y\\le n$。",
+      "link_ids": [
+        "SPG-DEF-007",
+        "SPG-HW-005",
+        "SPG-THM-002",
+        "SPG-THM-004"
+      ]
+    },
+    {
+      "id": "SPG-THM-004",
+      "type": "thm",
+      "category": "theorems",
+      "subject_id": "symplectic-geometry",
+      "title": "Lagrangian 的三个等价刻画",
+      "title_en": "Three equivalent Lagrangian criteria",
+      "summary": "Lagrangian ⇔ isotropic 且 coisotropic ⇔ 自辛正交。",
+      "prerequisites": [
+        "SPG-DEF-007",
+        "SPG-DEF-008",
+        "SPG-THM-002"
+      ],
+      "related": [
+        "SPG-DEF-009"
+      ],
+      "exercises": [
+        "SPG-HW-007"
+      ],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/theorems/SPG-THM-004.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-009",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-EX-002",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-EX-004",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-HW-007",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-THM-002",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-THM-003",
+          "kind": "related"
+        }
+      ],
+      "content": "### Statement\n设 $\\dim V=2n$，$Y\\subseteq V$，下列三条件等价：\n1. $Y$ 为 Lagrangian：$Y$ isotropic 且 $\\dim Y=n$；\n2. $Y$ 同时 isotropic 和 coisotropic；\n3. $Y=Y^\\Omega$。\n\n### Proof\n**(1) $\\Rightarrow$ (3).** 由 isotropic 得 $Y\\subseteq Y^\\Omega$，而维数公式给 $\\dim Y^\\Omega=2n-n=n=\\dim Y$，故相等。\n\n**(3) $\\Rightarrow$ (2).** 等式同时蕴含 $Y\\subseteq Y^\\Omega$ 及 $Y^\\Omega\\subseteq Y$。\n\n**(2) $\\Rightarrow$ (1).** 两个包含关系给出 $Y=Y^\\Omega$，故 $\\dim Y=2n-\\dim Y$，于是 $\\dim Y=n$；再结合 isotropic 性质即知是 Lagrangian。",
+      "link_ids": [
+        "SPG-DEF-007",
+        "SPG-DEF-008",
+        "SPG-DEF-009",
+        "SPG-EX-002",
+        "SPG-EX-004",
+        "SPG-HW-007",
+        "SPG-THM-002",
+        "SPG-THM-003"
+      ]
+    },
+    {
+      "id": "SPG-THM-005",
+      "type": "thm",
+      "category": "theorems",
+      "subject_id": "symplectic-geometry",
+      "title": "辛子空间的三个等价刻画",
+      "title_en": "Symplectic subspace criteria",
+      "summary": "限制非退化 ⇔ Y∩YΩ=0 ⇔ V=Y⊕YΩ。",
+      "prerequisites": [
+        "SPG-DEF-006",
+        "SPG-THM-002"
+      ],
+      "related": [
+        "SPG-EX-002"
+      ],
+      "exercises": [],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/theorems/SPG-THM-005.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-006",
+          "kind": "related"
+        }
+      ],
+      "content": "### Statement\n对 $Y\\subseteq V$：\n$$\n\\Omega|_Y\\text{ nondegenerate}\\iff Y\\cap Y^\\Omega=\\{0\\}\\iff V=Y\\oplus Y^\\Omega.\n$$\n\n### Proof\n$\\Omega|_Y$ 的 radical 正是 $Y\\cap Y^\\Omega$，故前两个条件等价。结合 $\\dim Y+\\dim Y^\\Omega=\\dim V$，交集为零当且仅当直和为整个 $V$。",
+      "link_ids": [
+        "SPG-DEF-006",
+        "SPG-EX-002",
+        "SPG-THM-002"
+      ]
+    },
+    {
+      "id": "SPG-THM-006",
+      "type": "thm",
+      "category": "theorems",
+      "subject_id": "symplectic-geometry",
+      "title": "各向同性与余各向同性的对偶",
+      "title_en": "Isotropic–coisotropic duality",
+      "summary": "Y isotropic 当且仅当 YΩ coisotropic。",
+      "prerequisites": [
+        "SPG-DEF-007",
+        "SPG-DEF-008",
+        "SPG-THM-002"
+      ],
+      "related": [
+        "SPG-EX-003"
+      ],
+      "exercises": [],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/theorems/SPG-THM-006.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-008",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-EX-003",
+          "kind": "related"
+        }
+      ],
+      "content": "### Statement\n$$\nY\\text{ isotropic}\\iff Y^\\Omega\\text{ coisotropic}.\n$$\n且 $\\dim Y^\\Omega\\ge n$ 当 $Y$ isotropic。\n\n### Proof\n$Y$ isotropic 意味着 $Y\\subseteq Y^\\Omega$。由 $(Y^\\Omega)^\\Omega=Y$，这等价于 $(Y^\\Omega)^\\Omega\\subseteq Y^\\Omega$，即 $Y^\\Omega$ coisotropic。",
+      "link_ids": [
+        "SPG-DEF-007",
+        "SPG-DEF-008",
+        "SPG-EX-003",
+        "SPG-THM-002"
+      ]
+    },
+    {
+      "id": "SPG-THM-007",
+      "type": "thm",
+      "category": "theorems",
+      "subject_id": "symplectic-geometry",
+      "title": "Darboux 定理（预习）",
+      "title_en": "Darboux theorem (preview)",
+      "summary": "局部辛流形总与标准辛空间同构。",
+      "prerequisites": [
+        "SPG-DEF-011"
+      ],
+      "related": [
+        "SPG-DEF-012"
+      ],
+      "exercises": [],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/theorems/SPG-THM-007.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-011",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-DEF-012",
+          "kind": "related"
+        }
+      ],
+      "content": "### Statement (preview only)\n对于任意 $2n$ 维 symplectic manifold $(M,\\omega)$ 与 $p\\in M$，存在 $p$ 邻域的坐标 $(q_1,\\ldots,q_n,p_1,\\ldots,p_n)$，使得\n$$\n\\omega=\\sum_{i=1}^n dq_i\\wedge dp_i.\n$$\n这说明辛几何**没有局部的曲率型不变量**，其本质信息更多地体现在全局。\n\n### Status\n仅作后续学习连接，今天不要求证明。",
+      "link_ids": [
+        "SPG-DEF-011",
+        "SPG-DEF-012"
+      ]
+    },
+    {
+      "id": "SPG-EX-001",
+      "type": "ex",
+      "category": "examples",
+      "subject_id": "symplectic-geometry",
+      "title": "标准辛空间与矩阵表示",
+      "title_en": "Standard symplectic space",
+      "summary": "(R²ⁿ,∑dqᵢ∧dpᵢ) 的标准表示。",
+      "prerequisites": [
+        "SPG-DEF-003",
+        "SPG-DEF-004"
+      ],
+      "related": [
+        "SPG-DEF-007",
+        "SPG-EX-002"
+      ],
+      "exercises": [],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/examples/SPG-EX-001.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-004",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-DEF-011",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-THM-001",
+          "kind": "related"
+        }
+      ],
+      "content": "在 $\\mathbb R^{2n}$ 中用 $(q_1,\\ldots,q_n,p_1,\\ldots,p_n)$ 作坐标，定义\n$$\\omega_0=\\sum_{i=1}^n dq_i\\wedge dp_i.$$\n把向量写为 $u=(q,p)$、$v=(Q,P)$，则\n$$\\omega_0(u,v)=q\\cdot P-p\\cdot Q=u^T\\begin{pmatrix}0&I_n\\\\-I_n&0\\end{pmatrix}v.$$\n基 $e_i=\\partial_{q_i}$、$f_i=\\partial_{p_i}$ 构成 symplectic basis。",
+      "link_ids": [
+        "SPG-DEF-003",
+        "SPG-DEF-004",
+        "SPG-DEF-007",
+        "SPG-DEF-011",
+        "SPG-EX-002",
+        "SPG-THM-001"
+      ]
+    },
+    {
+      "id": "SPG-EX-002",
+      "type": "ex",
+      "category": "examples",
+      "subject_id": "symplectic-geometry",
+      "title": "R⁴ 中四类子空间",
+      "title_en": "Four types of subspaces in R4",
+      "summary": "一组清晰区分 isotropic/coisotropic/Lagrangian/symplectic 的 toy model。",
+      "prerequisites": [
+        "SPG-DEF-005",
+        "SPG-DEF-006",
+        "SPG-DEF-007",
+        "SPG-DEF-008",
+        "SPG-DEF-009"
+      ],
+      "related": [
+        "SPG-THM-004"
+      ],
+      "exercises": [],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/examples/SPG-EX-002.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-006",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-EX-001",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-EX-005",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-THM-005",
+          "kind": "related"
+        }
+      ],
+      "content": "在 $V=\\mathbb R^4$，$\\omega=dq_1\\wedge dp_1+dq_2\\wedge dp_2$，取 $e_i=\\partial_{q_i}$、$f_i=\\partial_{p_i}$：\n\n| $Y$ | $Y^\\omega$ | 类型 |\n|---|---|---|\n| $\\langle e_1\\rangle$ | $\\langle e_1,e_2,f_2\\rangle$ | isotropic，非 Lagrangian |\n| $\\langle e_1,e_2\\rangle$ | $\\langle e_1,e_2\\rangle$ | Lagrangian |\n| $\\langle e_1,e_2,f_2\\rangle$ | $\\langle e_1\\rangle$ | coisotropic，非 Lagrangian |\n| $\\langle e_1,f_1\\rangle$ | $\\langle e_2,f_2\\rangle$ | symplectic，既非 isotropic 也非 coisotropic |\n\n最后一行表明：不是所有子空间都属于前三类。",
+      "link_ids": [
+        "SPG-DEF-005",
+        "SPG-DEF-006",
+        "SPG-DEF-007",
+        "SPG-DEF-008",
+        "SPG-DEF-009",
+        "SPG-EX-001",
+        "SPG-EX-005",
+        "SPG-THM-004",
+        "SPG-THM-005"
+      ]
+    },
+    {
+      "id": "SPG-EX-003",
+      "type": "ex",
+      "category": "examples",
+      "subject_id": "symplectic-geometry",
+      "title": "标准 coisotropic 约束子空间",
+      "title_en": "Coisotropic constraint planes",
+      "summary": "由 p₁=···=pₖ=0 给出的线性余各向同性子空间。",
+      "prerequisites": [
+        "SPG-DEF-008"
+      ],
+      "related": [
+        "SPG-THM-006"
+      ],
+      "exercises": [],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/examples/SPG-EX-003.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-008",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-EX-006",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-THM-006",
+          "kind": "related"
+        }
+      ],
+      "content": "对于 $0\\le k\\le n$，设\n$$Y=\\{(q,p)\\in\\mathbb R^{2n}:p_1=\\cdots=p_k=0\\}.$$\n那么\n$$Y=\\operatorname{span}\\{e_1,\\ldots,e_n,f_{k+1},\\ldots,f_n\\},$$\n$$Y^\\omega=\\operatorname{span}\\{e_1,\\ldots,e_k\\}\\subseteq Y.$$\n故 $Y$ coisotropic，$\\dim Y=2n-k$；当 $k=n$ 时它也是 Lagrangian。任意超平面（$k=1$，经辛基变换）都是 coisotropic。",
+      "link_ids": [
+        "SPG-DEF-008",
+        "SPG-EX-006",
+        "SPG-THM-006"
+      ]
+    },
+    {
+      "id": "SPG-EX-004",
+      "type": "ex",
+      "category": "examples",
+      "subject_id": "symplectic-geometry",
+      "title": "对称线性映射的图像是 Lagrangian",
+      "title_en": "Graphs of symmetric linear maps",
+      "summary": "Graph(A) 为 Lagrangian ⇔ A=Aᵀ。",
+      "prerequisites": [
+        "SPG-DEF-009"
+      ],
+      "related": [
+        "SPG-THM-004"
+      ],
+      "exercises": [],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/examples/SPG-EX-004.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-009",
+          "kind": "related"
+        }
+      ],
+      "content": "设 $A:\\mathbb R^n\\to\\mathbb R^n$ 为线性映射，取\n$$L_A=\\{(q,Aq):q\\in\\mathbb R^n\\}\\subseteq\\mathbb R^{2n}.$$\n因为 $\\dim L_A=n$，只需验证 isotropic：对 $q,Q\\in\\mathbb R^n$，\n$$\\omega_0((q,Aq),(Q,AQ))=q^TAQ-(Aq)^TQ=q^T(A-A^T)Q.$$\n所以\n$$L_A\\text{ Lagrangian}\\iff A=A^T.$$\n这为后续 generating functions 与 Lagrangian graphs 做准备。",
+      "link_ids": [
+        "SPG-DEF-009",
+        "SPG-THM-004"
+      ]
+    },
+    {
+      "id": "SPG-EX-005",
+      "type": "ex",
+      "category": "examples",
+      "subject_id": "symplectic-geometry",
+      "title": "R² 中的全部直线都是 Lagrangian",
+      "title_en": "Lines in a symplectic plane",
+      "summary": "在 2 维辛向量空间里任意直线都满足定义。",
+      "prerequisites": [
+        "SPG-DEF-009"
+      ],
+      "related": [
+        "SPG-EX-002"
+      ],
+      "exercises": [],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/examples/SPG-EX-005.md",
+      "backlinks": [],
+      "content": "在 $(\\mathbb R^2,dq\\wedge dp)$ 中，每个一维子空间 $L=\\operatorname{span}\\{v\\}$ 都 isotropic，因为 $\\omega(v,v)=0$。又 $\\dim L=1=\\frac12\\dim\\mathbb R^2$，因此每条过原点的直线都是 Lagrangian；相反，整个 $\\mathbb R^2$ 是 symplectic subspace，但非 isotropic。",
+      "link_ids": [
+        "SPG-DEF-009",
+        "SPG-EX-002"
+      ]
+    },
+    {
+      "id": "SPG-EX-006",
+      "type": "ex",
+      "category": "examples",
+      "subject_id": "symplectic-geometry",
+      "title": "余切丛零截面是 Lagrangian",
+      "title_en": "Zero section of a cotangent bundle",
+      "summary": "一个从线性空间过渡到流形的典型例子。",
+      "prerequisites": [
+        "SPG-DEF-011",
+        "SPG-DEF-013"
+      ],
+      "related": [
+        "SPG-EX-003"
+      ],
+      "exercises": [],
+      "tags": [],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": null,
+      "status": null,
+      "path": "subjects/symplectic-geometry/examples/SPG-EX-006.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-013",
+          "kind": "related"
+        }
+      ],
+      "content": "设 $X$ 是 $n$ 维流形，局部坐标 $q_i$，在 $T^*X$ 上用纤维坐标 $p_i$，典范辛形式为\n$$\\omega_{\\mathrm{can}}=\\sum_i dq_i\\wedge dp_i.$$\nzero section $X_0=\\{p_1=\\cdots=p_n=0\\}$ 维数为 $n$。沿零截面的切向量没有 $p$ 方向分量，故 $\\omega_{\\mathrm{can}}|_{TX_0}=0$。所以 $X_0$ 为 Lagrangian submanifold。\n\n*这是后续章节的提前示例，不是 Homework 1 的额外题目。*",
+      "link_ids": [
+        "SPG-DEF-011",
+        "SPG-DEF-013",
+        "SPG-EX-003"
+      ]
+    },
+    {
+      "id": "SPG-HW-001",
+      "type": "hw",
+      "category": "exercises",
+      "subject_id": "symplectic-geometry",
+      "title": "Homework 1 · Problem 1：辛正交补维数",
+      "title_en": "Dimension of symplectic orthogonal",
+      "summary": "证明 dimY+dimYΩ=dimV。",
+      "prerequisites": [
+        "SPG-DEF-002",
+        "SPG-DEF-005"
+      ],
+      "related": [
+        "SPG-THM-002"
+      ],
+      "exercises": [],
+      "tags": [
+        "linear-algebra",
+        "orthogonal",
+        "proof"
+      ],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": 8,
+      "status": "completed",
+      "path": "subjects/symplectic-geometry/exercises/SPG-HW-001.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-002",
+          "kind": "related"
+        },
+        {
+          "from": "SPG-DEF-005",
+          "kind": "exercises"
+        },
+        {
+          "from": "SPG-THM-002",
+          "kind": "exercises"
+        }
+      ],
+      "content": "### Problem (paraphrase)\n给定 $(V,\\Omega)$ 的子空间 $Y$，证明\n$$\\dim Y+\\dim Y^\\Omega=\\dim V.$$\n\n### Key hint\n考虑 $\\Phi:V\\to Y^*$，$\\Phi(v)(y)=\\Omega(v,y)$；计算核与像。\n\n### Solution\n由 $\\Omega$ 非退化，$\\Omega^\\flat:V\\xrightarrow{\\sim}V^*$ 是同构；限制映射 $\\rho:V^*\\to Y^*$ 满射，因为 $Y$ 上的任意线性泛函都可延拓到 $V$。于是 $\\Phi=\\rho\\circ\\Omega^\\flat$ 满射，且\n$$\\ker\\Phi=\\{v:\\Omega(v,y)=0\\ \\forall y\\in Y\\}=Y^\\Omega.$$\n利用 rank-nullity，\n$$\\dim V=\\dim\\ker\\Phi+\\dim\\operatorname{Im}\\Phi=\\dim Y^\\Omega+\\dim Y^*=\\dim Y^\\Omega+\\dim Y.$$\n证毕。\n\n### Personal review\n- **状态**：已完成（按学习记录）。\n- **个人错题**：无。\n- **复习定位**：这是非退化性 $V\\simeq V^*$ 与 rank-nullity 的直接应用。",
+      "link_ids": [
+        "SPG-DEF-002",
+        "SPG-DEF-005",
+        "SPG-THM-002"
+      ]
+    },
+    {
+      "id": "SPG-HW-005",
+      "type": "hw",
+      "category": "exercises",
+      "subject_id": "symplectic-geometry",
+      "title": "Homework 1 · Problem 5：isotropic 维数上界",
+      "title_en": "Isotropic dimension bound",
+      "summary": "证明 isotropic Y 的维数至多 dimV/2。",
+      "prerequisites": [
+        "SPG-DEF-007",
+        "SPG-THM-002"
+      ],
+      "related": [
+        "SPG-THM-003"
+      ],
+      "exercises": [],
+      "tags": [
+        "linear-algebra",
+        "isotropic",
+        "proof"
+      ],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": 8,
+      "status": "completed",
+      "path": "subjects/symplectic-geometry/exercises/SPG-HW-005.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-007",
+          "kind": "exercises"
+        },
+        {
+          "from": "SPG-THM-003",
+          "kind": "exercises"
+        }
+      ],
+      "content": "### Problem (paraphrase)\n设 $Y\\subseteq(V,\\Omega)$ 为 isotropic，证明\n$$\\dim Y\\le\\tfrac12\\dim V.$$\n\n### Solution\n由 isotropic 定义，$Y\\subseteq Y^\\Omega$。于是\n$$\\dim Y\\le\\dim Y^\\Omega=\\dim V-\\dim Y,$$\n其中等号使用 Problem 1。移项得 $2\\dim Y\\le\\dim V$，证毕。\n\n### Personal review\n- **状态**：已完成（按学习记录）。\n- **个人错题**：无。\n- **复习定位**：关键只有包含关系与维数公式。",
+      "link_ids": [
+        "SPG-DEF-007",
+        "SPG-THM-002",
+        "SPG-THM-003"
+      ]
+    },
+    {
+      "id": "SPG-HW-007",
+      "type": "hw",
+      "category": "exercises",
+      "subject_id": "symplectic-geometry",
+      "title": "Homework 1 · Problem 7：Lagrangian 等价刻画",
+      "title_en": "Three criteria for Lagrangian subspaces",
+      "summary": "证明 Lagrangian ⇔ isotropic+coisotropic ⇔ Y=YΩ。",
+      "prerequisites": [
+        "SPG-DEF-007",
+        "SPG-DEF-008",
+        "SPG-DEF-009",
+        "SPG-THM-002"
+      ],
+      "related": [
+        "SPG-THM-004"
+      ],
+      "exercises": [],
+      "tags": [
+        "linear-algebra",
+        "lagrangian",
+        "proof"
+      ],
+      "source": "Ana Cannas da Silva, Lectures on Symplectic Geometry, Chapter 1 (§1.1–1.4), Homework 1, p. 8",
+      "source_url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf",
+      "source_page": 8,
+      "status": "completed",
+      "path": "subjects/symplectic-geometry/exercises/SPG-HW-007.md",
+      "backlinks": [
+        {
+          "from": "SPG-DEF-007",
+          "kind": "exercises"
+        },
+        {
+          "from": "SPG-DEF-008",
+          "kind": "exercises"
+        },
+        {
+          "from": "SPG-DEF-009",
+          "kind": "exercises"
+        },
+        {
+          "from": "SPG-THM-004",
+          "kind": "exercises"
+        }
+      ],
+      "content": "### Problem (paraphrase)\n依原书定义，$Y$ Lagrangian 当且仅当 $Y$ isotropic 且 $\\dim Y=\\frac12\\dim V$。证明以下三个条件等价：\n1. $Y$ Lagrangian；\n2. $Y$ 同时 isotropic 和 coisotropic；\n3. $Y=Y^\\Omega$。\n\n### Solution\n设 $\\dim V=2n$。\n\n**1 $\\Rightarrow$ 3.** 因为 $Y$ isotropic，$Y\\subseteq Y^\\Omega$。又 $\\dim Y=n$，由 Problem 1，$\\dim Y^\\Omega=2n-n=n$，因此 $Y=Y^\\Omega$。\n\n**3 $\\Rightarrow$ 2.** $Y=Y^\\Omega$ 同时给出 $Y\\subseteq Y^\\Omega$ 与 $Y^\\Omega\\subseteq Y$，分别是 isotropic、coisotropic 的定义。\n\n**2 $\\Rightarrow$ 1.** 两个包含关系给出 $Y=Y^\\Omega$，于是由 Problem 1 得 $2\\dim Y=2n$，即 $\\dim Y=n$。结合 $Y$ isotropic，正是 Lagrangian 定义。\n\n### Personal review\n- **状态**：已完成（按学习记录）。\n- **个人错题**：无。\n- **复习定位**：牢记原书以“isotropic + 半维”作定义，$Y=Y^\\Omega$ 是等价刻画，不要混淆逻辑顺序。",
+      "link_ids": [
+        "SPG-DEF-007",
+        "SPG-DEF-008",
+        "SPG-DEF-009",
+        "SPG-THM-002",
+        "SPG-THM-004"
+      ]
+    }
+  ],
+  "route_markdown_path": "subjects/symplectic-geometry/roadmap.md",
+  "study_logs": [
+    {
+      "id": "SPG-LOG-2026-11-11",
+      "path": "subjects/symplectic-geometry/study-logs/2026-11-11.md",
+      "date": "2026-11-11",
+      "completed_exercises": [
+        "SPG-HW-001",
+        "SPG-HW-005",
+        "SPG-HW-007"
+      ],
+      "mistakes": []
+    }
+  ]
+}

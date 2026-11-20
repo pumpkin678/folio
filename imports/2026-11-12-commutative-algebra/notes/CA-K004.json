@@ -1,0 +1,29 @@
+{
+  "id": "CA-K004",
+  "title": "Maximal / prime ideal 的逐点判别法",
+  "track": "交换代数",
+  "type": "concept",
+  "path": "concepts/CA-K004-prime-maximal-detection.md",
+  "created_date": "2026-11-12",
+  "verification_state": "已核对数学推导",
+  "source": "本次对话题目与讨论（2026-11-12）；原书精确题号未独立核对",
+  "source_verified": false,
+  "tags": [
+    "prime-ideal",
+    "maximal-ideal",
+    "quotient",
+    "primitive"
+  ],
+  "related_questions": [
+    "CA-Q004"
+  ],
+  "related_concepts": [
+    "CA-K003",
+    "CA-K002"
+  ],
+  "related_examples": [
+    "CA-E002",
+    "CA-E003"
+  ],
+  "related_mistakes": []
+}

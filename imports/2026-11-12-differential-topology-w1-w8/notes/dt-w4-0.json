@@ -1,0 +1,24 @@
+{
+  "id": "dt-w4-0",
+  "title": "光滑过渡推出维数恒定",
+  "subject": "differential-topology",
+  "kind": "exercise",
+  "tags": [
+    "week-4",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-week-04",
+    "dt-rank-embedding",
+    "dt-inverse-constant-rank",
+    "dt-level-sphere"
+  ],
+  "sources": [
+    {
+      "type": "course-handout",
+      "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 4, Problem 4.0; W4DiffTop2026.pdf",
+      "verified": true
+    }
+  ],
+  "review_status": "reviewed"
+}

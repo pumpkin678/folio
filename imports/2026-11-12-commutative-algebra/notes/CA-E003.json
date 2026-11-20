@@ -1,0 +1,25 @@
+{
+  "id": "CA-E003",
+  "title": "Nilpotent 元素在所有 prime quotients 中消失",
+  "track": "交换代数",
+  "type": "example",
+  "path": "examples/CA-E003-nilpotent-quotient.md",
+  "created_date": "2026-11-12",
+  "verification_state": "已核对数学推导",
+  "source": "本次对话题目与讨论（2026-11-12）；原书精确题号未独立核对",
+  "source_verified": false,
+  "tags": [
+    "nilpotent",
+    "prime-ideal",
+    "zero-divisor"
+  ],
+  "related_questions": [
+    "CA-Q003"
+  ],
+  "related_concepts": [
+    "CA-K004",
+    "CA-K005"
+  ],
+  "related_examples": [],
+  "related_mistakes": []
+}

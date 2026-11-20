@@ -1,0 +1,145 @@
+{
+  "import_date": "2026-11-12",
+  "subject": "operad",
+  "source_file": "/Users/canfenghuixue/Downloads/grobner_basis_folio.md",
+  "archived_source": "grobner_basis_folio.md",
+  "source_sha256": "111a0881132288a550a89fdf55697554064bb3292a41604df47f1fd99f1fc351",
+  "original_document_id": "algebra-grobner-basis-intro",
+  "original_subject_metadata": "Commutative Algebra",
+  "subject_override_reason": "User explicitly requested Operad as the destination subject.",
+  "source_verified": false,
+  "counts": {
+    "def": 7,
+    "thm": 6,
+    "eg": 1,
+    "roadmap": 1
+  },
+  "entries": {
+    "op.gb-buchberger-algorithm": {
+      "path": "subjects/operad/materials/gb-buchberger-algorithm.md",
+      "type": "thm",
+      "source_sections": [
+        "6",
+        "7(B)"
+      ]
+    },
+    "op.gb-buchberger-criterion": {
+      "path": "subjects/operad/materials/gb-buchberger-criterion.md",
+      "type": "thm",
+      "source_sections": [
+        "5"
+      ]
+    },
+    "op.gb-dickson": {
+      "path": "subjects/operad/materials/gb-dickson.md",
+      "type": "thm",
+      "source_sections": [
+        "7(B)"
+      ]
+    },
+    "op.gb-division-theorem": {
+      "path": "subjects/operad/materials/gb-division-theorem.md",
+      "type": "thm",
+      "source_sections": [
+        "3",
+        "7(A)"
+      ]
+    },
+    "op.gb-grobner-basis": {
+      "path": "subjects/operad/materials/gb-grobner-basis.md",
+      "type": "def",
+      "source_sections": [
+        "2"
+      ]
+    },
+    "op.gb-initial-ideal": {
+      "path": "subjects/operad/materials/gb-initial-ideal.md",
+      "type": "def",
+      "source_sections": [
+        "2"
+      ]
+    },
+    "op.gb-leading-term": {
+      "path": "subjects/operad/materials/gb-leading-term.md",
+      "type": "def",
+      "source_sections": [
+        "0"
+      ]
+    },
+    "op.gb-membership": {
+      "path": "subjects/operad/materials/gb-membership.md",
+      "type": "thm",
+      "source_sections": [
+        "2",
+        "3"
+      ]
+    },
+    "op.gb-monomial-order": {
+      "path": "subjects/operad/materials/gb-monomial-order.md",
+      "type": "def",
+      "source_sections": [
+        "0"
+      ]
+    },
+    "op.gb-normal-form-uniqueness": {
+      "path": "subjects/operad/materials/gb-normal-form-uniqueness.md",
+      "type": "thm",
+      "source_sections": [
+        "3"
+      ]
+    },
+    "op.gb-reduced-basis": {
+      "path": "subjects/operad/materials/gb-reduced-basis.md",
+      "type": "def",
+      "source_sections": [
+        "6"
+      ]
+    },
+    "op.gb-reduction-normal-form": {
+      "path": "subjects/operad/materials/gb-reduction-normal-form.md",
+      "type": "def",
+      "source_sections": [
+        "3"
+      ]
+    },
+    "op.gb-s-polynomial": {
+      "path": "subjects/operad/materials/gb-s-polynomial.md",
+      "type": "def",
+      "source_sections": [
+        "4"
+      ]
+    },
+    "op.gb-worked-example": {
+      "path": "subjects/operad/materials/gb-worked-example.md",
+      "type": "eg",
+      "source_sections": [
+        "1",
+        "4",
+        "6"
+      ]
+    },
+    "op.grobner-basis-path": {
+      "path": "subjects/operad/roadmaps/grobner-basis.md",
+      "type": "roadmap",
+      "source_sections": [
+        "0–11"
+      ]
+    }
+  },
+  "adaptations": [
+    "Split the user-provided note into definition, theorem and example cards, embedded once each in a learn roadmap.",
+    "Preserve the original source verbatim and retain its original document ID as a roadmap search alias.",
+    "Retain the five self-check questions and the common-mistake table in the roadmap.",
+    "Make the field, fixed global monomial order, nonzero divisors and empty basis conventions explicit.",
+    "Distinguish arbitrary-term reduction, standard leading-term division and unique normal forms under a Groebner basis.",
+    "Expand the division algorithm, generation and membership proof, uniqueness proof, Buchberger criterion, Dickson lemma and algorithm correctness proofs.",
+    "Supply the reduced Groebner basis definition used by the source example and verify all three S-polynomial pairs.",
+    "Replace the source Mermaid diagram with the site-native ordered material embeds and checked ref:ID links.",
+    "Keep the polynomial-ring scope of the note when placing it under Operad; preserve existing Operad content and homepage choices."
+  ],
+  "verification_references": [
+    "https://metaphor.ethz.ch/x/2025/hs/401-3132-00L/ex/Groebnernotes.pdf",
+    "https://lekili.duckdns.org/teaching/calg/lec06.html",
+    "https://lekili.duckdns.org/teaching/calg/lec07.html"
+  ]
+}

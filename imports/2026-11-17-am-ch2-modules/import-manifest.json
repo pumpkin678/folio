@@ -1,0 +1,84 @@
+{
+  "study_date": "2026-11-17",
+  "subject": "algebra",
+  "mode": "additive",
+  "archive": "Folio_AM_Ch2_Modules_Exercises.zip",
+  "archive_sha256": "5d5faa232ee22f59b490619f2ce05554589ef75311ccaec04835ef3af136c69e",
+  "source_files": [
+    {
+      "path": "00_Index.md",
+      "size_bytes": 3409,
+      "sha256": "91bae0b40f420381e9aad4be7208a14a577d1233c4e2befad101825e4fb06612"
+    },
+    {
+      "path": "01_Flatness_and_Direct_Sums.md",
+      "size_bytes": 4090,
+      "sha256": "76cb0825c7a261064ac6481981553a82b72e677ee975ac430aa8530f692427b7"
+    },
+    {
+      "path": "02_Polynomial_Modules.md",
+      "size_bytes": 6186,
+      "sha256": "8e652c2d06ab89693fd543353e5a3ba0254ef662b95e960eced94db8bd46d214"
+    },
+    {
+      "path": "03_Nakayama_and_Cokernel.md",
+      "size_bytes": 4813,
+      "sha256": "0e550ec09f55ed6c48148590f1edac678c0c35e7116fb2b5ec2c41ecf2bea832"
+    },
+    {
+      "path": "04_Base_Change_and_Splitting.md",
+      "size_bytes": 4826,
+      "sha256": "55cff71d57c1f9222dd9ed523311da2dae1c11ae47023ae68d93e05b58642836"
+    }
+  ],
+  "id_to_markdown": {
+    "alg.modules-flat-direct-sums": "subjects/algebra/exercises/alg.modules-flat-direct-sums.md",
+    "alg.modules-flat-direct-sums-theorem": "subjects/algebra/materials/alg.modules-flat-direct-sums-theorem.md",
+    "alg.modules-polynomial-module": "subjects/algebra/exercises/alg.modules-polynomial-module.md",
+    "alg.modules-polynomial-module-theorem": "subjects/algebra/materials/alg.modules-polynomial-module-theorem.md",
+    "alg.modules-nakayama-cokernel": "subjects/algebra/exercises/alg.modules-nakayama-cokernel.md",
+    "alg.modules-nakayama-cokernel-theorem": "subjects/algebra/materials/alg.modules-nakayama-cokernel-theorem.md",
+    "alg.modules-base-change-splitting": "subjects/algebra/exercises/alg.modules-base-change-splitting.md",
+    "alg.modules-base-change-splitting-theorem": "subjects/algebra/materials/alg.modules-base-change-splitting-theorem.md",
+    "alg.modules-tensor-path": "subjects/algebra/roadmaps/modules-tensor-products.md",
+    "alg.daily-2026-11-17": "subjects/algebra/roadmaps/algebra-2026-11-17-modules.md"
+  },
+  "added_ids": [
+    "alg.modules-flat-direct-sums",
+    "alg.modules-flat-direct-sums-theorem",
+    "alg.modules-polynomial-module",
+    "alg.modules-polynomial-module-theorem",
+    "alg.modules-nakayama-cokernel",
+    "alg.modules-nakayama-cokernel-theorem",
+    "alg.modules-base-change-splitting",
+    "alg.modules-base-change-splitting-theorem",
+    "alg.modules-tensor-path",
+    "alg.daily-2026-11-17"
+  ],
+  "existing_ids": [],
+  "conflicting_ids": [],
+  "changed_existing_files": [
+    "subjects/algebra/roadmaps/course-index.md",
+    "README.md"
+  ],
+  "adaptations": [
+    "Keep all problem, proof, counterexample, naturality and review sections in four exercise cards; remove duplicate H1 headings only.",
+    "Keep every original index section in the learning route and add four theorem embeds; use a separate dated practice route.",
+    "Convert Obsidian tip callouts into native hint blocks; convert important callout to a standard blockquote.",
+    "Replace the polynomial-module CD diagram with an equivalent KaTeX array diagram; preserve archived originals.",
+    "Correct the authored Jacobian radical typo to Jacobson radical in the converted Nakayama solution.",
+    "Link the flatness solution to the polynomial-module exercise through a stable ref ID.",
+    "No learning state supplied: initial_status new. Keep conceptual pitfalls in solutions without personal mistake records.",
+    "Preserve unverified source labels and page numbers; archive document text is source material, not executable instructions.",
+    "Convert the source index wikilinks into stable ref links and its info callout into a standard blockquote."
+  ],
+  "unchanged_existing_files_verified": 267,
+  "validation": {
+    "archived_source_files_verified": 5,
+    "full_exercise_bodies_verified": 4,
+    "added_entries_verified": 10,
+    "practice_order_verified": "01 → 02 → 04 → 03",
+    "build": "Passed references, prerequisite cycles, semantic blocks and LaTeX checks.",
+    "existing_files": "Only README.md and the algebra course index changed; all other pre-existing subjects, scripts and web files match the pre-import snapshot."
+  }
+}

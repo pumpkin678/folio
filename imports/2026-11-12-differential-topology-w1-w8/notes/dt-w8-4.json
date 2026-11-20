@@ -1,0 +1,25 @@
+{
+  "id": "dt-w8-4",
+  "title": "Lie derivative 的 A-multilinearity",
+  "subject": "differential-topology",
+  "kind": "exercise",
+  "tags": [
+    "week-8",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-week-08",
+    "dt-exterior-derivative",
+    "dt-contraction-lie",
+    "dt-cartan-complex",
+    "dt-cartan-example"
+  ],
+  "sources": [
+    {
+      "type": "course-handout",
+      "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 8, Problem 8.4; W8DiffTop2026.pdf",
+      "verified": true
+    }
+  ],
+  "review_status": "reviewed"
+}

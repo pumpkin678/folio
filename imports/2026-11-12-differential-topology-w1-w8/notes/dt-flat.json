@@ -1,0 +1,36 @@
+{
+  "id": "dt-flat",
+  "title": "Flat function 与零因子",
+  "subject": "differential-topology",
+  "kind": "example",
+  "tags": [
+    "week-3",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-week-03",
+    "dt-w3-0",
+    "dt-w3-1",
+    "dt-w3-2",
+    "dt-w3-3",
+    "dt-w3-4",
+    "dt-w3-5",
+    "dt-w3-6",
+    "dt-w3-7",
+    "dt-w3-8",
+    "dt-w3-9",
+    "dt-w3-10",
+    "dt-w3-11",
+    "dt-w3-12",
+    "dt-w3-optional",
+    "dt-w3-13"
+  ],
+  "sources": [
+    {
+      "type": "editorial-companion",
+      "reference": "为 Week 3 roadmap 编写的配套知识卡；原课程文件 W3DiffTop2026.pdf；补充内容在正文标识",
+      "verified": false
+    }
+  ],
+  "review_status": "reviewed"
+}

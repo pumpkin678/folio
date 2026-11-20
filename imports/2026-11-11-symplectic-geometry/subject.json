@@ -1,0 +1,53 @@
+{
+  "id": "symplectic-geometry",
+  "slug": "symplectic-geometry",
+  "title": "辛几何",
+  "title_en": "Symplectic Geometry",
+  "category": "Geometry",
+  "description": "从 Symplectic Linear Algebra 到 Lagrangian / Hamiltonian / Fukaya theory 的概念—定理—例子—习题知识网络。",
+  "created_at": "2026-11-11",
+  "language": "zh-CN",
+  "technical_terms": "en",
+  "latex_renderer": "MathJax/KaTeX compatible Markdown ($...$ and $$...$$)",
+  "source": {
+    "author": "Ana Cannas da Silva",
+    "book": "Lectures on Symplectic Geometry",
+    "part": "Chapter 1 §1.1–1.4; Homework 1",
+    "page": 8,
+    "url": "https://www.math.ist.utl.pt/~acannas/Books/lsg.pdf"
+  },
+  "units": [
+    {
+      "id": "SPG-UNIT-001",
+      "title": "Symplectic Linear Algebra",
+      "status": "completed",
+      "completed_on": "2026-11-11",
+      "exercise_ids": [
+        "SPG-HW-001",
+        "SPG-HW-005",
+        "SPG-HW-007"
+      ]
+    },
+    {
+      "id": "SPG-UNIT-002",
+      "title": "Cotangent Bundles and Lagrangians",
+      "status": "planned"
+    }
+  ],
+  "navigation_order": [
+    "definitions",
+    "theorems",
+    "examples",
+    "exercises",
+    "roadmap",
+    "study-logs"
+  ],
+  "exercise_count_completed": 3,
+  "personal_mistake_count": 0,
+  "recommended_ui": {
+    "math": "MathJax/KaTeX",
+    "show_bidirectional_links": true,
+    "exercise_status": "completed",
+    "mistakes": []
+  }
+}

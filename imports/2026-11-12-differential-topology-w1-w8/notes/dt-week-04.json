@@ -1,0 +1,28 @@
+{
+  "id": "dt-week-04",
+  "title": "Week 4 · 逆函数定理、水平集与球面",
+  "subject": "differential-topology",
+  "kind": "note",
+  "tags": [
+    "week-4",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-rank-embedding",
+    "dt-inverse-constant-rank",
+    "dt-level-sphere",
+    "dt-w4-0",
+    "dt-w4-1",
+    "dt-w4-2",
+    "dt-w4-3",
+    "dt-w4-4"
+  ],
+  "sources": [
+    {
+      "type": "course-handout",
+      "reference": "课程 Week 4；W4DiffTop2026.pdf",
+      "verified": true
+    }
+  ],
+  "review_status": "reviewed"
+}

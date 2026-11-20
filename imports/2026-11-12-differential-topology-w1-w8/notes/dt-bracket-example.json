@@ -1,0 +1,29 @@
+{
+  "id": "dt-bracket-example",
+  "title": "一个非零 Lie bracket",
+  "subject": "differential-topology",
+  "kind": "example",
+  "tags": [
+    "week-5",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-week-05",
+    "dt-w5-1",
+    "dt-w5-2",
+    "dt-w5-3",
+    "dt-w5-s1",
+    "dt-w5-4",
+    "dt-w5-5",
+    "dt-w5-6",
+    "dt-w5-s2"
+  ],
+  "sources": [
+    {
+      "type": "editorial-companion",
+      "reference": "为 Week 5 roadmap 编写的配套知识卡；原课程文件 W5DiffTop2026.pdf；补充内容在正文标识",
+      "verified": false
+    }
+  ],
+  "review_status": "reviewed"
+}

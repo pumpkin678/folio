@@ -1,0 +1,25 @@
+{
+  "id": "dt-w7-2",
+  "title": "Exterior power 的基",
+  "subject": "differential-topology",
+  "kind": "exercise",
+  "tags": [
+    "week-7",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-week-07",
+    "dt-exterior",
+    "dt-exterior-basis",
+    "dt-forms",
+    "dt-wedge-example"
+  ],
+  "sources": [
+    {
+      "type": "course-handout",
+      "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 7, Problem 7.2; W7DiffTop2026.pdf",
+      "verified": true
+    }
+  ],
+  "review_status": "reviewed"
+}

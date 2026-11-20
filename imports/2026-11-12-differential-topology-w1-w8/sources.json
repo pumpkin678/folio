@@ -1,0 +1,128 @@
+[
+  {
+    "week": 1,
+    "filename": "DiffTop2026.pdf",
+    "library_file_id": "libfile_863f9877c1d08191877651f328b1e519",
+    "source_verified": true,
+    "exercise_numbers": [
+      "1.1",
+      "1.2",
+      "1.3",
+      "1.4",
+      "1.u1",
+      "1.u2",
+      "1.u3",
+      "1.u4"
+    ]
+  },
+  {
+    "week": 2,
+    "filename": "W2DiffTop2026.pdf",
+    "library_file_id": "libfile_c56033540e1c81919cea4c5d8a68cd87",
+    "source_verified": true,
+    "exercise_numbers": [
+      "2.0",
+      "2.2",
+      "2.3",
+      "2.4",
+      "2.5",
+      "2.6",
+      "2.8",
+      "2.10",
+      "2.11"
+    ]
+  },
+  {
+    "week": 3,
+    "filename": "W3DiffTop2026.pdf",
+    "library_file_id": "libfile_c4a8d2d8caa88191aec58d2a8a1467e4",
+    "source_verified": true,
+    "exercise_numbers": [
+      "3.0",
+      "3.1",
+      "3.2",
+      "3.3",
+      "3.4",
+      "3.5",
+      "3.6",
+      "3.7",
+      "3.8",
+      "3.9",
+      "3.10",
+      "3.11",
+      "3.12",
+      "3.optional",
+      "3.13"
+    ]
+  },
+  {
+    "week": 4,
+    "filename": "W4DiffTop2026.pdf",
+    "library_file_id": "libfile_56e27947ae9c81918310d78a845ad8a3",
+    "source_verified": true,
+    "exercise_numbers": [
+      "4.0",
+      "4.1",
+      "4.2",
+      "4.3",
+      "4.4"
+    ]
+  },
+  {
+    "week": 5,
+    "filename": "W5DiffTop2026.pdf",
+    "library_file_id": "libfile_543abdb837cc81919834ea8909cc7c61",
+    "source_verified": true,
+    "exercise_numbers": [
+      "5.1",
+      "5.2",
+      "5.3",
+      "5.s1",
+      "5.4",
+      "5.5",
+      "5.6",
+      "5.s2"
+    ]
+  },
+  {
+    "week": 6,
+    "filename": "W6DiffTop2026(1).pdf",
+    "library_file_id": "libfile_23c7d824cae081918dbc9ad3c9755bd0",
+    "source_verified": true,
+    "exercise_numbers": [
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4",
+      "6.5",
+      "6.6",
+      "6.7"
+    ]
+  },
+  {
+    "week": 7,
+    "filename": "W7DiffTop2026.pdf",
+    "library_file_id": "libfile_90d38310d02481919a3c01bbc4ab2245",
+    "source_verified": true,
+    "exercise_numbers": [
+      "7.1",
+      "7.2",
+      "7.3",
+      "7.4",
+      "7.5"
+    ]
+  },
+  {
+    "week": 8,
+    "filename": "W8DiffTop2026.pdf",
+    "library_file_id": "libfile_ba5b69a2490c8191acc228cba1ccc57b",
+    "source_verified": true,
+    "exercise_numbers": [
+      "8.2",
+      "8.3",
+      "8.4",
+      "8.5",
+      "8.6"
+    ]
+  }
+]

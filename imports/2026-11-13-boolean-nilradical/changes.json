@@ -1,0 +1,96 @@
+{
+  "pack_id": "folio-ca-2026-11-13-boolean-nilradical",
+  "mode": "additive",
+  "operations": [
+    {
+      "op": "add",
+      "collection": "questions",
+      "id": "CA-Q20261113-01",
+      "path": "problems/CA-Q20261113-01-boolean-basic.md"
+    },
+    {
+      "op": "add",
+      "collection": "questions",
+      "id": "CA-Q20261113-02",
+      "path": "problems/CA-Q20261113-02-unique-prime-nilradical.md"
+    },
+    {
+      "op": "add",
+      "collection": "questions",
+      "id": "CA-Q20261113-03",
+      "path": "problems/CA-Q20261113-03-boolean-fg-ideals.md"
+    },
+    {
+      "op": "add",
+      "collection": "concepts",
+      "id": "CA-K20261113-01",
+      "path": "concepts/CA-K20261113-01-boolean-rings.md"
+    },
+    {
+      "op": "add",
+      "collection": "concepts",
+      "id": "CA-K20261113-02",
+      "path": "concepts/CA-K20261113-02-nilradical-local-rings.md"
+    },
+    {
+      "op": "add",
+      "collection": "concepts",
+      "id": "CA-K20261113-03",
+      "path": "concepts/CA-K20261113-03-idempotent-ideals.md"
+    },
+    {
+      "op": "add",
+      "collection": "examples",
+      "id": "CA-E20261113-01",
+      "path": "examples/CA-E20261113-01-f2-product.md"
+    },
+    {
+      "op": "add",
+      "collection": "examples",
+      "id": "CA-E20261113-02",
+      "path": "examples/CA-E20261113-02-truncated-polynomials.md"
+    },
+    {
+      "op": "add",
+      "collection": "mistake_cards",
+      "id": "CA-M20261113-01",
+      "path": "mistakes/CA-mistakes-2026-11-13.md"
+    },
+    {
+      "op": "add",
+      "collection": "mistake_cards",
+      "id": "CA-M20261113-02",
+      "path": "mistakes/CA-mistakes-2026-11-13.md"
+    },
+    {
+      "op": "add",
+      "collection": "mistake_cards",
+      "id": "CA-M20261113-03",
+      "path": "mistakes/CA-mistakes-2026-11-13.md"
+    },
+    {
+      "op": "add",
+      "collection": "mistake_cards",
+      "id": "CA-M20261113-04",
+      "path": "mistakes/CA-mistakes-2026-11-13.md"
+    },
+    {
+      "op": "add",
+      "collection": "mistake_cards",
+      "id": "CA-M20261113-05",
+      "path": "mistakes/CA-mistakes-2026-11-13.md"
+    },
+    {
+      "op": "add",
+      "collection": "mistake_cards",
+      "id": "CA-M20261113-06",
+      "path": "mistakes/CA-mistakes-2026-11-13.md"
+    },
+    {
+      "op": "append_unique_by_id",
+      "collection": "mistake_index",
+      "id": "CA-M-20261113",
+      "path": "mistakes/CA-mistakes-2026-11-13.md"
+    }
+  ]
+}

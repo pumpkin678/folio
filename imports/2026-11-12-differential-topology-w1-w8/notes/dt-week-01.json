@@ -1,0 +1,34 @@
+{
+  "id": "dt-week-01",
+  "title": "Week 1 · 拓扑基础与局部欧氏维数",
+  "subject": "differential-topology",
+  "kind": "note",
+  "tags": [
+    "week-1",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-topology",
+    "dt-metric",
+    "dt-separation",
+    "dt-induced-product",
+    "dt-dimension-norm",
+    "dt-compact-counterexample",
+    "dt-w1-1",
+    "dt-w1-2",
+    "dt-w1-3",
+    "dt-w1-4",
+    "dt-w1-u1",
+    "dt-w1-u2",
+    "dt-w1-u3",
+    "dt-w1-u4"
+  ],
+  "sources": [
+    {
+      "type": "course-handout",
+      "reference": "课程 Week 1；DiffTop2026.pdf",
+      "verified": true
+    }
+  ],
+  "review_status": "reviewed"
+}

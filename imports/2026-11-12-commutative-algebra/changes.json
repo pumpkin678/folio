@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "change_set_id": "CA-2026-11-12-polynomial-content",
+  "change_type": "additive",
+  "baseline": "Existing Folio site-data.json: CA-Q001, CA-Q002, CA-K001, CA-K002",
+  "changes": [
+    {
+      "op": "upsert",
+      "id": "CA-Q003",
+      "node_type": "question",
+      "path": "problems/CA-Q003-mccoy-zero-divisors.md",
+      "sha256": "22ece7cfcc6efe812408c74a906a02a42700563359d3aec5dc0a6097f453ddc3",
+      "expected_old_sha256": null,
+      "if_present": "compare-hash-or-review"
+    },
+    {
+      "op": "upsert",
+      "id": "CA-Q004",
+      "node_type": "question",
+      "path": "problems/CA-Q004-primitive-product.md",
+      "sha256": "75423dd88868d9b51907966fc49026160ea8b876b7c927f05c3b0f62358a14ec",
+      "expected_old_sha256": null,
+      "if_present": "compare-hash-or-review"
+    },
+    {
+      "op": "upsert",
+      "id": "CA-Q005",
+      "node_type": "question",
+      "path": "problems/CA-Q005-primitive-content-preservation.md",
+      "sha256": "4bb19133fc64976440e878d96d7d8dbf971da6f7548a0b0c54217ca7b31eba87",
+      "expected_old_sha256": null,
+      "if_present": "compare-hash-or-review"
+    },
+    {
+      "op": "upsert",
+      "id": "CA-K003",
+      "node_type": "concept",
+      "path": "concepts/CA-K003-content-primitive.md",
+      "sha256": "ab26d444f6d7705f0b7b1a94b69dec5ae8528d57248ceda3b3600b4fafbf9053",
+      "expected_old_sha256": null,
+      "if_present": "compare-hash-or-review"
+    },
+    {
+      "op": "upsert",
+      "id": "CA-K004",
+      "node_type": "concept",
+      "path": "concepts/CA-K004-prime-maximal-detection.md",
+      "sha256": "7fa80098a7171222e7200debba9efb335b3a0539f98238f504f13afd64cca0b7",
+      "expected_old_sha256": null,
+      "if_present": "compare-hash-or-review"
+    },
+    {
+      "op": "upsert",
+      "id": "CA-K005",
+      "node_type": "concept",
+      "path": "concepts/CA-K005-mccoy.md",
+      "sha256": "ef658060991ac3d6cc23cbbdeacfbac294b4b0ee3ef29e578e60ad8da8f3c708",
+      "expected_old_sha256": null,
+      "if_present": "compare-hash-or-review"
+    },
+    {
+      "op": "upsert",
+      "id": "CA-K006",
+      "node_type": "concept",
+      "path": "concepts/CA-K006-content-product.md",
+      "sha256": "95c93ff0497abab969938d278905d67d72c26737164ab743e4aaee14881e1974",
+      "expected_old_sha256": null,
+      "if_present": "compare-hash-or-review"
+    },
+    {
+      "op": "upsert",
+      "id": "CA-E001",
+      "node_type": "example",
+      "path": "examples/CA-E001-z6-primitive.md",
+      "sha256": "7ade37452aecdf943044fc01a04a3ab65469a414b1ae0e5f36233df1c057f576",
+      "expected_old_sha256": null,
+      "if_present": "compare-hash-or-review"
+    },
+    {
+      "op": "upsert",
+      "id": "CA-E002",
+      "node_type": "example",
+      "path": "examples/CA-E002-one-prime-not-enough.md",
+      "sha256": "3f96030dbb10ff1fba1b6af2736ab9d633fd620d98e88fa321bb02693ccbf6ee",
+      "expected_old_sha256": null,
+      "if_present": "compare-hash-or-review"
+    },
+    {
+      "op": "upsert",
+      "id": "CA-E003",
+      "node_type": "example",
+      "path": "examples/CA-E003-nilpotent-quotient.md",
+      "sha256": "6516d6e9cfb3898251dd0cc7d3711a9af964dfce647b463e7c8c5addf86e2fba",
+      "expected_old_sha256": null,
+      "if_present": "compare-hash-or-review"
+    },
+    {
+      "op": "upsert",
+      "id": "CA-E004",
+      "node_type": "example",
+      "path": "examples/CA-E004-content-strict-inclusion.md",
+      "sha256": "aed3fe31fecf5a55a52f3a116b3e7a16f09dcbd461f85a0f8da2788e8291c00d",
+      "expected_old_sha256": null,
+      "if_present": "compare-hash-or-review"
+    },
+    {
+      "op": "upsert",
+      "id": "CA-M-ADD-20261112",
+      "node_type": "mistake-index",
+      "path": "mistakes/CA-mistakes-addendum.md",
+      "sha256": "36dd46f89c92e1009be1f41eff519eb3a4cc0687646cf351f496f7e2a11d296b",
+      "expected_old_sha256": null,
+      "if_present": "compare-hash-or-review"
+    }
+  ],
+  "existing_nodes": "No changes requested to preexisting node IDs or learning records",
+  "conflict_policy": "reject-unreviewed-different-content; preserve-user-progress",
+  "safe_entrypoint": "delta-site-data.json"
+}

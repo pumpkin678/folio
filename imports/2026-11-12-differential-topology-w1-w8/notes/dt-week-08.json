@@ -1,0 +1,29 @@
+{
+  "id": "dt-week-08",
+  "title": "Week 8 · 外微分、Lie derivative 与 Cartan formula",
+  "subject": "differential-topology",
+  "kind": "note",
+  "tags": [
+    "week-8",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-exterior-derivative",
+    "dt-contraction-lie",
+    "dt-cartan-complex",
+    "dt-cartan-example",
+    "dt-w8-2",
+    "dt-w8-3",
+    "dt-w8-4",
+    "dt-w8-5",
+    "dt-w8-6"
+  ],
+  "sources": [
+    {
+      "type": "course-handout",
+      "reference": "课程 Week 8；W8DiffTop2026.pdf",
+      "verified": true
+    }
+  ],
+  "review_status": "reviewed"
+}

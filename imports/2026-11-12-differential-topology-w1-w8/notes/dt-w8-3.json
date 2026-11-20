@@ -1,0 +1,25 @@
+{
+  "id": "dt-w8-3",
+  "title": "二形式的 d² 手算与抵消表",
+  "subject": "differential-topology",
+  "kind": "exercise",
+  "tags": [
+    "week-8",
+    "differential-topology"
+  ],
+  "links": [
+    "dt-week-08",
+    "dt-exterior-derivative",
+    "dt-contraction-lie",
+    "dt-cartan-complex",
+    "dt-cartan-example"
+  ],
+  "sources": [
+    {
+      "type": "course-handout",
+      "reference": "Yohsuke Imagi, Differential Topology, Autumn 2026, Week 8, Problem 8.3; W8DiffTop2026.pdf",
+      "verified": true
+    }
+  ],
+  "review_status": "reviewed"
+}
